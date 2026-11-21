@@ -1,4 +1,4 @@
-# Risk Miner — inteligentna baza doświadczeń inwestycji publicznych
+# Risk Miner - inteligentna baza doświadczeń inwestycji publicznych
 
 **HackNation 2026 · wyzwanie Ministerstwa Funduszy i Polityki Regionalnej (Departament PPP)**
 
