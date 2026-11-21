@@ -29,8 +29,8 @@ Przeglądarka otworzy się sama na **http://127.0.0.1:8080**. Okna terminala nie
 > macOS: `Risk Miner.app` i `Uruchom Risk Miner.command` działają po `git clone`. Po pobraniu ZIP-a
 > macOS blokuje programy z internetu, dlatego najpewniejsze jest `python3 app.py --open`.
 
-**3. Pokaż dane** — na ekranie **Start** kliknij **„Demo na prawdziwych danych BZP (22 projekty, offline)”**.
-Po ok. 5 s pojawi się wykres 22 umów, mapa i liczby. Wersja „BZP na żywo” robi to samo, pobierając ogłoszenia z API.
+**3. Pokaż dane** — na ekranie **Start** kliknij **„Wczytaj 22 projekty z BZP na żywo”**.
+Po kilku sekundach pojawi się wykres 22 umów, mapa i liczby. Bez internetu aplikacja sama użyje wbudowanej kopii BZP.
 
 **4. Przeanalizuj nową inwestycję** — **Analizuj nową inwestycję → „wstaw przykładowy opis”** → dołącz plik
 `samples/projekt_umowy_przyklad.txt` → **Analizuj**. Wynik eksportujesz przyciskami JSON / CSV / karta ryzyka.
@@ -82,7 +82,7 @@ Po ok. 5 s pojawi się wykres 22 umów, mapa i liczby. Wersja „BZP na żywo”
    jego przebieg opowiedziany w 3 zdaniach, złożony z ogłoszeń BZP bez modelu językowego.
 8. **Biblioteka zmian umów.** Wszystkie 40 zmian umów z BZP w jednym miejscu, z przyczyną, kategorią ryzyka,
    podstawą z art. 455 Pzp, kosztem i linkiem do ogłoszenia. Wpisujesz „grunt”, „służebność” albo „Wody Polskie”
-   i widzisz, jak to się skończyło u innych. Pulpit startowy pokazuje wszystkie umowy na jednym wykresie
+   i widzisz, jak to się skończyło u innych. Ekran Start pokazuje wszystkie umowy na jednym wykresie
    „plan → rzeczywistość” (koszt × czas, klik otwiera projekt).
 9. **Mapa inwestycji.** Projekty na mapie Polski (kolor = jak skończyły się koszt i termin, wielkość = wartość umowy),
    z rankingiem najdłuższych opóźnień i największych przekroczeń; klik otwiera projekt.
@@ -106,10 +106,9 @@ Aplikacja sama uruchomi serwer i otworzy przeglądarkę na **http://127.0.0.1:80
 # lub:  python3 app.py --open
 ```
 
-Otwórz **http://127.0.0.1:8080** → Pulpit → **„Demo na prawdziwych danych BZP (22 projekty, offline)”**.
-W ~5 sekund system wczyta rekordy organizatora i kopię ogłoszeń BZP, powiąże je, wyliczy koszty i terminy,
-odczyta zmiany umów i pokaże „Czego uczy baza”. Przycisk „Pakiet organizatora — BZP na żywo” robi to samo
-z pobieraniem ogłoszeń z API. Potem: **Analiza nowej inwestycji** → „wstaw przykładowy opis” → dołącz
+Otwórz **http://127.0.0.1:8080** → Start → **„Wczytaj 22 projekty z BZP na żywo”**.
+System wczyta rekordy organizatora, pobierze ogłoszenia z API BZP (bez sieci — z wbudowanej kopii), powiąże je,
+wyliczy koszty i terminy, odczyta zmiany umów i pokaże na ekranie Start, czego uczy baza. Potem: **Analiza nowej inwestycji** → „wstaw przykładowy opis” → dołącz
 `samples/projekt_umowy_przyklad.txt` → Analizuj.
 
 Docker (z OCR skanów):  `docker compose -f deploy/docker-compose.yml up --build`  → http://localhost:8080
