@@ -78,6 +78,7 @@ async function router() {
   $$("#nav a, .cta-new").forEach((a) => a.classList.toggle("active", a.dataset.v === (key === "project" ? "projects" : key) && !a.dataset.pid));
   $$("#recent a").forEach((a) => a.classList.toggle("active", key === "project" && a.dataset.pid === parts[1]));
   pulseActive();
+  $(".side").classList.remove("open"); $("#menu-btn").setAttribute("aria-expanded", "false");
   $("#main").innerHTML = `<div class="loading">Ładowanie…</div>`;
   try { await VIEWS[key](parts.slice(1)); } catch (e) { $("#main").innerHTML = `<div class="card"><h2>Nie udało się wczytać tego widoku</h2><p>Serwer odpowiedział: ${esc(e.message)}</p><p class="small muted">Sprawdź, czy aplikacja nadal działa w terminalu, i spróbuj ponownie.</p><button class="btn primary" onclick="router()">Spróbuj ponownie</button></div>`; }
   refreshBadges();
@@ -150,7 +151,7 @@ VIEWS.dash = async () => {
       <div class="card">
         <h3 style="margin-top:0">Zasil bazę</h3>
         <p class="muted small">Plik organizatora (.xlsx/.csv) lub inny plik z podobnymi kolumnami. Po imporcie system sam wyszuka ogłoszenia w BZP, powiąże je z projektami i przeanalizuje.</p>
-        <div class="drop" id="drop">Upuść plik z rekordami lub <label class="btn sm">wybierz<input type="file" id="f-import" accept=".xlsx,.csv" hidden></label></div>
+        <div class="drop" id="drop">Upuść plik z rekordami lub <label class="btn sm">wybierz<input type="file" id="f-import" accept=".xlsx,.csv" class="file-in"></label></div>
         <div class="row" style="margin-top:10px">
           <button class="btn${c.projects ? "" : " primary"}" id="b-sample-bzp" title="Rekordy organizatora i paczka 198 ogłoszeń BZP pobranych z API. Do bazy trafiają tylko ogłoszenia powiązane z projektami. Działa bez sieci, wynik powtarzalny.">${c.projects ? "Wczytaj demo ponownie (22 projekty, offline)" : "Demo na prawdziwych danych BZP (22 projekty, offline)"}</button>
           <button class="btn" id="b-sample">Pakiet organizatora — BZP na żywo</button>
@@ -203,7 +204,7 @@ function heroBlock(ins, projects, changes) {
   const ymax = Math.max(0.45, ...pts.map((p) => p.y)) * 1.08, ymin = Math.min(-0.15, ...pts.map((p) => p.y)) * 1.1;
   const X = (v) => L + ((v - xmin) / (xmax - xmin)) * (W - L - R), Y = (v) => T + ((ymax - v) / (ymax - ymin)) * (H - T - B);
   const vmax = Math.max(...pts.map((p) => p.v));
-  let g = `<rect x="${X(0)}" y="${T}" width="${W - R - X(0)}" height="${Y(0) - T}" fill="#e34948" opacity=".06"/>
+  let g = `<rect x="${X(0)}" y="${T}" width="${W - R - X(0)}" height="${Y(0) - T}" fill="${VZ.late}" opacity=".06"/>
     <text x="${W - R - 8}" y="${T + 16}" text-anchor="end" font-size="12" font-weight="700" fill="#b42318">drożej i dłużej: ${both} z ${pts.length}</text>`;
   for (const tx of [0, 0.5, 1, 1.5, 2, 2.5, 3]) if (tx <= xmax) g += `<line x1="${X(tx)}" x2="${X(tx)}" y1="${T}" y2="${H - B}" stroke="${VZ.grid}" ${tx ? "" : 'stroke="#9aa8b6"'}/><text x="${X(tx)}" y="${H - B + 16}" font-size="11" text-anchor="middle" fill="${VZ.muted}">${tx ? "+" + Math.round(tx * 100) + "%" : "plan"}</text>`;
   for (const ty of [-0.4, -0.2, 0, 0.2, 0.4]) if (ty >= ymin && ty <= ymax) g += `<line x1="${L}" x2="${W - R}" y1="${Y(ty)}" y2="${Y(ty)}" stroke="${ty ? VZ.grid : "#9aa8b6"}"/><text x="${L - 6}" y="${Y(ty) + 4}" font-size="11" text-anchor="end" fill="${VZ.muted}">${ty ? (ty > 0 ? "+" : "−") + Math.abs(Math.round(ty * 100)) + "%" : "plan"}</text>`;
@@ -214,7 +215,8 @@ function heroBlock(ins, projects, changes) {
     const col = late && over ? VZ.late : !late && !over ? VZ.early : VZ.plan;
     const r = 4.5 + 6 * Math.sqrt(p.v / vmax);
     g += `<line class="arr" style="--d:${i * 35}ms" x1="${X(0)}" y1="${Y(0)}" x2="${X(p.x)}" y2="${Y(p.y)}" stroke="${col}" stroke-opacity=".28" stroke-width="1.5"/>`;
-    g += `<a href="#/projekt/${p.id}"><circle class="dot" style="--d:${i * 35}ms" cx="${X(p.x)}" cy="${Y(p.y)}" r="${r}" fill="${p.unverified ? "#fff" : col}" stroke="${p.unverified ? col : "#fff"}" stroke-width="2" data-tip="<b>${esc(p.rid)} · ${esc(p.city)}</b><br>${esc(p.name.slice(0, 90))}<br>koszt ${pp(p.y, 1)} · czas ${pp(p.x, 0)}${p.unverified ? "<br><i>dopasowanie do weryfikacji</i>" : ""}<br><u>kliknij, aby otworzyć</u>"/></a>`;
+    const early = !late && !over, lbl = `${p.rid} ${p.city || ""}: koszt ${pp(p.y, 1)}, czas ${pp(p.x, 0)}${p.unverified ? ", dopasowanie do weryfikacji" : ""}`;
+    g += `<a href="#/projekt/${p.id}" aria-label="${esc(lbl)}"><${early ? "rect" : "circle"} class="dot" style="--d:${i * 35}ms" ${early ? `x="${X(p.x) - r}" y="${Y(p.y) - r}" width="${2 * r}" height="${2 * r}" rx="${(r * 0.3).toFixed(1)}"` : `cx="${X(p.x)}" cy="${Y(p.y)}" r="${r}"`} fill="${p.unverified ? "#fff" : col}" stroke="${p.unverified ? col : "#fff"}" stroke-width="2" data-tip="<b>${esc(p.rid)} · ${esc(p.city)}</b><br>${esc(p.name.slice(0, 90))}<br>koszt ${pp(p.y, 1)} · czas ${pp(p.x, 0)}${p.unverified ? "<br><i>dopasowanie do weryfikacji</i>" : ""}<br><u>kliknij, aby otworzyć</u>"/></a>`;
   });
   g += `<circle cx="${X(0)}" cy="${Y(0)}" r="5" fill="${VZ.ink}"/><text x="${X(0) + 8}" y="${Y(0) + 16}" font-size="11.5" font-weight="700" fill="${VZ.ink}">plan</text>`;
   const top = (ins.register.rows || []).slice().sort((a, b) => b.k - a.k)[0];
@@ -225,8 +227,8 @@ function heroBlock(ins, projects, changes) {
       <div class="hero-cta"><a class="btn primary big" href="#/nowa">Analizuj nową inwestycję</a><a class="btn big" href="#/zmiany">${(changes.length || STATUS.counts.changes) ? `Przejrzyj ${num(changes.length || STATUS.counts.changes)} zmian umów` : "Przejrzyj zmiany umów"}</a></div>
       <p class="small muted" style="margin-top:12px">Każda kropka to jedna umowa — kliknij, aby zobaczyć jej historię, oś czasu i źródła w BZP.</p>
     </div>
-    <div class="hero-r"><svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Plan a rzeczywistość: koszt i czas umów (${pts.length})">${g}</svg>
-      <div class="legend small"><span><i style="background:${VZ.late}"></i>drożej i dłużej</span><span><i style="background:${VZ.plan}"></i>jedno z dwóch</span><span><i style="background:${VZ.early}"></i>w planie</span><span><i class="hollow"></i>do weryfikacji</span><span>wielkość = wartość umowy</span></div></div>
+    <div class="hero-r"><svg viewBox="0 0 ${W} ${H}" width="100%" role="group" aria-label="Plan a rzeczywistość: koszt i czas umów (${pts.length}). Kwadrat oznacza umowę w planie.">${g}</svg>
+      <div class="legend small"><span><i style="background:${VZ.late}"></i>drożej i dłużej</span><span><i style="background:${VZ.plan}"></i>jedno z dwóch</span><span><i style="background:${VZ.early};border-radius:2px"></i>w planie</span><span><i class="hollow"></i>do weryfikacji</span><span>wielkość = wartość umowy</span></div></div>
   </section>`;
 }
 function knowsStrip(ins) {
@@ -511,7 +513,7 @@ function tabDokumenty(d, T, args) {
   const pid = args[0];
   T.innerHTML = `<div class="grid g2"><div class="card"><h3>Dodaj dokumenty</h3>
       <p class="small muted">PDF (z warstwą tekstową${STATUS && STATUS.capabilities.ocr ? " lub skan — OCR" : ""}), DOCX, XLSX, CSV, HTML. System rozpozna typ dokumentu i fazę, wyodrębni fakty i zdarzenia, porówna je z dotychczasową wiedzą (potwierdzenia / sprzeczności).</p>
-      <div class="drop" id="ddrop">Upuść pliki lub <label class="btn sm">wybierz<input type="file" id="dfile" multiple hidden></label></div>
+      <div class="drop" id="ddrop">Upuść pliki lub <label class="btn sm">wybierz<input type="file" id="dfile" multiple class="file-in"></label></div>
       <div class="row" style="margin-top:10px"><input id="durl" class="grow" placeholder="lub adres URL dokumentu (BIP, NIK, KIO…)"><button class="btn" id="bdurl">Pobierz</button></div>
       <div id="dres"></div></div>
     <div class="card"><h3>Kompletność materiału</h3><table>${d.completeness.map((c) => `<tr><td>${c.status === "jest w paczce" ? '<span class="pill p-ok">jest</span>' : '<span class="pill p-warn">brak w paczce</span>'}</td><td><b>${esc(c.label)}</b><div class="small muted">${esc(c.phase)}${c.note ? " — " + esc(c.note) : ""}</div></td></tr>`).join("")}</table></div></div>
@@ -629,24 +631,51 @@ VIEWS.new = async (args) => {
       <div class="grid g3" style="margin-top:8px"><label class="f">Szacowana wartość (zł)<input id="a-val" inputmode="decimal" placeholder="np. 7 800 000"></label><label class="f">Długość sieci (km)<input id="a-len" inputmode="decimal" placeholder="np. 6,5"></label><label class="f">Województwo<select id="a-voi"><option value="">odczytaj z opisu</option>${VOIV.map((v) => `<option>${v}</option>`).join("")}</select></label></div>
       <div class="grid g2" style="margin-top:8px"><label class="f">Planowane ogłoszenie przetargu<input id="a-start" type="date"></label><label class="f">Termin zakończenia z umowy o dofinansowanie<input id="a-dl" type="date" aria-describedby="a-dl-h"></label></div>
       <p class="small muted" id="a-dl-h" style="margin:4px 0 0">Bez terminu z umowy o dofinansowanie (tu albo w opisie) nie policzymy ryzyka utraty dofinansowania.</p>
-      <div class="drop" id="adrop" style="margin-top:10px"><b>Dokumenty (opcjonalnie):</b> koncepcja, PFU, studium — oraz <b>projekt umowy (PPU/SWZ)</b>, który włącza audyt 14 klauzul. Upuść pliki lub <label class="btn sm">wybierz<input type="file" id="afile" multiple hidden></label><div id="adocs" class="small"></div></div>
-      <div class="row" style="margin-top:12px"><button class="btn primary" id="a-run">Analizuj nową inwestycję</button><span id="a-st" class="muted small"></span></div>
+      <div class="drop" id="adrop" style="margin-top:10px"><b>Dokumenty (opcjonalnie):</b> koncepcja, PFU, studium — oraz <b>projekt umowy (PPU/SWZ)</b>, który włącza audyt 14 klauzul. Upuść pliki lub <label class="btn sm">wybierz<input type="file" id="afile" multiple class="file-in"></label><div id="adocs" class="small"></div></div>
+      <div class="row" style="margin-top:12px"><button class="btn primary" id="a-run">Analizuj nową inwestycję</button><span id="a-st" class="muted small" role="status" aria-live="polite"></span></div>
     </div><div class="card"><h3>Poprzednie analizy</h3>${list.length ? list.map((a) => `<div><a href="#/analiza/${a.id}">#${a.id} ${esc(a.title)}</a> <span class="small muted">${dt(a.created_at)}</span></div>`).join("") : `<p class="muted small">Jeszcze żadnej. Kliknij „wstaw przykładowy opis” i „Analizuj nową inwestycję”, aby zobaczyć, jak wygląda wynik.</p>`}</div></div>
     <div id="a-res"></div>`;
   const files = [];
-  const showDocs = () => ($("#adocs").innerHTML = files.map((f) => "• " + esc(f.name)).join("<br>") + (existing && existing.documents.length ? "<br>" + existing.documents.map((d) => "• " + esc(d.filename) + " (zapisany)").join("<br>") : ""));
+  const saved = existing ? existing.documents.map((d) => d.filename) : [];
+  const showDocs = () => {
+    $("#adocs").innerHTML = files.length || saved.length ? `<ul class="files">${files.map((f, i) => `<li>${esc(f.name)} <button type="button" class="btn sm" data-rm="${i}" aria-label="Usuń plik ${esc(f.name)}">usuń</button></li>`).join("")}${saved.map((n) => `<li>${esc(n)} <span class="muted">(zapisany w analizie)</span></li>`).join("")}</ul>` : "";
+    $$("#adocs [data-rm]").forEach((b) => (b.onclick = () => { files.splice(Number(b.dataset.rm), 1); showDocs(); }));
+  };
   showDocs();
-  $("#afile").onchange = (e) => { files.push(...e.target.files); showDocs(); };
+  $("#afile").onchange = (e) => { files.push(...e.target.files); e.target.value = ""; showDocs(); };
   dropzone($("#adrop"), (fs) => { files.push(...fs); showDocs(); });
   $("#a-ex").onclick = () => ($("#a-text").value = EXAMPLE);
-  $("#a-run").onclick = async () => {
-    $("#a-st").textContent = "Analiza w toku…";
-    if (!aid) { const r = await guard(() => post("/api/analyses", { title: $("#a-title").value, text: $("#a-text").value })); aid = r.analysis_id; }
-    for (const f of files.splice(0)) await guard(() => upload(`/api/analyses/${aid}/documents`, f));
-    const r = await guard(() => post(`/api/analyses/${aid}/run`, { title: $("#a-title").value, text: $("#a-text").value, value: $("#a-val").value, length_km: $("#a-len").value, voivodeship: $("#a-voi").value, tender_start: $("#a-start").value, deadline: $("#a-dl").value }));
-    $("#a-st").textContent = "";
-    history.replaceState(null, "", `#/analiza/${aid}`);
-    renderAnalysis(r.result, aid);
+  const run = $("#a-run"), st = $("#a-st");
+  run.onclick = async () => {
+    if (!$("#a-text").value.trim() && !files.length && !saved.length) {
+      st.textContent = "Wpisz opis inwestycji albo dodaj dokument — bez nich nie ma czego porównać.";
+      $("#a-text").focus();
+      return;
+    }
+    const label = run.textContent;
+    run.disabled = true;
+    run.textContent = "Analizuję…";
+    st.textContent = files.length ? "Wczytuję dokumenty i porównuję z zakończonymi umowami z bazy…" : "Porównuję z zakończonymi umowami z bazy…";
+    try {
+      if (!aid) {
+        const r0 = await post("/api/analyses", { title: $("#a-title").value, text: $("#a-text").value });
+        aid = r0.analysis_id;
+        history.replaceState(null, "", `#/analiza/${aid}`);
+      }
+      while (files.length) { await upload(`/api/analyses/${aid}/documents`, files[0]); saved.push(files.shift().name); showDocs(); }
+      const r = await post(`/api/analyses/${aid}/run`, { title: $("#a-title").value, text: $("#a-text").value, value: $("#a-val").value, length_km: $("#a-len").value, voivodeship: $("#a-voi").value, tender_start: $("#a-start").value, deadline: $("#a-dl").value });
+      renderAnalysis(r.result, aid);
+      st.textContent = "Gotowe — wynik jest poniżej.";
+      $("#a-res").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+      refreshBadges();
+    } catch (e) {
+      st.textContent = "";
+      $("#a-res").innerHTML = `<div class="flag wysoki" role="alert" style="margin-top:18px"><b>Analiza się nie udała.</b><div class="small">Serwer odpowiedział: ${esc(e.message)}. Opis i niewysłane pliki zostały w formularzu.</div><div class="row" style="margin-top:8px"><button class="btn primary" id="a-retry">Spróbuj ponownie</button></div></div>`;
+      $("#a-retry").onclick = () => run.click();
+    } finally {
+      run.disabled = false;
+      run.textContent = label;
+    }
   };
   if (existing && existing.result) renderAnalysis(existing.result, aid);
 };
@@ -777,7 +806,7 @@ VIEWS.settings = async () => {
     <div class="grid g2"><div class="card"><h3>Źródła</h3><div class="kv small"><div>BZP (API)</div><div class="code">${esc(cfg.bzp.base_url)}</div><div>Zapasowe</div><div class="code">${(cfg.bzp.fallback_urls || []).map(esc).join("<br>")}</div><div>Limit zapytań</div><div>${cfg.bzp.requests_per_minute || "bez limitu"} / min (dla ezamowienia.gov.pl automatycznie 25/min)</div><div>Cache odpowiedzi</div><div>${cfg.bzp.cache ? "tak (data/cache)" : "nie"}</div><div>Kopia lokalna BZP</div><div>${s.bzp_local ? "wczytana" : "brak"}</div><div>TED</div><div>${cfg.ted.enabled ? "włączony — " + esc(cfg.ted.search_url) : "wyłączony"}</div></div></div>
     <div class="card"><h3>Model językowy i przetwarzanie danych</h3><div class="kv small"><div>Dostawca</div><div>${esc(cfg.llm.provider)}</div><div>Model</div><div>${esc(cfg.llm.model || "—")}</div><div>Adres</div><div class="code">${esc(cfg.llm.base_url || "—")}</div><div>Klucz</div><div>${cfg.llm.api_key_set ? "ustawiony (" + esc(cfg.llm.api_key_env) + ")" : "brak — LLM nieaktywny"}</div><div>Miejsce przetwarzania</div><div>${esc(cfg.llm.data_location)}</div><div>OCR</div><div>${s.capabilities.ocr ? "dostępny (tesseract)" : "niedostępny"}</div></div></div></div>
     <div class="grid g2" style="margin-top:14px"><div class="card"><h3>Test połączenia z BZP</h3><div class="row"><input id="t-num" placeholder="np. 2023/BZP 00271948/01" class="grow"><button class="btn" id="t-go">Testuj</button></div><pre class="log" id="t-out" style="display:none"></pre></div>
-    <div class="card"><h3>Kopia lokalna ogłoszeń (tryb offline)</h3><p class="small muted">Wczytaj paczkę organizatora (risk_miner_bzp_kopia.zip — pliki JSON w formacie API) lub plik JSON z ogłoszeniami. Wyszukiwanie korzysta wtedy z kopii zamiast z sieci.</p><div class="row"><label class="btn">Wczytaj .zip/.json<input type="file" id="t-local" accept=".zip,.json" hidden></label><button class="btn bad" id="t-clear">Usuń kopię lokalną</button></div></div></div>
+    <div class="card"><h3>Kopia lokalna ogłoszeń (tryb offline)</h3><p class="small muted">Wczytaj paczkę organizatora (risk_miner_bzp_kopia.zip — pliki JSON w formacie API) lub plik JSON z ogłoszeniami. Wyszukiwanie korzysta wtedy z kopii zamiast z sieci.</p><div class="row"><label class="btn">Wczytaj .zip/.json<input type="file" id="t-local" accept=".zip,.json" class="file-in"></label><button class="btn bad" id="t-clear">Usuń kopię lokalną</button></div></div></div>
     <div class="card" style="margin-top:14px"><h3>Baza danych</h3><p class="small muted">Plik SQLite w katalogu danych. Wyczyszczenie usuwa projekty, zdarzenia i analizy (wiedza ekspercka pozostaje).</p><button class="btn bad" id="t-reset">Wyczyść bazę przypadków</button></div>`;
   $("#t-go").onclick = async () => { const o = $("#t-out"); o.style.display = "block"; o.textContent = "…"; const r = await post("/api/bzp/test", { notice_number: $("#t-num").value || null, date_from: $("#t-num").value ? null : new Date(Date.now() - 86400000 * 3).toISOString().slice(0, 10) + "T00:00:00Z" }); o.textContent = JSON.stringify(r, null, 2); };
   $("#t-local").onchange = async (e) => { const r = await guard(() => upload("/api/bzp/import-local", e.target.files[0])); toast(`Dodano ${r.added} ogłoszeń (razem ${r.total})`); VIEWS.settings(); };
@@ -787,7 +816,7 @@ VIEWS.settings = async () => {
 
 
 // ------------------------------------------------------------ WIZUALIZACJE (oś czasu, rozkład wyników, rejestr)
-const VZ = { plan: "#2a78d6", late: "#e34948", early: "#008300", ink: "#1b2430", muted: "#5d6b7c", grid: "#e3e8ee" };
+const VZ = { plan: "#3557a0", late: "#b42318", early: "#1f7a4d", ink: "#1b2430", muted: "#5d6b7c", grid: "#e3e8ee" };
 const pp = (v, d = 0) => (v === null || v === undefined || isNaN(v) ? "—" : (v >= 0 ? "+" : "−") + Math.abs(v * 100).toLocaleString("pl-PL", { maximumFractionDigits: d }) + "%");
 const months = (dd) => (dd === null || dd === undefined ? "—" : (dd / 30.4).toLocaleString("pl-PL", { maximumFractionDigits: 1 }) + " mies.");
 // jeden dymek dla wszystkich wykresów: elementy z atrybutem data-tip
@@ -803,6 +832,16 @@ const months = (dd) => (dd === null || dd === undefined ? "—" : (dd / 30.4).to
     const x = Math.min(window.innerWidth - tip.offsetWidth - 12, e.clientX + 14);
     tip.style.left = x + "px"; tip.style.top = (e.clientY + 16) + "px";
   });
+  document.addEventListener("focusin", (e) => {
+    const a = e.target, t = a.matches && a.matches("[data-tip]") ? a : a.querySelector && a.querySelector("[data-tip]");
+    if (!t || !a.closest("svg")) return tip.classList.add("hidden");
+    tip.innerHTML = t.getAttribute("data-tip");
+    tip.classList.remove("hidden");
+    const r = t.getBoundingClientRect();
+    tip.style.left = Math.max(8, Math.min(window.innerWidth - tip.offsetWidth - 12, r.right + 10)) + "px";
+    tip.style.top = (r.bottom + 8) + "px";
+  });
+  document.addEventListener("focusout", () => tip.classList.add("hidden"));
 })();
 const dnum = (s) => (s ? Date.parse(String(s).slice(0, 10) + "T00:00:00Z") : null);
 
@@ -928,7 +967,7 @@ function registerTable(reg, value) {
 }
 function basesBars(b) {
   if (!b || !b.n) return "";
-  return `<h3>Na jakiej podstawie zmieniano umowy (${b.n} zmian w BZP)</h3>${b.rows.map((r) => `<div class="row small" style="gap:8px;margin:3px 0"><span style="width:300px"><b>${esc(r.basis)}</b> <span class="muted">${esc(r.meaning)}</span></span><div class="bar grow"><i style="width:${r.share * 100}%;background:${VZ.plan}"></i></div><span style="width:70px" class="num">${r.n} · ${Math.round(r.share * 100)}%</span></div>`).join("")}<p class="small muted">${esc(b.note)}</p>`;
+  return `<h3>Na jakiej podstawie zmieniano umowy (${b.n} zmian w BZP)</h3>${b.rows.map((r) => `<div class="row small" style="gap:8px;margin:3px 0"><span class="bases-l" style="width:300px;max-width:100%"><b>${esc(r.basis)}</b> <span class="muted">${esc(r.meaning)}</span></span><div class="bar grow"><i style="width:${r.share * 100}%;background:${VZ.plan}"></i></div><span style="width:70px" class="num">${r.n} · ${Math.round(r.share * 100)}%</span></div>`).join("")}<p class="small muted">${esc(b.note)}</p>`;
 }
 
 function insightsCard(ins) {
@@ -952,12 +991,12 @@ function clauseAudit(a) {
   if (!a) return "";
   const st = { "jest": "p-ok", "brak": "p-warn", "niepełna": "p-warn", "wyłączona": "p-bad", "do przemyślenia": "p-info", "nie oceniono": "p-grey" };
   return `<h3>Audyt klauzul projektu umowy</h3><div class="hint">${esc(a.summary)}${a.months ? ` Okres realizacji odczytany z materiałów: <b>${a.months} mies.</b>` : ""}</div>
-    <table class="audit" style="margin-top:8px"><tr><th>Status</th><th>Klauzula</th><th>W materiałach</th><th>Dlaczego (dane z podobnych umów)</th></tr>
+    <div style="overflow-x:auto"><table class="audit" style="margin-top:8px"><tr><th>Status</th><th>Klauzula</th><th>W materiałach</th><th>Dlaczego (dane z podobnych umów)</th></tr>
     ${a.rows.map((r) => `<tr><td><span class="pill ${r.legal_gap ? "p-bad" : st[r.status] || "p-grey"}">${r.legal_gap ? "⚠ " : ""}${esc(r.status)}</span>${r.required ? `<div class="small muted" style="margin-top:4px">wymóg ustawowy</div>` : ""}</td>
       <td><b>${esc(r.id)} ${esc(r.name)}</b><div class="small muted">${esc(r.ref)} · ${r.risks.map(esc).join(", ")}</div>${r.required_text ? `<div class="small">${esc(r.required_text)}</div>` : ""}${r.note ? `<div class="small" style="color:var(--bad)">${esc(r.note)}</div>` : ""}
         <details><summary class="small">propozycja zapisu</summary><div class="small">${esc(r.model)}</div></details></td>
       <td class="small">${r.evidence ? `<div class="quote">${esc(r.evidence.quote)}</div><span class="muted">${esc(r.evidence.doc || "")}${r.evidence.page ? ", s. " + r.evidence.page : ""}</span>` : `<span class="muted">${r.status === "nie oceniono" ? "—" : "nie znaleziono"}</span>`}</td>
-      <td class="small">${r.data_why.map(esc).join("<br>") || (r.required ? "wymóg ustawowy — obowiązuje niezależnie od danych historycznych" : '<span class="muted">brak przypadków w bazie</span>')}</td></tr>`).join("")}</table>
+      <td class="small">${r.data_why.map(esc).join("<br>") || (r.required ? "wymóg ustawowy — obowiązuje niezależnie od danych historycznych" : '<span class="muted">brak przypadków w bazie</span>')}</td></tr>`).join("")}</table></div>
     <p class="small muted">${esc(a.disclaimer)}</p>`;
 }
 
@@ -1110,8 +1149,10 @@ function pulseActive() {
   if (!n || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   n.classList.remove("pulse"); void n.offsetWidth; n.classList.add("pulse");
 }
+const NARROW = matchMedia("(max-width: 900px)");
+NARROW.addEventListener("change", () => { try { setRail(!!localStorage.getItem("rm_rail")); } catch (e) {} });
 function setRail(on) {
-  $(".layout").classList.toggle("rail", on);
+  $(".layout").classList.toggle("rail", on && !NARROW.matches);
   try { localStorage.setItem("rm_rail", on ? "1" : ""); } catch (e) {}
   $("#collapse").setAttribute("aria-label", on ? "Rozwiń menu" : "Zwiń menu");
 }
@@ -1178,6 +1219,7 @@ $("#cmd-q").addEventListener("input", () => { CMD.sel = 0; renderCmd(); });
 $("#cmd").addEventListener("click", (e) => { if (e.target.id === "cmd") closeCmd(); });
 $("#open-cmd").onclick = openCmd;
 $("#collapse").onclick = () => setRail(!$(".layout").classList.contains("rail"));
+$("#menu-btn").onclick = () => { const open = $(".side").classList.toggle("open"); $("#menu-btn").setAttribute("aria-expanded", open ? "true" : "false"); };
 if (/Mac|iPhone|iPad/.test(navigator.platform || "")) { /* ⌘K */ } else { $$("kbd").forEach((k) => { if (k.textContent === "⌘K") k.textContent = "Ctrl K"; }); }
 try { if (localStorage.getItem("rm_rail")) setRail(true); } catch (e) {}
 renderRecent();
@@ -1202,23 +1244,24 @@ function mapBlock(projects) {
     const n = (used[key] = (used[key] || 0) + 1) - 1;
     const x = X(c[0]) + (n ? 11 * Math.cos(n * 2.1) : 0), y = Y(c[1]) + (n ? 11 * Math.sin(n * 2.1) : 0);
     const late = m.delay_days > 0, over = m.cost_dev_pct > 0.005, known = m.cost_dev_pct != null || m.delay_days != null;
-    const col = !known ? "#9aa8b6" : late && over ? VZ.late : !late && !over ? VZ.early : VZ.plan;
-    return { p, m, x, y, col, r: 5 + 7 * Math.sqrt((m.contract_value || 1e6) / 6e6) };
+    const col = !known ? "#6b7a8c" : late && over ? VZ.late : !late && !over ? VZ.early : VZ.plan;
+    return { p, m, x, y, col, sq: known && !late && !over, r: 5 + 7 * Math.sqrt((m.contract_value || 1e6) / 6e6) };
   }).filter(Boolean);
   let g = `<path d="M${PL_OUTLINE.map(([a, b]) => `${X(a).toFixed(1)} ${Y(b).toFixed(1)}`).join("L")}Z" fill="#eef3f7" stroke="#b9c7d4" stroke-width="1.5" stroke-linejoin="round"/>`;
-  for (const [name, [a, b]] of Object.entries(PL_CITIES)) g += `<circle cx="${X(a)}" cy="${Y(b)}" r="2.2" fill="#9aa8b6"/><text x="${X(a) + 5}" y="${Y(b) + 4}" font-size="10.5" fill="#8a98a8">${name}</text>`;
+  for (const [name, [a, b]] of Object.entries(PL_CITIES)) g += `<circle cx="${X(a)}" cy="${Y(b)}" r="2.2" fill="#9aa8b6"/><text x="${X(a) + 5}" y="${Y(b) + 4}" font-size="10.5" fill="${VZ.muted}">${name}</text>`;
   pts.sort((a, b) => b.r - a.r).forEach((q) => {
     const m = q.m;
-    g += `<a href="#/projekt/${q.p.id}"><circle cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="${q.r.toFixed(1)}" fill="${q.col}" fill-opacity=".85" stroke="#fff" stroke-width="2" style="cursor:pointer" data-tip="<b>${esc(q.p.record_id)} · ${esc(q.p.city || "")}</b><br>${esc((q.p.name || "").slice(0, 90))}<br>umowa ${pln(m.contract_value)}<br>koszt ${pct(m.cost_dev_pct)} · termin ${days(m.delay_days)}"/></a>`;
+    const ml = `${q.p.record_id} ${q.p.city || ""}: umowa ${pln(m.contract_value)}, koszt ${pct(m.cost_dev_pct)}, termin ${days(m.delay_days)}`;
+    g += `<a href="#/projekt/${q.p.id}" aria-label="${esc(ml)}"><${q.sq ? "rect" : "circle"} ${q.sq ? `x="${(q.x - q.r).toFixed(1)}" y="${(q.y - q.r).toFixed(1)}" width="${(2 * q.r).toFixed(1)}" height="${(2 * q.r).toFixed(1)}" rx="${(q.r * 0.3).toFixed(1)}"` : `cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="${q.r.toFixed(1)}"`} fill="${q.col}" fill-opacity=".85" stroke="#fff" stroke-width="2" style="cursor:pointer" data-tip="<b>${esc(q.p.record_id)} · ${esc(q.p.city || "")}</b><br>${esc((q.p.name || "").slice(0, 90))}<br>umowa ${pln(m.contract_value)}<br>koszt ${pct(m.cost_dev_pct)} · termin ${days(m.delay_days)}"/></a>`;
   });
   const worst = pts.filter((q) => q.m.delay_days != null).sort((a, b) => (b.m.delay_days || 0) - (a.m.delay_days || 0)).slice(0, 3);
   const costly = pts.filter((q) => q.m.cost_dev_pct != null).sort((a, b) => b.m.cost_dev_pct - a.m.cost_dev_pct).slice(0, 3);
   const byW = {};
   pts.forEach((q) => { const w = q.p.voivodeship || "—"; (byW[w] = byW[w] || []).push(q); });
-  const li = (q, v) => `<li><a href="#/projekt/${q.p.id}"><span class="mdot" style="background:${q.col}"></span><b>${esc(q.p.city || q.p.record_id)}</b> <span class="muted">${esc(q.p.record_id)}</span></a><span class="mv">${v}</span></li>`;
+  const li = (q, v) => `<li><a href="#/projekt/${q.p.id}"><span class="mdot" style="background:${q.col}${q.sq ? ";border-radius:2px" : ""}"></span><b>${esc(q.p.city || q.p.record_id)}</b> <span class="muted">${esc(q.p.record_id)}</span></a><span class="mv">${v}</span></li>`;
   return `<section class="pmap card"><div class="pmap-l"><h2 style="margin:0 0 4px">Mapa inwestycji</h2><p class="small muted" style="margin:0 0 8px">${pts.length} projektów w ${Object.keys(byW).length} województwach. Kolor jak na wykresie powyżej, wielkość = wartość umowy. Kliknij kółko, aby otworzyć projekt.</p>
-      <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Mapa projektów w Polsce">${g}</svg>
-      <div class="legend small" style="padding-left:0"><span><i style="background:${VZ.late}"></i>drożej i dłużej</span><span><i style="background:${VZ.plan}"></i>jedno z dwóch</span><span><i style="background:${VZ.early}"></i>w planie</span><span>położenie wg siedziby gminy (przybliżone)</span></div></div>
+      <svg viewBox="0 0 ${W} ${H}" width="100%" role="group" aria-label="Mapa projektów w Polsce. Kwadrat oznacza umowę w planie.">${g}</svg>
+      <div class="legend small" style="padding-left:0"><span><i style="background:${VZ.late}"></i>drożej i dłużej</span><span><i style="background:${VZ.plan}"></i>jedno z dwóch</span><span><i style="background:${VZ.early};border-radius:2px"></i>w planie</span><span>położenie wg siedziby gminy (przybliżone)</span></div></div>
     <div class="pmap-r"><h3>Najdłuższe opóźnienia</h3><ul class="mlist">${worst.map((q) => li(q, `<b class="neg">+${q.m.delay_days} dni</b>`)).join("")}</ul>
       <h3>Największe przekroczenia kosztu</h3><ul class="mlist">${costly.map((q) => li(q, `<b class="neg">${pp(q.m.cost_dev_pct, 1)}</b>`)).join("")}</ul>
       <h3>Województwa</h3><ul class="mlist">${Object.entries(byW).sort((a, b) => b[1].length - a[1].length).map(([w, qs]) => `<li><span>${esc(w)}</span><span class="mv">${qs.map((q) => `<span class="mdot" title="${esc(q.p.record_id)}" style="background:${q.col}"></span>`).join("")}</span></li>`).join("")}</ul></div></section>`;

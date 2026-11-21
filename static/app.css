@@ -309,3 +309,42 @@ details.sec>summary{font-weight:650;font-size:15px;color:var(--navy)}
 details.sec[open]>summary{margin-bottom:8px}
 .result-end{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
 @media print{details.sec{display:block}details.sec>summary{list-style:none}}
+
+/* ---- dostępność ---- */
+.file-in{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;clip-path:inset(50%)}
+label.btn{position:relative}
+label.btn:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+ul.files{list-style:none;margin:8px 0 0;padding:0;text-align:left}
+ul.files li{display:flex;align-items:center;gap:8px;padding:3px 0}
+.skip{position:fixed;left:12px;top:-60px;z-index:100;background:var(--navy);color:#fff;border:0;border-radius:8px;padding:10px 14px;font:inherit;font-weight:600;cursor:pointer}
+.skip:focus{top:12px;outline:2px solid #f2b45a;outline-offset:2px}
+#main:focus{outline:none}
+.who input:focus{outline:2px solid #f2b45a;outline-offset:3px;border-radius:2px}
+svg a:focus{outline:none}
+svg a:focus-visible>circle,svg a:focus-visible>rect{stroke:var(--navy);stroke-width:3.5}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,details>summary:focus-visible,.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.p-acc{color:#0c6774}
+/* ---- telefon ---- */
+.menu-btn{display:none}
+@media(max-width:900px){
+  .menu-btn{display:inline-flex;align-items:center;height:34px;padding:0 12px;border-radius:8px;border:1px solid rgba(255,255,255,.18);background:transparent;color:#dbe6f2;font:inherit;font-weight:600;cursor:pointer}
+  .menu-btn:focus-visible{outline:2px solid #f2b45a;outline-offset:2px}
+  .collapse{display:none}
+  .brandrow{padding-right:14px}
+  .side:not(.open) nav,.side:not(.open) .search,.side:not(.open) .side-foot{display:none}
+  .flow{flex-wrap:wrap;overflow-x:visible}
+  .fs{flex:1 1 40%;min-width:0}
+  .fa{display:none}
+  .kv{grid-template-columns:1fr}
+  .kv div:nth-child(odd){margin-top:6px}
+  .bases-l{width:auto!important;flex:1 1 100%}
+}
+@media(max-width:600px){
+  main{padding:16px 16px 48px}
+  .hero{padding:20px 16px;border-radius:14px;gap:18px}
+  .hero-h{font-size:25px;letter-spacing:-.4px}
+  .hero.empty{padding:28px 16px}
+  .hero.empty .hero-h{font-size:28px}
+  .pmap,.verdict{padding:16px}
+  .legend{padding-left:0}
+}

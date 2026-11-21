@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="/app.css">
 </head>
 <body>
+<button class="skip" type="button" onclick="document.getElementById('main').focus()">Przejdź do treści</button>
 <div class="layout">
   <aside class="side">
     <div class="brandrow">
@@ -14,6 +15,7 @@
       <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="#7fd6e0" stroke-width="3.2"/><circle cx="20" cy="20" r="8.5" fill="none" stroke="#7fd6e0" stroke-opacity=".45" stroke-width="2"/><path d="M20 5v6.5" stroke="#f2b45a" stroke-width="3.2" stroke-linecap="round"/><circle cx="20" cy="20" r="2.6" fill="#f2b45a"/></svg>
       <span class="btxt"><span class="brand-name">Risk Miner</span><span class="brand-sub">pamięć inwestycji</span></span>
     </a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
     <button class="collapse" id="collapse" title="Zwiń menu ( [ )" aria-label="Zwiń lub rozwiń menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
     </div>
     <button class="search" id="open-cmd" title="Szukaj projektu lub akcji (Ctrl/⌘ + K)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span class="stxt">Szukaj projektu, akcji…</span><kbd>⌘K</kbd></button>
@@ -41,11 +43,11 @@
       <div id="conn" class="conn"></div>
     </div>
   </aside>
-  <main id="main"><div class="loading">Ładowanie…</div></main>
+  <main id="main" tabindex="-1"><div class="loading">Ładowanie…</div></main>
 </div>
 <div id="modal" class="modal hidden" role="dialog" aria-modal="true"><div class="modal-box"><button class="modal-x" aria-label="Zamknij" onclick="closeModal()">×</button><div id="modal-body"></div></div></div>
 <div id="cmd" class="cmd hidden" role="dialog" aria-modal="true" aria-label="Szukaj"><div class="cmd-box"><div class="cmd-in"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><input id="cmd-q" placeholder="Wpisz nazwę gminy, kod RM-…, numer BZP albo akcję" autocomplete="off"><kbd>Esc</kbd></div><div id="cmd-list" class="cmd-list" role="listbox"></div><div class="cmd-foot"><span><kbd>↑</kbd><kbd>↓</kbd> wybór</span><span><kbd>Enter</kbd> otwórz</span></div></div></div>
-<div id="toast" class="toast hidden"></div>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
 <script src="/app.js"></script>
 </body>
 </html>
