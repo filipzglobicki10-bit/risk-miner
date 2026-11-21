@@ -88,5 +88,17 @@ class ClauseAudit(unittest.TestCase):
         self.assertIn("waloryzacji", a["K01"]["evidence"]["quote"])
 
 
+class Voivodeship(unittest.TestCase):
+    def test_inflected_forms(self):
+        from riskminer.analysis import detect_voivodeship as d
+        self.assertEqual(d("Inwestycja w województwie wielkopolskim."), "wielkopolskie")
+        self.assertEqual(d("gmina z województwa zachodniopomorskiego"), "zachodniopomorskie")
+        self.assertEqual(d("woj. kujawsko-pomorskie"), "kujawsko-pomorskie")
+        self.assertEqual(d("na terenie województwa pomorskiego"), "pomorskie")
+        self.assertEqual(d("województwo dolnośląskie"), "dolnośląskie")
+        self.assertEqual(d("Łódzkie, powiat zgierski"), "łódzkie")
+        self.assertIsNone(d("droga wojewódzka nr 196"))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

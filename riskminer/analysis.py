@@ -13,6 +13,14 @@ from .util import find_amounts, fold, now_iso, percentile
 
 VOIVODESHIPS = ["dolnośląskie", "kujawsko-pomorskie", "lubelskie", "lubuskie", "łódzkie", "małopolskie", "mazowieckie", "opolskie",
                 "podkarpackie", "podlaskie", "pomorskie", "śląskie", "świętokrzyskie", "warmińsko-mazurskie", "wielkopolskie", "zachodniopomorskie"]
+# Rdzeń przymiotnika ("wielkopolsk") łapie każdą odmianę: „w województwie wielkopolskim”, „wielkopolskiego”…
+# Nie może go poprzedzać litera ani łącznik, więc „pomorsk” nie trafia w „zachodniopomorskim” ani „kujawsko-pomorskim”.
+_VOIV_RE = [(v, re.compile(r"(?<![\w-])" + re.escape(v[:-2]) + r"\w*", re.IGNORECASE)) for v in VOIVODESHIPS]
+
+
+def detect_voivodeship(text):
+    found = [(m.start(), v) for v, rx in _VOIV_RE for m in [rx.search(text or "")] if m]
+    return min(found)[1] if found else None
 
 
 def _stats(values):
@@ -95,8 +103,7 @@ def analyze(text, title=None, analysis_id=None, extra=None):
     if not extra.get("value"):
         extra["value"] = detect_value(full)
     if not extra.get("voivodeship"):
-        fl = full.lower()
-        extra["voivodeship"] = next((v for v in VOIVODESHIPS if v in fl), None)
+        extra["voivodeship"] = detect_voivodeship(full)
     feats = similarity.features_from_text(full, extra)
 
     sims = similarity.find_similar(full, feats, metrics_fn=pipeline.project_metrics)
