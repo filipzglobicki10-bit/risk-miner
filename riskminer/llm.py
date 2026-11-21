@@ -13,7 +13,7 @@ import re
 import urllib.request
 
 from . import config, knowledge
-from .util import fold
+from .util import fold, ssl_context
 
 
 def enabled():
@@ -54,7 +54,7 @@ def chat(system, user):
 
 def _post(url, body, headers, timeout):
     req = urllib.request.Request(url, data=json.dumps(body).encode("utf-8"), headers=headers, method="POST")
-    with urllib.request.urlopen(req, timeout=timeout) as r:
+    with urllib.request.urlopen(req, timeout=timeout, context=ssl_context()) as r:
         return json.loads(r.read().decode("utf-8"))
 
 

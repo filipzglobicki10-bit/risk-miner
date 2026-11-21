@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+# Risk Miner — launcher macOS (bez okna terminala; uruchamia serwer w tle i otwiera przeglądarkę)
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+
+BUNDLE_DIR="$(cd "$(dirname "$0")/../.." && pwd)"
+PARENT_DIR="$(dirname "$BUNDLE_DIR")"
+
+if [ -f "$PARENT_DIR/app.py" ]; then
+  APP_DIR="$PARENT_DIR"
+elif [ -f "$PARENT_DIR/risk-miner/app.py" ]; then
+  APP_DIR="$PARENT_DIR/risk-miner"
+else
+  osascript -e 'display alert "Risk Miner" message "Nie znaleziono pliku app.py obok aplikacji Risk Miner.app." as critical'
+  exit 1
+fi
+
+cd "$APP_DIR"
+PORT="${RISKMINER_PORT:-8080}"
+URL="http://127.0.0.1:${PORT}"
+
+# Jeśli serwer już działa — po prostu otwórz przeglądarkę
+if curl -sf "${URL}/api/status" >/dev/null 2>&1; then
+  open "$URL"
+  exit 0
+fi
+
+[ -f config.json ] || cp config.example.json config.json
+mkdir -p data
+
+PY="$(command -v python3 || true)"
+if [ -z "$PY" ]; then
+  osascript -e 'display alert "Risk Miner" message "Nie znaleziono Pythona 3 (wymagany Python 3.9+)." as critical'
+  exit 1
+fi
+
+if ! "$PY" -c "import pypdf" 2>/dev/null; then
+  if [ -x ".venv/bin/python" ] && .venv/bin/python -c "import pypdf" 2>/dev/null; then
+    PY=".venv/bin/python"
+  elif ! "$PY" -m pip install --user -q -r requirements-optional.txt 2>/dev/null; then
+    if "$PY" -m venv .venv 2>/dev/null && .venv/bin/python -m pip install -q -r requirements-optional.txt 2>/dev/null; then
+      PY=".venv/bin/python"
+    fi
+  fi
+fi
+
+nohup "$PY" app.py > "data/server.log" 2>&1 </dev/null &
+echo $! > "data/server.pid"
+
+for _ in $(seq 1 50); do
+  if curl -sf "${URL}/api/status" >/dev/null 2>&1; then
+    open "$URL"
+    exit 0
+  fi
+  sleep 0.2
+done
+
+osascript -e "display alert \"Risk Miner\" message \"Serwer nie uruchomił się w oczekiwanym czasie. Sprawdź log: ${APP_DIR}/data/server.log\" as critical"
+exit 1

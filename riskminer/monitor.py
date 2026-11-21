@@ -34,7 +34,7 @@ def check_all(progress):
     only_unfinished = config.get()["monitor"].get("only_unfinished", True)
     rows = db.q("SELECT id, record_id, status FROM projects")
     if only_unfinished:
-        rows = [r for r in rows if not (r["status"] or "").lower().startswith("zako")] or rows
+        rows = [r for r in rows if not (r["status"] or "").lower().startswith("zako") and not pipeline.project_metrics(r["id"]).get("completed")] or rows
     tot = {"projekty": 0, "nowe_ogłoszenia": 0, "nowe_zdarzenia": 0, "błędy": 0}
     for i, r in enumerate(rows):
         progress(i / max(1, len(rows)), f"monitoring {r['record_id']}")

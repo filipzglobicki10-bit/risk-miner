@@ -108,7 +108,7 @@ def analyze(text, title=None, analysis_id=None, extra=None):
 
     sims = similarity.find_similar(full, feats, metrics_fn=pipeline.project_metrics)
     group = [s for s in sims if s["score"] >= cfg.get("min_similarity", 0.15)][: cfg.get("top_k", 6)]
-    completed = [s for s in group if (s["status"] or "").lower().startswith("zako")]
+    completed = [s for s in group if (s.get("metrics") or {}).get("completed") or (s["status"] or "").lower().startswith("zako")]
 
     # ---------------- obliczenia
     calc = {}

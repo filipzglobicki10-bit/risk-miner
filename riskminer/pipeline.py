@@ -13,7 +13,7 @@ import traceback
 from . import bzp, config, db, extract, knowledge, llm, rules, ted
 from .util import (
     add_duration, classify_identifier, days_between, extract_length_km, find_bzp_numbers, fold, nip_valid, normalize_bzp,
-    fmt_pln, normalize_nip, now_iso, parse_amount, ratio_similarity, sha256, year_from_identifier,
+    fmt_pln, normalize_nip, now_iso, parse_amount, ratio_similarity, sha256, ssl_context, year_from_identifier,
 )
 
 HEADER_MAP = {
@@ -418,7 +418,7 @@ def _related_notices(p, pr, stats, L):
     cfg = config.get()["bzp"]
     pub = (pr.get("publication_date") or "")[:10] or f"{dt.date.today().year - 3}-01-01"
     dto = f"{min(int(pub[:4]) + cfg.get('search_window_years_after', 4), dt.date.today().year + 1)}-12-31T23:59:59Z"
-    org = pr.get("organization_name") or org_core_name(p.get("beneficiary_name"), p.get("city"))
+    org = org_core_name(pr.get("organization_name") or p.get("beneficiary_name"), p.get("city")) or pr.get("organization_name")
     for nt in cfg.get("related_notice_types", []):
         items, url, fetched = _safe_search(L, stats, nt, OrganizationName=org, PublicationDateFrom=pub + "T00:00:00Z", PublicationDateTo=dto)
         for n in map(bzp.normalize_notice, items):
@@ -622,12 +622,12 @@ def _structured_events(p, pr, nid):
             k = int(m.group(1))
             delay = k * (30 if m.group(2).startswith("miesi") else 7 if m.group(2).startswith("tygod") else 1)
         fp = sha256(f"{p['id']}|change|{pr['id']}|{part}|{basis_key}|{c.get('value')}|{fold(c.get('reason') or '')[:120]}")[:24]
-        if not db.q1("SELECT id FROM contract_changes WHERE project_id=? AND quote=?", (p["id"], fp)):
+        if not db.q1("SELECT id FROM contract_changes WHERE project_id=? AND (fingerprint=? OR quote=?)", (p["id"], fp, fp)):
             db.insert("contract_changes", {
                 # data zmiany tylko, gdy podana w formularzu — data publikacji ogłoszenia o wykonaniu to nie data zmiany
                 "project_id": p["id"], "change_date": c.get("date"), "legal_basis": basis_key or c.get("legal_basis"),
                 "description": (text if c.get("date") else f"{text} [data zmiany niepodana; zmiana wykazana w ogłoszeniu {n.get('notice_number')} z {(n.get('publication_date') or '')[:10]}]")[:1600], "value_change": c.get("value"), "term_change_days": delay, "source_id": n["source_id"],
-                "notice_id": nid, "quote": fp, "status": "proposed", "part": part,
+                "notice_id": nid, "quote": (c.get("quote") or text)[:900], "fingerprint": fp, "status": "proposed", "part": part,
             })
         ev = {"risk_code": risk, "event_type": ev_type,
               "title": f"Zmiana umowy nr {c.get('no') or '?'}: {meaning or 'zmiana'} ({basis_key or c.get('legal_basis') or 'podstawa nieokreślona'})" + (f" [część {part}]" if part else ""),
@@ -867,18 +867,50 @@ def add_document(filename, data, project_id=None, analysis_id=None, source_url=N
     return result
 
 
+def validate_public_url(url):
+    """Weryfikuje, że URL używa wyłącznie HTTP(S) i nie kieruje na adresy lokalne/prywatne (ochrona przed SSRF)."""
+    import ipaddress
+    import socket
+    import urllib.parse
+
+    parsed = urllib.parse.urlparse((url or "").strip())
+    if parsed.scheme not in ("http", "https") or not parsed.hostname:
+        raise ValueError("Dozwolone są wyłącznie publiczne adresy http:// lub https://.")
+    host = parsed.hostname.lower()
+    if host in ("localhost", "localhost.localdomain") or host.endswith(".local"):
+        raise ValueError("Adresy lokalne są zablokowane ze względów bezpieczeństwa.")
+    try:
+        infos = socket.getaddrinfo(host, parsed.port or (443 if parsed.scheme == "https" else 80), type=socket.SOCK_STREAM)
+    except socket.gaierror as e:
+        raise ValueError(f"Nie udało się rozwiązać nazwy hosta „{host}”: {e}")
+    for info in infos:
+        ip = ipaddress.ip_address(info[4][0])
+        if ip.is_private or ip.is_loopback or ip.is_link_local or ip.is_reserved or ip.is_multicast or ip.is_unspecified:
+            raise ValueError("Adres docelowy wskazuje na sieć prywatną lub lokalną — pobieranie zablokowane.")
+    return parsed.geturl()
+
+
 def fetch_url_document(url, project_id=None):
     import urllib.request
-    req = urllib.request.Request(url, headers={"User-Agent": "RiskMiner/1.0"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        data = r.read()
+
+    safe_url = validate_public_url(url)
+
+    class _SafeRedirect(urllib.request.HTTPRedirectHandler):
+        def redirect_request(self, req, fp, code, msg, headers, newurl):
+            validate_public_url(newurl)
+            return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+    opener = urllib.request.build_opener(_SafeRedirect, urllib.request.HTTPSHandler(context=ssl_context()))
+    req = urllib.request.Request(safe_url, headers={"User-Agent": "RiskMiner/1.0"})
+    with opener.open(req, timeout=60) as r:
+        data = r.read(50 * 1024 * 1024)
         ctype = r.headers.get("Content-Type", "")
-    name = url.rstrip("/").split("/")[-1] or "strona"
+    name = safe_url.rstrip("/").split("/")[-1] or "strona"
     if "pdf" in ctype and not name.lower().endswith(".pdf"):
         name += ".pdf"
     elif "html" in ctype and not re.search(r"\.html?$", name.lower()):
         name += ".html"
-    return add_document(name, data, project_id=project_id, source_url=url)
+    return add_document(name, data, project_id=project_id, source_url=safe_url)
 
 
 # ---------------------------------------------------------------- metryki projektu

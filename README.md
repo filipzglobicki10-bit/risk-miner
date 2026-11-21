@@ -66,9 +66,16 @@ w tej umowie, żeby nie skończyła się tak samo*. Pilotaż: sektor wodociągow
 
 Wymagany tylko **Python 3.9+** — aplikacja nie ma obowiązkowych zależności (sama biblioteka standardowa).
 
+**Bez terminala (kliknij dwa razy w folderze projektu):**
+- **Windows:** `Uruchom Risk Miner.bat`
+- **macOS:** `Risk Miner.app` (bez okna terminala) lub `Uruchom Risk Miner.command`
+
+Aplikacja sama uruchomi serwer i otworzy przeglądarkę na **http://127.0.0.1:8080**.
+
+**Z terminala:**
 ```bash
 ./run.sh                 # macOS / Linux   (Windows: run.bat)
-# lub:  python3 app.py
+# lub:  python3 app.py --open
 ```
 
 Otwórz **http://127.0.0.1:8080** → Pulpit → **„Demo na prawdziwych danych BZP (22 projekty, offline)”**.

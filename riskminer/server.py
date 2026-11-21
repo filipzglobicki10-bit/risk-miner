@@ -65,6 +65,7 @@ def status(r):
                    "categories_proposed": c("risk_catalog", "WHERE status='proposed'")},
         "capabilities": extract.capabilities(), "llm": llm.info(), "bzp_url": config.get()["bzp"]["base_url"],
         "bzp_local": os.path.exists(os.path.join(config.get()["data_dir"], "bzp_local.json")),
+        "bzp_fallback_active": bzp.fallback_active(),
         "recent": db.q("SELECT * FROM audit_log ORDER BY id DESC LIMIT 12"),
         "by_risk": db.q("SELECT risk_code, COUNT(*) n, SUM(CASE WHEN status IN ('approved','edited') THEN 1 ELSE 0 END) approved FROM events WHERE status!='rejected' AND risk_code IS NOT NULL GROUP BY risk_code ORDER BY risk_code"),
         "risk_names": knowledge.risk_names(),
@@ -94,7 +95,8 @@ def all_changes(r):
                   "k.value_gross, k.contractor_name FROM contract_changes cc JOIN projects p ON p.id=cc.project_id "
                   "LEFT JOIN notices n ON n.id=cc.notice_id LEFT JOIN contracts k ON k.id=cc.contract_id "
                   "WHERE cc.status!='rejected' ORDER BY p.record_id, cc.change_date"):
-        ev = db.q1("SELECT * FROM events WHERE project_id=? AND fingerprint=? ", (c["project_id"], c["quote"])) if c.get("quote") else None
+        fp_key = c.get("fingerprint") or c.get("quote")
+        ev = db.q1("SELECT * FROM events WHERE project_id=? AND fingerprint=? ", (c["project_id"], fp_key)) if fp_key else None
         key, meaning = bzp.basis_meaning(c.get("legal_basis"))
         cost = ev["cost_impact"] if ev else None
         out.append({
@@ -132,6 +134,9 @@ def import_sample(r):
         # prawdziwa kopia ogłoszeń BZP dla 22 projektów (pobrana z API organizatora) — praca bez sieci, wynik powtarzalny
         with open(os.path.join(SAMPLES, "bzp_kopia_22_projekty.json"), encoding="utf-8") as f:
             bzp.import_local(bzp.items_of(json.load(f)))
+    elif r.query.get("bzp") == "0":
+        # tryb „BZP na żywo” — usuwamy lokalną kopię offline, żeby zapytania szły do API
+        bzp.clear_local()
     path = os.path.join(SAMPLES, "Risk_Miner_dane_projekty.xlsx")
     with open(path, "rb") as f:
         res = pipeline.import_records(os.path.basename(path), f.read(), actor=r.actor)
@@ -311,7 +316,12 @@ def queue(r):
              db.q("SELECT l.*, p.record_id, p.name pname FROM links l JOIN projects p ON p.id=l.project_id WHERE l.status='proposed' ORDER BY l.confidence DESC")]
     cats = db.q("SELECT * FROM risk_catalog WHERE status='proposed'")
     contr = db.q("SELECT m.*, p.record_id FROM monitor_events m JOIN projects p ON p.id=m.project_id WHERE m.kind='sprzeczność' AND m.acknowledged=0")
-    facts = db.q("SELECT f.*, p.record_id FROM facts f JOIN projects p ON p.id=f.project_id WHERE f.status='proposed' ORDER BY f.project_id, f.key LIMIT 400")
+    facts = db.q("SELECT f.*, p.record_id, p.name pname FROM facts f JOIN projects p ON p.id=f.project_id WHERE f.status='proposed' ORDER BY f.project_id, f.key LIMIT 400")
+    for f in facts:
+        if not f.get("source_id") and f.get("notice_id"):
+            n = db.get("notices", f["notice_id"])
+            f["source_id"] = n["source_id"] if n else None
+        f["source"] = db.get("sources", f["source_id"]) if f.get("source_id") else None
     return {"events": ev, "links": links, "categories": cats, "contradictions": contr, "facts": facts, "risk_names": knowledge.risk_names()}
 
 
@@ -508,7 +518,8 @@ def report(r):
 def bzp_test(r):
     b = r.json()
     try:
-        items, url, fetched = bzp.search(b.get("notice_type") or "ContractNotice", NoticeNumber=b.get("notice_number"),
+        items, url, fetched = bzp.search(b.get("notice_type") or "ContractNotice", force_live=True,
+                                         NoticeNumber=b.get("notice_number"),
                                          PublicationDateFrom=b.get("date_from"), PublicationDateTo=b.get("date_to"))
         return {"ok": True, "url": url, "fetched_at": fetched, "count": len(items),
                 "sample": [{k: v for k, v in bzp.normalize_notice(i).items() if k != "text"} for i in items[:5]]}

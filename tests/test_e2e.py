@@ -121,11 +121,17 @@ class E2E(unittest.TestCase):
         self.assertGreater(ins["rcf"]["cost"]["p80"], ins["rcf"]["cost"]["p50"])
         self.assertTrue(ins["register"]["rows"])
         self.assertEqual(ins["bases"]["rows"][0]["basis"], "art. 455 ust. 1 pkt 1")
-        # biblioteka zmian umów: każda zmiana z podstawą prawną i kategorią ryzyka
+        # biblioteka zmian umów: każda zmiana z podstawą prawną, kategorią ryzyka i czytelnym cytatem (nie hashem)
         ch = call("/api/changes")
         self.assertGreaterEqual(len(ch), 35)
         self.assertTrue(all(c["basis"] for c in ch))
         self.assertTrue(any(c["risk_code"] == "R02" and "skaln" in (c["description"] or "") for c in ch))
+        raw_ch = call("/api/export/contract_changes")
+        self.assertTrue(all(len(c.get("quote") or "") != 24 or " " in (c.get("quote") or "") for c in raw_ch))
+        # kolejka eksperta: fakty mają dołączone źródło (do testu źródłowego)
+        q_check = call("/api/review/queue")
+        self.assertTrue(q_check["facts"])
+        self.assertTrue(all(f.get("source") for f in q_check["facts"][:20]))
         # KPO bez numeru BZP: dopasowanie przybliżone wymaga weryfikacji
         d2 = call(f"/api/projects/{projects['RM-2026-002']['id']}")
         bzp_links = [l for l in d2["links"] if l["to_type"] == "bzp" and l["from_type"] == "project"]

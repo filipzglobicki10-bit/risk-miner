@@ -279,6 +279,32 @@ def sha256(data):
     return hashlib.sha256(data).hexdigest()
 
 
+_SSL_CTX = None
+
+
+def ssl_context():
+    """Kontekst TLS z zaufanymi certyfikatami CA (działa też w Python.org na macOS bez Install Certificates)."""
+    global _SSL_CTX
+    if _SSL_CTX is not None:
+        return _SSL_CTX
+    import os
+    import ssl
+    try:
+        import certifi
+        _SSL_CTX = ssl.create_default_context(cafile=certifi.where())
+        return _SSL_CTX
+    except ImportError:
+        pass
+    ctx = ssl.create_default_context()
+    if ctx.cert_store_stats().get("x509_ca", 0) == 0:
+        for path in ("/etc/ssl/cert.pem", "/etc/ssl/certs/ca-certificates.crt", "/etc/pki/tls/certs/ca-bundle.crt"):
+            if os.path.exists(path):
+                ctx.load_verify_locations(cafile=path)
+                break
+    _SSL_CTX = ctx
+    return _SSL_CTX
+
+
 def ratio_similarity(a, b):
     """Podobieństwo zbiorów tokenów (Dice)."""
     ta, tb = set(tokens(a)), set(tokens(b))

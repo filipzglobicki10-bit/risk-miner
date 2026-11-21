@@ -1,8 +1,8 @@
 """Człowiek w procesie: decyzje eksperta (zatwierdź / popraw / odrzuć) z pełną historią zmian."""
 import json
 
-from . import db, pipeline
-from .util import now_iso
+from . import bzp, db, pipeline
+from .util import normalize_bzp, now_iso
 
 EVENT_EDITABLE = ("risk_code", "event_type", "title", "cause", "mitigation", "mitigation_effective", "cost_impact", "delay_days",
                   "quote", "page")
@@ -68,25 +68,45 @@ def decide_link(lid, decision, actor="ekspert", comment=None):
         if link["to_type"] == "bzp":
             for n in db.q("SELECT * FROM notices WHERE link_id=?", (lid,)):
                 _remove_notice(n["id"])
-    elif decision == "approved" and link["from_type"] == "project" and link["to_type"] == "bzp":
+    elif decision == "approved" and link["from_type"] in ("project", "document") and link["to_type"] == "bzp":
         if not db.q1("SELECT id FROM procurements WHERE link_id=?", (lid,)):
             payload = (db.jload(link["basis"], {}) or {}).get("payload") or {}
             p = db.get("projects", pid)
             n = dict(payload)
-            row = db.q1("SELECT text FROM notices WHERE project_id=? AND notice_number=?", (pid, link["to_ref"]))
+            ref_num = n.get("notice_number") or link["to_ref"]
+            row = db.q1("SELECT text FROM notices WHERE project_id=? AND (notice_number=? OR bzp_number=?)", (pid, ref_num, normalize_bzp(ref_num)[1]))
             n["text"] = row["text"] if row else ""
+            if not n["text"] and ref_num:
+                try:
+                    full_ref, base_ref = normalize_bzp(ref_num)
+                    items, _, _ = bzp.search("ContractNotice", NoticeNumber=full_ref or ref_num)
+                    found = [x for x in map(bzp.normalize_notice, items) if x["notice_number"] == full_ref or x["bzp_number"] == base_ref]
+                    if found:
+                        n = {**n, **found[0]}
+                except Exception:
+                    pass
+            if not n.get("bzp_number") and ref_num:
+                full_ref, base_ref = normalize_bzp(ref_num)
+                n["notice_number"] = n.get("notice_number") or full_ref or ref_num
+                n["bzp_number"] = base_ref or ref_num
+            existing_pr = db.q1("SELECT * FROM procurements WHERE project_id=? AND bzp_number=?", (pid, n.get("bzp_number")))
             stats = {"notices": 0, "procurements": 0, "facts": 0, "events": 0, "links_proposed": 0, "errors": 0}
-            prid = db.insert("procurements", {
-                "project_id": pid, "bzp_number": n.get("bzp_number"), "tender_id": n.get("tender_id"), "title": n.get("title"),
-                "cpv": n.get("cpv"), "organization_name": n.get("organization_name"), "organization_nip": n.get("organization_nip"),
-                "organization_id": n.get("organization_id"), "publication_date": n.get("publication_date"), "link_id": lid,
-                "source_id": db.add_source("bzp", title=f"Ogłoszenie o zamówieniu {n.get('notice_number')}", url=n.get("url"), ref=n.get("notice_number")),
-            })
-            pipeline._store_notice(p, n, n.get("url"), now_iso(), procurement_id=prid, link_id=lid)
+            if existing_pr:
+                prid = existing_pr["id"]
+            else:
+                prid = db.insert("procurements", {
+                    "project_id": pid, "bzp_number": n.get("bzp_number"), "tender_id": n.get("tender_id"), "title": n.get("title"),
+                    "cpv": n.get("cpv"), "organization_name": n.get("organization_name"), "organization_nip": n.get("organization_nip"),
+                    "organization_id": n.get("organization_id"), "publication_date": n.get("publication_date"), "link_id": lid,
+                    "source_id": db.add_source("bzp", title=f"Ogłoszenie o zamówieniu {n.get('notice_number')}", url=n.get("url"), ref=n.get("notice_number")),
+                })
+            nid, _ = pipeline._store_notice(p, n, n.get("url"), now_iso(), procurement_id=prid, link_id=lid)
             pr = db.get("procurements", prid)
-            pipeline._facts_from_notice(p, prid, db.q1("SELECT id FROM notices WHERE procurement_id=? ORDER BY id LIMIT 1", (prid,))["id"], n)
+            if nid and n.get("text"):
+                pipeline._facts_from_notice(p, prid, nid, n)
             pipeline._related_notices(p, pr, stats, lambda m: None)
             pipeline._assign_parts(p, pr)
+            pipeline._reconcile(p, pr, None, stats)
             pipeline._build_contract(p, pr, None)
             pipeline._computed_events(p, None)
     return db.get("links", lid)

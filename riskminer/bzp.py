@@ -16,14 +16,35 @@ import urllib.parse
 import urllib.request
 
 from . import config
-from .util import fold, normalize_bzp, normalize_nip, now_iso, parse_amount, parse_date, sha256, strip_html, AMOUNT_ANY_RE, DATE_RE
+from .util import fold, normalize_bzp, normalize_nip, now_iso, parse_amount, parse_date, sha256, ssl_context, strip_html, AMOUNT_ANY_RE, DATE_RE
 
 _rate_lock = threading.Lock()
 _last_calls = []
+_live_down_until = 0.0
+_BUNDLED_CACHE = None
 
 
 class BZPError(Exception):
     pass
+
+
+def fallback_active():
+    return time.time() < _live_down_until
+
+
+def _fallback_store():
+    """Zapasowa kopia offline używana wyłącznie, gdy API BZP na żywo nie odpowiada."""
+    global _BUNDLED_CACHE
+    local = _local_store()
+    if local is not None:
+        return local, "kopia lokalna BZP (data/bzp_local.json, tryb awaryjny)"
+    bundled = os.path.join(config.BASE_DIR, "samples", "bzp_kopia_22_projekty.json")
+    if os.path.exists(bundled):
+        if _BUNDLED_CACHE is None:
+            with open(bundled, encoding="utf-8") as f:
+                _BUNDLED_CACHE = items_of(json.load(f))
+        return _BUNDLED_CACHE, "wbudowana kopia BZP (tryb awaryjny offline)"
+    return None, None
 
 
 def _throttle(rpm):
@@ -68,7 +89,7 @@ def get_json(params, log=None):
         _throttle(rpm)
         try:
             req = urllib.request.Request(url, headers={"Accept": "application/json", "User-Agent": "RiskMiner/1.0 (HackNation 2026)"})
-            with urllib.request.urlopen(req, timeout=cfg.get("timeout_s", 30)) as r:
+            with urllib.request.urlopen(req, timeout=cfg.get("timeout_s", 30), context=ssl_context()) as r:
                 raw = r.read().decode("utf-8")
             data = json.loads(raw) if raw.strip() else []
             fetched = now_iso()
@@ -102,39 +123,71 @@ def items_of(data):
     return []
 
 
-def search(notice_type, log=None, **filters):
-    """Pobiera ogłoszenia danego typu (z paginacją SearchAfter / przesuwaniem daty publikacji)."""
-    local = _local_store()
-    if local is not None:
-        return _search_local(local, notice_type, **filters), "lokalna kopia BZP (data/bzp_local.json)", now_iso()
+def search(notice_type, log=None, force_live=False, **filters):
+    """Pobiera ogłoszenia na żywo z API BZP (z paginacją SearchAfter).
+
+    Zawsze próbuje najpierw API na żywo; zapasowa kopia offline (wgrana lub wbudowana)
+    jest używana wyłącznie jako automatyczny fallback, gdy API na żywo nie odpowiada.
+    """
+    global _live_down_until
+    if not force_live and time.time() < _live_down_until:
+        fb_items, fb_label = _fallback_store()
+        if fb_items is not None:
+            if log:
+                log(f"API BZP niedostępne — używam zapasowej kopii offline ({fb_label})")
+            return _search_local(fb_items, notice_type, **filters), fb_label, now_iso()
     cfg = config.get()["bzp"]
     params = {"NoticeType": notice_type, "PageSize": min(500, cfg.get("page_size", 500))}
     for k, v in filters.items():
         if v not in (None, ""):
             params[k] = v
-    out, seen, first_url, fetched = [], set(), None, None
-    for _ in range(cfg.get("max_pages", 30)):
-        data, url, fetched = get_json(params, log=log)
-        first_url = first_url or url
-        batch = items_of(data)
-        new = 0
-        for it in batch:
-            key = g(it, "objectId", "noticeNumber", "id") or json.dumps(it, sort_keys=True)[:200]
-            if key in seen:
-                continue
-            seen.add(key)
-            out.append(it)
-            new += 1
-        if len(batch) < params["PageSize"] or new == 0:
-            break
-        last = batch[-1]
-        if g(last, "objectId"):
-            params["SearchAfter"] = g(last, "objectId")
-        elif g(last, "publicationDate"):
-            params["PublicationDateFrom"] = g(last, "publicationDate")
+    # Oficjalne API ezamowienia.gov.pl wymaga PublicationDateFrom i PublicationDateTo w każdym zapytaniu (inaczej HTTP 400).
+    if not params.get("PublicationDateFrom") or not params.get("PublicationDateTo"):
+        import datetime as _dt
+        m_yr = re.match(r"^(\d{4})/BZP", str(params.get("NoticeNumber") or ""))
+        if m_yr:
+            y = int(m_yr.group(1))
+            params.setdefault("PublicationDateFrom", f"{y}-01-01T00:00:00Z")
+            params.setdefault("PublicationDateTo", f"{y}-12-31T23:59:59Z")
         else:
-            break
-    return out, first_url, fetched
+            now_d = _dt.date.today()
+            params.setdefault("PublicationDateFrom", (now_d - _dt.timedelta(days=365)).isoformat() + "T00:00:00Z")
+            params.setdefault("PublicationDateTo", now_d.isoformat() + "T23:59:59Z")
+    out, seen, first_url, fetched = [], set(), None, None
+    try:
+        for _ in range(cfg.get("max_pages", 30)):
+            data, url, fetched = get_json(params, log=log)
+            first_url = first_url or url
+            batch = items_of(data)
+            new = 0
+            for it in batch:
+                key = g(it, "objectId", "noticeNumber", "id") or json.dumps(it, sort_keys=True)[:200]
+                if key in seen:
+                    continue
+                seen.add(key)
+                out.append(it)
+                new += 1
+            if len(batch) < params["PageSize"] or new == 0:
+                break
+            last = batch[-1]
+            if g(last, "objectId"):
+                params["SearchAfter"] = g(last, "objectId")
+            elif g(last, "publicationDate"):
+                params["PublicationDateFrom"] = g(last, "publicationDate")
+            else:
+                break
+        _live_down_until = 0.0
+        return out, first_url, fetched
+    except BZPError as e:
+        if force_live:
+            raise
+        _live_down_until = time.time() + 60
+        fb_items, fb_label = _fallback_store()
+        if fb_items is not None:
+            if log:
+                log(f"API BZP na żywo nie odpowiedziało ({e}) — automatyczne przełączenie na zapasową kopię offline.")
+            return _search_local(fb_items, notice_type, **filters), fb_label, now_iso()
+        raise
 
 
 def _search_local(items, notice_type, **f):

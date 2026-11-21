@@ -139,6 +139,7 @@ CREATE TABLE IF NOT EXISTS contract_changes (
     notice_id INTEGER,
     document_id INTEGER,
     quote TEXT,
+    fingerprint TEXT,
     status TEXT DEFAULT 'proposed',
     part INTEGER,
     created_at TEXT
@@ -312,10 +313,16 @@ def _open(mode):
     try:
         c.execute(f"PRAGMA journal_mode={mode}")
         c.executescript(SCHEMA)
-        for table, col, typ in (("facts", "part", "INTEGER"), ("contract_changes", "part", "INTEGER")):
+        for table, col, typ in (("facts", "part", "INTEGER"), ("contract_changes", "part", "INTEGER"), ("contract_changes", "fingerprint", "TEXT")):
             cols = [r[1] for r in c.execute(f"PRAGMA table_info({table})").fetchall()]
             if col not in cols:
                 c.execute(f"ALTER TABLE {table} ADD COLUMN {col} {typ}")
+        # Migracja starszych rekordów contract_changes, w których kolumna quote trzymała 24-znakowy hash fingerprint
+        c.execute(
+            "UPDATE contract_changes SET fingerprint=quote, quote=COALESCE("
+            "(SELECT e.quote FROM events e WHERE e.project_id=contract_changes.project_id AND e.fingerprint=contract_changes.quote LIMIT 1), "
+            "description) WHERE fingerprint IS NULL AND length(quote)=24 AND quote NOT LIKE '% %'"
+        )
         c.commit()
         return c
     except sqlite3.OperationalError:

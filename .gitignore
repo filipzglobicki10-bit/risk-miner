@@ -1,5 +1,6 @@
 data/
 /config.json
+.venv/
 tests/tmp/
 __pycache__/
 *.pyc

@@ -8,7 +8,7 @@ import os
 import urllib.request
 
 from . import config
-from .util import now_iso, sha256
+from .util import now_iso, sha256, ssl_context
 
 FIELDS = ["publication-number", "notice-title", "buyer-name", "publication-date", "notice-type", "buyer-country"]
 
@@ -27,7 +27,7 @@ def search(nip=None, name=None, limit=20, log=None):
         return c["items"], c["url"], c["fetched_at"]
     req = urllib.request.Request(cfg["search_url"], data=payload, method="POST",
                                  headers={"Content-Type": "application/json", "Accept": "application/json"})
-    with urllib.request.urlopen(req, timeout=cfg.get("timeout_s", 30)) as r:
+    with urllib.request.urlopen(req, timeout=cfg.get("timeout_s", 30), context=ssl_context()) as r:
         data = json.loads(r.read().decode("utf-8"))
     items = []
     for n in data.get("notices", []):

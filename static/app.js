@@ -105,7 +105,7 @@ async function refreshBadges() {
     hint("knowledge", `${Object.keys(STATUS.risk_names || {}).length} kategorii ryzyk`);
     hint("reports", c.analyses ? `${num(c.analyses)} analiz · CSV, JSON` : "CSV, JSON, raport łączenia");
     const src = (on, label, val, tip) => `<span class="src ${on ? "on" : "off"}" title="${esc(tip)}"><i></i>${esc(label)} <b>${esc(val)}</b></span>`;
-    $("#conn").innerHTML = src(true, "BZP", STATUS.bzp_local ? "kopia lokalna" : STATUS.bzp_url.replace(/^https?:\/\//, "").split("/")[0], "źródło ogłoszeń")
+    $("#conn").innerHTML = src(true, "BZP", STATUS.bzp_fallback_active ? "kopia offline (awaryjnie)" : STATUS.bzp_url.replace(/^https?:\/\//, "").split("/")[0], STATUS.bzp_fallback_active ? "API BZP nie odpowiedziało — używana jest zapasowa kopia offline" : "API BZP na żywo (z automatyczną kopią zapasową offline)")
       + src(STATUS.llm.enabled, "Model językowy", STATUS.llm.enabled ? STATUS.llm.model : "wyłączony", STATUS.llm.enabled ? STATUS.llm.provider : "działa na regułach — bez AI")
       + src(STATUS.capabilities.ocr, "OCR skanów", STATUS.capabilities.ocr ? "tak" : "nie", "odczyt zeskanowanych PDF");
     $("#dbstat").innerHTML = c.projects ? `<b>${num(c.projects)}</b> projektów <span>·</span> <b>${num(c.notices)}</b> ogłoszeń BZP<div class="dbbar"><i style="width:${Math.min(100, (c.events_approved / Math.max(1, c.events_approved + c.events_proposed)) * 100)}%"></i></div><span class="dbsm">${num(c.events_approved)} z ${num(c.events_approved + c.events_proposed)} zdarzeń zweryfikowanych</span>` : `<span class="dbsm">Baza jest pusta — wczytaj dane na pulpicie.</span>`;
@@ -140,7 +140,7 @@ VIEWS.dash = async () => {
   const hero = c.projects && ins ? heroBlock(ins, projects, changes) : `
     <section class="hero empty"><div class="hero-l"><h1 class="hero-h">Jak naprawdę kończą się inwestycje publiczne?</h1>
       <p class="hero-p">Risk Miner składa ogłoszenia z BZP w historię każdej umowy — koszt, termin, zmiany i ich przyczyny — i na tej podstawie ocenia nową inwestycję, zanim ogłosisz przetarg.</p>
-      <div class="row"><button class="btn primary big" id="b-sample-bzp2">Wczytaj 22 projekty z prawdziwymi danymi BZP</button><span class="muted small">ok. 5 sekund · działa bez internetu</span></div></div></section>`;
+      <div class="row"><button class="btn primary big" id="b-sample-live">Wczytaj 22 projekty z BZP na żywo</button><span class="muted small">API BZP na żywo · w razie braku sieci automatyczna kopia zapasowa offline</span></div></div></section>`;
   const dataOpen = c.projects ? `<details class="more" id="dane-box"><summary id="dane">Dane i zasilanie bazy · ostatnie operacje</summary>` : `<h2 id="dane">Dane i zasilanie bazy</h2>`;
   $("#main").innerHTML = `${hero}
     ${c.projects && ins ? knowsStrip(ins) : ""}
@@ -150,11 +150,11 @@ VIEWS.dash = async () => {
     ${dataOpen}
     <div class="card zasil"${c.projects ? ' style="margin-top:12px"' : ""}>
         <h3 style="margin-top:0">Zasil bazę</h3>
-        <p class="muted small">Plik organizatora (.xlsx/.csv) lub inny plik z podobnymi kolumnami. Po imporcie system sam wyszuka ogłoszenia w BZP, powiąże je z projektami i przeanalizuje.</p>
+        <p class="muted small">Plik organizatora (.xlsx/.csv) lub inny plik z podobnymi kolumnami. System zawsze pobiera ogłoszenia z <b>BZP na żywo</b>; w razie awarii sieci lub API automatycznie przełącza się na zapasową kopię offline.</p>
+        ${s.bzp_fallback_active ? `<div class="hint small" style="margin-bottom:10px"><b>Tryb awaryjny offline:</b> API BZP ostatnio nie odpowiedziało — tymczasowo używana jest zapasowa kopia offline (ponowna próba na żywo nastąpi automatycznie).</div>` : ""}
         <div class="drop" id="drop">Upuść plik z rekordami lub <label class="btn sm">wybierz<input type="file" id="f-import" accept=".xlsx,.csv" class="file-in"></label></div>
         <div class="row" style="margin-top:10px">
-          ${c.projects ? `<button class="btn" id="b-sample-bzp" title="Rekordy organizatora i paczka 198 ogłoszeń BZP pobranych z API. Do bazy trafiają tylko ogłoszenia powiązane z projektami. Działa bez sieci, wynik powtarzalny.">Wczytaj demo ponownie (22 projekty, offline)</button>` : ""}
-          <button class="btn" id="b-sample">Pakiet organizatora — BZP na żywo</button>
+          <button class="btn primary" id="b-sample">Pakiet organizatora — BZP na żywo (22 projekty)</button>
           <label class="row small"><input type="checkbox" id="c-enrich" checked> po imporcie od razu wyszukaj ogłoszenia w BZP</label>
         </div>
         ${c.projects ? `<div class="row" style="margin-top:8px"><button class="btn" id="b-enrich-all">Wzbogać wszystkie projekty z BZP/TED</button></div>` : ""}
@@ -172,18 +172,13 @@ VIEWS.dash = async () => {
   };
   $("#f-import").onchange = (e) => e.target.files[0] && doImport(e.target.files[0]);
   dropzone($("#drop"), (files) => doImport(files[0]));
-  $("#b-sample").onclick = async () => {
+  const loadLive = async () => {
     const r = await guard(() => post("/api/import-sample" + ($("#c-enrich").checked ? "?enrich=1" : "")));
-    toast(`Pakiet organizatora: ${r.created} nowych, ${r.updated} zaktualizowanych`);
-    if (r.job_id) watchJob(r.job_id, $("#job"), () => VIEWS.dash()); else VIEWS.dash();
-  };
-  const demo = async () => {
-    const r = await guard(() => post("/api/import-sample?enrich=1&bzp=1"));
-    toast(`Wczytano kopię BZP i ${r.created + r.updated} rekordów — trwa wzbogacanie`);
+    toast(`Pakiet organizatora (BZP na żywo): ${r.created} nowych, ${r.updated} zaktualizowanych`);
     if (r.job_id) { if ($("#dane-box")) $("#dane-box").open = true; $("#dane").scrollIntoView({ behavior: "smooth" }); watchJob(r.job_id, $("#job"), () => VIEWS.dash()); } else VIEWS.dash();
   };
-  if ($("#b-sample-bzp")) $("#b-sample-bzp").onclick = demo;
-  if ($("#b-sample-bzp2")) $("#b-sample-bzp2").onclick = demo;
+  $("#b-sample").onclick = loadLive;
+  if ($("#b-sample-live")) $("#b-sample-live").onclick = loadLive;
   if ($("#b-enrich-all")) $("#b-enrich-all").onclick = async () => { const r = await guard(() => post("/api/enrich", {})); watchJob(r.job_id, $("#job"), () => VIEWS.dash()); };
   animateHero();
   countUp($("#main"));
@@ -525,11 +520,11 @@ window.showNotice = async (id) => {
   modal(`<h2>${esc(n.label)} ${esc(n.notice_number || "")}</h2><p class="small muted">Źródło: ${n.url ? `<a href="${esc(n.url)}" target="_blank">${esc(n.url)}</a>` : "—"} · pobrano ${dt(n.source && n.source.fetched_at)} · API: <span class="code">${esc(n.source && n.source.meta ? JSON.parse(n.source.meta).api_url || "" : "")}</span></p><pre class="log" style="max-height:60vh;background:#f7f9fb;color:#1b2430">${esc(n.text || "(brak treści)")}</pre>`);
 };
 
-function factTable(facts, sources, editable = true) {
+function factTable(facts, sources, editable = true, opts = {}) {
   if (!facts.length) return `<div class="empty">Brak faktów.</div>`;
-  const label = { project_value: "wartość przedsięwzięcia", funding: "dofinansowanie", contract_value: "wartość umowy / cena oferty wybranej", final_paid: "łącznie wypłacono", offer_min: "oferta najtańsza", offer_max: "oferta najdroższa", n_offers: "liczba ofert", signed_date: "data zawarcia umowy", planned_end_date: "termin umowny", planned_duration_days: "okres realizacji (dni)", actual_end_date: "data wykonania", performed_properly: "wykonana należycie", performed_on_time: "wykonana w terminie", contract_changed: "umowa zmieniona", penalties: "kary umowne", estimated_value_net: "wartość zamówienia (netto)", budget_amount: "kwota na sfinansowanie", contractor: "wykonawca" };
+  const label = { project_value: "wartość przedsięwzięcia", funding: "dofinansowanie", contract_value: "wartość umowy / cena oferty wybranej", final_paid: "łącznie wypłacono", offer_min: "oferta najtańsza", offer_max: "oferta najdroższa", n_offers: "liczba ofert", n_rejected: "oferty odrzucone", n_changes: "liczba zmian umowy", part_value_net: "wartość części (netto)", awarded_price: "cena wybranej oferty", procedure_result: "wynik postępowania", performed: "umowa wykonana", security_required: "zabezpieczenie należytego wykonania", criteria: "kryteria oceny ofert", signed_date: "data zawarcia umowy", planned_end_date: "termin umowny", planned_duration_days: "okres realizacji (dni)", actual_end_date: "data wykonania", performed_properly: "wykonana należycie", performed_on_time: "wykonana w terminie", contract_changed: "umowa zmieniona", penalties: "kary umowne", estimated_value_net: "wartość zamówienia (netto)", budget_amount: "kwota na sfinansowanie", contractor: "wykonawca" };
   return `<table><tr><th>Fakt</th><th>Wartość</th><th>VAT</th><th>Źródło i cytat</th><th>Pewność</th><th>Status</th>${editable ? "<th></th>" : ""}</tr>${facts.map((f) => `
-    <tr><td>${esc(label[f.key] || f.key)}</td><td class="num">${f.unit === "PLN" ? pln(f.value_num) : esc(f.value_text ?? num(f.value_num))}</td><td class="small">${esc(f.vat || "")}</td>
+    <tr><td>${esc(label[f.key] || f.key)}${opts.showProject && f.record_id ? `<div class="small"><a href="#/projekt/${f.project_id}">${esc(f.record_id)}</a></div>` : ""}</td><td class="num">${f.unit === "PLN" ? pln(f.value_num) : esc(f.value_text ?? num(f.value_num))}</td><td class="small">${esc(f.vat || "")}</td>
     <td class="small">${srcLink(sources, f.source_id, f.page)}<div class="quote">${esc(f.quote || "")}</div></td><td>${confPill(f.confidence)}<div class="small muted">${esc(methodLabel(f.method))}</div></td><td>${statusPill(f.status)}</td>
     ${editable ? `<td><div class="row"><button class="btn sm ok" onclick="factDecide(${f.id},'approved')">✓</button><button class="btn sm" onclick="factEdit(${f.id},'${esc(String(f.value_text ?? f.value_num ?? ""))}')">popraw</button><button class="btn sm bad" onclick="factDecide(${f.id},'rejected')">✗</button></div></td>` : ""}</tr>`).join("")}</table>`;
 }
@@ -553,7 +548,7 @@ function tabKoszty(d, T) {
 
 function eventCard(e, sources, opts = {}) {
   const imp = [e.cost_impact ? "koszt: " + pln(e.cost_impact) : "", e.delay_days ? "czas: " + days(e.delay_days) : ""].filter(Boolean).join(" · ");
-  return `<div class="ev ${esc(e.status)}" id="ev-${e.id}"><div class="h">${riskLabel(e.risk_code)}${e.event_type ? ` <span class="pill p-grey code">${esc(e.event_type)}</span>` : ""}<b>${esc(e.title || "")}</b><span class="grow"></span>${confPill(e.confidence)}${statusPill(e.status)}${e.is_exemplar ? '<span class="pill p-acc">wzorcowe</span>' : ""}</div>
+  return `<div class="ev ${esc(e.status)}" id="ev-${e.id}"><div class="h">${riskLabel(e.risk_code)}${e.event_type ? ` <span class="pill p-grey code">${esc(e.event_type)}</span>` : ""}<b>${esc(e.title || "")}</b><span class="grow"></span>${confPill(e.confidence)}<span class="ev-st">${statusPill(e.status)}</span>${e.is_exemplar ? '<span class="pill p-acc">wzorcowe</span>' : ""}</div>
     ${opts.project ? `<div class="small"><a href="#/projekt/${e.project_id}">${esc(e.record_id)} — ${esc(e.pname)}</a></div>` : ""}
     <div class="quote">${esc(e.quote || e.snippet || "")}</div>
     <div class="small muted">Źródło: ${srcLink(sources, e.source_id, e.page) || "—"} · metoda: ${esc(methodLabel(e.method))}${e.rule_id ? ` (<span class="code">${esc(e.rule_id)}</span>)` : ""}${imp ? " · skutek: " + imp : ""}${e.cause ? " · przyczyna: " + esc(e.cause) : ""}${e.mitigation ? " · działanie: " + esc(e.mitigation) : ""}${e.reviewer ? ` · decyzja: ${esc(e.reviewer)} ${dt(e.reviewed_at)}` : ""}${e.review_comment ? " — " + esc(e.review_comment) : ""}</div>
@@ -563,7 +558,7 @@ window.evDecide = async (id, decision) => {
   const comment = decision === "rejected" ? prompt("Powód odrzucenia (opcjonalnie):") : null;
   if (comment === null && decision === "rejected") return;
   await guard(() => post(`/api/events/${id}/decide`, { decision, comment }), decision === "approved" ? "Zatwierdzono" : "Odrzucono");
-  const el = $("#ev-" + id); if (el) { el.className = "ev " + decision; } refreshBadges();
+  const el = $("#ev-" + id); if (el) { el.className = "ev " + decision; const st = $(".ev-st", el); if (st) st.innerHTML = statusPill(decision); } refreshBadges();
 };
 window.markEx = async (entity, id, value) => { await guard(() => post("/api/exemplar", { entity, id, value }), "Zapisano"); router(); };
 window.evEdit = async (id) => {
@@ -696,7 +691,7 @@ VIEWS.review = async () => {
   if (RTAB === "events") {
     const risks = [...new Set(q.events.map((e) => e.risk_code).filter(Boolean))].sort();
     T.innerHTML = `<div class="row sticky-actions"><select id="fr" style="max-width:340px"><option value="">wszystkie kategorie</option>${risks.map((r) => `<option value="${r}">${r} ${esc(RISK_NAMES[r] || "")}</option>`).join("")}</select>
-      <select id="fm"><option value="">każda metoda</option><option value="computed">wyliczone z danych</option><option value="rule">reguły</option><option value="llm">model językowy</option></select>
+      <select id="fm"><option value="">każda metoda</option><option value="formularz BZP">formularz BZP (zmiany umów)</option><option value="computed">wyliczone z danych</option><option value="rule">reguły</option><option value="llm">model językowy</option></select>
       <label class="small">min. pewność <input id="fc" type="number" min="0" max="100" value="0" style="width:70px">%</label><span class="grow"></span><button class="btn ok" id="bulk">Zatwierdź widoczne</button><button class="btn bad" id="bulkr">Odrzuć widoczne</button></div><div id="evl"></div>`;
     const visible = () => q.events.filter((e) => (!$("#fr").value || e.risk_code === $("#fr").value) && (!$("#fm").value || e.method === $("#fm").value) && (e.confidence || 0) * 100 >= Number($("#fc").value || 0));
     const render = () => ($("#evl").innerHTML = visible().map((e) => eventCard(e, srcs, { project: true })).join("") || `<div class="empty">Kolejka pusta.</div>`);
@@ -708,7 +703,9 @@ VIEWS.review = async () => {
   } else if (RTAB === "links") {
     T.innerHTML = q.links.map((l) => linkRow(l, { project: true })).join("") || `<div class="empty">Brak niepewnych powiązań.</div>`;
   } else if (RTAB === "facts") {
-    T.innerHTML = `<div class="card" style="padding:0;overflow:auto">${factTable(q.facts.map((f) => ({ ...f, key: f.key + " — " + f.record_id })), {})}</div>`;
+    const fsrcs = {};
+    q.facts.forEach((f) => { if (f.source) fsrcs[f.source.id] = f.source; });
+    T.innerHTML = `<div class="card" style="padding:0;overflow:auto">${factTable(q.facts, fsrcs, true, { showProject: true })}</div>`;
   } else if (RTAB === "contr") {
     T.innerHTML = q.contradictions.map((c) => `<div class="ev proposed"><div class="h"><b>${esc(c.record_id)}</b><span class="grow"></span><span class="pill p-warn">sprzeczność</span></div><div>${esc(c.message)}</div><div class="acts"><a class="btn sm" href="#/projekt/${c.project_id}">otwórz projekt</a><button class="btn sm" onclick="ack(${c.id})">rozstrzygnięte</button></div></div>`).join("") || `<div class="empty">Brak sprzeczności.</div>`;
   } else if (RTAB === "cats") {
@@ -911,8 +908,8 @@ VIEWS.settings = async () => {
   $("#main").innerHTML = `<h1>Ustawienia i źródła danych</h1><p class="sub">Konfiguracja w pliku <span class="code">${esc(cfg._config_path)}</span> (model, dostawca, źródła — bez zmian w kodzie). Klucze API wyłącznie w zmiennych środowiskowych.</p>
     <div class="grid g2"><div class="card"><h3>Źródła</h3><div class="kv small"><div>BZP (API)</div><div class="code">${esc(cfg.bzp.base_url)}</div><div>Zapasowe</div><div class="code">${(cfg.bzp.fallback_urls || []).map(esc).join("<br>")}</div><div>Limit zapytań</div><div>${cfg.bzp.requests_per_minute || "bez limitu"} / min (dla ezamowienia.gov.pl automatycznie 25/min)</div><div>Cache odpowiedzi</div><div>${cfg.bzp.cache ? "tak (data/cache)" : "nie"}</div><div>Kopia lokalna BZP</div><div>${s.bzp_local ? "wczytana" : "brak"}</div><div>TED</div><div>${cfg.ted.enabled ? "włączony — " + esc(cfg.ted.search_url) : "wyłączony"}</div></div></div>
     <div class="card"><h3>Model językowy i przetwarzanie danych</h3><div class="kv small"><div>Dostawca</div><div>${esc(cfg.llm.provider)}</div><div>Model</div><div>${esc(cfg.llm.model || "—")}</div><div>Adres</div><div class="code">${esc(cfg.llm.base_url || "—")}</div><div>Klucz</div><div>${cfg.llm.api_key_set ? "ustawiony (" + esc(cfg.llm.api_key_env) + ")" : "brak — LLM nieaktywny"}</div><div>Miejsce przetwarzania</div><div>${esc(cfg.llm.data_location)}</div><div>OCR</div><div>${s.capabilities.ocr ? "dostępny (tesseract)" : "niedostępny"}</div></div></div></div>
-    <div class="grid g2" style="margin-top:14px"><div class="card"><h3>Test połączenia z BZP</h3><div class="row"><input id="t-num" placeholder="np. 2023/BZP 00271948/01" class="grow"><button class="btn" id="t-go">Testuj</button></div><pre class="log" id="t-out" style="display:none"></pre></div>
-    <div class="card"><h3>Kopia lokalna ogłoszeń (tryb offline)</h3><p class="small muted">Wczytaj paczkę organizatora (risk_miner_bzp_kopia.zip — pliki JSON w formacie API) lub plik JSON z ogłoszeniami. Wyszukiwanie korzysta wtedy z kopii zamiast z sieci.</p><div class="row"><label class="btn">Wczytaj .zip/.json<input type="file" id="t-local" accept=".zip,.json" class="file-in"></label><button class="btn bad" id="t-clear">Usuń kopię lokalną</button></div></div></div>
+    <div class="grid g2" style="margin-top:14px"><div class="card"><h3>Test połączenia z BZP (na żywo)</h3><div class="row"><input id="t-num" placeholder="np. 2023/BZP 00271948/01" class="grow"><button class="btn" id="t-go">Testuj</button></div><pre class="log" id="t-out" style="display:none"></pre></div>
+    <div class="card"><h3>Kopia zapasowa offline (awaryjna)</h3><p class="small muted">System zawsze odpytuje <b>API BZP na żywo</b>. Kopia offline (wbudowana paczka 22 projektów albo wgrany tu plik .zip/.json) uruchamia się automatycznie wyłącznie wtedy, gdy API na żywo nie odpowiada.</p><div class="row"><label class="btn">Wczytaj własną kopię .zip/.json<input type="file" id="t-local" accept=".zip,.json" class="file-in"></label><button class="btn bad" id="t-clear">Usuń własną kopię</button></div></div></div>
     <div class="card" style="margin-top:14px"><h3>Baza danych</h3><p class="small muted">Plik SQLite w katalogu danych. Wyczyszczenie usuwa projekty, zdarzenia i analizy (wiedza ekspercka pozostaje).</p><button class="btn bad" id="t-reset">Wyczyść bazę przypadków</button></div>`;
   $("#t-go").onclick = async () => { const o = $("#t-out"); o.style.display = "block"; o.textContent = "…"; const r = await post("/api/bzp/test", { notice_number: $("#t-num").value || null, date_from: $("#t-num").value ? null : new Date(Date.now() - 86400000 * 3).toISOString().slice(0, 10) + "T00:00:00Z" }); o.textContent = JSON.stringify(r, null, 2); };
   $("#t-local").onchange = async (e) => { const r = await guard(() => upload("/api/bzp/import-local", e.target.files[0])); toast(`Dodano ${r.added} ogłoszeń (razem ${r.total})`); VIEWS.settings(); };
@@ -1309,7 +1306,7 @@ function renderCmd() {
   const q = foldq($("#cmd-q").value.trim());
   const acts = [
     { t: "Analizuj nową inwestycję", s: "opis + projekt umowy → prognoza, ryzyka, audyt klauzul", go: "#/nowa", k: "akcja" },
-    { t: "Wczytaj demo na prawdziwych danych BZP", s: "22 projekty, paczka 198 ogłoszeń BZP, bez internetu", run: async () => { location.hash = "#/"; const r = await guard(() => post("/api/import-sample?enrich=1&bzp=1")); toast("Wczytuję dane…"); if (r.job_id) setTimeout(() => router(), 4500); }, k: "akcja" },
+    { t: "Wczytaj 22 projekty z BZP na żywo", s: "pobiera ogłoszenia z API BZP (z automatyczną kopią zapasową offline)", run: async () => { location.hash = "#/"; const r = await guard(() => post("/api/import-sample?enrich=1")); toast("Wczytuję dane i pobieram ogłoszenia z BZP na żywo…"); if (r.job_id) { const poll = async () => { const j = await api(`/api/jobs/${r.job_id}`); if (j.status === "w toku") return setTimeout(poll, 700); toast("Gotowe"); router(); }; poll(); } else router(); }, k: "akcja" },
     ...$$("#nav a[data-v]").filter((a) => a.dataset.v !== "recent").map((a) => ({ t: $(".nt", a).textContent, s: $(".nh", a).textContent, go: a.getAttribute("href"), k: "strona" })),
   ];
   const projs = (CMD.projects || []).map((p) => ({ t: `${p.record_id} · ${p.beneficiary_name}`, s: p.name, go: `#/projekt/${p.id}`, k: "projekt",

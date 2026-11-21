@@ -100,5 +100,31 @@ class Voivodeship(unittest.TestCase):
         self.assertIsNone(d("droga wojewódzka nr 196"))
 
 
+class SecurityAndUrlValidation(unittest.TestCase):
+    def test_blocks_non_http_and_local_urls(self):
+        from riskminer.pipeline import validate_public_url
+        for bad in ("file:///etc/passwd", "ftp://example.com/a.pdf", "http://localhost:8080/", "http://127.0.0.1/secret", "http://169.254.169.254/latest/meta-data/"):
+            with self.assertRaises(ValueError, msg=bad):
+                validate_public_url(bad)
+
+    def test_bzp_auto_fallback_when_live_fails(self):
+        from riskminer import config
+        cfg = config.get()["bzp"]
+        old = (cfg["base_url"], list(cfg["fallback_urls"]), cfg["cache"], cfg.get("timeout_s"))
+        try:
+            bzp._live_down_until = 0.0
+            cfg["base_url"] = "http://127.0.0.1:1/unreachable"
+            cfg["fallback_urls"] = []
+            cfg["cache"] = False
+            cfg["timeout_s"] = 1
+            items, url, _ = bzp.search("ContractNotice", NoticeNumber="2023/BZP 00271948/01")
+            self.assertEqual(len(items), 1)
+            self.assertIn("tryb awaryjny", url)
+            self.assertTrue(bzp.fallback_active())
+        finally:
+            cfg["base_url"], cfg["fallback_urls"], cfg["cache"], cfg["timeout_s"] = old
+            bzp._live_down_until = 0.0
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
