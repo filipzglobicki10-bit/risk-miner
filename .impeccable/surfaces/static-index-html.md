@@ -13,7 +13,7 @@ Scope: every view of the single-page app (Start, case base, change library, expe
 
 THESIS: Investment risk read the way Poland reads a river: as a level on a gauge staff against warning and alarm marks. Refuses the navy/teal SaaS dashboard with one accent and flat cards.
 
-OWN-WORLD: IMGW hydrological bulletin. Deep river-navy shell, light mist work ground, water blue as the only action colour, a warning ladder (green → yellow → orange → red) that carries every status. Barlow for text, Barlow Semi Condensed for numbers and headings, tabular figures everywhere. Gauge staffs with decimetre ticks; level chips.
+OWN-WORLD: IMGW hydrological bulletin. Deep river-navy shell, light mist work ground, water blue as the only action colour, a warning ladder (green → yellow → red: below P50, stan ostrzegawczy at P50, stan alarmowy at P80) that carries risk levels only. Barlow for text, Barlow Semi Condensed for numbers and headings, tabular figures everywhere. Gauge staffs with decimetre ticks; level chips.
 
 STORY: The visitor sees immediately how far real contracts rose above plan, opens any contract from a chart in a sliding panel, then describes a new investment and watches its cost and time gauges fill to P80 against the base's warning and alarm levels, with actions to take.
 

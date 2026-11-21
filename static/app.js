@@ -47,7 +47,7 @@ async function guard(fn, okMsg) {
 }
 
 const statusPill = (s) => {
-  const m = { approved: ["zatwierdzone", "p-ok"], edited: ["zatwierdzone (poprawione)", "p-ok"], proposed: ["do weryfikacji", "p-warn"], rejected: ["odrzucone", "p-grey"], auto: ["pewne (identyfikator)", "p-acc"] };
+  const m = { approved: ["zatwierdzone", "p-ok"], edited: ["zatwierdzone (poprawione)", "p-ok"], proposed: ["do weryfikacji", "p-info"], rejected: ["odrzucone", "p-grey"], auto: ["pewne (identyfikator)", "p-acc"] };
   const [l, c] = m[s] || [s || "—", "p-grey"];
   return `<span class="pill ${c}">${esc(l)}</span>`;
 };
@@ -79,6 +79,7 @@ async function router() {
   $$("#recent a").forEach((a) => a.classList.toggle("active", key === "project" && a.dataset.pid === parts[1]));
   pulseActive();
   closeDrawer(false);
+  $$(".viztip").forEach((t) => t.classList.add("hidden"));
   $("#main").innerHTML = `<div class="loading">Ładowanie…</div>`;
   try { await VIEWS[key](parts.slice(1)); } catch (e) { $("#main").innerHTML = `<div class="card"><h2>Nie udało się wczytać tego widoku</h2><p>Serwer odpowiedział: ${esc(e.message)}</p><p class="small muted">Sprawdź, czy aplikacja nadal działa w terminalu, i spróbuj ponownie.</p><button class="btn primary" onclick="router()">Spróbuj ponownie</button></div>`; }
   refreshBadges();
@@ -196,7 +197,9 @@ function heroBlock(ins, projects, changes) {
     .map((p) => ({ id: p.id, rid: p.record_id, city: p.city || p.beneficiary_name, name: p.name, x: p.metrics.delay_days / p.metrics.planned_duration_days, y: p.metrics.cost_dev_pct, v: p.metrics.contract_value || 1, unverified: !!p.n_links_proposed }));
   const both = pts.filter((p) => p.x > 0.005 && p.y > 0.005).length;
   const W = 560, H = 380, L = 62, R = 18, T = 18, B = 40;
-  const xmax = Math.max(1.2, ...pts.map((p) => p.x)) * 1.05, xmin = Math.min(-0.15, ...pts.map((p) => p.x));
+  const xs = pts.map((p) => p.x).sort((a, b) => a - b), xtop = xs[xs.length - 1] || 0;
+  const xcap = Math.max(1.2, (xs.length > 2 ? xs[xs.length - 2] : xtop) * 1.2);
+  const xmax = Math.max(1.2, Math.min(xtop, xcap)) * 1.06, xmin = Math.min(-0.15, ...pts.map((p) => p.x));
   const ymax = Math.max(0.45, ...pts.map((p) => p.y)) * 1.08, ymin = Math.min(-0.15, ...pts.map((p) => p.y)) * 1.1;
   const X = (v) => L + ((v - xmin) / (xmax - xmin)) * (W - L - R), Y = (v) => T + ((ymax - v) / (ymax - ymin)) * (H - T - B);
   const vmax = Math.max(...pts.map((p) => p.v));
@@ -207,52 +210,53 @@ function heroBlock(ins, projects, changes) {
     <line x1="${L}" x2="${W - R}" y1="${yP50}" y2="${yP50}" stroke="${VZ.warnEdge}" stroke-dasharray="6 4" stroke-width="1.5"/>
     <text x="${W - R - 6}" y="${yP80 - 6}" text-anchor="end" font-size="12" font-weight="700" fill="#B31F27" stroke="${VZ.alarmWash}" stroke-width="3" paint-order="stroke">stan alarmowy · P80 ${pp(c.p80, 0)}</text>
     <text x="${W - R - 6}" y="${yP50 - 6}" text-anchor="end" font-size="12" font-weight="700" fill="#7A5600" stroke="${VZ.warnWash}" stroke-width="3" paint-order="stroke">stan ostrzegawczy · P50 ${pp(c.p50, 1)}</text>`;
-  for (const tx of [0, 0.5, 1, 1.5, 2, 2.5, 3]) if (tx <= xmax) g += `<line x1="${X(tx)}" x2="${X(tx)}" y1="${T}" y2="${H - B}" stroke="${VZ.grid}" ${tx ? "" : 'stroke="#9aa8b6"'}/><text x="${X(tx)}" y="${H - B + 16}" font-size="11" text-anchor="middle" fill="${VZ.muted}">${tx ? "+" + Math.round(tx * 100) + "%" : "plan"}</text>`;
+  for (const tx of [0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2, 2.5, 3]) if (tx <= xmax) g += `<line x1="${X(tx)}" x2="${X(tx)}" y1="${T}" y2="${H - B}" stroke="${VZ.grid}" ${tx ? "" : 'stroke="#9aa8b6"'}/><text x="${X(tx)}" y="${H - B + 16}" font-size="11" text-anchor="middle" fill="${VZ.muted}">${tx ? "+" + Math.round(tx * 100) + "%" : "plan"}</text>`;
   for (const ty of [-0.4, -0.2, 0, 0.2, 0.4]) if (ty >= ymin && ty <= ymax) g += `<line x1="${L}" x2="${W - R}" y1="${Y(ty)}" y2="${Y(ty)}" stroke="${ty ? VZ.grid : "#9aa8b6"}"/><text x="${L - 6}" y="${Y(ty) + 4}" font-size="11" text-anchor="end" fill="${VZ.muted}">${ty ? (ty > 0 ? "+" : "−") + Math.abs(Math.round(ty * 100)) + "%" : "plan"}</text>`;
   g += `<text x="${(L + W - R) / 2}" y="${H - 6}" font-size="11.5" text-anchor="middle" fill="${VZ.ink}">czas realizacji względem umowy →</text>
-    <text transform="translate(12 ${(T + H - B) / 2}) rotate(-90)" font-size="11.5" text-anchor="middle" fill="${VZ.ink}">koszt względem umowy →</text>${levels}`;
+    <text transform="translate(12 ${(T + H - B) / 2}) rotate(-90)" font-size="11.5" text-anchor="middle" fill="${VZ.ink}">koszt względem umowy →</text>`;
   pts.forEach((p, i) => {
-    const late = p.x > 0.005, over = p.y > 0.005;
-    const col = late && over ? VZ.late : !late && !over ? VZ.early : VZ.mid;
-    const ser = late && over ? "late" : !late && !over ? "early" : "mid", cls = `s-${ser}${p.unverified ? " s-unv" : ""}`;
-    const r = 4.5 + 6 * Math.sqrt(p.v / vmax);
-    g += `<line class="arr ${cls}" data-pid="${p.id}" style="--d:${i * 35}ms" x1="${X(0)}" y1="${Y(0)}" x2="${X(p.x)}" y2="${Y(p.y)}" stroke="${col}" stroke-opacity=".28" stroke-width="1.5"/>`;
-    const early = !late && !over, lbl = `${p.rid} ${p.city || ""}: koszt ${pp(p.y, 1)}, czas ${pp(p.x, 0)}${p.unverified ? ", dopasowanie do weryfikacji" : ""}`;
-    g += `<a href="#/projekt/${p.id}" data-pid="${p.id}" class="${cls}" aria-label="${esc(lbl)}"><${early ? "rect" : "circle"} class="dot" style="--d:${i * 35}ms" ${early ? `x="${X(p.x) - r}" y="${Y(p.y) - r}" width="${2 * r}" height="${2 * r}" rx="${(r * 0.3).toFixed(1)}"` : `cx="${X(p.x)}" cy="${Y(p.y)}" r="${r}"`} fill="${p.unverified ? "#fff" : col}" stroke="${p.unverified ? col : "#fff"}" stroke-width="2" data-tip="<b>${esc(p.rid)} · ${esc(p.city)}</b><br>${esc(p.name.slice(0, 90))}<br>koszt ${pp(p.y, 1)} · czas ${pp(p.x, 0)}${p.unverified ? "<br><i>dopasowanie do weryfikacji</i>" : ""}<br><u>kliknij: przebieg w panelu</u>"/></a>`;
+    const late = p.x > 0.005, lv = levelOf(p.y, c) || "ok";
+    const col = lv === "bad" ? VZ.late : lv === "warn" ? VZ.yel : VZ.early, edge = lv === "warn" ? VZ.warnEdge : col;
+    const cls = `s-${lv}${p.unverified ? " s-unv" : ""}`;
+    const r = 4.5 + 6 * Math.sqrt(p.v / vmax), px = X(Math.min(p.x, xmax / 1.06)), py = Y(p.y), clipped = p.x > xmax / 1.06;
+    g += `<line class="arr ${cls}" data-pid="${p.id}" style="--d:${i * 35}ms" x1="${X(0)}" y1="${Y(0)}" x2="${px}" y2="${py}" stroke="${edge}" stroke-opacity=".35" stroke-width="1.5"/>`;
+    if (clipped) g += `<text class="${cls}" x="${px - r - 6}" y="${py - r - 4}" text-anchor="end" font-size="11.5" font-weight="700" fill="${VZ.ink}" stroke="#fff" stroke-width="3" paint-order="stroke">czas ${pp(p.x, 0)} →</text>`;
+    const lbl = `${p.rid} ${p.city || ""}: koszt ${pp(p.y, 1)}, czas ${pp(p.x, 0)}${p.unverified ? ", dopasowanie do weryfikacji" : ""}`;
+    g += `<a href="#/projekt/${p.id}" data-pid="${p.id}" class="${cls}" aria-label="${esc(lbl)}"><${late ? "circle" : "rect"} class="dot" style="--d:${i * 35}ms" ${late ? `cx="${px}" cy="${py}" r="${r}"` : `x="${px - r}" y="${py - r}" width="${2 * r}" height="${2 * r}" rx="${(r * 0.3).toFixed(1)}"`} fill="${p.unverified ? "#fff" : col}" stroke="${p.unverified ? edge : lv === "warn" ? edge : "#fff"}" stroke-width="2" data-tip="<b>${esc(p.rid)} · ${esc(p.city)}</b><br>${esc(p.name.slice(0, 90))}<br>koszt ${pp(p.y, 1)} · czas ${pp(p.x, 0)}${p.unverified ? "<br><i>dopasowanie do weryfikacji</i>" : ""}<br><u>kliknij: przebieg w panelu</u>"/></a>`;
   });
-  g += `<circle cx="${X(0)}" cy="${Y(0)}" r="5" fill="${VZ.ink}"/><text x="${X(0) + 8}" y="${Y(0) + 16}" font-size="11.5" font-weight="700" fill="${VZ.ink}">plan</text>`;
+  g += `<g pointer-events="none">${levels}</g><circle cx="${X(0)}" cy="${Y(0)}" r="5" fill="${VZ.ink}"/><text x="${X(0) + 8}" y="${Y(0) + 16}" font-size="11.5" font-weight="700" fill="${VZ.ink}">plan</text>`;
   const top = (ins.register.rows || []).slice().sort((a, b) => b.k - a.k)[0];
   return `<section class="hero">
     <div class="hero-l">
       <h1 class="hero-h"><span class="hn">${c.share_over_raw[0]} z ${c.share_over_raw[1]}</span> umów kosztowało więcej, niż podpisano. <span class="hn">${t.share_over_raw[0]} z ${t.share_over_raw[1]}</span> skończyło się po terminie.</h1>
       <p class="hero-p">To nie szacunek ani model — to ${c.n} prawdziwych umów wodno-kanalizacyjnych, złożonych automatycznie z ${num(STATUS.counts.notices)} ogłoszeń w BZP. Typowo: <b>${pp(c.p50, 1)}</b> kosztu i <b>${pp(t.p50, 0)}</b> czasu; w co piątej umowie ponad <b>${pp(c.p80, 0)}</b> i <b>${pp(t.p80, 0)}</b>.${top ? ` Najczęstsza przyczyna zmian: ${esc(top.name.toLowerCase())}.` : ""}</p>
       <div class="hero-cta"><a class="btn primary big" href="#/nowa">Analizuj nową inwestycję</a><a class="btn big" href="#/zmiany">${(changes.length || STATUS.counts.changes) ? `Przejrzyj ${num(changes.length || STATUS.counts.changes)} zmian umów` : "Przejrzyj zmiany umów"}</a></div>
-      <p class="small muted" style="margin-top:12px">Każdy znacznik to jedna umowa — kliknij, a z prawej wysunie się jej przebieg. Pasy to progi z całej bazy: stan ostrzegawczy (P50) i alarmowy (P80). Legenda włącza i wyłącza grupy.</p>
+      <p class="small muted" style="margin-top:12px">Każdy znacznik to jedna umowa — kliknij, a z prawej wysunie się jej przebieg. Kolor mówi, który stan kosztu umowa osiągnęła względem całej bazy: ostrzegawczy (P50) albo alarmowy (P80); koło — po terminie, kwadrat — w terminie. Legenda włącza i wyłącza grupy.</p>
     </div>
-    <div class="hero-r"><svg viewBox="0 0 ${W} ${H}" width="100%" role="group" aria-label="Plan a rzeczywistość: koszt i czas umów (${pts.length}). Kwadrat oznacza umowę w planie.">${g}</svg>
-      <div class="legend small" role="group" aria-label="Pokaż lub ukryj grupy umów"><button type="button" data-s="late" aria-pressed="true"><i style="background:${VZ.late}"></i>drożej i dłużej (${both} z ${pts.length})</button><button type="button" data-s="mid" aria-pressed="true"><i style="background:${VZ.mid}"></i>jedno z dwóch</button><button type="button" data-s="early" aria-pressed="true"><i style="background:${VZ.early};border-radius:0"></i>w planie</button><button type="button" data-s="unv" aria-pressed="true"><i class="hollow"></i>do weryfikacji</button><span>wielkość = wartość umowy</span></div></div>
+    <div class="hero-r"><svg viewBox="0 0 ${W} ${H}" width="100%" role="group" aria-label="Plan a rzeczywistość: koszt i czas umów (${pts.length}). Kolor: poziom kosztu względem progów bazy. Koło: umowa po terminie, kwadrat: w terminie.">${g}</svg>
+      <div class="legend small" role="group" aria-label="Pokaż lub ukryj grupy umów"><button type="button" data-s="ok" aria-pressed="true"><i style="background:${VZ.early}"></i>koszt poniżej P50</button><button type="button" data-s="warn" aria-pressed="true"><i style="background:${VZ.yel};box-shadow:inset 0 0 0 2px ${VZ.warnEdge}"></i>stan ostrzegawczy</button><button type="button" data-s="bad" aria-pressed="true"><i style="background:${VZ.late}"></i>stan alarmowy</button><button type="button" data-s="unv" aria-pressed="true"><i class="hollow"></i>do weryfikacji</button><span>● po terminie · ■ w terminie · wielkość = wartość umowy</span></div></div>
   </section>`;
 }
 // ---- świat „Stany ostrzegawcze”: wodowskaz, odliczanie, panel wysuwany
 let PROJ = {}, INS = null;
 const REDUCED = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
 function gaugeBlock(o) {
-  const H0 = 12, H1 = 222, top = Math.max(o.max, 1e-6), id = "g" + Math.random().toString(36).slice(2, 8);
+  const H0 = 12, H1 = 380, top = Math.max(o.max, 1e-6), id = "g" + Math.random().toString(36).slice(2, 8);
   const Yg = (v) => H1 - (Math.max(0, Math.min(v, top)) / top) * (H1 - H0);
   let ticks = "";
-  for (let v = 0, i = 0; v <= top + 1e-9; v += o.step, i++) {
-    const y = Yg(v), major = i % o.major === 0;
-    ticks += `<line x1="12" x2="${major ? 30 : 22}" y1="${y.toFixed(1)}" y2="${y.toFixed(1)}" stroke="#0B2A45" stroke-width="${major ? 2.2 : 1.2}"/>`;
+  for (let v = 0, i = 0; v < top - 1e-9; v += o.step, i++) {
+    const yb = Yg(v), yt = Yg(Math.min(v + o.step, top)), bh = yb - yt, x0 = i % 2 ? 29 : 13;
+    ticks += `<rect x="${x0}" y="${yt.toFixed(1)}" width="3.5" height="${bh.toFixed(1)}" fill="#0B2A45"/>` + [0, 2, 4].map((k) => `<rect x="${x0}" y="${(yt + (k * bh) / 5).toFixed(1)}" width="15" height="${(bh / 5).toFixed(1)}" fill="#0B2A45"/>`).join("");
   }
   const lvl = Yg(o.level);
   const ms = o.marks.filter((m) => m.v != null).map((m) => ({ ...m, y: Yg(m.v) })).sort((a, b) => b.y - a.y);
   for (let i = 1; i < ms.length; i++) ms[i].ly = Math.min(ms[i].y, (ms[i - 1].ly ?? ms[i - 1].y) - 14);
-  const marks = ms.map((m) => { const ly = m.ly ?? m.y; return `<g class="mk"><line x1="6" x2="66" y1="${m.y.toFixed(1)}" y2="${m.y.toFixed(1)}" stroke="${m.c}" stroke-width="2.5" ${m.dash ? 'stroke-dasharray="4 3"' : ""}/><path d="M66 ${m.y.toFixed(1)} L74 ${ly.toFixed(1)}" stroke="${m.c}" stroke-width="1.5" fill="none"/><text x="77" y="${(ly + 4).toFixed(1)}" font-size="12" font-weight="700" fill="#FFFFFF">${esc(m.l)}</text></g>`; }).join("");
-  const svg = `<svg viewBox="0 0 160 234" role="img" aria-label="${esc(o.aria)}"><defs><clipPath id="${id}"><rect x="6" y="${H0}" width="54" height="${H1 - H0}" rx="4"/></clipPath></defs>
-    <rect x="6" y="${H0}" width="54" height="${H1 - H0}" rx="4" fill="#123A5D"/>
-    <rect x="12" y="${H0}" width="20" height="${H1 - H0}" fill="#F4F8FB"/>${ticks}
+  const marks = ms.map((m) => { const ly = m.ly ?? m.y; return `<g class="mk"><line x1="6" x2="58" y1="${m.y.toFixed(1)}" y2="${m.y.toFixed(1)}" stroke="${m.c}" stroke-width="3" ${m.dash ? 'stroke-dasharray="4 3"' : ""}/><path d="M58 ${m.y.toFixed(1)} L66 ${ly.toFixed(1)}" stroke="${m.c}" stroke-width="1.5" fill="none"/><text x="69" y="${(ly + 4).toFixed(1)}" font-size="12" font-weight="700" fill="#FFFFFF">${esc(m.l)}</text></g>`; }).join("");
+  const svg = `<svg viewBox="0 0 168 392" role="img" aria-label="${esc(o.aria)}"><defs><clipPath id="${id}"><rect x="6" y="${H0}" width="45" height="${H1 - H0}" rx="4"/></clipPath></defs>
+    <rect x="6" y="${H0}" width="45" height="${H1 - H0}" rx="4" fill="#123A5D"/>
+    <rect x="12" y="${H0}" width="33" height="${H1 - H0}" fill="#F4F8FB"/>${ticks}
     <g clip-path="url(#${id})"><g class="wl" style="--drop:${(H1 - lvl + 8).toFixed(1)}px"><path class="wave-path" d="M-30 ${lvl.toFixed(1)} q10 -5 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 V ${H1 + 30} H -30 Z" fill="#2E8FD6" fill-opacity=".78"/></g></g>
-    <line x1="6" x2="60" y1="${H1}" y2="${H1}" stroke="#5FB3EA" stroke-width="1.5"/>${marks}</svg>`;
+    <line x1="6" x2="51" y1="${H1}" y2="${H1}" stroke="#5FB3EA" stroke-width="1.5"/>${marks}</svg>`;
   return `<div class="gauge"><div class="g-t">${esc(o.title)}</div>${svg}<div class="g-v" data-count="${o.value}" data-prefix="${o.prefix || ""}" data-suffix="${o.suffix || ""}" data-dec="${o.dec || 0}">${o.prefix || ""}${o.value.toLocaleString("pl-PL", { maximumFractionDigits: o.dec || 0, minimumFractionDigits: o.dec || 0 })}${o.suffix || ""}</div><div class="g-s">${esc(o.sub)}</div></div>`;
 }
 function animateGauges(root) {
@@ -291,7 +295,7 @@ function wireHero() {
 let DRAWER_OPENER = null;
 function levelOf(v, base) {
   if (v == null || !base || !base.n) return "";
-  return v > base.p80 ? "bad" : v > base.p50 ? "warn" : "ok";
+  return v >= base.p80 ? "bad" : v >= base.p50 ? "warn" : "ok";
 }
 function staffBar(v, base) {
   if (v == null || !base || !base.n) return "";
@@ -307,11 +311,11 @@ function openDrawer(pid, opener) {
   const p = PROJ[pid];
   if (!p) return false;
   const m = p.metrics || {}, base = INS && INS.rcf ? INS.rcf.cost : null;
-  const lc = levelOf(m.cost_dev_pct, base), lt = m.delay_days == null ? "" : m.delay_days > 0 ? (m.planned_duration_days && m.delay_days / m.planned_duration_days > 0.25 ? "bad" : "warn") : "ok";
+  const lc = levelOf(m.cost_dev_pct, base), lt = m.delay_days == null || !m.planned_duration_days ? "" : levelOf(m.delay_days / m.planned_duration_days, INS && INS.rcf ? INS.rcf.time : null);
   const tile = (tone, l, v, s) => `<div class="vt ${tone}"><div class="vl">${l}</div><div class="vb">${v}</div>${s ? `<div class="vs">${s}</div>` : ""}</div>`;
   $("#drawer-c").innerHTML = `<div class="drawer-h"><div class="d-id">${esc(p.record_id)}${p.n_links_proposed ? " · dopasowanie do weryfikacji" : ""}</div><h2 id="drawer-title">${esc(p.city || p.beneficiary_name || p.record_id)}</h2><div class="d-sub">${esc(p.name)}</div></div>
     <div class="drawer-b">
-      <div class="d-metrics">${tile(lc, "Koszt względem umowy", pct(m.cost_dev_pct), m.final_paid ? `wypłacono ${pln(m.final_paid)}` : "")}${tile(lt, "Termin", days(m.delay_days), m.planned_duration_days ? `umowa na ${num(m.planned_duration_days)} dni` : "")}${tile("", "Wartość umowy", pln(m.contract_value), m.n_offers ? `ofert: ${m.n_offers}` : "")}${tile(m.n_changes ? "warn" : "", "Zmiany umowy", num(m.n_changes || 0), m.n_changes ? "z formularzy BZP" : "bez zmian w BZP")}</div>
+      <div class="d-metrics">${tile(lc, "Koszt względem umowy", pct(m.cost_dev_pct), m.final_paid ? `wypłacono ${pln(m.final_paid)}` : "")}${tile(lt, "Termin", days(m.delay_days), m.planned_duration_days ? `umowa na ${num(m.planned_duration_days)} dni` : "")}${tile("", "Wartość umowy", pln(m.contract_value), m.n_offers ? `ofert: ${m.n_offers}` : "")}${tile("", "Zmiany umowy", num(m.n_changes || 0), m.n_changes ? "z formularzy BZP" : "bez zmian w BZP")}</div>
       ${staffBar(m.cost_dev_pct, base)}
       <div class="kv small">${m.signed_date ? `<div>Podpisanie</div><div>${dpl(m.signed_date)}</div>` : ""}${m.planned_end_date ? `<div>Termin z umowy</div><div>${dpl(m.planned_end_date)}</div>` : ""}${m.actual_end_date ? `<div>Faktyczne wykonanie</div><div><b>${dpl(m.actual_end_date)}</b></div>` : ""}<div>Podsektor</div><div>${esc(p.subsector_main || "—")} · ${esc(p.formula || p.work_type || "")}</div><div>Województwo</div><div>${esc(p.voivodeship || "—")}</div></div>
     </div>
@@ -339,7 +343,7 @@ function knowsStrip(ins) {
   const iss = ins.data_issues || [];
   const nIss = iss.length === 1 ? "1 problem" : iss.length < 5 ? `${iss.length} problemy` : `${iss.length} problemów`;
   const tiles = [
-    `<div class="vt ${iss.length ? "warn" : "ok"}"><div class="vl">Sprawdzenie danych wejściowych</div><div class="vb">${iss.length ? `${nIss} w rekordach` : "Bez problemów"}</div>${iss.length ? `<ul class="vlist">${iss.map((x) => `<li><a href="#/projekt/${x.project_id}"><b>${esc(x.record_id)}</b></a> ${esc(x.message)}</li>`).join("")}</ul>` : `<div class="vs">rekordy zgadzają się z ogłoszeniami BZP</div>`}</div>`,
+    `<div class="vt ${iss.length ? "info" : ""}"><div class="vl">Sprawdzenie danych wejściowych</div><div class="vb">${iss.length ? `${nIss} w rekordach` : "Bez problemów"}</div>${iss.length ? `<ul class="vlist">${iss.map((x) => `<li><a href="#/projekt/${x.project_id}"><b>${esc(x.record_id)}</b></a> ${esc(x.message)}</li>`).join("")}</ul>` : `<div class="vs">rekordy zgadzają się z ogłoszeniami BZP</div>`}</div>`,
     top ? `<div class="vt warn"><div class="vl">Najczęstsze ryzyko</div><div class="vb">${esc(top.name)}</div><div class="vs">${top.k} z ${top.n} umów${top.impact_cost_pct != null ? ` · typowy skutek ${pp(top.impact_cost_pct, 1)} wartości umowy` : ""}${top.impact_delay_days ? ` i ${Math.round(top.impact_delay_days)} dni` : ""}</div></div>` : "",
     td.n && c.n ? `<div class="vt"><div class="vl">Oszczędności z przetargu</div><div class="vb">Ceny ${pp(td.p50, 0)} wobec kosztorysu</div><div class="vs">ale ${c.share_over_raw[0]} z ${c.share_over_raw[1]} umów kosztowało potem więcej, niż podpisano — nie zwalniaj ich w całości</div></div>` : "",
   ].filter(Boolean);
@@ -918,7 +922,7 @@ VIEWS.settings = async () => {
 
 
 // ------------------------------------------------------------ WIZUALIZACJE (oś czasu, rozkład wyników, rejestr)
-const VZ = { plan: "#2E8FD6", mid: "#C9570C", late: "#D3262E", early: "#1E8A52", ink: "#0E2236", muted: "#4A5D72", grid: "#E1E9F0", warnWash: "#FFF6D6", warnEdge: "#9A7200", alarmWash: "#FCE6E6" };
+const VZ = { plan: "#2E8FD6", mid: "#C9570C", yel: "#F4C20D", late: "#D3262E", early: "#1E8A52", ink: "#0E2236", muted: "#4A5D72", grid: "#E1E9F0", warnWash: "#FFF6D6", warnEdge: "#9A7200", alarmWash: "#FCE6E6" };
 const pp = (v, d = 0) => (v === null || v === undefined || isNaN(v) ? "—" : (v >= 0 ? "+" : "−") + Math.abs(v * 100).toLocaleString("pl-PL", { maximumFractionDigits: d }) + "%");
 const months = (dd) => (dd === null || dd === undefined ? "—" : (dd / 30.4).toLocaleString("pl-PL", { maximumFractionDigits: 1 }) + " mies.");
 // jeden dymek dla wszystkich wykresów: elementy z atrybutem data-tip
@@ -1219,7 +1223,7 @@ function verdictCard(r) {
   if (ct.p80 !== undefined && ct.p50 !== undefined) {
     const top = Math.max(0.3, (ct.p90 || ct.p80) * 1.25);
     gauges.push(gaugeBlock({ title: "Rezerwa po przetargu", level: Math.max(0, ct.p80), max: top, step: 0.05, major: 2, tick: (v) => Math.round(v * 100) + "%",
-      marks: [{ v: ct.p50, c: "#F4C20D", l: `P50 ${pp(ct.p50, 0)}` }, { v: ct.p80, c: "#F07D1A", l: `P80 ${pp(ct.p80, 0)}` }, ...(ct.p90 !== undefined ? [{ v: ct.p90, c: "#FF6B6B", l: `P90 ${pp(ct.p90, 0)}` }] : [])],
+      marks: [{ v: ct.p50, c: "#F4C20D", l: `P50 ${pp(ct.p50, 0)}` }, { v: ct.p80, c: "#FF5A5F", l: `P80 ${pp(ct.p80, 0)}` }, ...(ct.p90 !== undefined ? [{ v: ct.p90, c: "#FFB3B6", l: `P90 ${pp(ct.p90, 0)}`, dash: true }] : [])],
       value: Math.max(0, ct.p80) * 100, prefix: "+", suffix: "%", dec: 0, sub: "od ceny umowy — wystarczy w 8 na 10 podobnych umów",
       aria: `Rezerwa od ceny umowy: P50 ${pp(ct.p50, 0)}, P80 ${pp(ct.p80, 0)}${ct.p90 !== undefined ? ", P90 " + pp(ct.p90, 0) : ""}` }));
   }
@@ -1227,16 +1231,16 @@ function verdictCard(r) {
   if (res.time_p80 && plan) {
     const t50 = res.time_p50 ? res.time_p50.days : null, t80 = res.time_p80.days, t90 = res.time_p90 ? res.time_p90.days : null;
     gauges.push(gaugeBlock({ title: "Czas realizacji", level: t80, max: Math.max((t90 || t80) * 1.1, plan * 1.3), step: 60.8, major: 3, tick: (v) => Math.round(v / 30.4) + " m",
-      marks: [{ v: plan, c: "#FFFFFF", l: `umowa ${months(plan)}`, dash: true }, ...(t50 ? [{ v: t50, c: "#F4C20D", l: `P50 ${months(t50)}` }] : []), { v: t80, c: "#F07D1A", l: `P80 ${months(t80)}` }, ...(t90 ? [{ v: t90, c: "#FF6B6B", l: `P90 ${months(t90)}` }] : [])],
+      marks: [{ v: plan, c: "#FFFFFF", l: `umowa ${months(plan)}`, dash: true }, ...(t50 ? [{ v: t50, c: "#F4C20D", l: `P50 ${months(t50)}` }] : []), { v: t80, c: "#FF5A5F", l: `P80 ${months(t80)}` }, ...(t90 ? [{ v: t90, c: "#FFB3B6", l: `P90 ${months(t90)}`, dash: true }] : [])],
       value: t80 / 30.4, suffix: " mies.", dec: 1, sub: `realnie (P80) zamiast ${months(plan)} z umowy`,
       aria: `Czas realizacji: umowa ${months(plan)}, P80 ${months(t80)}` }));
   }
   const cols = gauges.length ? Math.min(3, tiles.length) : tiles.length <= 4 ? tiles.length : Math.ceil(tiles.length / 2);
   return `<div class="verdict"><h2>Odpowiedź w 30 sekund: jak może pójść ta inwestycja — na podstawie ${R.n_class} prawdziwych umów z BZP</h2>
-    <div class="${gauges.length ? "verdict-body" : ""}">${gauges.length ? `<div class="gauges">${gauges.join("")}</div>` : ""}<div>
+    <div class="${gauges.length ? "verdict-body" : ""}">${gauges.length ? `<div class="gauges"><div class="g-row">${gauges.join("")}</div><ul class="g-legend"><li><i style="background:#F4C20D"></i><span><b>P50 — stan ostrzegawczy.</b> Połowa podobnych umów skończyła się wyżej.</span></li><li><i style="background:#FF5A5F"></i><span><b>P80 — stan alarmowy.</b> Do tego poziomu sięga woda: tyle zaplanuj, wystarczyło w 8 na 10 umów.</span></li><li><i class="dash"></i><span><b>P90</b> — rzadki przypadek powyżej alarmu.</span></li></ul></div>` : ""}<div>
     <div class="vtiles" style="grid-template-columns:repeat(${cols},minmax(0,1fr))">${tiles.map((t) => `<div class="vt ${t.tone}"><div class="vl">${esc(t.label)}</div><div class="vb">${esc(t.big)}</div><div class="vs">${esc(t.small)}</div></div>`).join("")}</div>
     ${todo.length ? `<h3>Co zrobić przed ogłoszeniem przetargu</h3><ol class="todo">${todo.slice(0, 6).map((x) => `<li>${x}</li>`).join("")}</ol>` : ""}
-    <p class="small muted">Jak czytać wodowskaz: woda sięga <b>P80</b> — poziomu, który wystarczył w 8 na 10 podobnych przypadkach; P50 to stan ostrzegawczy, P90 alarmowy. Szczegóły, obliczenia i cytaty ze źródeł — poniżej.</p></div></div></div>`;
+    <p class="small muted">Szczegóły, obliczenia i cytaty ze źródeł — poniżej.</p></div></div></div>`;
 }
 
 function projectStory(d) {
@@ -1362,8 +1366,9 @@ function mapBlock(projects) {
     const n = (used[key] = (used[key] || 0) + 1) - 1;
     const x = X(c[0]) + (n ? 11 * Math.cos(n * 2.1) : 0), y = Y(c[1]) + (n ? 11 * Math.sin(n * 2.1) : 0);
     const late = m.delay_days > 0, over = m.cost_dev_pct > 0.005, known = m.cost_dev_pct != null || m.delay_days != null;
-    const col = !known ? "#6b7a8c" : late && over ? VZ.late : !late && !over ? VZ.early : VZ.mid;
-    return { p, m, x, y, col, sq: known && !late && !over, r: 5 + 7 * Math.sqrt((m.contract_value || 1e6) / 6e6) };
+    const lv = levelOf(m.cost_dev_pct, INS && INS.rcf ? INS.rcf.cost : null);
+    const col = !known ? "#6b7a8c" : lv === "bad" ? VZ.late : lv === "warn" ? VZ.yel : VZ.early;
+    return { p, m, x, y, col, edge: lv === "warn" ? VZ.warnEdge : "#fff", sq: known && !late, r: 5 + 7 * Math.sqrt((m.contract_value || 1e6) / 6e6) };
   }).filter(Boolean);
   let g = `<path d="M${PL_OUTLINE.map(([a, b]) => `${X(a).toFixed(1)} ${Y(b).toFixed(1)}`).join("L")}Z" fill="#eef3f7" stroke="#b9c7d4" stroke-width="1.5" stroke-linejoin="round"/>`;
   let cities = "";
@@ -1371,7 +1376,7 @@ function mapBlock(projects) {
   pts.sort((a, b) => b.r - a.r).forEach((q) => {
     const m = q.m;
     const ml = `${q.p.record_id} ${q.p.city || ""}: umowa ${pln(m.contract_value)}, koszt ${pct(m.cost_dev_pct)}, termin ${days(m.delay_days)}`;
-    g += `<a href="#/projekt/${q.p.id}" data-pid="${q.p.id}" aria-label="${esc(ml)}"><${q.sq ? "rect" : "circle"} ${q.sq ? `x="${(q.x - q.r).toFixed(1)}" y="${(q.y - q.r).toFixed(1)}" width="${(2 * q.r).toFixed(1)}" height="${(2 * q.r).toFixed(1)}" rx="${(q.r * 0.3).toFixed(1)}"` : `cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="${q.r.toFixed(1)}"`} fill="${q.col}" fill-opacity=".85" stroke="#fff" stroke-width="2" style="cursor:pointer" data-tip="<b>${esc(q.p.record_id)} · ${esc(q.p.city || "")}</b><br>${esc((q.p.name || "").slice(0, 90))}<br>umowa ${pln(m.contract_value)}<br>koszt ${pct(m.cost_dev_pct)} · termin ${days(m.delay_days)}"/></a>`;
+    g += `<a href="#/projekt/${q.p.id}" data-pid="${q.p.id}" aria-label="${esc(ml)}"><${q.sq ? "rect" : "circle"} ${q.sq ? `x="${(q.x - q.r).toFixed(1)}" y="${(q.y - q.r).toFixed(1)}" width="${(2 * q.r).toFixed(1)}" height="${(2 * q.r).toFixed(1)}" rx="${(q.r * 0.3).toFixed(1)}"` : `cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="${q.r.toFixed(1)}"`} fill="${q.col}" fill-opacity=".9" stroke="${q.edge}" stroke-width="2" style="cursor:pointer" data-tip="<b>${esc(q.p.record_id)} · ${esc(q.p.city || "")}</b><br>${esc((q.p.name || "").slice(0, 90))}<br>umowa ${pln(m.contract_value)}<br>koszt ${pct(m.cost_dev_pct)} · termin ${days(m.delay_days)}"/></a>`;
   });
   g += cities;
   const worst = pts.filter((q) => q.m.delay_days != null).sort((a, b) => (b.m.delay_days || 0) - (a.m.delay_days || 0)).slice(0, 3);
@@ -1379,9 +1384,9 @@ function mapBlock(projects) {
   const byW = {};
   pts.forEach((q) => { const w = q.p.voivodeship || "—"; (byW[w] = byW[w] || []).push(q); });
   const li = (q, v) => `<li><a href="#/projekt/${q.p.id}"><span class="mdot" style="background:${q.col}${q.sq ? ";border-radius:0" : ""}"></span><b>${esc(q.p.city || q.p.record_id)}</b> <span class="muted">${esc(q.p.record_id)}</span></a><span class="mv">${v}</span></li>`;
-  return `<section class="pmap card"><div class="pmap-l"><h2 style="margin:0 0 4px">Mapa inwestycji</h2><p class="small muted" style="margin:0 0 8px">${pts.length} projektów w ${Object.keys(byW).length} województwach. Kolor jak na wykresie powyżej, wielkość = wartość umowy. Kliknij znacznik, aby wysunąć przebieg umowy.</p>
+  return `<section class="pmap card"><div class="pmap-l"><h2 style="margin:0 0 4px">Mapa inwestycji</h2><p class="small muted" style="margin:0 0 8px">${pts.length} projektów w ${Object.keys(byW).length} województwach. Kolor i kształt jak na wykresie powyżej, wielkość = wartość umowy. Kliknij znacznik, aby wysunąć przebieg umowy.</p>
       <svg viewBox="0 0 ${W} ${H}" width="100%" role="group" aria-label="Mapa projektów w Polsce. Kwadrat oznacza umowę w planie.">${g}</svg>
-      <div class="legend small" style="padding-left:0"><span><i style="background:${VZ.late}"></i>drożej i dłużej</span><span><i style="background:${VZ.mid}"></i>jedno z dwóch</span><span><i style="background:${VZ.early};border-radius:0"></i>w planie</span><span>położenie wg siedziby gminy (przybliżone)</span></div></div>
+      <div class="legend small" style="padding-left:0"><span><i style="background:${VZ.early}"></i>koszt poniżej P50</span><span><i style="background:${VZ.yel};box-shadow:inset 0 0 0 2px ${VZ.warnEdge}"></i>stan ostrzegawczy</span><span><i style="background:${VZ.late}"></i>stan alarmowy</span><span>● po terminie · ■ w terminie</span><span>położenie wg siedziby gminy (przybliżone)</span></div></div>
     <div class="pmap-r"><h3>Najdłuższe opóźnienia</h3><ul class="mlist">${worst.map((q) => li(q, `<b class="neg">+${q.m.delay_days} dni</b>`)).join("")}</ul>
       <h3>Największe przekroczenia kosztu</h3><ul class="mlist">${costly.map((q) => li(q, `<b class="neg">${pp(q.m.cost_dev_pct, 1)}</b>`)).join("")}</ul></div></section>`;
 }
