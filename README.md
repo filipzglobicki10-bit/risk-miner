@@ -8,8 +8,36 @@ zdarzenia ryzyka** wg katalogu eksperckiego, przekazuje je **do weryfikacji eksp
 odpowiada na pytanie, które naprawdę interesuje instytucję: *jak skończyły się podobne umowy i co trzeba zapisać
 w tej umowie, żeby nie skończyła się tak samo*. Pilotaż: sektor wodociągowo-kanalizacyjny.
 
+## Jak uruchomić (dla jury, 3 minuty)
+
+Potrzebny jest tylko **Python 3.9 lub nowszy** (bez instalowania bibliotek).
+Nie masz Pythona? Windows: [python.org/downloads](https://www.python.org/downloads/) — przy instalacji
+zaznacz „Add python.exe to PATH”. macOS: przy pierwszym poleceniu `python3` system sam zaproponuje instalację.
+
+**1. Pobierz projekt** — zielony przycisk **Code → Download ZIP**, potem rozpakuj
+(albo `git clone https://github.com/filipzglobicki10-bit/risk-miner.git`).
+
+**2. Uruchom**
+
+| System | Co zrobić |
+|---|---|
+| **Windows** | w rozpakowanym folderze kliknij dwa razy **`Uruchom Risk Miner.bat`** |
+| **macOS / Linux** | otwórz Terminal, przejdź do folderu projektu i wpisz `python3 app.py --open` |
+
+Przeglądarka otworzy się sama na **http://127.0.0.1:8080**. Okna terminala nie zamykaj, dopóki pracujesz.
+
+> macOS: `Risk Miner.app` i `Uruchom Risk Miner.command` działają po `git clone`. Po pobraniu ZIP-a
+> macOS blokuje programy z internetu, dlatego najpewniejsze jest `python3 app.py --open`.
+
+**3. Pokaż dane** — na ekranie **Start** kliknij **„Demo na prawdziwych danych BZP (22 projekty, offline)”**.
+Po ok. 5 s pojawi się wykres 22 umów, mapa i liczby. Wersja „BZP na żywo” robi to samo, pobierając ogłoszenia z API.
+
+**4. Przeanalizuj nową inwestycję** — **Analizuj nową inwestycję → „wstaw przykładowy opis”** → dołącz plik
+`samples/projekt_umowy_przyklad.txt` → **Analizuj**. Wynik eksportujesz przyciskami JSON / CSV / karta ryzyka.
+
 ## Spis treści
 
+- [Jak uruchomić (dla jury, 3 minuty)](#jak-uruchomić-dla-jury-3-minuty)
 - [Co wyróżnia to rozwiązanie](#co-wyróżnia-to-rozwiązanie)
 - [Szybki start (1 minuta)](#szybki-start-1-minuta)
   - [Źródło BZP](#źródło-bzp)
