@@ -43,7 +43,7 @@ function modal(html) { $("#modal-body").innerHTML = html; $("#modal").classList.
 function closeModal() { $("#modal").classList.add("hidden"); }
 window.closeModal = closeModal;
 async function guard(fn, okMsg) {
-  try { const r = await fn(); if (okMsg) toast(okMsg); return r; } catch (e) { toast("Błąd: " + e.message, true); throw e; }
+  try { const r = await fn(); if (okMsg) toast(okMsg); return r; } catch (e) { toast("Nie udało się: " + e.message, true); throw e; }
 }
 
 const statusPill = (s) => {
@@ -79,7 +79,7 @@ async function router() {
   $$("#recent a").forEach((a) => a.classList.toggle("active", key === "project" && a.dataset.pid === parts[1]));
   pulseActive();
   $("#main").innerHTML = `<div class="loading">Ładowanie…</div>`;
-  try { await VIEWS[key](parts.slice(1)); } catch (e) { $("#main").innerHTML = `<div class="card"><h2>Błąd</h2><p>${esc(e.message)}</p></div>`; }
+  try { await VIEWS[key](parts.slice(1)); } catch (e) { $("#main").innerHTML = `<div class="card"><h2>Nie udało się wczytać tego widoku</h2><p>Serwer odpowiedział: ${esc(e.message)}</p><p class="small muted">Sprawdź, czy aplikacja nadal działa w terminalu, i spróbuj ponownie.</p><button class="btn primary" onclick="router()">Spróbuj ponownie</button></div>`; }
   refreshBadges();
 }
 window.addEventListener("hashchange", router);
@@ -150,9 +150,9 @@ VIEWS.dash = async () => {
         <p class="muted small">Plik organizatora (.xlsx/.csv) lub inny plik z podobnymi kolumnami. Po imporcie system sam wyszuka ogłoszenia w BZP, powiąże je z projektami i przeanalizuje.</p>
         <div class="drop" id="drop">Upuść plik z rekordami lub <label class="btn sm">wybierz<input type="file" id="f-import" accept=".xlsx,.csv" hidden></label></div>
         <div class="row" style="margin-top:10px">
-          <button class="btn primary" id="b-sample-bzp" title="Rekordy organizatora + prawdziwa kopia 198 ogłoszeń BZP pobrana z API — działa bez sieci, wynik powtarzalny">Demo na prawdziwych danych BZP (22 projekty, offline)</button>
+          <button class="btn${c.projects ? "" : " primary"}" id="b-sample-bzp" title="Rekordy organizatora i paczka 198 ogłoszeń BZP pobranych z API. Do bazy trafiają tylko ogłoszenia powiązane z projektami. Działa bez sieci, wynik powtarzalny.">${c.projects ? "Wczytaj demo ponownie (22 projekty, offline)" : "Demo na prawdziwych danych BZP (22 projekty, offline)"}</button>
           <button class="btn" id="b-sample">Pakiet organizatora — BZP na żywo</button>
-          <label class="row small"><input type="checkbox" id="c-enrich" checked> od razu wzbogać z BZP</label>
+          <label class="row small"><input type="checkbox" id="c-enrich" checked> po imporcie od razu wyszukaj ogłoszenia w BZP</label>
         </div>
         <div class="row" style="margin-top:8px"><button class="btn" id="b-enrich-all" ${c.projects ? "" : "disabled"}>Wzbogać wszystkie projekty z BZP/TED</button></div>
         <div id="job"></div>
@@ -219,16 +219,16 @@ function heroBlock(ins, projects, changes) {
     <div class="hero-l">
       <h1 class="hero-h"><span class="hn">${c.share_over_raw[0]} z ${c.share_over_raw[1]}</span> umów kosztowało więcej, niż podpisano. <span class="hn">${t.share_over_raw[0]} z ${t.share_over_raw[1]}</span> skończyło się po terminie.</h1>
       <p class="hero-p">To nie szacunek ani model — to ${c.n} prawdziwych umów wodno-kanalizacyjnych, złożonych automatycznie z ${num(STATUS.counts.notices)} ogłoszeń w BZP. Typowo: <b>${pp(c.p50, 1)}</b> kosztu i <b>${pp(t.p50, 0)}</b> czasu; w co piątej umowie ponad <b>${pp(c.p80, 0)}</b> i <b>${pp(t.p80, 0)}</b>.${top ? ` Najczęstsza przyczyna zmian: ${esc(top.name.toLowerCase())}.` : ""}</p>
-      <div class="hero-cta"><a class="btn primary big" href="#/nowa">Sprawdź swoją inwestycję</a><a class="btn big" href="#/zmiany">${(changes.length || STATUS.counts.changes) ? `Przejrzyj ${num(changes.length || STATUS.counts.changes)} zmian umów` : "Przejrzyj zmiany umów"}</a></div>
+      <div class="hero-cta"><a class="btn primary big" href="#/nowa">Analizuj nową inwestycję</a><a class="btn big" href="#/zmiany">${(changes.length || STATUS.counts.changes) ? `Przejrzyj ${num(changes.length || STATUS.counts.changes)} zmian umów` : "Przejrzyj zmiany umów"}</a></div>
       <p class="small muted" style="margin-top:12px">Każda kropka to jedna umowa — kliknij, aby zobaczyć jej historię, oś czasu i źródła w BZP.</p>
     </div>
-    <div class="hero-r"><svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Plan a rzeczywistość: koszt i czas 22 umów">${g}</svg>
+    <div class="hero-r"><svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Plan a rzeczywistość: koszt i czas umów (${pts.length})">${g}</svg>
       <div class="legend small"><span><i style="background:${VZ.late}"></i>drożej i dłużej</span><span><i style="background:${VZ.plan}"></i>jedno z dwóch</span><span><i style="background:${VZ.early}"></i>w planie</span><span><i class="hollow"></i>do weryfikacji</span><span>wielkość = wartość umowy</span></div></div>
   </section>`;
 }
 function flowStrip(c, changes, s) {
   const steps = [
-    { n: c.notices, l: "ogłoszeń BZP", d: "pobrane i powiązane po identyfikatorach", go: "#/raporty" },
+    { n: c.notices, l: "ogłoszeń BZP", d: "powiązanych z projektami po identyfikatorach", go: "#/raporty" },
     { n: c.contracts, l: "umów", d: "koszt i termin: plan → wykonanie", go: "#/projekty" },
     { n: changes.length || c.changes || 0, l: "zmian umów", d: "przyczyna, podstawa z art. 455, koszt", go: "#/zmiany" },
     { n: c.events, l: "zdarzeń ryzyka", d: `${c.events_approved} zatwierdzonych przez eksperta`, go: "#/ekspert" },
@@ -273,9 +273,20 @@ function dropzone(el, cb) {
   el.addEventListener("dragleave", () => el.classList.remove("hover"));
   el.addEventListener("drop", (e) => { e.preventDefault(); el.classList.remove("hover"); if (e.dataTransfer.files.length) cb([...e.dataTransfer.files]); });
 }
+const ACTION_PL = {
+  "admin.reset": "Wyczyszczono bazę przypadków", "analysis.run": "Uruchomiono analizę nowej inwestycji", "bzp.import_local": "Wczytano kopię lokalną ogłoszeń BZP",
+  "document.add": "Dodano dokument", "event.approved": "Zatwierdzono zdarzenie ryzyka", "event.edited": "Poprawiono i zatwierdzono zdarzenie ryzyka",
+  "event.rejected": "Odrzucono zdarzenie ryzyka", "event.manual": "Dodano zdarzenie ryzyka ręcznie", "link.approved": "Potwierdzono powiązanie z ogłoszeniem BZP",
+  "link.rejected": "Odrzucono powiązanie z ogłoszeniem BZP", "monitor.ack": "Przyjęto sygnał monitoringu", "project.create": "Dodano projekt",
+  "project.update": "Zaktualizowano projekt z pliku", "project.edit": "Poprawiono dane projektu", "project.enrich": "Wyszukano ogłoszenia BZP dla projektu",
+  "project.exemplar": "Oznaczono projekt jako wzorcowy", "risk.create": "Dodano kategorię ryzyka", "risk.update": "Zmieniono kategorię ryzyka",
+  "event_type.save": "Zapisano typ zdarzenia", "knowledge.update": "Zmieniono wiedzę ekspercką", "knowledge.reset": "Przywrócono domyślną wiedzę ekspercką",
+};
+const ENTITY_PL = { project: "projekt", link: "powiązanie", event: "zdarzenie", analysis: "analiza", document: "dokument", monitor_event: "sygnał monitoringu", database: "baza", risk: "kategoria ryzyka", knowledge: "wiedza ekspercka", event_type: "typ zdarzenia" };
+const dtLocal = (s) => { const d = s ? new Date(s) : null; return d && !isNaN(d) ? d.toLocaleString("pl-PL", { dateStyle: "short", timeStyle: "short" }) : dt(s); };
 function historyTable(rows) {
-  if (!rows || !rows.length) return `<div class="empty">Brak operacji.</div>`;
-  return `<table><tr><th>Czas</th><th>Kto</th><th>Operacja</th><th>Obiekt</th><th>Komentarz</th></tr>${rows.map((r) => `<tr><td class="small">${dt(r.ts)}</td><td>${esc(r.actor)}</td><td class="code">${esc(r.action)}</td><td class="small">${esc(r.entity)} ${esc(r.entity_id || "")}</td><td class="small">${esc(r.comment || "")}</td></tr>`).join("")}</table>`;
+  if (!rows || !rows.length) return `<div class="empty">Nie ma jeszcze żadnych operacji.</div>`;
+  return `<table><tr><th>Kiedy</th><th>Kto</th><th>Co się stało</th><th>Dotyczy</th><th>Komentarz</th></tr>${rows.map((r) => `<tr><td class="small">${esc(dtLocal(r.ts))}</td><td>${esc(r.actor)}</td><td title="${esc(r.action)}">${esc(ACTION_PL[r.action] || r.action)}</td><td class="small">${esc(ENTITY_PL[r.entity] || r.entity)}${r.entity_id ? " #" + esc(r.entity_id) : ""}</td><td class="small">${esc(r.comment || "")}</td></tr>`).join("")}</table>`;
 }
 
 // ------------------------------------------------------------ BAZA PRZYPADKÓW
@@ -589,21 +600,23 @@ window.ack = async (id) => { await guard(() => post(`/api/monitor/events/${id}/a
 window.catDecide = async (code, decision) => { await guard(() => post(`/api/knowledge/risk/${code}/decide`, { decision }), "Zapisano"); router(); };
 
 // ------------------------------------------------------------ NOWA INWESTYCJA
+const VOIV = ["dolnośląskie", "kujawsko-pomorskie", "lubelskie", "lubuskie", "łódzkie", "małopolskie", "mazowieckie", "opolskie", "podkarpackie", "podlaskie", "pomorskie", "śląskie", "świętokrzyskie", "warmińsko-mazurskie", "wielkopolskie", "zachodniopomorskie"];
 const EXAMPLE = `Gmina planuje budowę sieci kanalizacji sanitarnej grawitacyjno-tłocznej o długości ok. 6,5 km wraz z dwiema przepompowniami ścieków i przyłączami do granic 140 nieruchomości w miejscowościach poza aglomeracją. Ścieki będą odprowadzane do istniejącej oczyszczalni. Trasa przebiega w pasie dróg gminnych i powiatowych, częściowo przez grunty prywatne; przewidziano przekroczenie cieku i drogi wojewódzkiej przewiertem. Szacowana wartość inwestycji: 7 800 000 zł brutto. Planowana formuła: zaprojektuj i wybuduj, termin realizacji 14 miesięcy. Inwestycja w województwie wielkopolskim. Ogłoszenie przetargu planowane na styczeń 2027. Umowa o dofinansowanie wymaga zakończenia rzeczowego projektu do 30.06.2028.`;
 VIEWS.new = async (args) => {
   const list = await api("/api/analyses");
   let aid = args[0] && /^\d+$/.test(args[0]) ? Number(args[0]) : null;
   let existing = aid ? await api(`/api/analyses/${aid}`) : null;
-  $("#main").innerHTML = `<h1>Analiza nowej inwestycji</h1><p class="sub no-print">Opisz planowany projekt językiem naturalnym lub wgraj jego wstępne dokumenty (koncepcja, PFU, studium). System znajdzie najbardziej zbliżone zakończone inwestycje, wyjaśni podobieństwo i przedstawi prognozę, flagi, zagadnienia do analizy i propozycje zapisów.</p>
+  $("#main").innerHTML = `<h1>Analiza nowej inwestycji</h1><p class="sub no-print">Opisz planowany projekt zwykłym językiem. Risk Miner porówna go z zakończonymi umowami z BZP i pokaże ryzyko utraty dofinansowania, potrzebną rezerwę i realny termin (P80), najważniejsze ryzyka, a jeśli dołączysz projekt umowy — także audyt jej klauzul.</p>
     <div class="grid g3 no-print"><div class="card" style="grid-column:span 2">
       <label class="f">Nazwa analizy<input id="a-title" value="${esc(existing ? existing.title : "Planowana inwestycja")}"></label>
       <label class="f" style="margin-top:8px">Opis inwestycji<textarea id="a-text" style="min-height:150px">${esc(existing ? existing.input_text : "")}</textarea></label>
       <div class="row small" style="margin-top:4px"><button class="btn sm" id="a-ex">wstaw przykładowy opis</button><span class="muted">Parametry poniżej są opcjonalne — system odczyta je z opisu, jeśli je zawiera.</span></div>
-      <div class="grid g3" style="margin-top:8px"><label class="f">Szacowana wartość (zł)<input id="a-val"></label><label class="f">Długość sieci (km)<input id="a-len"></label><label class="f">Województwo<input id="a-voi"></label></div>
-      <div class="grid g2" style="margin-top:8px"><label class="f">Planowane ogłoszenie przetargu<input id="a-start" type="date"></label><label class="f">Termin zakończenia z umowy o dofinansowanie<input id="a-dl" type="date"></label></div>
-      <div class="drop" id="adrop" style="margin-top:10px">Wstępne dokumenty (opcjonalnie): upuść pliki lub <label class="btn sm">wybierz<input type="file" id="afile" multiple hidden></label><div id="adocs" class="small"></div></div>
-      <div class="row" style="margin-top:12px"><button class="btn primary" id="a-run">Analizuj</button><span id="a-st" class="muted small"></span></div>
-    </div><div class="card"><h3>Poprzednie analizy</h3>${list.length ? list.map((a) => `<div><a href="#/analiza/${a.id}">#${a.id} ${esc(a.title)}</a> <span class="small muted">${dt(a.created_at)}</span></div>`).join("") : `<p class="muted">Brak.</p>`}</div></div>
+      <div class="grid g3" style="margin-top:8px"><label class="f">Szacowana wartość (zł)<input id="a-val" inputmode="decimal" placeholder="np. 7 800 000"></label><label class="f">Długość sieci (km)<input id="a-len" inputmode="decimal" placeholder="np. 6,5"></label><label class="f">Województwo<select id="a-voi"><option value="">odczytaj z opisu</option>${VOIV.map((v) => `<option>${v}</option>`).join("")}</select></label></div>
+      <div class="grid g2" style="margin-top:8px"><label class="f">Planowane ogłoszenie przetargu<input id="a-start" type="date"></label><label class="f">Termin zakończenia z umowy o dofinansowanie<input id="a-dl" type="date" aria-describedby="a-dl-h"></label></div>
+      <p class="small muted" id="a-dl-h" style="margin:4px 0 0">Bez terminu z umowy o dofinansowanie (tu albo w opisie) nie policzymy ryzyka utraty dofinansowania.</p>
+      <div class="drop" id="adrop" style="margin-top:10px"><b>Dokumenty (opcjonalnie):</b> koncepcja, PFU, studium — oraz <b>projekt umowy (PPU/SWZ)</b>, który włącza audyt 14 klauzul. Upuść pliki lub <label class="btn sm">wybierz<input type="file" id="afile" multiple hidden></label><div id="adocs" class="small"></div></div>
+      <div class="row" style="margin-top:12px"><button class="btn primary" id="a-run">Analizuj nową inwestycję</button><span id="a-st" class="muted small"></span></div>
+    </div><div class="card"><h3>Poprzednie analizy</h3>${list.length ? list.map((a) => `<div><a href="#/analiza/${a.id}">#${a.id} ${esc(a.title)}</a> <span class="small muted">${dt(a.created_at)}</span></div>`).join("") : `<p class="muted small">Jeszcze żadnej. Kliknij „wstaw przykładowy opis” i „Analizuj nową inwestycję”, aby zobaczyć, jak wygląda wynik.</p>`}</div></div>
     <div id="a-res"></div>`;
   const files = [];
   const showDocs = () => ($("#adocs").innerHTML = files.map((f) => "• " + esc(f.name)).join("<br>") + (existing && existing.documents.length ? "<br>" + existing.documents.map((d) => "• " + esc(d.filename) + " (zapisany)").join("<br>") : ""));
@@ -634,7 +647,7 @@ function renderAnalysis(r, aid) {
   const f = r.input.features, src = r.dane_zrodlowe, calc = r.obliczenia, w = r.wnioski, fc = calc.forecast;
   const lvl = (l) => (l || "").replace(/\s|–/g, "").replace("ż", "z");
   const emptyDb = !(r.dane_zrodlowe.all_ranked || []).length;
-  $("#a-res").innerHTML = `${emptyDb ? `<div class="flag wysoki" style="margin-top:18px"><b>Baza przypadków jest pusta — nie ma z czym porównać.</b><div class="small">Najpierw wczytaj dane: Pulpit → „Demo na prawdziwych danych BZP (22 projekty, offline)”, poczekaj ok. 5 s, potem wróć tutaj i kliknij „Analizuj” jeszcze raz.</div><div class="row" style="margin-top:8px"><a class="btn primary" href="#/">Przejdź do pulpitu</a></div></div>` : ""}
+  $("#a-res").innerHTML = `${emptyDb ? `<div class="flag wysoki" style="margin-top:18px"><b>Baza przypadków jest pusta — nie ma z czym porównać.</b><div class="small">Najpierw wczytaj dane: Pulpit → „Demo na prawdziwych danych BZP (22 projekty, offline)”, poczekaj ok. 5 s, potem wróć tutaj i kliknij „Analizuj nową inwestycję” jeszcze raz.</div><div class="row" style="margin-top:8px"><a class="btn primary" href="#/">Przejdź do pulpitu</a></div></div>` : ""}
     <div class="row" style="margin-top:18px"><h2 class="grow" style="margin:0">Wynik: ${esc(r.title)}</h2><button class="btn" onclick="window.print()">Drukuj kartę ryzyka</button><a class="btn" href="/api/analyses/${aid}/export">Eksport JSON</a><a class="btn" href="/api/analyses/${aid}/export?format=csv">Eksport CSV</a></div>
     <div class="card" style="margin-top:10px"><div class="kv small"><div>Podsektor główny</div><div><b>${esc(f.subsector_main)}</b> ${(f.subsectors_extra || []).length ? "· dodatkowe: " + f.subsectors_extra.map(esc).join(", ") : ""}</div><div>Rodzaj prac / formuła</div><div>${esc(f.work_type)} · ${esc(f.formula)}</div><div>Wartość / długość / region</div><div>${pln(f.value)} · ${f.length_km ? num(f.length_km, 2) + " km" : "—"} · ${esc(f.voivodeship || "—")}</div></div></div>
     ${verdictCard(r)}
@@ -905,7 +918,7 @@ function insightsCard(ins) {
     <div class="grid g2"><div class="card"><h3 style="margin-top:0">Koszt: rozliczenie vs wartość umowy</h3>${distSvg(c, (v) => pp(v))}</div>
       <div class="card"><h3 style="margin-top:0">Czas: faktyczny vs umowny</h3>${distSvg(t, (v) => pp(v))}</div></div>
     <div class="grid g2" style="margin-top:12px"><div class="card">${basesBars(ins.bases)}</div>
-      <div class="card"><h3 style="margin-top:0">Wykryte problemy w danych wejściowych (${ins.data_issues.length})</h3>${ins.data_issues.map((x) => `<div class="quote small"><a href="#/projekt/${x.project_id}"><b>${esc(x.record_id)}</b></a> ${esc(x.message)}</div>`).join("") || `<div class="empty">Brak.</div>`}</div></div>
+      <div class="card"><h3 style="margin-top:0">Wykryte problemy w danych wejściowych (${ins.data_issues.length})</h3>${ins.data_issues.map((x) => `<div class="quote small"><a href="#/projekt/${x.project_id}"><b>${esc(x.record_id)}</b></a> ${esc(x.message)}</div>`).join("") || `<div class="empty">Nie wykryto problemów w danych wejściowych.</div>`}</div></div>
     <div class="card" style="margin-top:12px;overflow:auto"><h3 style="margin-top:0">Ryzyka, które się zmaterializowały — z wyceną</h3>${registerTable(ins.register)}</div>`;
 }
 
@@ -982,7 +995,7 @@ function deadlineBlock(ref) {
   const pm = F.p_miss;
   const head = F.deadline
     ? `<div class="bigq ${pm >= 0.5 ? "bad" : pm >= 0.2 ? "warn" : "ok"}"><span class="pct">${Math.round(pm * 100)}%</span><span>ryzyka, że inwestycja <b>nie zdąży przed ${dpl(F.deadline)}</b> — tak skończyło się ${F.k_miss[0]} z ${F.k_miss[1]} podobnych przebiegów.</span></div>`
-    : `<div class="hint">Podaj termin zakończenia z umowy o dofinansowanie (pole nad przyciskiem „Analizuj” albo w opisie), aby policzyć ryzyko utraty dofinansowania.</div>`;
+    : `<div class="hint">Podaj termin zakończenia z umowy o dofinansowanie (pole nad przyciskiem „Analizuj nową inwestycję” albo w opisie), aby policzyć ryzyko utraty dofinansowania.</div>`;
   const tips = [];
   if (F.deadline) {
     tips.push(`„Na papierze” (przetarg ~${Math.round(F.tender.p50 || 45)} dni + ${months(F.planned_days)} realizacji) koniec wypada <b>${dpl(F.naive_finish)}</b>, ale w 8 na 10 podobnych przebiegów dopiero do <b>${dpl(F.finish.p80)}</b>.`);
@@ -1010,11 +1023,11 @@ function verdictCard(r) {
   // 1. budżet
   if (res.p80 && f.value) {
     const ok = res.p80.uplift <= 0;
-    tiles.push({ tone: ok ? "ok" : "bad", label: "Budżet", big: ok ? "Szacunek wystarczy" : "Za mało o " + mlnz(res.reserve_p80),
+    tiles.push({ tone: ok ? "ok" : "bad", label: "Budżet (szacunek inwestora)", big: ok ? "Szacunek wystarczy" : "Za mało o " + mlnz(res.reserve_p80),
       small: ok ? `w 8 na 10 podobnych przypadków koszt końcowy ≤ ${mlnz(res.p80.budget_raw)}` : `w 8 na 10 podobnych przypadków potrzeba do ${mlnz(res.p80.budget)}` });
   }
-  if (ct.p80 !== undefined) tiles.push({ tone: ct.p80 > 0.1 ? "warn" : "ok", label: "Po przetargu", big: `Zostaw ${pp(ct.p80, 0)} rezerwy`,
-    small: `od ceny umowy${ct.reserve_p80_pln ? ` (≈ ${mlnz(ct.reserve_p80_pln)})` : ""} — ${R.cost.share_over_raw ? R.cost.share_over_raw[0] + " z " + R.cost.share_over_raw[1] : "większość"} umów kosztowało więcej niż w umowie` });
+  if (ct.p80 !== undefined) tiles.push({ tone: ct.p80 > 0.1 ? "warn" : "ok", label: "Rezerwa po przetargu", big: `Zostaw ${pp(ct.p80, 0)} rezerwy`,
+    small: `liczone od ceny umowy, nie od szacunku${ct.reserve_p80_pln ? ` (≈ ${mlnz(ct.reserve_p80_pln)})` : ""} — ${R.cost.share_over_raw ? R.cost.share_over_raw[0] + " z " + R.cost.share_over_raw[1] : "większość"} umów kosztowało więcej niż w umowie` });
   if (res.time_p80 && calc.reference.duration_days_input) {
     const late = res.time_p80.uplift > 0.15;
     tiles.push({ tone: late ? "bad" : "ok", label: "Termin", big: `Planuj ${months(res.time_p80.days)}`, small: `zamiast ${months(calc.reference.duration_days_input)} — ${R.time.share_over_raw ? R.time.share_over_raw[0] + " z " + R.time.share_over_raw[1] : ""} podobnych umów skończyło się po terminie` });
@@ -1106,7 +1119,7 @@ function renderCmd() {
   const q = foldq($("#cmd-q").value.trim());
   const acts = [
     { t: "Analizuj nową inwestycję", s: "opis + projekt umowy → prognoza, ryzyka, audyt klauzul", go: "#/nowa", k: "akcja" },
-    { t: "Wczytaj demo na prawdziwych danych BZP", s: "22 projekty, 198 ogłoszeń, bez internetu", run: async () => { location.hash = "#/"; const r = await guard(() => post("/api/import-sample?enrich=1&bzp=1")); toast("Wczytuję dane…"); if (r.job_id) setTimeout(() => router(), 4500); }, k: "akcja" },
+    { t: "Wczytaj demo na prawdziwych danych BZP", s: "22 projekty, paczka 198 ogłoszeń BZP, bez internetu", run: async () => { location.hash = "#/"; const r = await guard(() => post("/api/import-sample?enrich=1&bzp=1")); toast("Wczytuję dane…"); if (r.job_id) setTimeout(() => router(), 4500); }, k: "akcja" },
     ...$$("#nav a[data-v]").filter((a) => a.dataset.v !== "recent").map((a) => ({ t: $(".nt", a).textContent, s: $(".nh", a).textContent, go: a.getAttribute("href"), k: "strona" })),
   ];
   const projs = (CMD.projects || []).map((p) => ({ t: `${p.record_id} · ${p.beneficiary_name}`, s: p.name, go: `#/projekt/${p.id}`, k: "projekt",
