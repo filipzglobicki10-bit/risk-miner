@@ -2,6 +2,12 @@
 
 **HackNation 2026 · wyzwanie Ministerstwa Funduszy i Polityki Regionalnej (Departament PPP)**
 
+Risk Miner automatycznie buduje z rozproszonych źródeł (plik organizatora, BZP/e-Zamówienia, TED, dokumenty
+PDF/DOCX/XLSX, strony BIP/NIK/KIO) **ustrukturyzowaną bazę przypadków** inwestycji, wykrywa **udokumentowane
+zdarzenia ryzyka** wg katalogu eksperckiego, przekazuje je **do weryfikacji eksperta**, a dla **nowej inwestycji**
+odpowiada na pytanie, które naprawdę interesuje instytucję: *jak skończyły się podobne umowy i co trzeba zapisać
+w tej umowie, żeby nie skończyła się tak samo*. Pilotaż: sektor wodociągowo-kanalizacyjny.
+
 ## Spis treści
 
 - [Co wyróżnia to rozwiązanie](#co-wyróżnia-to-rozwiązanie)
@@ -13,12 +19,6 @@
 - [Testy](#testy)
 - [Licencje](#licencje)
 - [Znane ograniczenia](#znane-ograniczenia)
-
-Risk Miner automatycznie buduje z rozproszonych źródeł (plik organizatora, BZP/e-Zamówienia, TED, dokumenty
-PDF/DOCX/XLSX, strony BIP/NIK/KIO) **ustrukturyzowaną bazę przypadków** inwestycji, wykrywa **udokumentowane
-zdarzenia ryzyka** wg katalogu eksperckiego, przekazuje je **do weryfikacji eksperta**, a dla **nowej inwestycji**
-odpowiada na pytanie, które naprawdę interesuje instytucję: *jak skończyły się podobne umowy i co trzeba zapisać
-w tej umowie, żeby nie skończyła się tak samo*. Pilotaż: sektor wodociągowo-kanalizacyjny.
 
 ## Co wyróżnia to rozwiązanie
 
