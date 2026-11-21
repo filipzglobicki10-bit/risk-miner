@@ -1,0 +1,446 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-21T18:47:12+00:00",
+  "title": "Design System: Risk Miner",
+  "extensions": {
+    "colorMeta": {
+      "reservoir-teal": {
+        "role": "primary",
+        "displayName": "Reservoir Teal",
+        "canonical": "#0f7c8c",
+        "oklch": "oklch(53.9% 0.090 211.0)",
+        "tonalRamp": [
+          "#000f16",
+          "#002b34",
+          "#004954",
+          "#046a78",
+          "#378e9d",
+          "#6db1be",
+          "#a0d5e0",
+          "#cdf7ff"
+        ]
+      },
+      "main-line-navy": {
+        "role": "primary",
+        "displayName": "Main Line Navy",
+        "canonical": "#16324f",
+        "oklch": "oklch(31.1% 0.063 251.2)",
+        "tonalRamp": [
+          "#030c18",
+          "#152537",
+          "#2c4159",
+          "#45607d",
+          "#6683a3",
+          "#8ea7c3",
+          "#b8cde4",
+          "#e0f1ff"
+        ]
+      },
+      "night-network": {
+        "role": "secondary",
+        "displayName": "Night Network",
+        "canonical": "#0f2438",
+        "oklch": "oklch(25.4% 0.047 249.1)",
+        "tonalRamp": [
+          "#040c14",
+          "#192532",
+          "#314152",
+          "#4b6075",
+          "#6c839a",
+          "#93a7bb",
+          "#bccddd",
+          "#e3f0fe"
+        ]
+      },
+      "flow-cyan": {
+        "role": "secondary",
+        "displayName": "Flow Cyan",
+        "canonical": "#7fd6e0",
+        "oklch": "oklch(82.5% 0.085 205.1)",
+        "tonalRamp": [
+          "#001013",
+          "#002b30",
+          "#004950",
+          "#116a72",
+          "#3c8e97",
+          "#71b1b9",
+          "#a2d5db",
+          "#cff7fc"
+        ]
+      },
+      "junction-amber": {
+        "role": "tertiary",
+        "displayName": "Junction Amber",
+        "canonical": "#f2b45a",
+        "oklch": "oklch(81.0% 0.129 74.3)",
+        "tonalRamp": [
+          "#1a0500",
+          "#3a1b00",
+          "#5e3500",
+          "#845100",
+          "#aa7416",
+          "#ca9b59",
+          "#eac38f",
+          "#ffe9c0"
+        ]
+      },
+      "desk-mist": {
+        "role": "neutral",
+        "displayName": "Desk Mist",
+        "canonical": "#f4f6f9",
+        "oklch": "oklch(97.2% 0.005 258.3)",
+        "tonalRamp": [
+          "#0b0b0c",
+          "#232425",
+          "#3f4042",
+          "#5c5e60",
+          "#7f8083",
+          "#a3a5a7",
+          "#c9cacc",
+          "#edeef0"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1b2430",
+        "oklch": "oklch(25.7% 0.026 255.8)",
+        "tonalRamp": [
+          "#080b11",
+          "#1f242c",
+          "#39404b",
+          "#555e6b",
+          "#77818f",
+          "#9ca5b2",
+          "#c4cbd5",
+          "#e9eff7"
+        ]
+      },
+      "slate-muted": {
+        "role": "neutral",
+        "displayName": "Slate Muted",
+        "canonical": "#5d6b7c",
+        "oklch": "oklch(52.2% 0.032 253.4)",
+        "tonalRamp": [
+          "#070c12",
+          "#1d252e",
+          "#37414d",
+          "#525f6e",
+          "#748292",
+          "#9aa6b4",
+          "#c2ccd8",
+          "#e7eff9"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#dde3ea",
+        "oklch": "oklch(91.3% 0.012 252.1)",
+        "tonalRamp": [
+          "#090b0e",
+          "#222428",
+          "#3c4044",
+          "#595e64",
+          "#7c8187",
+          "#a1a5aa",
+          "#c7cbcf",
+          "#eceff2"
+        ]
+      },
+      "ok-green": {
+        "role": "status",
+        "displayName": "OK Green",
+        "canonical": "#1f7a4d",
+        "oklch": "oklch(51.5% 0.110 156.8)",
+        "tonalRamp": [
+          "#001103",
+          "#002d15",
+          "#064d2d",
+          "#1e6e46",
+          "#449367",
+          "#76b58f",
+          "#a6d9b8",
+          "#d2fae0"
+        ]
+      },
+      "warn-ochre": {
+        "role": "status",
+        "displayName": "Warn Ochre",
+        "canonical": "#a15c00",
+        "oklch": "oklch(54.2% 0.124 62.5)",
+        "tonalRamp": [
+          "#1c0300",
+          "#3d1800",
+          "#623100",
+          "#894c00",
+          "#b16f2b",
+          "#d09763",
+          "#f0c096",
+          "#ffe6c5"
+        ]
+      },
+      "bad-red": {
+        "role": "status",
+        "displayName": "Bad Red",
+        "canonical": "#b42318",
+        "oklch": "oklch(50.0% 0.182 29.5)",
+        "tonalRamp": [
+          "#260000",
+          "#4e0000",
+          "#790f08",
+          "#a7271c",
+          "#d24e3f",
+          "#f17f6f",
+          "#ffae9f",
+          "#ffd9cc"
+        ]
+      },
+      "info-blue": {
+        "role": "status",
+        "displayName": "Info Blue",
+        "canonical": "#3557a0",
+        "oklch": "oklch(47.0% 0.125 263.5)",
+        "tonalRamp": [
+          "#010824",
+          "#0f2149",
+          "#243d72",
+          "#3b5b9d",
+          "#5b7ec6",
+          "#85a4e2",
+          "#b0cbff",
+          "#daefff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Dashboard hero question only; Main Line Navy, max 20ch."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page titles (h1) with a muted subtitle."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section heads, verdict title (20px), h3 (15px)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default text; story and change prose at 14.5–15px / 1.55–1.6."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels, table headers, tile labels in Slate Muted."
+      },
+      "eyebrow": {
+        "displayName": "Eyebrow",
+        "purpose": "Uppercase teal kicker above verdicts and sections; evidence-layer tags."
+      },
+      "metric": {
+        "displayName": "Metric",
+        "purpose": "Headline numbers, tabular; 19px in tiles, 40px/800 for the funding-risk percentage."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Identifiers, codes and job logs only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet",
+        "value": "0 1px 2px rgba(16,24,40,.06), 0 1px 3px rgba(16,24,40,.08)",
+        "purpose": "All resting cards, layers, hero, story, verdict."
+      },
+      {
+        "name": "tooltip",
+        "value": "0 8px 24px rgba(16,32,52,.16)",
+        "purpose": "Chart tooltips."
+      },
+      {
+        "name": "modal",
+        "value": "0 20px 60px rgba(0,0,0,.25)",
+        "purpose": "Dialogs over a rgba(10,20,35,.45) scrim."
+      },
+      {
+        "name": "palette",
+        "value": "0 30px 80px rgba(0,0,0,.35)",
+        "purpose": "Command palette over a rgba(8,20,33,.55) scrim with 3px blur."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state",
+        "value": "150ms",
+        "purpose": "Background/colour transitions on nav items and the sidebar CTA."
+      },
+      {
+        "name": "rail",
+        "value": "200ms ease",
+        "purpose": "Sidebar collapse to icon rail."
+      },
+      {
+        "name": "node-pulse",
+        "value": "700ms ease-out, once",
+        "purpose": "Junction node pulse on navigation — the menu's only animation."
+      },
+      {
+        "name": "chart-draw",
+        "value": "900ms cubic-bezier(.2,.7,.2,1), staggered via --d",
+        "purpose": "Plan→reality arrows draw in on the dashboard hero; dots fade/scale in 350ms after."
+      },
+      {
+        "name": "reduced",
+        "value": "none",
+        "purpose": "prefers-reduced-motion disables rail transition, pulse and chart draw."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "900px",
+        "purpose": "Sidebar becomes a static top block; pipe, nodes and nav hints hide."
+      },
+      {
+        "name": "medium",
+        "value": "1100px",
+        "purpose": "Sidebar 236px; 4/6-col grids to 2; 3-col, hero and map stack."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one action colour on the desk: Analizuj, Zatwierdź import, Eksportuj.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Analizuj</button>",
+      "css": ".ds-btn{border:1px solid #dde3ea;background:#fff;color:#1b2430;padding:7px 12px;border-radius:8px;cursor:pointer;font:500 14px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;display:inline-flex;gap:6px;align-items:center} .ds-btn-primary{background:#0f7c8c;border-color:#0f7c8c;color:#fff} .ds-btn-primary:hover{background:#0c6774;border-color:#0c6774} .ds-btn:focus-visible{outline:2px solid #0f7c8c;outline-offset:2px}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Default quiet action on white sheets.",
+      "html": "<button class=\"ds-btn-sec\">Drukuj kartę ryzyka</button>",
+      "css": ".ds-btn-sec{border:1px solid #dde3ea;background:#fff;color:#1b2430;padding:7px 12px;border-radius:8px;cursor:pointer;font:500 14px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif} .ds-btn-sec:hover{border-color:#b9c5d3;background:#f9fbfd} .ds-btn-sec:focus-visible{outline:2px solid #0f7c8c;outline-offset:2px}"
+    },
+    {
+      "name": "Approve / Reject Pair",
+      "kind": "button",
+      "refersTo": "button-approve",
+      "description": "Expert decisions: constructive solid green, destructive quiet red outline.",
+      "html": "<div class=\"ds-acts\"><button class=\"ds-ok\">Zatwierdź</button><button class=\"ds-bad\">Odrzuć</button></div>",
+      "css": ".ds-acts{display:flex;gap:6px} .ds-ok,.ds-bad{padding:3px 9px;font:500 12px/1.5 system-ui,sans-serif;border-radius:6px;cursor:pointer;border:1px solid} .ds-ok{background:#1f7a4d;border-color:#1f7a4d;color:#fff} .ds-ok:hover{background:#196640} .ds-bad{background:#fff;border-color:#e6b3ae;color:#b42318} .ds-bad:hover{background:#fdecea} .ds-ok:focus-visible,.ds-bad:focus-visible{outline:2px solid #0f7c8c;outline-offset:2px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Label above, hairline field, teal focus.",
+      "html": "<label class=\"ds-f\">Planowany start przetargu<input class=\"ds-in\" value=\"2026-03\"></label>",
+      "css": ".ds-f{display:flex;flex-direction:column;gap:4px;font:500 12px system-ui,sans-serif;color:#5d6b7c} .ds-in{font:14px system-ui,sans-serif;border:1px solid #dde3ea;border-radius:7px;padding:7px 9px;background:#fff;color:#1b2430} .ds-in:focus{outline:2px solid #0f7c8c;outline-offset:1px;border-color:#0f7c8c}"
+    },
+    {
+      "name": "Sidebar Navigation",
+      "kind": "nav",
+      "refersTo": "sidebar-cta",
+      "description": "Network schematic: pipe line, junction nodes, cyan active flow, amber badge.",
+      "html": "<nav class=\"ds-side\"><a class=\"ds-cta\" href=\"#\">+ Analizuj nową inwestycję</a><div class=\"ds-grp\"><div class=\"ds-gl\">Baza doświadczeń</div><a class=\"ds-ni ds-act\" href=\"#\"><i></i><span><b>Start</b><small>wnioski z całej bazy</small></span></a><a class=\"ds-ni\" href=\"#\"><i></i><span><b>Panel eksperta</b><small>do zatwierdzenia</small></span><em>12</em></a></div></nav>",
+      "css": ".ds-side{background:#0f2438;color:#c9d8e8;padding:14px 10px;width:268px;font:14px/1.5 system-ui,sans-serif} .ds-cta{display:block;margin:0 4px 14px;padding:11px 13px;border-radius:11px;background:#7fd6e0;color:#0b2233;font-weight:700;text-decoration:none} .ds-cta:hover{background:#9ee2ea} .ds-grp{position:relative} .ds-grp::before{content:'';position:absolute;left:17px;top:30px;bottom:14px;width:2px;background:rgba(127,214,224,.22)} .ds-gl{font-size:12px;color:#7e97b0;padding:6px 10px 6px 34px;font-weight:600} .ds-ni{position:relative;display:flex;align-items:center;gap:10px;padding:7px 10px 7px 34px;border-radius:10px;color:#c9d8e8;text-decoration:none} .ds-ni i{position:absolute;left:13px;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:#0f2438;border:2px solid rgba(127,214,224,.45)} .ds-ni span{display:flex;flex-direction:column;flex:1;line-height:1.2} .ds-ni b{font-weight:550} .ds-ni small{font-size:11.5px;color:#7e97b0;margin-top:2px} .ds-ni:hover{background:rgba(255,255,255,.06);color:#fff} .ds-act{background:rgba(127,214,224,.12);color:#fff} .ds-act i{background:#7fd6e0;border-color:#7fd6e0;box-shadow:0 0 0 4px rgba(127,214,224,.18)} .ds-ni em{font-style:normal;background:#f2b45a;color:#2a1800;border-radius:7px;padding:1px 7px;font-size:11.5px;font-weight:750} .ds-ni:focus-visible,.ds-cta:focus-visible{outline:2px solid #f2b45a;outline-offset:2px}"
+    },
+    {
+      "name": "Status Pills",
+      "kind": "chip",
+      "refersTo": "pill-ok",
+      "description": "Wash-and-ink status vocabulary; non-interactive.",
+      "html": "<span class=\"ds-pill ds-ok\">zatwierdzone</span> <span class=\"ds-pill ds-warn\">podwyższony</span> <span class=\"ds-pill ds-bad\">wysoki</span> <span class=\"ds-pill ds-info\">BZP</span>",
+      "css": ".ds-pill{display:inline-block;padding:1px 8px;border-radius:999px;font:600 11.5px/1.5 system-ui,sans-serif;white-space:nowrap} .ds-ok{background:#e5f4ec;color:#1f7a4d} .ds-warn{background:#fff3e0;color:#a15c00} .ds-bad{background:#fdecea;color:#b42318} .ds-info{background:#e9effb;color:#3557a0}"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Resting white sheet on Desk Mist.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-l\">Wartość umowy</div><div class=\"ds-v\">4,82 mln zł</div><div class=\"ds-l\">ogłoszenie o wyniku, BZP</div></div>",
+      "css": ".ds-card{background:#fff;border:1px solid #dde3ea;border-radius:10px;padding:16px;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.08);font:14px/1.5 system-ui,sans-serif;color:#1b2430;max-width:240px} .ds-v{font-size:26px;font-weight:700;color:#16324f;font-variant-numeric:tabular-nums} .ds-l{color:#5d6b7c;font-size:12px}"
+    },
+    {
+      "name": "Evidence Layers",
+      "kind": "custom",
+      "description": "A/B/C separation of source data, calculations and conclusions.",
+      "html": "<div class=\"ds-layers\"><div class=\"ds-layer ds-a\"><span class=\"ds-tag\">A. Dane źródłowe</span><p>Ogłoszenie o wykonaniu umowy 2026/BZP…</p></div><div class=\"ds-layer ds-b\"><span class=\"ds-tag\">B. Obliczenia</span><p>P80 kosztu: +23,8% (n_eff 9,4)</p></div><div class=\"ds-layer ds-c\"><span class=\"ds-tag\">C. Wnioski</span><p>Nie zwalniaj oszczędności przetargowych w całości.</p></div></div>",
+      "css": ".ds-layers{display:grid;gap:10px;font:14px/1.5 system-ui,sans-serif;color:#1b2430} .ds-layer{border-radius:10px;padding:14px 16px;border:1px solid #dde3ea;background:#fff} .ds-layer p{margin:0} .ds-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:2px 8px;border-radius:5px;margin-bottom:8px} .ds-a{border-top:4px solid #3557a0} .ds-a .ds-tag{background:#e9effb;color:#3557a0} .ds-b{border-top:4px solid #0f7c8c} .ds-b .ds-tag{background:#e3f3f5;color:#0f7c8c} .ds-c{border-top:4px solid #a15c00} .ds-c .ds-tag{background:#fff3e0;color:#a15c00}"
+    },
+    {
+      "name": "Verdict Tiles",
+      "kind": "custom",
+      "description": "The 30-second answer: eyebrow, title, status-tinted tiles with a basis line.",
+      "html": "<div class=\"ds-verdict\"><div class=\"ds-eb\">Odpowiedź w 30 sekund</div><h2>Czy zdążysz przed końcem dofinansowania?</h2><div class=\"ds-tiles\"><div class=\"ds-vt ds-bad\"><div class=\"ds-vl\">Dofinansowanie</div><div class=\"ds-vb\">74% ryzyka</div><div class=\"ds-vs\">16 z 22 przebiegów po terminie</div></div><div class=\"ds-vt ds-warn\"><div class=\"ds-vl\">Rezerwa</div><div class=\"ds-vb\">+24% ceny</div><div class=\"ds-vs\">P80, n_eff 9,4</div></div><div class=\"ds-vt ds-ok\"><div class=\"ds-vl\">Budżet</div><div class=\"ds-vb\">wystarcza</div><div class=\"ds-vs\">szacunek vs P80</div></div></div></div>",
+      "css": ".ds-verdict{background:#fff;border:1px solid #dde3ea;border-radius:14px;padding:18px 20px;border-top:5px solid #16324f;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.08);font:14px/1.5 system-ui,sans-serif;color:#1b2430} .ds-verdict h2{margin:2px 0 12px;font-size:20px} .ds-eb{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#0f7c8c} .ds-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px} .ds-vt{border-radius:10px;padding:12px 14px;border:1px solid #dde3ea;background:#fafbfc} .ds-vl{font-size:12px;color:#5d6b7c;font-weight:600} .ds-vb{font-size:19px;font-weight:700;color:#16324f;margin:4px 0;line-height:1.2;font-variant-numeric:tabular-nums} .ds-vs{font-size:12px;color:#5d6b7c} .ds-vt.ds-ok{background:#e5f4ec;border-color:#bfe3cf} .ds-vt.ds-ok .ds-vb{color:#1f7a4d} .ds-vt.ds-warn{background:#fff3e0;border-color:#f3d6a8} .ds-vt.ds-warn .ds-vb{color:#a15c00} .ds-vt.ds-bad{background:#fdecea;border-color:#f3c5c0} .ds-vt.ds-bad .ds-vb{color:#b42318}"
+    },
+    {
+      "name": "Story Card",
+      "kind": "custom",
+      "description": "A project's history in three sentences — the model for warm, guiding copy.",
+      "html": "<div class=\"ds-story\"><div class=\"ds-eb\">Przebieg projektu</div><div class=\"ds-st\">Umowę podpisano na 14 miesięcy. Po dwóch zmianach (roboty dodatkowe, postępowanie Wód Polskich) wykonanie przesunęło się o 277 dni. Rozliczenie wyniosło +8% ceny umowy.</div></div>",
+      "css": ".ds-story{background:#fff;border:1px solid #dde3ea;border-left:5px solid #0f7c8c;border-radius:12px;padding:14px 16px;box-shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.08);font:14px/1.5 system-ui,sans-serif;color:#1b2430;max-width:640px} .ds-eb{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#0f7c8c} .ds-st{font-size:15px;line-height:1.6;margin-top:4px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Utility Control Room",
+    "overview": "Risk Miner is laid out like the control room of a water utility. The dark sidebar is the network schematic: a single pipe runs down each navigation group, every destination is a junction node on it, and the active page lights up with flow cyan. The workspace to its right is the control desk, a calm, light surface of white sheets where every reading carries a gauge (P50/P80/P90, k of n, % confidence) and a source you can follow. The schematic sets the identity; the desk does the work.\n\nThe desk's tone is warm and guiding. Its users are procurement, investment and legal specialists, not statisticians, so every view leads with a plain-Polish answer (\"Odpowiedź w 30 sekund\", meaning \"the answer in 30 seconds\"; story cards; \"co zrobić przed ogłoszeniem przetargu\", meaning \"what to do before announcing the tender\") and keeps the full evidence one click away. Density is high where comparison matters (tables, the change library, review queues) and generous where a decision is made (hero, verdict tiles, the funding-risk percentage). Colour almost always carries meaning: status, the evidence layer, or flow. It is not decoration.\n\nThe one confirmed anti-reference is government-form greyness: walls of identical grey fields with no hierarchy, no explanation and no voice. Risk Miner serves the public sector without looking like a form.",
+    "keyCharacteristics": [
+      "A dark network sidebar (night network, flow cyan, junction amber) against a light misty desk.",
+      "Reservoir teal is the single action colour on the desk.",
+      "A traffic-light status vocabulary, always as a soft wash plus a strong text colour, never as solid blocks.",
+      "Three evidence layers (A: source data, B: calculations, C: conclusions), each with its own colour.",
+      "Headline numbers in large type with tabular figures. Plain-language explanations sit next to every number.",
+      "The system font stack, with weights from 400 to 800 doing the hierarchy work."
+    ],
+    "rules": [
+      {
+        "name": "The Wash-and-Ink Rule",
+        "body": "Status is shown as a soft wash with strong same-hue text and a tinted border, for example Bad Wash ground, Bad Red text, border #f3c5c0. Solid status fills are reserved for decisive action buttons (approve).",
+        "section": "colors"
+      },
+      {
+        "name": "The Water Stays in the Pipes Rule",
+        "body": "Flow Cyan and Junction Amber live on the Night Network sidebar. On the desk, action is Reservoir Teal and emphasis is Main Line Navy.",
+        "section": "colors"
+      },
+      {
+        "name": "The Graded Risk Rule",
+        "body": "Risk severity always uses the full scale (ok, warn, bad, info, grey). Red is for the specific finding that is high, such as the hero's key number or a cost overrun, never for a whole screen.",
+        "section": "colors"
+      },
+      {
+        "name": "The Number-with-a-Sentence Rule",
+        "body": "A large figure never stands alone. It sits with a label above it and a plain-language basis below (\"16 z 22 umów\", \"P80, n_eff = 9\").",
+        "section": "typography"
+      },
+      {
+        "name": "The Floating-Only-When-Floating Rule",
+        "body": "Shadows heavier than Sheet belong only to layers that sit above the page (modal, palette, tooltip). Never lift a card to make it look important; use an edge colour or an eyebrow instead.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do lead every view with the plain-language answer, then the numbers, then the evidence trail (verdict, then layers, then sources).",
+      "Do pair every headline number with its basis in Slate Muted (\"k z n\", n_eff, P80 interval).",
+      "Do use the Wash-and-Ink treatment for status, with tinted borders: ok #bfe3cf, warn #f3d6a8, bad #f3c5c0, info #c9d6f2.",
+      "Do keep Reservoir Teal as the only action colour on the desk, and Flow Cyan and Junction Amber inside the sidebar.",
+      "Do use tabular figures (font-variant-numeric: tabular-nums) for every number in tables, tiles and lists.",
+      "Do add a short guiding hint (the info-wash hint block or a muted sub line) wherever a non-specialist needs to know what to do next.",
+      "Do respect prefers-reduced-motion for the rail transition, the node pulse and the hero chart draw-in."
+    ],
+    "donts": [
+      "Don't let a screen fall into government-form greyness: rows of identical grey fields with no eyebrow, no answer, no hint and no hierarchy.",
+      "Don't use Flow Cyan as text or fill on white sheets; it fails contrast there.",
+      "Don't fill status as solid blocks or paint a whole section red; grade it.",
+      "Don't lift cards with heavier shadows to signal importance; use an edge colour, an eyebrow or a verdict tile.",
+      "Don't show a number without its source path or sample size."
+    ]
+  }
+}

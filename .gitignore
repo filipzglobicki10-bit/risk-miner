@@ -1,5 +1,5 @@
 data/
-config.json
+/config.json
 tests/tmp/
 __pycache__/
 *.pyc
