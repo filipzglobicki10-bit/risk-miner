@@ -432,3 +432,6 @@ svg a:focus-visible>circle,svg a:focus-visible>rect{stroke:var(--river);stroke-w
 }
 .hero-r svg.hide-ok .s-ok,.hero-r svg.hide-warn .s-warn,.hero-r svg.hide-bad .s-bad,.hero-r svg.hide-unv .s-unv{display:none}
 @media(max-width:1250px){.verdict-body{grid-template-columns:1fr}}
+.vt .vk{color:var(--ink);font-weight:600}
+.vt .vb{font-size:22px}
+.knows .vt .vb{font-size:22px}

@@ -196,7 +196,7 @@ function heroBlock(ins, projects, changes) {
   const pts = projects.filter((p) => p.metrics && p.metrics.cost_dev_pct != null && p.metrics.delay_days != null && p.metrics.planned_duration_days)
     .map((p) => ({ id: p.id, rid: p.record_id, city: p.city || p.beneficiary_name, name: p.name, x: p.metrics.delay_days / p.metrics.planned_duration_days, y: p.metrics.cost_dev_pct, v: p.metrics.contract_value || 1, unverified: !!p.n_links_proposed }));
   const both = pts.filter((p) => p.x > 0.005 && p.y > 0.005).length;
-  const W = 560, H = 380, L = 62, R = 18, T = 18, B = 40;
+  const W = 600, H = 380, L = 62, R = 108, T = 18, B = 40;
   const xs = pts.map((p) => p.x).sort((a, b) => a - b), xtop = xs[xs.length - 1] || 0;
   const xcap = Math.max(1.2, (xs.length > 2 ? xs[xs.length - 2] : xtop) * 1.2);
   const xmax = Math.max(1.2, Math.min(xtop, xcap)) * 1.06, xmin = Math.min(-0.15, ...pts.map((p) => p.x));
@@ -208,8 +208,8 @@ function heroBlock(ins, projects, changes) {
     <rect class="band" x="${L}" y="${yP80}" width="${W - R - L}" height="${Math.max(0, yP50 - yP80)}" fill="${VZ.warnWash}"/>`;
   const levels = `<line x1="${L}" x2="${W - R}" y1="${yP80}" y2="${yP80}" stroke="${VZ.late}" stroke-dasharray="6 4" stroke-width="1.5"/>
     <line x1="${L}" x2="${W - R}" y1="${yP50}" y2="${yP50}" stroke="${VZ.warnEdge}" stroke-dasharray="6 4" stroke-width="1.5"/>
-    <text x="${W - R - 6}" y="${yP80 - 6}" text-anchor="end" font-size="12" font-weight="700" fill="#B31F27" stroke="${VZ.alarmWash}" stroke-width="3" paint-order="stroke">stan alarmowy · P80 ${pp(c.p80, 0)}</text>
-    <text x="${W - R - 6}" y="${yP50 - 6}" text-anchor="end" font-size="12" font-weight="700" fill="#7A5600" stroke="${VZ.warnWash}" stroke-width="3" paint-order="stroke">stan ostrzegawczy · P50 ${pp(c.p50, 1)}</text>`;
+    <text x="${W - R + 8}" y="${yP80 - 3}" font-size="12" font-weight="700" fill="#B31F27">stan alarmowy<tspan x="${W - R + 8}" dy="14">P80 ${pp(c.p80, 0)}</tspan></text>
+    <text x="${W - R + 8}" y="${Math.max(yP50 - 3, yP80 + 30)}" font-size="12" font-weight="700" fill="#7A5600">stan ostrzegawczy<tspan x="${W - R + 8}" dy="14">P50 ${pp(c.p50, 1)}</tspan></text>`;
   for (const tx of [0, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2, 2.5, 3]) if (tx <= xmax) g += `<line x1="${X(tx)}" x2="${X(tx)}" y1="${T}" y2="${H - B}" stroke="${VZ.grid}" ${tx ? "" : 'stroke="#9aa8b6"'}/><text x="${X(tx)}" y="${H - B + 16}" font-size="11" text-anchor="middle" fill="${VZ.muted}">${tx ? "+" + Math.round(tx * 100) + "%" : "plan"}</text>`;
   for (const ty of [-0.4, -0.2, 0, 0.2, 0.4]) if (ty >= ymin && ty <= ymax) g += `<line x1="${L}" x2="${W - R}" y1="${Y(ty)}" y2="${Y(ty)}" stroke="${ty ? VZ.grid : "#9aa8b6"}"/><text x="${L - 6}" y="${Y(ty) + 4}" font-size="11" text-anchor="end" fill="${VZ.muted}">${ty ? (ty > 0 ? "+" : "−") + Math.abs(Math.round(ty * 100)) + "%" : "plan"}</text>`;
   g += `<text x="${(L + W - R) / 2}" y="${H - 6}" font-size="11.5" text-anchor="middle" fill="${VZ.ink}">czas realizacji względem umowy →</text>
@@ -312,7 +312,7 @@ function openDrawer(pid, opener) {
   if (!p) return false;
   const m = p.metrics || {}, base = INS && INS.rcf ? INS.rcf.cost : null;
   const lc = levelOf(m.cost_dev_pct, base), lt = m.delay_days == null || !m.planned_duration_days ? "" : levelOf(m.delay_days / m.planned_duration_days, INS && INS.rcf ? INS.rcf.time : null);
-  const tile = (tone, l, v, s) => `<div class="vt ${tone}"><div class="vl">${l}</div><div class="vb">${v}</div>${s ? `<div class="vs">${s}</div>` : ""}</div>`;
+  const tile = (tone, l, v, s) => `<div class="vt ${tone}"><div class="vb"><span class="vk">${l}:</span> ${v}</div>${s ? `<div class="vs">${s}</div>` : ""}</div>`;
   $("#drawer-c").innerHTML = `<div class="drawer-h"><div class="d-id">${esc(p.record_id)}${p.n_links_proposed ? " · dopasowanie do weryfikacji" : ""}</div><h2 id="drawer-title">${esc(p.city || p.beneficiary_name || p.record_id)}</h2><div class="d-sub">${esc(p.name)}</div></div>
     <div class="drawer-b">
       <div class="d-metrics">${tile(lc, "Koszt względem umowy", pct(m.cost_dev_pct), m.final_paid ? `wypłacono ${pln(m.final_paid)}` : "")}${tile(lt, "Termin", days(m.delay_days), m.planned_duration_days ? `umowa na ${num(m.planned_duration_days)} dni` : "")}${tile("", "Wartość umowy", pln(m.contract_value), m.n_offers ? `ofert: ${m.n_offers}` : "")}${tile("", "Zmiany umowy", num(m.n_changes || 0), m.n_changes ? "z formularzy BZP" : "bez zmian w BZP")}</div>
@@ -343,9 +343,9 @@ function knowsStrip(ins) {
   const iss = ins.data_issues || [];
   const nIss = iss.length === 1 ? "1 problem" : iss.length < 5 ? `${iss.length} problemy` : `${iss.length} problemów`;
   const tiles = [
-    `<div class="vt ${iss.length ? "info" : ""}"><div class="vl">Sprawdzenie danych wejściowych</div><div class="vb">${iss.length ? `${nIss} w rekordach` : "Bez problemów"}</div>${iss.length ? `<ul class="vlist">${iss.map((x) => `<li><a href="#/projekt/${x.project_id}"><b>${esc(x.record_id)}</b></a> ${esc(x.message)}</li>`).join("")}</ul>` : `<div class="vs">rekordy zgadzają się z ogłoszeniami BZP</div>`}</div>`,
-    top ? `<div class="vt warn"><div class="vl">Najczęstsze ryzyko</div><div class="vb">${esc(top.name)}</div><div class="vs">${top.k} z ${top.n} umów${top.impact_cost_pct != null ? ` · typowy skutek ${pp(top.impact_cost_pct, 1)} wartości umowy` : ""}${top.impact_delay_days ? ` i ${Math.round(top.impact_delay_days)} dni` : ""}</div></div>` : "",
-    td.n && c.n ? `<div class="vt"><div class="vl">Oszczędności z przetargu</div><div class="vb">Ceny ${pp(td.p50, 0)} wobec kosztorysu</div><div class="vs">ale ${c.share_over_raw[0]} z ${c.share_over_raw[1]} umów kosztowało potem więcej, niż podpisano — nie zwalniaj ich w całości</div></div>` : "",
+    `<div class="vt ${iss.length ? "info" : ""}"><div class="vb"><span class="vk">Dane wejściowe:</span> ${iss.length ? `${nIss} w rekordach` : "bez problemów"}</div>${iss.length ? `<ul class="vlist">${iss.map((x) => `<li><a href="#/projekt/${x.project_id}"><b>${esc(x.record_id)}</b></a> ${esc(x.message)}</li>`).join("")}</ul>` : `<div class="vs">rekordy zgadzają się z ogłoszeniami BZP</div>`}</div>`,
+    top ? `<div class="vt warn"><div class="vb"><span class="vk">Najczęstsze ryzyko:</span> ${esc(top.name.toLowerCase())}</div><div class="vs">${top.k} z ${top.n} umów${top.impact_cost_pct != null ? ` · typowy skutek ${pp(top.impact_cost_pct, 1)} wartości umowy` : ""}${top.impact_delay_days ? ` i ${Math.round(top.impact_delay_days)} dni` : ""}</div></div>` : "",
+    td.n && c.n ? `<div class="vt"><div class="vb">Ceny z przetargu ${pp(td.p50, 0)} wobec kosztorysu</div><div class="vs">To oszczędność tylko na papierze: ${c.share_over_raw[0]} z ${c.share_over_raw[1]} umów kosztowało potem więcej, niż podpisano — nie zwalniaj ich w całości</div></div>` : "",
   ].filter(Boolean);
   return `<section class="knows" aria-label="Co jeszcze pokazuje baza"><div class="vtiles">${tiles.join("")}</div></section>`;
 }
@@ -1238,7 +1238,7 @@ function verdictCard(r) {
   const cols = gauges.length ? Math.min(3, tiles.length) : tiles.length <= 4 ? tiles.length : Math.ceil(tiles.length / 2);
   return `<div class="verdict"><h2>Odpowiedź w 30 sekund: jak może pójść ta inwestycja — na podstawie ${R.n_class} prawdziwych umów z BZP</h2>
     <div class="${gauges.length ? "verdict-body" : ""}">${gauges.length ? `<div class="gauges"><div class="g-row">${gauges.join("")}</div><ul class="g-legend"><li><i style="background:#F4C20D"></i><span><b>P50 — stan ostrzegawczy.</b> Połowa podobnych umów skończyła się wyżej.</span></li><li><i style="background:#FF5A5F"></i><span><b>P80 — stan alarmowy.</b> Do tego poziomu sięga woda: tyle zaplanuj, wystarczyło w 8 na 10 umów.</span></li><li><i class="dash"></i><span><b>P90</b> — rzadki przypadek powyżej alarmu.</span></li></ul></div>` : ""}<div>
-    <div class="vtiles" style="grid-template-columns:repeat(${cols},minmax(0,1fr))">${tiles.map((t) => `<div class="vt ${t.tone}"><div class="vl">${esc(t.label)}</div><div class="vb">${esc(t.big)}</div><div class="vs">${esc(t.small)}</div></div>`).join("")}</div>
+    <div class="vtiles" style="grid-template-columns:repeat(${cols},minmax(0,1fr))">${tiles.map((t) => `<div class="vt ${t.tone}"><div class="vb"><span class="vk">${esc(t.label)}:</span> ${esc(t.big)}</div><div class="vs">${esc(t.small)}</div></div>`).join("")}</div>
     ${todo.length ? `<h3>Co zrobić przed ogłoszeniem przetargu</h3><ol class="todo">${todo.slice(0, 6).map((x) => `<li>${x}</li>`).join("")}</ol>` : ""}
     <p class="small muted">Szczegóły, obliczenia i cytaty ze źródeł — poniżej.</p></div></div></div>`;
 }
@@ -1383,12 +1383,12 @@ function mapBlock(projects) {
   const costly = pts.filter((q) => q.m.cost_dev_pct != null).sort((a, b) => b.m.cost_dev_pct - a.m.cost_dev_pct).slice(0, 3);
   const byW = {};
   pts.forEach((q) => { const w = q.p.voivodeship || "—"; (byW[w] = byW[w] || []).push(q); });
-  const li = (q, v) => `<li><a href="#/projekt/${q.p.id}"><span class="mdot" style="background:${q.col}${q.sq ? ";border-radius:0" : ""}"></span><b>${esc(q.p.city || q.p.record_id)}</b> <span class="muted">${esc(q.p.record_id)}</span></a><span class="mv">${v}</span></li>`;
+  const li = (q, v, col) => `<li><a href="#/projekt/${q.p.id}"><span class="mdot" style="background:${col || q.col}${q.sq ? ";border-radius:0" : ""}"></span><b>${esc(q.p.city || q.p.record_id)}</b> <span class="muted">${esc(q.p.record_id)}</span></a><span class="mv">${v}</span></li>`;
   return `<section class="pmap card"><div class="pmap-l"><h2 style="margin:0 0 4px">Mapa inwestycji</h2><p class="small muted" style="margin:0 0 8px">${pts.length} projektów w ${Object.keys(byW).length} województwach. Kolor i kształt jak na wykresie powyżej, wielkość = wartość umowy. Kliknij znacznik, aby wysunąć przebieg umowy.</p>
       <svg viewBox="0 0 ${W} ${H}" width="100%" role="group" aria-label="Mapa projektów w Polsce. Kwadrat oznacza umowę w planie.">${g}</svg>
       <div class="legend small" style="padding-left:0"><span><i style="background:${VZ.early}"></i>koszt poniżej P50</span><span><i style="background:${VZ.yel};box-shadow:inset 0 0 0 2px ${VZ.warnEdge}"></i>stan ostrzegawczy</span><span><i style="background:${VZ.late}"></i>stan alarmowy</span><span>● po terminie · ■ w terminie</span><span>położenie wg siedziby gminy (przybliżone)</span></div></div>
-    <div class="pmap-r"><h3>Najdłuższe opóźnienia</h3><ul class="mlist">${worst.map((q) => li(q, `<b class="neg">+${q.m.delay_days} dni</b>`)).join("")}</ul>
-      <h3>Największe przekroczenia kosztu</h3><ul class="mlist">${costly.map((q) => li(q, `<b class="neg">${pp(q.m.cost_dev_pct, 1)}</b>`)).join("")}</ul></div></section>`;
+    <div class="pmap-r"><h3>Najdłuższe opóźnienia</h3><p class="small muted" style="margin:0 0 4px">kolor: stan opóźnienia względem całej bazy</p><ul class="mlist">${worst.map((q) => { const tl = q.m.planned_duration_days ? levelOf(q.m.delay_days / q.m.planned_duration_days, INS && INS.rcf ? INS.rcf.time : null) : ""; return li(q, `<b class="neg">+${q.m.delay_days} dni</b>`, tl === "bad" ? VZ.late : tl === "warn" ? VZ.yel : tl === "ok" ? VZ.early : "#6b7a8c"); }).join("")}</ul>
+      <h3>Największe przekroczenia kosztu</h3><p class="small muted" style="margin:0 0 4px">kolor: stan kosztu względem całej bazy</p><ul class="mlist">${costly.map((q) => li(q, `<b class="neg">${pp(q.m.cost_dev_pct, 1)}</b>`)).join("")}</ul></div></section>`;
 }
 
 
