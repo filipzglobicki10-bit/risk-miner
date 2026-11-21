@@ -296,3 +296,16 @@ ul.todo{margin:8px 0;padding-left:20px;font-size:14px;line-height:1.55}
 .mv{white-space:nowrap;font-variant-numeric:tabular-nums}
 @media(max-width:1100px){.pmap{grid-template-columns:1fr}}
 
+
+/* ---- pulpit: co jeszcze pokazuje baza ---- */
+.knows{margin:0 0 16px}
+.knows .vt{background:#fff}
+.knows .vt.ok{background:var(--ok-soft)}.knows .vt.warn{background:var(--warn-soft)}
+.vlist{margin:6px 0 0;padding-left:18px;font-size:12.5px;line-height:1.45}
+.vlist li{margin:3px 0}
+/* ---- wynik analizy: sekcje zwijane z licznikami ---- */
+details.sec{border-top:1px solid var(--line);padding:10px 0 4px;margin-top:12px}
+details.sec>summary{font-weight:650;font-size:15px;color:var(--navy)}
+details.sec[open]>summary{margin-bottom:8px}
+.result-end{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
+@media print{details.sec{display:block}details.sec>summary{list-style:none}}

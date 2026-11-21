@@ -139,12 +139,14 @@ VIEWS.dash = async () => {
     <section class="hero empty"><div class="hero-l"><h1 class="hero-h">Jak naprawdę kończą się inwestycje publiczne?</h1>
       <p class="hero-p">Risk Miner składa ogłoszenia z BZP w historię każdej umowy — koszt, termin, zmiany i ich przyczyny — i na tej podstawie ocenia nową inwestycję, zanim ogłosisz przetarg.</p>
       <div class="row"><button class="btn primary big" id="b-sample-bzp2">Wczytaj 22 projekty z prawdziwymi danymi BZP</button><span class="muted small">ok. 5 sekund · działa bez internetu</span></div></div></section>`;
+  const dataOpen = c.projects ? `<details class="more" id="dane-box"><summary id="dane">Dane i zasilanie bazy · ostatnie operacje</summary>` : `<h2 id="dane">Dane i zasilanie bazy</h2>`;
   $("#main").innerHTML = `${hero}
+    ${c.projects && ins ? knowsStrip(ins) : ""}
     ${c.projects ? flowStrip(c, changes, s) : ""}
     ${c.projects ? mapBlock(projects) : ""}
     <div id="insights">${ins ? insightsCard(ins) : ""}</div>
-    <h2 id="dane">Dane i zasilanie bazy</h2>
-    <div class="grid g2">
+    ${dataOpen}
+    <div class="grid g2"${c.projects ? ' style="margin-top:12px"' : ""}>
       <div class="card">
         <h3 style="margin-top:0">Zasil bazę</h3>
         <p class="muted small">Plik organizatora (.xlsx/.csv) lub inny plik z podobnymi kolumnami. Po imporcie system sam wyszuka ogłoszenia w BZP, powiąże je z projektami i przeanalizuje.</p>
@@ -162,8 +164,9 @@ VIEWS.dash = async () => {
         ${s.by_risk.length ? `<table>${s.by_risk.map((r) => `<tr><td style="width:55%">${riskLabel(r.risk_code)}</td><td><div class="bar" title="${r.n}"><i style="width:${(r.n / maxR) * 100}%"></i></div></td><td class="num">${r.n}</td><td class="num small muted">${r.approved} zatw.</td></tr>`).join("")}</table>` : `<div class="empty">Brak zdarzeń — zasil bazę.</div>`}
       </div>
     </div>
-    <h2>Ostatnie operacje</h2>
-    <div class="card" style="padding:0">${historyTable((s.recent || []).slice(0, 8))}</div>`;
+    <h3>Ostatnie operacje</h3>
+    <div class="card" style="padding:0;overflow:auto">${historyTable((s.recent || []).slice(0, 8))}</div>
+    ${c.projects ? "</details>" : ""}`;
   const doImport = async (file) => {
     const enrich = $("#c-enrich").checked ? "?enrich=1" : "";
     const r = await guard(() => api("/api/import" + enrich, { method: "POST", body: file, headers: { "X-Filename": encodeURIComponent(file.name) } }));
@@ -181,7 +184,7 @@ VIEWS.dash = async () => {
   const demo = async () => {
     const r = await guard(() => post("/api/import-sample?enrich=1&bzp=1"));
     toast(`Wczytano kopię BZP i ${r.created + r.updated} rekordów — trwa wzbogacanie`);
-    if (r.job_id) { $("#dane").scrollIntoView({ behavior: "smooth" }); watchJob(r.job_id, $("#job"), () => VIEWS.dash()); } else VIEWS.dash();
+    if (r.job_id) { if ($("#dane-box")) $("#dane-box").open = true; $("#dane").scrollIntoView({ behavior: "smooth" }); watchJob(r.job_id, $("#job"), () => VIEWS.dash()); } else VIEWS.dash();
   };
   $("#b-sample-bzp").onclick = demo;
   if ($("#b-sample-bzp2")) $("#b-sample-bzp2").onclick = demo;
@@ -225,6 +228,18 @@ function heroBlock(ins, projects, changes) {
     <div class="hero-r"><svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Plan a rzeczywistość: koszt i czas umów (${pts.length})">${g}</svg>
       <div class="legend small"><span><i style="background:${VZ.late}"></i>drożej i dłużej</span><span><i style="background:${VZ.plan}"></i>jedno z dwóch</span><span><i style="background:${VZ.early}"></i>w planie</span><span><i class="hollow"></i>do weryfikacji</span><span>wielkość = wartość umowy</span></div></div>
   </section>`;
+}
+function knowsStrip(ins) {
+  const td = ins.rcf.tender, c = ins.rcf.cost;
+  const top = (ins.register.rows || []).slice().sort((a, b) => b.k - a.k)[0];
+  const iss = ins.data_issues || [];
+  const nIss = iss.length === 1 ? "1 problem" : iss.length < 5 ? `${iss.length} problemy` : `${iss.length} problemów`;
+  const tiles = [
+    `<div class="vt ${iss.length ? "warn" : "ok"}"><div class="vl">Sprawdzenie danych wejściowych</div><div class="vb">${iss.length ? `${nIss} w rekordach` : "Bez problemów"}</div>${iss.length ? `<ul class="vlist">${iss.map((x) => `<li><a href="#/projekt/${x.project_id}"><b>${esc(x.record_id)}</b></a> ${esc(x.message)}</li>`).join("")}</ul>` : `<div class="vs">rekordy zgadzają się z ogłoszeniami BZP</div>`}</div>`,
+    top ? `<div class="vt warn"><div class="vl">Najczęstsze ryzyko</div><div class="vb">${esc(top.name)}</div><div class="vs">${top.k} z ${top.n} umów${top.impact_cost_pct != null ? ` · typowy skutek ${pp(top.impact_cost_pct, 1)} wartości umowy` : ""}${top.impact_delay_days ? ` i ${Math.round(top.impact_delay_days)} dni` : ""}</div></div>` : "",
+    td.n && c.n ? `<div class="vt"><div class="vl">Oszczędności z przetargu</div><div class="vb">Ceny ${pp(td.p50, 0)} wobec kosztorysu</div><div class="vs">ale ${c.share_over_raw[0]} z ${c.share_over_raw[1]} umów kosztowało potem więcej, niż podpisano — nie zwalniaj ich w całości</div></div>` : "",
+  ].filter(Boolean);
+  return `<section class="knows" aria-label="Co jeszcze pokazuje baza"><div class="vtiles">${tiles.join("")}</div></section>`;
 }
 function flowStrip(c, changes, s) {
   const steps = [
@@ -647,6 +662,17 @@ function renderAnalysis(r, aid) {
   const f = r.input.features, src = r.dane_zrodlowe, calc = r.obliczenia, w = r.wnioski, fc = calc.forecast;
   const lvl = (l) => (l || "").replace(/\s|–/g, "").replace("ż", "z");
   const emptyDb = !(r.dane_zrodlowe.all_ranked || []).length;
+  const RANK = { wysoki: 3, "podwyższony": 2, "do sprawdzenia": 1 };
+  const byCode = {};
+  for (const x of w.flags) {
+    const k = x.risk_code || x.name || "";
+    const cur = byCode[k];
+    if (!cur) byCode[k] = { ...x, more: [] };
+    else if ((RANK[x.level] || 0) > (RANK[cur.level] || 0)) byCode[k] = { ...x, more: [{ basis: cur.basis, level: cur.level, why: cur.why }, ...cur.more] };
+    else cur.more.push({ basis: x.basis, level: x.level, why: x.why });
+  }
+  const flags = Object.values(byCode).sort((a, b) => (RANK[b.level] || 0) - (RANK[a.level] || 0));
+  const nHigh = flags.filter((x) => x.level === "wysoki").length;
   $("#a-res").innerHTML = `${emptyDb ? `<div class="flag wysoki" style="margin-top:18px"><b>Baza przypadków jest pusta — nie ma z czym porównać.</b><div class="small">Najpierw wczytaj dane: Pulpit → „Demo na prawdziwych danych BZP (22 projekty, offline)”, poczekaj ok. 5 s, potem wróć tutaj i kliknij „Analizuj nową inwestycję” jeszcze raz.</div><div class="row" style="margin-top:8px"><a class="btn primary" href="#/">Przejdź do pulpitu</a></div></div>` : ""}
     <div class="row" style="margin-top:18px"><h2 class="grow" style="margin:0">Wynik: ${esc(r.title)}</h2><button class="btn" onclick="window.print()">Drukuj kartę ryzyka</button><a class="btn" href="/api/analyses/${aid}/export">Eksport JSON</a><a class="btn" href="/api/analyses/${aid}/export?format=csv">Eksport CSV</a></div>
     <div class="card" style="margin-top:10px"><div class="kv small"><div>Podsektor główny</div><div><b>${esc(f.subsector_main)}</b> ${(f.subsectors_extra || []).length ? "· dodatkowe: " + f.subsectors_extra.map(esc).join(", ") : ""}</div><div>Rodzaj prac / formuła</div><div>${esc(f.work_type)} · ${esc(f.formula)}</div><div>Wartość / długość / region</div><div>${pln(f.value)} · ${f.length_km ? num(f.length_km, 2) + " km" : "—"} · ${esc(f.voivodeship || "—")}</div></div></div>
@@ -674,12 +700,13 @@ function renderAnalysis(r, aid) {
     <div class="layer concl" style="margin-top:14px"><span class="tag">C. Wnioski systemu (do oceny eksperta)</span>
       <p class="small muted">${esc(w.method_note)}</p>
       ${w.narrative_llm ? `<div class="hint"><b>Podsumowanie (model językowy, na podstawie danych A i B):</b><br>${esc(w.narrative_llm)}</div>` : ""}
-      <h3>Czerwone flagi</h3>${w.flags.map((x) => `<div class="flag ${lvl(x.level)}"><b>${esc(x.risk_code)} ${esc(x.name || "")}</b> <span class="pill p-grey">${esc(x.level)}</span> <span class="small muted">podstawa: ${esc(x.basis)}</span><div class="small">${esc(x.why)}</div></div>`).join("") || `<div class="empty">Brak flag.</div>`}
       ${clauseAudit(w.clause_audit)}
-      <h3>Rekomendowane działania i propozycje zapisów umownych</h3>${w.recommendations.map((x) => `<details open><summary>${esc(x.risk_code)} ${esc(x.name || "")}</summary><div class="grid g3 small"><div><b>Działania</b><ul>${x.mitigations.map((m) => `<li>${esc(m)}</li>`).join("")}</ul></div><div><b>Propozycje zapisów</b><ul>${x.clauses.map((m) => `<li>${esc(m)}</li>`).join("")}</ul></div><div><b>Sprawdź przed uruchomieniem</b><ul>${x.checks.map((m) => `<li>${esc(m)}</li>`).join("")}</ul></div></div></details>`).join("")}
-      <h3>Zagadnienia do analizy (lista kontrolna przygotowania inwestycji)</h3>${w.checklist.map((c) => `<div class="chk">${c.covered ? '<span class="pill p-ok">jest</span>' : '<span class="pill p-warn">brak</span>'}<div>${esc(c.text)} <span class="small muted">(${esc(c.ref)})</span></div></div>`).join("")}
-      ${w.signals_in_input.length ? `<h3>Sygnały ryzyka w opisie</h3>${w.signals_in_input.slice(0, 10).map((s) => `<div class="quote"><b>${esc(s.risk_code)}</b> ${esc(s.quote)}</div>`).join("")}` : ""}
-    </div>`;
+      <details class="sec"><summary>Czerwone flagi (${flags.length}${nHigh ? ` · wysokie: ${nHigh}` : ""})</summary>${flags.map((x) => `<div class="flag ${lvl(x.level)}"><b>${esc(x.risk_code)} ${esc(x.name || "")}</b> <span class="pill p-grey">${esc(x.level)}</span> <span class="small muted">podstawa: ${esc(x.basis)}</span><div class="small">${esc(x.why)}</div>${x.more.length ? `<div class="small muted" style="margin-top:4px">Także: ${x.more.map((m) => `${esc(m.basis)} (${esc(m.level)}) — ${esc(m.why)}`).join(" · ")}</div>` : ""}</div>`).join("") || `<div class="empty">Brak flag.</div>`}</details>
+      <details class="sec"><summary>Rekomendowane działania i propozycje zapisów (${w.recommendations.length})</summary>${w.recommendations.map((x) => `<details><summary>${esc(x.risk_code)} ${esc(x.name || "")}</summary><div class="grid g3 small"><div><b>Działania</b><ul>${x.mitigations.map((m) => `<li>${esc(m)}</li>`).join("")}</ul></div><div><b>Propozycje zapisów</b><ul>${x.clauses.map((m) => `<li>${esc(m)}</li>`).join("")}</ul></div><div><b>Sprawdź przed uruchomieniem</b><ul>${x.checks.map((m) => `<li>${esc(m)}</li>`).join("")}</ul></div></div></details>`).join("")}</details>
+      <details class="sec"><summary>Lista kontrolna przygotowania inwestycji (${w.checklist.filter((c) => c.covered).length} z ${w.checklist.length} w materiałach)</summary>${w.checklist.map((c) => `<div class="chk">${c.covered ? '<span class="pill p-ok">jest</span>' : '<span class="pill p-warn">brak</span>'}<div>${esc(c.text)} <span class="small muted">(${esc(c.ref)})</span></div></div>`).join("")}</details>
+      ${w.signals_in_input.length ? `<details class="sec"><summary>Sygnały ryzyka znalezione w opisie (${Math.min(10, w.signals_in_input.length)})</summary>${w.signals_in_input.slice(0, 10).map((s) => `<div class="quote"><b>${esc(s.risk_code)}</b> ${esc(s.quote)}</div>`).join("")}</details>` : ""}
+    </div>
+    <div class="row no-print result-end"><button class="btn primary" onclick="window.print()">Drukuj kartę ryzyka</button><a class="btn" href="/api/analyses/${aid}/export">Eksport JSON</a><a class="btn" href="/api/analyses/${aid}/export?format=csv">Eksport CSV</a><span class="small muted">Karta do druku zawiera wszystkie sekcje, także zwinięte.</span></div>`;
 }
 
 // ------------------------------------------------------------ MONITORING
@@ -914,12 +941,11 @@ function insightsCard(ins) {
     t.n ? `<b>${t.share_over_raw[0]} z ${t.share_over_raw[1]}</b> umów skończyło się po terminie — bezpieczny harmonogram to umowny czas <b>${pp(t.p80, 0)}</b>.` : "",
     top.length ? `Najczęstsze przyczyny zmian umów: <b>${top.map((x) => esc(x.name.toLowerCase())).join("</b> oraz <b>")}</b>.` : "",
   ].filter(Boolean);
-  return `<h2>Czego uczy baza — szczegóły</h2>
-    <div class="grid g2"><div class="card"><h3 style="margin-top:0">Koszt: rozliczenie vs wartość umowy</h3>${distSvg(c, (v) => pp(v))}</div>
+  return `<details class="more" id="stat"><summary>Szczegóły statystyczne: rozkład kosztu i czasu, podstawy zmian umów, rejestr ryzyk z wyceną</summary>
+    <div class="grid g2" style="margin-top:12px"><div class="card"><h3 style="margin-top:0">Koszt: rozliczenie vs wartość umowy</h3>${distSvg(c, (v) => pp(v))}</div>
       <div class="card"><h3 style="margin-top:0">Czas: faktyczny vs umowny</h3>${distSvg(t, (v) => pp(v))}</div></div>
-    <div class="grid g2" style="margin-top:12px"><div class="card">${basesBars(ins.bases)}</div>
-      <div class="card"><h3 style="margin-top:0">Wykryte problemy w danych wejściowych (${ins.data_issues.length})</h3>${ins.data_issues.map((x) => `<div class="quote small"><a href="#/projekt/${x.project_id}"><b>${esc(x.record_id)}</b></a> ${esc(x.message)}</div>`).join("") || `<div class="empty">Nie wykryto problemów w danych wejściowych.</div>`}</div></div>
-    <div class="card" style="margin-top:12px;overflow:auto"><h3 style="margin-top:0">Ryzyka, które się zmaterializowały — z wyceną</h3>${registerTable(ins.register)}</div>`;
+    <div class="card" style="margin-top:12px">${basesBars(ins.bases)}</div>
+    <div class="card" style="margin-top:12px;overflow:auto"><h3 style="margin-top:0">Ryzyka, które się zmaterializowały — z wyceną</h3>${registerTable(ins.register)}</div></details>`;
 }
 
 function clauseAudit(a) {
@@ -1004,7 +1030,7 @@ function deadlineBlock(ref) {
     if (F.max_planned_days_p80 && F.max_planned_days_p80 < F.planned_days) tips.push(`Przy tym starcie umowny czas realizacji musiałby wynosić ok. <b>${months(F.max_planned_days_p80)}</b> — jeśli to nierealne: podziel zamówienie na części, ogłoś przetarg wcześniej albo wynegocjuj dłuższy termin w umowie o dofinansowanie.`);
     else if (!F.max_planned_days_p80) tips.push(`Żaden realny czas realizacji nie daje 80% szans przy tym starcie — potrzebny wcześniejszy przetarg, podział na części albo zmiana terminu w umowie o dofinansowanie.`);
   }
-  return `<div class="layer concl" style="margin-top:14px"><span class="tag">Czy zdążysz przed końcem dofinansowania?</span>
+  return `<div class="layer concl" style="margin-top:14px"><span class="tag">Termin dofinansowania — rozwinięcie odpowiedzi</span>
     ${head}${tips.length ? `<ul class="todo">${tips.map((x) => `<li>${x}</li>`).join("")}</ul>` : ""}
     <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Rozkład dat zakończenia">${g}</svg>
     <div class="small muted">Każda kropka = data końca, gdyby ta inwestycja przebiegła jak jedna z podobnych umów z BZP (czerwona = po terminie; pusta = powiązanie do weryfikacji). n=${F.n}, n<sub>eff</sub>=${num(F.n_eff, 1)}. ${esc(F.method)}</div></div>`;
