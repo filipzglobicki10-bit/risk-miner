@@ -1,8 +1,10 @@
 services:
   riskminer:
-    build: .
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
     ports: ["8080:8080"]
-    volumes: ["./data:/app/data"]
+    volumes: ["../data:/app/data"]
     environment:
       - RISKMINER_LLM_API_KEY=${RISKMINER_LLM_API_KEY:-}
       # - RISKMINER_LLM_PROVIDER=openai

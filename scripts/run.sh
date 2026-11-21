@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Risk Miner — uruchomienie (macOS / Linux). Wymaga Pythona 3.9+.
 set -e
-cd "$(dirname "$0")"
+cd "$(dirname "$0")/.."
 [ -f config.json ] || cp config.example.json config.json
 PY=python3
 if ! "$PY" -c "import pypdf" 2>/dev/null; then

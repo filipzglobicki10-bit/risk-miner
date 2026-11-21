@@ -1,6 +1,6 @@
 # Scenariusz demonstracji (film ≤ 3 min i pokaz dla jury)
 
-Przygotowanie: `./run.sh`, przeglądarka na http://127.0.0.1:8080, w polu „Ekspert” wpisane imię i nazwisko.
+Przygotowanie: dwuklik `Risk Miner.app` (albo `./scripts/run.sh`), przeglądarka na http://127.0.0.1:8080, w polu „Ekspert” wpisane imię i nazwisko.
 Demo działa **bez internetu** na prawdziwej kopii ogłoszeń BZP (przycisk na pulpicie).
 
 | Czas | Ekran | Co pokazać / powiedzieć |

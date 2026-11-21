@@ -74,7 +74,7 @@ Aplikacja sama uruchomi serwer i otworzy przeglądarkę na **http://127.0.0.1:80
 
 **Z terminala:**
 ```bash
-./run.sh                 # macOS / Linux   (Windows: run.bat)
+./scripts/run.sh         # macOS / Linux   (Windows: scripts\run.bat)
 # lub:  python3 app.py --open
 ```
 
@@ -84,21 +84,41 @@ odczyta zmiany umów i pokaże „Czego uczy baza”. Przycisk „Pakiet organiz
 z pobieraniem ogłoszeń z API. Potem: **Analiza nowej inwestycji** → „wstaw przykładowy opis” → dołącz
 `samples/projekt_umowy_przyklad.txt` → Analizuj.
 
-Docker (z OCR skanów):  `docker compose up --build`  → http://localhost:8080
+Docker (z OCR skanów):  `docker compose -f deploy/docker-compose.yml up --build`  → http://localhost:8080
 
 | Opcjonalnie | Po co |
 |---|---|
-| `pip install pypdf` (robi to `run.sh`) | odczyt warstwy tekstowej PDF |
+| `pip install pypdf` (robi to skrypt uruchomieniowy) | odczyt warstwy tekstowej PDF |
 | `tesseract` + `pdftoppm` w PATH (w Dockerze są) | OCR skanów PDF i zdjęć |
 | klucz LLM w `RISKMINER_LLM_API_KEY` + `config.json` | ekstrakcja zdarzeń modelem językowym, narracja analizy |
 
 **Wymagania sprzętowe:** dowolny laptop (≈60 MB RAM, SQLite w pliku `data/riskminer.sqlite`). Bez GPU.
 
+### Co jest w folderze
+
+```
+risk-miner/
+├── Risk Miner.app              ← macOS: kliknij dwa razy
+├── Uruchom Risk Miner.command  ← macOS (z oknem terminala)
+├── Uruchom Risk Miner.bat      ← Windows: kliknij dwa razy
+├── app.py                      ← start z terminala: python3 app.py --open
+├── config.example.json         ← wzór konfiguracji (kopiowany do config.json przy 1. starcie)
+├── riskminer/                  ← logika: BZP, łączenie, ekstrakcja, prognoza, audyt klauzul, serwer
+├── static/                     ← interfejs (HTML, CSS, JS, fonty)
+├── samples/                    ← dane organizatora: 22 projekty (.xlsx), kopia BZP, przykładowy opis i umowa
+├── tests/                      ← testy jednostkowe i test całego przepływu z atrapą BZP
+├── docs/                       ← opis rozwiązania, architektura, raport z testów, scenariusz demo, system wyglądu
+├── scripts/                    ← run.sh / run.bat — uruchomienie z terminala
+├── deploy/                     ← Dockerfile i docker-compose.yml (wersja z OCR)
+└── data/                       ← baza SQLite i cache (tworzone przy starcie, poza gitem)
+```
+
 ### Źródło BZP
-Domyślnie kopia organizatora **https://bzp.cytr.us** (ten sam interfejs co API e-Zamówień, bez limitu), z
-automatycznym przejściem na `ezamowienia.gov.pl` (limit 25 zapytań/min — klient sam zwalnia). Odpowiedzi są
-zapisywane w `data/cache/` (powtarzalność, ponowne uruchomienie bez ręcznego wpisywania). Tryb offline:
-*Ustawienia → Kopia lokalna ogłoszeń* → wczytaj `risk_miner_bzp_kopia.zip`.
+Najpierw zawsze API na żywo: kopia organizatora **https://bzp.cytr.us** (ten sam interfejs co API e-Zamówień),
+z przejściem na `ezamowienia.gov.pl` (limit 25 zapytań/min — klient sam zwalnia). Gdy API nie odpowiada,
+aplikacja **sama przełącza się na kopię offline** (wgraną w *Ustawieniach* albo wbudowaną
+`samples/bzp_kopia_22_projekty.json`) i mówi o tym w dzienniku. Odpowiedzi są zapisywane w `data/cache/`
+(powtarzalność, ponowne uruchomienie bez ręcznego wpisywania).
 
 ---
 
@@ -163,7 +183,7 @@ Zmienne środowiskowe: `RISKMINER_PORT`, `RISKMINER_HOST`, `RISKMINER_BZP_URL`, 
 ## Testy
 
 ```bash
-python3 tests/test_units.py    # parser formularza BZP, kwantyle ważone, audyt klauzul (11 testów)
+python3 tests/test_units.py    # parser BZP, kwantyle ważone, audyt klauzul, województwa, bezpieczeństwo URL (14 testów)
 python3 tests/test_e2e.py      # pełny scenariusz przez REST API: atrapa BZP z PRAWDZIWYMI ogłoszeniami
                                # i zachowaniem prawdziwego API (ignorowane filtry, stronicowanie, HTTP 400)
 python3 tests/mock_bzp.py      # sama atrapa BZP na :8765 (do pokazów offline)
