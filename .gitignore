@@ -1,0 +1,7 @@
+data/
+config.json
+tests/tmp/
+__pycache__/
+*.pyc
+.env
+.DS_Store

@@ -1,0 +1,35 @@
+{
+  "_opis": "Skopiuj do config.json i dostosuj. Klucze API NIE trafiają do pliku — tylko do zmiennej środowiskowej wskazanej w llm.api_key_env.",
+  "server": {"host": "127.0.0.1", "port": 8080},
+  "data_dir": "data",
+  "bzp": {
+    "base_url": "https://bzp.cytr.us/mo-board/api/v1/notice",
+    "fallback_urls": ["https://ezamowienia.gov.pl/mo-board/api/v1/notice"],
+    "requests_per_minute": 0,
+    "cache": true,
+    "related_notice_types": ["TenderResultNotice", "AgreementUpdateNotice", "ContractPerformingNotice", "NoticeUpdateNotice"],
+    "search_window_years_after": 4
+  },
+  "ted": {"enabled": true, "query_template": "FT ~ (\"{nip}\")"},
+  "llm": {
+    "_przyklady": {
+      "brak (domyślnie)": {"provider": "none"},
+      "OpenAI": {"provider": "openai", "model": "gpt-4o-mini", "base_url": "https://api.openai.com/v1", "data_location": "OpenAI (poza UE, chyba że EU data residency)"},
+      "Ollama lokalnie": {"provider": "openai", "model": "llama3.1:8b", "base_url": "http://localhost:11434/v1", "data_location": "lokalnie (ten komputer)"},
+      "Anthropic": {"provider": "anthropic", "model": "claude-sonnet-4-5", "base_url": "https://api.anthropic.com", "data_location": "Anthropic (poza UE)"},
+      "Mistral (UE)": {"provider": "openai", "model": "mistral-small-latest", "base_url": "https://api.mistral.ai/v1", "data_location": "UE (Francja)"}
+    },
+    "provider": "none",
+    "model": "",
+    "base_url": "",
+    "api_key_env": "RISKMINER_LLM_API_KEY",
+    "data_location": "nie dotyczy (LLM wyłączony)"
+  },
+  "monitor": {"interval_minutes": 0, "only_unfinished": true},
+  "analysis": {
+    "top_k": 6,
+    "min_similarity": 0.15,
+    "weights": {"text": 0.40, "subsector": 0.20, "work_type": 0.08, "formula": 0.08, "value": 0.12, "length": 0.07, "region": 0.05}
+  },
+  "link_auto_accept_confidence": 0.95
+}

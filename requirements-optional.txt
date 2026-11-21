@@ -1,0 +1,2 @@
+# Opcjonalne — aplikacja działa bez nich (biblioteka standardowa Pythona).
+pypdf>=4.0        # odczyt warstwy tekstowej PDF (BSD-3-Clause)

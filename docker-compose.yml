@@ -1,0 +1,10 @@
+services:
+  riskminer:
+    build: .
+    ports: ["8080:8080"]
+    volumes: ["./data:/app/data"]
+    environment:
+      - RISKMINER_LLM_API_KEY=${RISKMINER_LLM_API_KEY:-}
+      # - RISKMINER_LLM_PROVIDER=openai
+      # - RISKMINER_LLM_MODEL=gpt-4o-mini
+      # - RISKMINER_BZP_URL=https://ezamowienia.gov.pl/mo-board/api/v1/notice

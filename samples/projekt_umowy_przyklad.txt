@@ -1,0 +1,40 @@
+PROJEKTOWANE POSTANOWIENIA UMOWY (PPU) — PRZYKŁAD DEMONSTRACYJNY
+Dokument fikcyjny, przygotowany wyłącznie do pokazania audytu klauzul w Risk Miner. Nie dotyczy żadnego rzeczywistego postępowania.
+
+Umowa nr ……/2027 na zadanie: „Budowa sieci kanalizacji sanitarnej grawitacyjno-tłocznej wraz z przepompowniami ścieków i przyłączami” w formule „zaprojektuj i wybuduj”, zawarta pomiędzy Gminą (Zamawiający) a ……… (Wykonawca).
+
+§ 1. Przedmiot umowy
+1. Wykonawca zobowiązuje się do opracowania dokumentacji projektowej, uzyskania w imieniu Zamawiającego decyzji i uzgodnień oraz wykonania robót budowlanych zgodnie z Programem Funkcjonalno-Użytkowym (PFU).
+2. Zakres obejmuje ok. 6,5 km sieci, dwie przepompownie ścieków oraz przyłącza do granic 140 nieruchomości.
+
+§ 2. Terminy
+1. Termin realizacji przedmiotu umowy: 14 miesięcy od dnia zawarcia umowy.
+2. Zamawiający przekaże Wykonawcy teren budowy w terminie 14 dni od dnia przedłożenia prawomocnej decyzji o pozwoleniu na budowę.
+
+§ 3. Wynagrodzenie
+1. Za wykonanie przedmiotu umowy Strony ustalają wynagrodzenie ryczałtowe w wysokości ……… zł brutto.
+2. Wynagrodzenie, o którym mowa w ust. 1, jest stałe i nie podlega waloryzacji przez cały okres obowiązywania umowy.
+3. Rozliczenie nastąpi fakturami częściowymi za odebrane elementy harmonogramu rzeczowo-finansowego, do 80% wynagrodzenia, oraz fakturą końcową.
+
+§ 4. Podwykonawcy
+1. Wykonawca może powierzyć wykonanie części robót podwykonawcom po uzyskaniu akceptacji Zamawiającego.
+
+§ 5. Odbiory
+1. Strony przewidują odbiory robót zanikających, odbiory częściowe i odbiór końcowy.
+2. Warunkiem odbioru końcowego jest przedłożenie protokołów prób szczelności, raportu z inspekcji TV kanałów oraz dokumentacji powykonawczej z inwentaryzacją geodezyjną.
+
+§ 6. Kary umowne
+1. Wykonawca zapłaci Zamawiającemu kary umowne:
+   a) za zwłokę w wykonaniu przedmiotu umowy — 0,2% wynagrodzenia brutto za każdy dzień zwłoki,
+   b) za zwłokę w usunięciu wad — 0,1% wynagrodzenia brutto za każdy dzień zwłoki,
+   c) z tytułu odstąpienia od umowy z przyczyn leżących po stronie Wykonawcy — 20% wynagrodzenia brutto.
+
+§ 7. Zabezpieczenie należytego wykonania umowy
+1. Wykonawca wnosi zabezpieczenie należytego wykonania umowy w wysokości 5% ceny ofertowej brutto.
+
+§ 8. Zmiany umowy
+1. Zamawiający przewiduje możliwość dokonania istotnych zmian postanowień zawartej umowy w stosunku do treści oferty w następującym zakresie:
+   a) zmiana terminu realizacji w przypadku wystąpienia niekorzystnych warunków atmosferycznych uniemożliwiających prowadzenie robót,
+   b) zmiana terminu realizacji o czas przedłużającego się ponad terminy ustawowe postępowania organu w sprawie wydania decyzji lub uzgodnień, o ile Wykonawca złożył kompletny wniosek,
+   c) zmiana sposobu wykonania przedmiotu umowy w przypadku wystąpienia kolizji z niezinwentaryzowanymi sieciami uzbrojenia terenu.
+2. Zmiana umowy wymaga formy pisemnej pod rygorem nieważności.
