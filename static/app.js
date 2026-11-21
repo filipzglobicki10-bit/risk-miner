@@ -134,7 +134,6 @@ VIEWS.dash = async () => {
   const c = s.counts;
   let ins = null, projects = [], changes = [];
   if (c.projects) [ins, projects, changes] = await Promise.all([api("/api/insights").catch(() => null), api("/api/projects"), api("/api/changes").catch(() => [])]);
-  const maxR = Math.max(1, ...s.by_risk.map((r) => r.n));
   const hero = c.projects && ins ? heroBlock(ins, projects, changes) : `
     <section class="hero empty"><div class="hero-l"><h1 class="hero-h">Jak naprawdę kończą się inwestycje publiczne?</h1>
       <p class="hero-p">Risk Miner składa ogłoszenia z BZP w historię każdej umowy — koszt, termin, zmiany i ich przyczyny — i na tej podstawie ocenia nową inwestycję, zanim ogłosisz przetarg.</p>
@@ -146,23 +145,17 @@ VIEWS.dash = async () => {
     ${c.projects ? mapBlock(projects) : ""}
     <div id="insights">${ins ? insightsCard(ins) : ""}</div>
     ${dataOpen}
-    <div class="grid g2"${c.projects ? ' style="margin-top:12px"' : ""}>
-      <div class="card">
+    <div class="card zasil"${c.projects ? ' style="margin-top:12px"' : ""}>
         <h3 style="margin-top:0">Zasil bazę</h3>
         <p class="muted small">Plik organizatora (.xlsx/.csv) lub inny plik z podobnymi kolumnami. Po imporcie system sam wyszuka ogłoszenia w BZP, powiąże je z projektami i przeanalizuje.</p>
         <div class="drop" id="drop">Upuść plik z rekordami lub <label class="btn sm">wybierz<input type="file" id="f-import" accept=".xlsx,.csv" class="file-in"></label></div>
         <div class="row" style="margin-top:10px">
-          <button class="btn${c.projects ? "" : " primary"}" id="b-sample-bzp" title="Rekordy organizatora i paczka 198 ogłoszeń BZP pobranych z API. Do bazy trafiają tylko ogłoszenia powiązane z projektami. Działa bez sieci, wynik powtarzalny.">${c.projects ? "Wczytaj demo ponownie (22 projekty, offline)" : "Demo na prawdziwych danych BZP (22 projekty, offline)"}</button>
+          ${c.projects ? `<button class="btn" id="b-sample-bzp" title="Rekordy organizatora i paczka 198 ogłoszeń BZP pobranych z API. Do bazy trafiają tylko ogłoszenia powiązane z projektami. Działa bez sieci, wynik powtarzalny.">Wczytaj demo ponownie (22 projekty, offline)</button>` : ""}
           <button class="btn" id="b-sample">Pakiet organizatora — BZP na żywo</button>
           <label class="row small"><input type="checkbox" id="c-enrich" checked> po imporcie od razu wyszukaj ogłoszenia w BZP</label>
         </div>
-        <div class="row" style="margin-top:8px"><button class="btn" id="b-enrich-all" ${c.projects ? "" : "disabled"}>Wzbogać wszystkie projekty z BZP/TED</button></div>
+        ${c.projects ? `<div class="row" style="margin-top:8px"><button class="btn" id="b-enrich-all">Wzbogać wszystkie projekty z BZP/TED</button></div>` : ""}
         <div id="job"></div>
-      </div>
-      <div class="card">
-        <h3 style="margin-top:0">Zdarzenia ryzyka w bazie wg katalogu</h3>
-        ${s.by_risk.length ? `<table>${s.by_risk.map((r) => `<tr><td style="width:55%">${riskLabel(r.risk_code)}</td><td><div class="bar" title="${r.n}"><i style="width:${(r.n / maxR) * 100}%"></i></div></td><td class="num">${r.n}</td><td class="num small muted">${r.approved} zatw.</td></tr>`).join("")}</table>` : `<div class="empty">Brak zdarzeń — zasil bazę.</div>`}
-      </div>
     </div>
     <h3>Ostatnie operacje</h3>
     <div class="card" style="padding:0;overflow:auto">${historyTable((s.recent || []).slice(0, 8))}</div>
@@ -186,9 +179,9 @@ VIEWS.dash = async () => {
     toast(`Wczytano kopię BZP i ${r.created + r.updated} rekordów — trwa wzbogacanie`);
     if (r.job_id) { if ($("#dane-box")) $("#dane-box").open = true; $("#dane").scrollIntoView({ behavior: "smooth" }); watchJob(r.job_id, $("#job"), () => VIEWS.dash()); } else VIEWS.dash();
   };
-  $("#b-sample-bzp").onclick = demo;
+  if ($("#b-sample-bzp")) $("#b-sample-bzp").onclick = demo;
   if ($("#b-sample-bzp2")) $("#b-sample-bzp2").onclick = demo;
-  $("#b-enrich-all").onclick = async () => { const r = await guard(() => post("/api/enrich", {})); watchJob(r.job_id, $("#job"), () => VIEWS.dash()); };
+  if ($("#b-enrich-all")) $("#b-enrich-all").onclick = async () => { const r = await guard(() => post("/api/enrich", {})); watchJob(r.job_id, $("#job"), () => VIEWS.dash()); };
   animateHero();
 };
 
@@ -248,7 +241,6 @@ function flowStrip(c, changes, s) {
     { n: c.contracts, l: "umów", d: "koszt i termin: plan → wykonanie", go: "#/projekty" },
     { n: changes.length || c.changes || 0, l: "zmian umów", d: "przyczyna, podstawa z art. 455, koszt", go: "#/zmiany" },
     { n: c.events, l: "zdarzeń ryzyka", d: `${c.events_approved} zatwierdzonych przez eksperta`, go: "#/ekspert" },
-    { n: c.analyses, l: "analiz nowych inwestycji", d: "prognoza P80, audyt umowy, termin dofinansowania", go: "#/nowa" },
   ];
   return `<section class="flow" aria-label="Jak działa Risk Miner">${steps.map((x, i) => `<a class="fs" href="${x.go}"><span class="fn">${num(x.n)}</span><span class="fl">${esc(x.l)}</span><span class="fd">${esc(x.d)}</span></a>${i < steps.length - 1 ? '<span class="fa" aria-hidden="true"></span>' : ""}`).join("")}</section>`;
 }
@@ -1255,12 +1247,11 @@ function mapBlock(projects) {
   const byW = {};
   pts.forEach((q) => { const w = q.p.voivodeship || "—"; (byW[w] = byW[w] || []).push(q); });
   const li = (q, v) => `<li><a href="#/projekt/${q.p.id}"><span class="mdot" style="background:${q.col}${q.sq ? ";border-radius:0" : ""}"></span><b>${esc(q.p.city || q.p.record_id)}</b> <span class="muted">${esc(q.p.record_id)}</span></a><span class="mv">${v}</span></li>`;
-  return `<section class="pmap card"><div class="pmap-l"><h2 style="margin:0 0 4px">Mapa inwestycji</h2><p class="small muted" style="margin:0 0 8px">${pts.length} projektów w ${Object.keys(byW).length} województwach. Kolor jak na wykresie powyżej, wielkość = wartość umowy. Kliknij kółko, aby otworzyć projekt.</p>
+  return `<section class="pmap card"><div class="pmap-l"><h2 style="margin:0 0 4px">Mapa inwestycji</h2><p class="small muted" style="margin:0 0 8px">${pts.length} projektów w ${Object.keys(byW).length} województwach. Kolor jak na wykresie powyżej, wielkość = wartość umowy. Kliknij znacznik, aby otworzyć projekt.</p>
       <svg viewBox="0 0 ${W} ${H}" width="100%" role="group" aria-label="Mapa projektów w Polsce. Kwadrat oznacza umowę w planie.">${g}</svg>
       <div class="legend small" style="padding-left:0"><span><i style="background:${VZ.late}"></i>drożej i dłużej</span><span><i style="background:${VZ.plan}"></i>jedno z dwóch</span><span><i style="background:${VZ.early};border-radius:0"></i>w planie</span><span>położenie wg siedziby gminy (przybliżone)</span></div></div>
     <div class="pmap-r"><h3>Najdłuższe opóźnienia</h3><ul class="mlist">${worst.map((q) => li(q, `<b class="neg">+${q.m.delay_days} dni</b>`)).join("")}</ul>
-      <h3>Największe przekroczenia kosztu</h3><ul class="mlist">${costly.map((q) => li(q, `<b class="neg">${pp(q.m.cost_dev_pct, 1)}</b>`)).join("")}</ul>
-      <h3>Województwa</h3><ul class="mlist">${Object.entries(byW).sort((a, b) => b[1].length - a[1].length).map(([w, qs]) => `<li><span>${esc(w)}</span><span class="mv">${qs.map((q) => `<span class="mdot" title="${esc(q.p.record_id)}" style="background:${q.col}"></span>`).join("")}</span></li>`).join("")}</ul></div></section>`;
+      <h3>Największe przekroczenia kosztu</h3><ul class="mlist">${costly.map((q) => li(q, `<b class="neg">${pp(q.m.cost_dev_pct, 1)}</b>`)).join("")}</ul></div></section>`;
 }
 
 
