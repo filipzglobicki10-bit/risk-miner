@@ -78,7 +78,6 @@ async function router() {
   $$("#nav a, .cta-new").forEach((a) => a.classList.toggle("active", a.dataset.v === (key === "project" ? "projects" : key) && !a.dataset.pid));
   $$("#recent a").forEach((a) => a.classList.toggle("active", key === "project" && a.dataset.pid === parts[1]));
   pulseActive();
-  $(".side").classList.remove("open"); $("#menu-btn").setAttribute("aria-expanded", "false");
   $("#main").innerHTML = `<div class="loading">Ładowanie…</div>`;
   try { await VIEWS[key](parts.slice(1)); } catch (e) { $("#main").innerHTML = `<div class="card"><h2>Nie udało się wczytać tego widoku</h2><p>Serwer odpowiedział: ${esc(e.message)}</p><p class="small muted">Sprawdź, czy aplikacja nadal działa w terminalu, i spróbuj ponownie.</p><button class="btn primary" onclick="router()">Spróbuj ponownie</button></div>`; }
   refreshBadges();
@@ -228,7 +227,7 @@ function heroBlock(ins, projects, changes) {
       <p class="small muted" style="margin-top:12px">Każda kropka to jedna umowa — kliknij, aby zobaczyć jej historię, oś czasu i źródła w BZP.</p>
     </div>
     <div class="hero-r"><svg viewBox="0 0 ${W} ${H}" width="100%" role="group" aria-label="Plan a rzeczywistość: koszt i czas umów (${pts.length}). Kwadrat oznacza umowę w planie.">${g}</svg>
-      <div class="legend small"><span><i style="background:${VZ.late}"></i>drożej i dłużej</span><span><i style="background:${VZ.plan}"></i>jedno z dwóch</span><span><i style="background:${VZ.early};border-radius:2px"></i>w planie</span><span><i class="hollow"></i>do weryfikacji</span><span>wielkość = wartość umowy</span></div></div>
+      <div class="legend small"><span><i style="background:${VZ.late}"></i>drożej i dłużej</span><span><i style="background:${VZ.plan}"></i>jedno z dwóch</span><span><i style="background:${VZ.early};border-radius:0"></i>w planie</span><span><i class="hollow"></i>do weryfikacji</span><span>wielkość = wartość umowy</span></div></div>
   </section>`;
 }
 function knowsStrip(ins) {
@@ -628,7 +627,7 @@ VIEWS.new = async (args) => {
       <label class="f">Nazwa analizy<input id="a-title" value="${esc(existing ? existing.title : "Planowana inwestycja")}"></label>
       <label class="f" style="margin-top:8px">Opis inwestycji<textarea id="a-text" style="min-height:150px">${esc(existing ? existing.input_text : "")}</textarea></label>
       <div class="row small" style="margin-top:4px"><button class="btn sm" id="a-ex">wstaw przykładowy opis</button><span class="muted">Parametry poniżej są opcjonalne — system odczyta je z opisu, jeśli je zawiera.</span></div>
-      <div class="grid g3" style="margin-top:8px"><label class="f">Szacowana wartość (zł)<input id="a-val" inputmode="decimal" placeholder="np. 7 800 000"></label><label class="f">Długość sieci (km)<input id="a-len" inputmode="decimal" placeholder="np. 6,5"></label><label class="f">Województwo<select id="a-voi"><option value="">odczytaj z opisu</option>${VOIV.map((v) => `<option>${v}</option>`).join("")}</select></label></div>
+      <div class="grid g3" style="margin-top:8px"><label class="f">Szacowana wartość (zł)<input id="a-val" placeholder="np. 7 800 000"></label><label class="f">Długość sieci (km)<input id="a-len" placeholder="np. 6,5"></label><label class="f">Województwo<select id="a-voi"><option value="">odczytaj z opisu</option>${VOIV.map((v) => `<option>${v}</option>`).join("")}</select></label></div>
       <div class="grid g2" style="margin-top:8px"><label class="f">Planowane ogłoszenie przetargu<input id="a-start" type="date"></label><label class="f">Termin zakończenia z umowy o dofinansowanie<input id="a-dl" type="date" aria-describedby="a-dl-h"></label></div>
       <p class="small muted" id="a-dl-h" style="margin:4px 0 0">Bez terminu z umowy o dofinansowanie (tu albo w opisie) nie policzymy ryzyka utraty dofinansowania.</p>
       <div class="drop" id="adrop" style="margin-top:10px"><b>Dokumenty (opcjonalnie):</b> koncepcja, PFU, studium — oraz <b>projekt umowy (PPU/SWZ)</b>, który włącza audyt 14 klauzul. Upuść pliki lub <label class="btn sm">wybierz<input type="file" id="afile" multiple class="file-in"></label><div id="adocs" class="small"></div></div>
@@ -967,7 +966,7 @@ function registerTable(reg, value) {
 }
 function basesBars(b) {
   if (!b || !b.n) return "";
-  return `<h3>Na jakiej podstawie zmieniano umowy (${b.n} zmian w BZP)</h3>${b.rows.map((r) => `<div class="row small" style="gap:8px;margin:3px 0"><span class="bases-l" style="width:300px;max-width:100%"><b>${esc(r.basis)}</b> <span class="muted">${esc(r.meaning)}</span></span><div class="bar grow"><i style="width:${r.share * 100}%;background:${VZ.plan}"></i></div><span style="width:70px" class="num">${r.n} · ${Math.round(r.share * 100)}%</span></div>`).join("")}<p class="small muted">${esc(b.note)}</p>`;
+  return `<h3>Na jakiej podstawie zmieniano umowy (${b.n} zmian w BZP)</h3>${b.rows.map((r) => `<div class="row small" style="gap:8px;margin:3px 0"><span style="width:300px"><b>${esc(r.basis)}</b> <span class="muted">${esc(r.meaning)}</span></span><div class="bar grow"><i style="width:${r.share * 100}%;background:${VZ.plan}"></i></div><span style="width:70px" class="num">${r.n} · ${Math.round(r.share * 100)}%</span></div>`).join("")}<p class="small muted">${esc(b.note)}</p>`;
 }
 
 function insightsCard(ins) {
@@ -1149,10 +1148,8 @@ function pulseActive() {
   if (!n || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   n.classList.remove("pulse"); void n.offsetWidth; n.classList.add("pulse");
 }
-const NARROW = matchMedia("(max-width: 900px)");
-NARROW.addEventListener("change", () => { try { setRail(!!localStorage.getItem("rm_rail")); } catch (e) {} });
 function setRail(on) {
-  $(".layout").classList.toggle("rail", on && !NARROW.matches);
+  $(".layout").classList.toggle("rail", on);
   try { localStorage.setItem("rm_rail", on ? "1" : ""); } catch (e) {}
   $("#collapse").setAttribute("aria-label", on ? "Rozwiń menu" : "Zwiń menu");
 }
@@ -1219,7 +1216,6 @@ $("#cmd-q").addEventListener("input", () => { CMD.sel = 0; renderCmd(); });
 $("#cmd").addEventListener("click", (e) => { if (e.target.id === "cmd") closeCmd(); });
 $("#open-cmd").onclick = openCmd;
 $("#collapse").onclick = () => setRail(!$(".layout").classList.contains("rail"));
-$("#menu-btn").onclick = () => { const open = $(".side").classList.toggle("open"); $("#menu-btn").setAttribute("aria-expanded", open ? "true" : "false"); };
 if (/Mac|iPhone|iPad/.test(navigator.platform || "")) { /* ⌘K */ } else { $$("kbd").forEach((k) => { if (k.textContent === "⌘K") k.textContent = "Ctrl K"; }); }
 try { if (localStorage.getItem("rm_rail")) setRail(true); } catch (e) {}
 renderRecent();
@@ -1258,10 +1254,10 @@ function mapBlock(projects) {
   const costly = pts.filter((q) => q.m.cost_dev_pct != null).sort((a, b) => b.m.cost_dev_pct - a.m.cost_dev_pct).slice(0, 3);
   const byW = {};
   pts.forEach((q) => { const w = q.p.voivodeship || "—"; (byW[w] = byW[w] || []).push(q); });
-  const li = (q, v) => `<li><a href="#/projekt/${q.p.id}"><span class="mdot" style="background:${q.col}${q.sq ? ";border-radius:2px" : ""}"></span><b>${esc(q.p.city || q.p.record_id)}</b> <span class="muted">${esc(q.p.record_id)}</span></a><span class="mv">${v}</span></li>`;
+  const li = (q, v) => `<li><a href="#/projekt/${q.p.id}"><span class="mdot" style="background:${q.col}${q.sq ? ";border-radius:0" : ""}"></span><b>${esc(q.p.city || q.p.record_id)}</b> <span class="muted">${esc(q.p.record_id)}</span></a><span class="mv">${v}</span></li>`;
   return `<section class="pmap card"><div class="pmap-l"><h2 style="margin:0 0 4px">Mapa inwestycji</h2><p class="small muted" style="margin:0 0 8px">${pts.length} projektów w ${Object.keys(byW).length} województwach. Kolor jak na wykresie powyżej, wielkość = wartość umowy. Kliknij kółko, aby otworzyć projekt.</p>
       <svg viewBox="0 0 ${W} ${H}" width="100%" role="group" aria-label="Mapa projektów w Polsce. Kwadrat oznacza umowę w planie.">${g}</svg>
-      <div class="legend small" style="padding-left:0"><span><i style="background:${VZ.late}"></i>drożej i dłużej</span><span><i style="background:${VZ.plan}"></i>jedno z dwóch</span><span><i style="background:${VZ.early};border-radius:2px"></i>w planie</span><span>położenie wg siedziby gminy (przybliżone)</span></div></div>
+      <div class="legend small" style="padding-left:0"><span><i style="background:${VZ.late}"></i>drożej i dłużej</span><span><i style="background:${VZ.plan}"></i>jedno z dwóch</span><span><i style="background:${VZ.early};border-radius:0"></i>w planie</span><span>położenie wg siedziby gminy (przybliżone)</span></div></div>
     <div class="pmap-r"><h3>Najdłuższe opóźnienia</h3><ul class="mlist">${worst.map((q) => li(q, `<b class="neg">+${q.m.delay_days} dni</b>`)).join("")}</ul>
       <h3>Największe przekroczenia kosztu</h3><ul class="mlist">${costly.map((q) => li(q, `<b class="neg">${pp(q.m.cost_dev_pct, 1)}</b>`)).join("")}</ul>
       <h3>Województwa</h3><ul class="mlist">${Object.entries(byW).sort((a, b) => b[1].length - a[1].length).map(([w, qs]) => `<li><span>${esc(w)}</span><span class="mv">${qs.map((q) => `<span class="mdot" title="${esc(q.p.record_id)}" style="background:${q.col}"></span>`).join("")}</span></li>`).join("")}</ul></div></section>`;

@@ -115,7 +115,7 @@ components:
   input:
     backgroundColor: "{colors.sheet-white}"
     textColor: "{colors.ink}"
-    rounded: "7px"
+    rounded: "{rounded.sm}"
     padding: "7px 9px"
   pill-ok:
     backgroundColor: "{colors.ok-wash}"
@@ -135,7 +135,7 @@ components:
   badge:
     backgroundColor: "{colors.junction-amber}"
     textColor: "#2a1800"
-    rounded: "7px"
+    rounded: "{rounded.sm}"
     padding: "1px 7px"
   hint:
     backgroundColor: "{colors.info-wash}"

@@ -115,7 +115,7 @@ components:
   input:
     backgroundColor: "{colors.sheet-white}"
     textColor: "{colors.ink}"
-    rounded: "7px"
+    rounded: "{rounded.sm}"
     padding: "7px 9px"
   pill-ok:
     backgroundColor: "{colors.ok-wash}"
@@ -135,7 +135,7 @@ components:
   badge:
     backgroundColor: "{colors.junction-amber}"
     textColor: "#2a1800"
-    rounded: "7px"
+    rounded: "{rounded.sm}"
     padding: "1px 7px"
   hint:
     backgroundColor: "{colors.info-wash}"
@@ -225,7 +225,8 @@ The palette is a utility network at night against a daylight desk. Its saturated
 - **Breakpoints:** at 1100px the sidebar narrows to 236px, 4- and 6-column grids drop to 2 columns, 3-column grids and the hero and map splits stack, and the 900px step merges into one column. At 900px the sidebar becomes a static top block and the pipe and nodes disappear.
 - **Grid:** content uses simple equal-column grids (2, 3, 4 or 6 columns, 14px gap) and auto-fit tiles (min 200px).
 - **Rhythm:** 4, 8, 12, 14, 16, 22 and 28px. Cards pad 16px, hero blocks 28–30px.
-- **Dashboard order:** answer first. The hero (question, number, chart) comes first, then the data-flow strip (import → notices → contracts → changes), then the map and the lists.
+- **Dashboard order:** answer first. The hero (question, number, chart) comes first, then a strip of answer tiles (data-input problems, the most frequent risk, tender savings), then the data-flow strip, then the map. Statistical detail and the data/import section sit behind collapsed disclosures once the base is loaded.
+- **Charts:** marks use the status palette (info blue = one of two, bad red = over cost and late, ok green = on plan). "On plan" is drawn as a square, not only a different colour, and every mark is a keyboard-focusable link with a spoken label.
 
 ## Elevation & Depth
 
@@ -242,7 +243,7 @@ The desk is a **lightly lifted sheet system**. Every sheet (card, layer, hero, s
 
 ## Shapes
 
-The shapes are friendly but engineered. Radius grows with the size of the container: 6px for small buttons, 7–8px for inputs, buttons and tree nodes, 10px for cards (`--r`), 12–14px for stories, the verdict, the flow strip and the palette, and 18px for the hero. Status pills are fully rounded. **Coloured edges** are the recurring signature: a 4–5px top edge on evidence layers and verdicts, a 4–5px left edge on review events and story cards, and a 3px left rule on quotes. The pipe-and-node motif (a 2px vertical line with 10px ring nodes) belongs to the sidebar alone.
+The shapes are friendly but engineered. Radius grows with the size of the container: 6px for small buttons, 8px for inputs, buttons and tree nodes, 10px for cards (`--r`), 12–14px for stories, the verdict, the flow strip and the palette, and 18px for the hero. Status pills are fully rounded. **Coloured edges** are the recurring signature: a 4–5px top edge on evidence layers and verdicts, a 4–5px left edge on review events and story cards, and a 3px left rule on quotes. The pipe-and-node motif (a 2px vertical line with 10px ring nodes) belongs to the sidebar alone.
 
 ## Components
 
@@ -265,7 +266,7 @@ The shapes are friendly but engineered. Radius grows with the size of the contai
 - **Internal Padding:** 16px.
 
 ### Inputs / Fields
-- **Style:** 1px Hairline, 7px radius, 7px × 9px padding, white, inheriting the body font. Labels sit above in 12px Slate Muted weight 500.
+- **Style:** 1px Hairline, 8px radius, 7px × 9px padding, white, inheriting the body font. Labels sit above in 12px Slate Muted weight 500.
 - **Drop zone:** a 2px dashed `#b8c7d6` border on `#fbfcfe`. On hover it turns to a Reservoir Teal border on Teal Wash.
 
 ### Navigation
@@ -283,7 +284,7 @@ A 14px-radius sheet with a 5px Main Line Navy top edge, an eyebrow and a 20px ti
 A white card with a 5px Reservoir Teal left edge and 15px/1.6 prose: a project's history told in three sentences. It is the warmest component and the model for guiding copy.
 
 ### Review Event
-A 9px-radius sheet with a 4px left edge for its state: approved or edited is OK Green, proposed is amber `#e8a33d`, and rejected is grey at 65% opacity. Approve, edit and reject actions sit inline.
+An 8px-radius sheet with a 4px left edge for its state: approved or edited is OK Green, proposed is amber `#e8a33d`, and rejected is grey at 65% opacity. Approve, edit and reject actions sit inline.
 
 ## Do's and Don'ts
 
