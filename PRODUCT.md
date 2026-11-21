@@ -41,6 +41,7 @@ Success means a planner gets reference-class numbers (P50/P80/P90 for cost and t
 
 ## Capabilities and Constraints
 
+- Desktop only: there will be no phone or tablet version, so no work goes into mobile layouts (user decision, 2026-11-21).
 - Existing UI: a single-page vanilla JS app (`static/`) served by a Python `http.server` backend. It has no mandatory dependencies and no build step.
 - Views: Start (lessons from the whole base, the plan-vs-reality chart, the map), the case base, the contract-change library, the expert panel, monitoring, expert knowledge, reports and export, and settings and sources. There is also a ⌘K command palette and the new-investment analysis.
 - An LLM is optional and configurable (OpenAI-compatible or Anthropic). LLM-generated narrative must be labelled as such.
