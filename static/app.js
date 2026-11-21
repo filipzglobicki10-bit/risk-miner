@@ -981,13 +981,14 @@ function insightsCard(ins) {
 function clauseAudit(a) {
   if (!a) return "";
   const st = { "jest": "p-ok", "brak": "p-warn", "niepełna": "p-warn", "wyłączona": "p-bad", "do przemyślenia": "p-info", "nie oceniono": "p-grey" };
-  return `<h3>Audyt klauzul projektu umowy</h3><div class="hint">${esc(a.summary)}${a.months ? ` Okres realizacji odczytany z materiałów: <b>${a.months} mies.</b>` : ""}</div>
-    <div style="overflow-x:auto"><table class="audit" style="margin-top:8px"><tr><th>Status</th><th>Klauzula</th><th>W materiałach</th><th>Dlaczego (dane z podobnych umów)</th></tr>
+  const noContract = a.has_contract === false;
+  return `<h3>Audyt klauzul projektu umowy</h3><div class="hint">${noContract ? `Nie dołączono projektu umowy (PPU/SWZ), więc ${a.rows.length} klauzul nie zostało ocenionych. Dodaj projekt umowy w formularzu powyżej i uruchom analizę ponownie.` : esc(a.summary)}${a.months ? ` Okres realizacji odczytany z materiałów: <b>${a.months} mies.</b>` : ""}</div>
+    ${noContract ? `<details class="sec"><summary>Lista sprawdzanych klauzul i wzorcowe zapisy (${a.rows.length})</summary>` : ""}<div style="overflow-x:auto"><table class="audit" style="margin-top:8px"><tr><th>Status</th><th>Klauzula</th><th>W materiałach</th><th>Dlaczego (dane z podobnych umów)</th></tr>
     ${a.rows.map((r) => `<tr><td><span class="pill ${r.legal_gap ? "p-bad" : st[r.status] || "p-grey"}">${r.legal_gap ? "⚠ " : ""}${esc(r.status)}</span>${r.required ? `<div class="small muted" style="margin-top:4px">wymóg ustawowy</div>` : ""}</td>
       <td><b>${esc(r.id)} ${esc(r.name)}</b><div class="small muted">${esc(r.ref)} · ${r.risks.map(esc).join(", ")}</div>${r.required_text ? `<div class="small">${esc(r.required_text)}</div>` : ""}${r.note ? `<div class="small" style="color:var(--bad)">${esc(r.note)}</div>` : ""}
         <details><summary class="small">propozycja zapisu</summary><div class="small">${esc(r.model)}</div></details></td>
       <td class="small">${r.evidence ? `<div class="quote">${esc(r.evidence.quote)}</div><span class="muted">${esc(r.evidence.doc || "")}${r.evidence.page ? ", s. " + r.evidence.page : ""}</span>` : `<span class="muted">${r.status === "nie oceniono" ? "—" : "nie znaleziono"}</span>`}</td>
-      <td class="small">${r.data_why.map(esc).join("<br>") || (r.required ? "wymóg ustawowy — obowiązuje niezależnie od danych historycznych" : '<span class="muted">brak przypadków w bazie</span>')}</td></tr>`).join("")}</table></div>
+      <td class="small">${r.data_why.map(esc).join("<br>") || (r.required ? "wymóg ustawowy — obowiązuje niezależnie od danych historycznych" : '<span class="muted">brak przypadków w bazie</span>')}</td></tr>`).join("")}</table></div>${noContract ? "</details>" : ""}
     <p class="small muted">${esc(a.disclaimer)}</p>`;
 }
 
@@ -1104,7 +1105,7 @@ function verdictCard(r) {
   if (ct.p80 > 0.1) todo.push(`<b>Nie zwalniaj oszczędności z przetargu</b> — zostaw rezerwę ok. ${pp(ct.p80, 0)} ceny umowy na zmiany w trakcie budowy.`);
   if (reg[0]) todo.push(`<b>Sprawdź przed przetargiem:</b> ${esc(reg[0].name.toLowerCase())} — w podobnych umowach to najdroższe ryzyko.`);
   return `<div class="verdict"><div class="vh"><div><div class="eyebrow">Odpowiedź w 30 sekund</div><h2>Jak może pójść ta inwestycja — na podstawie ${R.n_class} prawdziwych umów z BZP</h2></div></div>
-    <div class="vtiles">${tiles.map((t) => `<div class="vt ${t.tone}"><div class="vl">${esc(t.label)}</div><div class="vb">${esc(t.big)}</div><div class="vs">${esc(t.small)}</div></div>`).join("")}</div>
+    <div class="vtiles" style="grid-template-columns:repeat(${tiles.length <= 4 ? tiles.length : Math.ceil(tiles.length / 2)},minmax(0,1fr))">${tiles.map((t) => `<div class="vt ${t.tone}"><div class="vl">${esc(t.label)}</div><div class="vb">${esc(t.big)}</div><div class="vs">${esc(t.small)}</div></div>`).join("")}</div>
     ${todo.length ? `<h3>Co zrobić przed ogłoszeniem przetargu</h3><ol class="todo">${todo.slice(0, 6).map((x) => `<li>${x}</li>`).join("")}</ol>` : ""}
     <p class="small muted">Jak czytać: <b>P80</b> = wartość, która wystarczyła w 8 na 10 podobnych przypadkach. Szczegóły, obliczenia i cytaty ze źródeł — poniżej.</p></div>`;
 }
@@ -1236,12 +1237,14 @@ function mapBlock(projects) {
     return { p, m, x, y, col, sq: known && !late && !over, r: 5 + 7 * Math.sqrt((m.contract_value || 1e6) / 6e6) };
   }).filter(Boolean);
   let g = `<path d="M${PL_OUTLINE.map(([a, b]) => `${X(a).toFixed(1)} ${Y(b).toFixed(1)}`).join("L")}Z" fill="#eef3f7" stroke="#b9c7d4" stroke-width="1.5" stroke-linejoin="round"/>`;
-  for (const [name, [a, b]] of Object.entries(PL_CITIES)) g += `<circle cx="${X(a)}" cy="${Y(b)}" r="2.2" fill="#9aa8b6"/><text x="${X(a) + 5}" y="${Y(b) + 4}" font-size="10.5" fill="${VZ.muted}">${name}</text>`;
+  let cities = "";
+  for (const [name, [a, b]] of Object.entries(PL_CITIES)) { g += `<circle cx="${X(a)}" cy="${Y(b)}" r="2.2" fill="#9aa8b6"/>`; cities += `<text x="${X(a) + 5}" y="${Y(b) + 4}" font-size="10.5" fill="${VZ.muted}" stroke="#eef3f7" stroke-width="3" paint-order="stroke" pointer-events="none">${name}</text>`; }
   pts.sort((a, b) => b.r - a.r).forEach((q) => {
     const m = q.m;
     const ml = `${q.p.record_id} ${q.p.city || ""}: umowa ${pln(m.contract_value)}, koszt ${pct(m.cost_dev_pct)}, termin ${days(m.delay_days)}`;
     g += `<a href="#/projekt/${q.p.id}" aria-label="${esc(ml)}"><${q.sq ? "rect" : "circle"} ${q.sq ? `x="${(q.x - q.r).toFixed(1)}" y="${(q.y - q.r).toFixed(1)}" width="${(2 * q.r).toFixed(1)}" height="${(2 * q.r).toFixed(1)}" rx="${(q.r * 0.3).toFixed(1)}"` : `cx="${q.x.toFixed(1)}" cy="${q.y.toFixed(1)}" r="${q.r.toFixed(1)}"`} fill="${q.col}" fill-opacity=".85" stroke="#fff" stroke-width="2" style="cursor:pointer" data-tip="<b>${esc(q.p.record_id)} · ${esc(q.p.city || "")}</b><br>${esc((q.p.name || "").slice(0, 90))}<br>umowa ${pln(m.contract_value)}<br>koszt ${pct(m.cost_dev_pct)} · termin ${days(m.delay_days)}"/></a>`;
   });
+  g += cities;
   const worst = pts.filter((q) => q.m.delay_days != null).sort((a, b) => (b.m.delay_days || 0) - (a.m.delay_days || 0)).slice(0, 3);
   const costly = pts.filter((q) => q.m.cost_dev_pct != null).sort((a, b) => b.m.cost_dev_pct - a.m.cost_dev_pct).slice(0, 3);
   const byW = {};
