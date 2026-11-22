@@ -104,18 +104,36 @@ CONTRACT_MARKERS = [r"§\s*\d", r"projektowan\w* postanowien\w* umowy", r"wzor\w
 
 
 def detect_months(text):
-    """Okres realizacji w miesiącach z opisu lub umowy (największa wiarygodna wartość)."""
+    """Okres realizacji w miesiącach z opisu lub umowy.
+    Pierwszeństwo ma okres podany wprost („termin/okres/czas realizacji…”, „realizacja 10 miesięcy”); okresy gwarancji,
+    rękojmi, kar i przechowywania dokumentów są pomijane (np. „gwarancja na okres 60 miesięcy od dnia odbioru”)."""
     ft = fold(text)
-    vals = []
-    for m in re.finditer(r"(termin\w*|okres\w*|czas\w*) (realizacji|wykonania)[^.]{0,80}?(\d{1,3})\s*(mies|miesiec)", ft):
-        vals.append(int(m.group(3)))
-    for m in re.finditer(r"(\d{1,3})\s*(miesiecy|miesiace|mies\.?)\s*(od|licz)", ft):
-        vals.append(int(m.group(1)))
-    for m in re.finditer(r"(termin\w*|okres\w*) (realizacji|wykonania)[^.]{0,80}?(\d{2,4})\s*dni", ft):
-        vals.append(round(int(m.group(3)) / 30.4))
-    vals = [v for v in vals if 1 <= v <= 120]
-    return max(vals) if vals else None
 
+    def ok(m):
+        # tylko w obrębie tego samego zdania: „…gwarancji 60 miesięcy. Termin realizacji 14 miesięcy…” → 14
+        before = re.split(r"[.;\n]", ft[max(0, m.start() - 80): m.start()])[-1]
+        return not re.search(r"gwaranc|rekojm|\bkar[aeyi]?\b|przechowyw|archiw", before + ft[m.start(): m.end()])
+
+    explicit, generic = [], []
+    for m in re.finditer(r"(termin\w*|okres\w*|czas\w*) (realizacji|wykonania)[^.]{0,80}?(\d{1,3})\s*(mies|miesiec)", ft):
+        if ok(m):
+            explicit.append(int(m.group(3)))
+    for m in re.finditer(r"(termin\w*|okres\w*) (realizacji|wykonania)[^.]{0,80}?(\d{2,4})\s*dni", ft):
+        if ok(m):
+            explicit.append(round(int(m.group(3)) / 30.4))
+    for m in re.finditer(r"(realizacj\w*|trwa\w*|harmonogram\w*)[^.\d]{0,40}?(\d{1,3})\s*(mies|miesiec)", ft):
+        if ok(m):
+            explicit.append(int(m.group(2)))
+    for m in re.finditer(r"(\d{1,3})\s*(miesiecy|miesiace|mies\.?)\s*(od|licz)", ft):
+        if ok(m):
+            generic.append(int(m.group(1)))
+    if not explicit and not generic:
+        # „…, 18 miesięcy.” bez słowa „realizacja”
+        for m in re.finditer(r"\b(\d{1,3})\s*(miesiecy|miesiace|miesiac)\b", ft):
+            if ok(m):
+                generic.append(int(m.group(1)))
+    vals = [v for v in (explicit or generic) if 1 <= v <= 120]
+    return max(vals) if vals else None
 
 def fold_keep(s):
     """fold() zachowujący długość tekstu — pozycje dopasowań wskazują ten sam fragment w oryginale."""

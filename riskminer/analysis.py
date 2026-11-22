@@ -39,17 +39,35 @@ def _confidence_label(n, spread=None):
     return "niska (mała próba)"
 
 
+MULT_RX = re.compile(r"(?<![\d,.])(\d{1,4}(?:[,.]\d{1,3})?)\s*(mld|mln|milion\w*|tys\.?|tysi\w*)\s*(?:zl|pln|zlotych)?", re.I)
+MULT = {"mld": 1e9, "mln": 1e6, "mil": 1e6, "tys": 1e3}
+
+
+def _short_amounts(text):
+    """Kwoty zapisane skrótem: „2,4 mln zł”, „950 tys. zł”, „1,2 mld zł” → (wartość, początek, koniec)."""
+    out = []
+    for m in MULT_RX.finditer(fold(text or "")):
+        unit = m.group(2).lower()
+        mult = MULT["mld"] if unit.startswith("mld") else MULT["tys"] if unit.startswith("tys") else MULT["mln"]
+        try:
+            out.append((float(m.group(1).replace(",", ".")) * mult, m.start(), m.end()))
+        except ValueError:
+            pass
+    return out
+
+
 def detect_value(text):
-    """Szacowana wartość inwestycji z opisu: kwota przy słowach wartość/koszt/budżet, inaczej największa kwota."""
+    """Szacowana wartość inwestycji z opisu: kwota przy słowach wartość/koszt/budżet, inaczej największa kwota.
+    Rozumie pełny zapis („2 400 000 zł”) i skróty („2,4 mln zł”, „950 tys. zł”)."""
     ft = fold(text)
     best = None
-    for val, s, e in find_amounts(text):
+    for val, s, e in find_amounts(text) + _short_amounts(text):
         ctx = ft[max(0, s - 80): s]
         if re.search(r"wartos|koszt|budzet|szacun|kwot|naklad", ctx):
             if val and (best is None or val > best):
                 best = val
     if best is None:
-        vals = [v for v, _, _ in find_amounts(text) if v and v > 10000]
+        vals = [v for v, _, _ in find_amounts(text) + _short_amounts(text) if v and v > 10000]
         best = max(vals) if vals else None
     return best
 
@@ -263,13 +281,18 @@ def analyze(text, title=None, analysis_id=None, extra=None):
                          "why": (f"w {funding['k_miss'][0]} z {funding['k_miss'][1]} podobnych przebiegów inwestycja nie zdążyłaby przed {funding['deadline']} "
                                  f"(ważone prawdopodobieństwo {funding['p_miss']:.0%}); realny termin zakończenia P80: {funding['finish']['p80']}"),
                          "basis": "prognoza referencyjna"})
+    top_score = group[0]["score"] if group else 0
+    vague = (not feats.get("value") and not feats.get("length_km") and (feats.get("subsector_main") or "").startswith("Inne")) or top_score < 0.3
+    input_warning = ("Opis jest zbyt ogólny, żeby wiarygodnie dobrać podobne inwestycje: brakuje rodzaju obiektu (np. sieć kanalizacyjna, "
+                     "oczyszczalnia, wodociąg), długości lub wartości. Wyniki poniżej to w praktyce średnia z całej bazy — dopisz te dane "
+                     "albo dołącz koncepcję, PFU lub projekt umowy.") if vague else None
     issues = [{"id": c["id"], "text": c["text"], "ref": c["ref"],
                "note": "Brak informacji w opisie — uzupełnić przed uruchomieniem projektu."} for c in checklist if not c["covered"]]
 
     result = {
         "title": title or "Analiza nowej inwestycji",
         "created_at": now_iso(),
-        "input": {"text": text, "documents": doc_rows, "features": feats},
+        "input": {"text": text, "documents": doc_rows, "features": feats, "warning": input_warning},
         "dane_zrodlowe": {
             "similar": group,
             "all_ranked": [{k: s[k] for k in ("project_id", "record_id", "name", "score")} for s in sims[:15]],

@@ -59,6 +59,23 @@ class LiveHtmlFormat(unittest.TestCase):
         self.assertNotIn("Przyczyny", c.get("basis") or "")
 
 
+class InvestmentDescription(unittest.TestCase):
+    """Opis nowej inwestycji pisany przez użytkownika: kwoty skrótem i okres realizacji obok gwarancji."""
+
+    def test_short_amounts(self):
+        from riskminer.analysis import detect_value
+        self.assertEqual(detect_value("Wartość szacunkowa 2,4 mln zł brutto."), 2_400_000)
+        self.assertEqual(detect_value("budżet 950 tys. zł"), 950_000)
+        self.assertEqual(detect_value("Koszt ok. 12 500 000 zł."), 12_500_000)
+        self.assertEqual(detect_value("oczyszczalnia na 2 tys. RLM, koszt 8 mln zł"), 8_000_000)
+
+    def test_months_ignore_warranty(self):
+        self.assertEqual(clauses.detect_months("Realizacja 10 miesięcy."), 10)
+        self.assertEqual(clauses.detect_months("Wykonawca udziela gwarancji na okres 60 miesięcy od dnia odbioru. "
+                                               "Termin realizacji 14 miesięcy od dnia zawarcia umowy."), 14)
+        self.assertIsNone(clauses.detect_months("Rękojmia za wady wynosi 60 miesięcy od dnia odbioru."))
+
+
 class Quantiles(unittest.TestCase):
     def test_equal_weights_median(self):
         self.assertAlmostEqual(forecast.wquantile([(1, 1), (2, 1), (3, 1)], 0.5), 2)

@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-11-22T06:34:10+00:00",
+  "exported_at": "2026-11-22T07:15:12+00:00",
   "project": {
     "id": 3,
     "record_id": "RM-2026-003",
@@ -35,11 +35,11 @@
     "is_exemplar": 0,
     "needs_review": 1,
     "enrich_status": "wzbogacony",
-    "enrich_log": "2026-11-22T06:34:03+00:00 Projekt RM-2026-003: identyfikator BZP 2024/BZP 00349631/01, zakres: całe postępowanie, okno 2023-01-01–2027-12-31\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00 Postępowanie 2024/BZP 00349631 (99%, identifier): Budowa oczyszczalni ścieków w miejscowości Steklin w formule „zaprojektuj i wybuduj”.\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00   + Ogłoszenie o wyniku postępowania 2024/BZP 00418711/01 (99%)\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00   + Ogłoszenie o zmianie umowy 2024/BZP 00618384/01 (99%)\n2026-11-22T06:34:03+00:00   + Ogłoszenie o zmianie umowy 2024/BZP 00554831/01 (99%)\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00276065/01 (99%)\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-    "last_checked": "2026-11-22T06:34:04+00:00",
+    "enrich_log": "2026-11-22T07:15:10+00:00 Projekt RM-2026-003: identyfikator BZP 2024/BZP 00349631/01, zakres: całe postępowanie, okno 2023-01-01–2027-12-31\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 Postępowanie 2024/BZP 00349631 (99%, identifier): Budowa oczyszczalni ścieków w miejscowości Steklin w formule „zaprojektuj i wybuduj”.\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wyniku postępowania 2024/BZP 00418711/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o zmianie umowy 2024/BZP 00618384/01 (99%)\n2026-11-22T07:15:10+00:00   + Ogłoszenie o zmianie umowy 2024/BZP 00554831/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00276065/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+    "last_checked": "2026-11-22T07:15:10+00:00",
     "source_id": 4,
-    "created_at": "2026-11-22T06:34:02+00:00",
-    "updated_at": "2026-11-22T06:34:04+00:00"
+    "created_at": "2026-11-22T07:15:10+00:00",
+    "updated_at": "2026-11-22T07:15:10+00:00"
   },
   "metrics": {
     "basis": {
@@ -91,7 +91,7 @@
       "n_offers": null,
       "link_id": 11,
       "source_id": 31,
-      "created_at": "2026-11-22T06:34:03+00:00",
+      "created_at": "2026-11-22T07:15:10+00:00",
       "link": {
         "id": 11,
         "project_id": 3,
@@ -106,7 +106,7 @@
         "reviewer": null,
         "review_comment": null,
         "reviewed_at": null,
-        "created_at": "2026-11-22T06:34:03+00:00"
+        "created_at": "2026-11-22T07:15:10+00:00"
       },
       "notices": [
         {
@@ -125,7 +125,7 @@
           "raw_json": "{\"notice_type\": \"ContractNotice\", \"notice_number\": \"2024/BZP 00349631/01\", \"bzp_number\": \"2024/BZP 00349631\", \"object_id\": \"08dc846b-60bd-458e-1a46-3000018a35eb\", \"tender_id\": \"ocds-148610-6b092479-223f-11ef-87ba-8eb060fd7bb8\", \"publication_date\": \"2024-06-04T07:53:09\", \"title\": \"Budowa oczyszczalni ścieków w miejscowości Steklin w formule „zaprojektuj i wybuduj”.\", \"cpv\": \"45231300-8 (Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków),71000000-8 (Usługi architektoniczne, budowlane, inżynieryjne i kontrolne),71300000-1 (Usługi inżynieryjne),71320000-7 (Usługi inżynieryjne w zakresie projektowania),71322000-1 (Usługi inżynierii projektowej w zakresie inżynierii lądowej i wodnej),71242000-6 (Przygotowanie przedsięwzięcia i projektu, oszacowanie kosztów),71245000-7 (Plany zatwierdzające, rysunki robocze i specyfikacje),45000000-7 (Roboty budowlane),45100000-8 (Przygotowanie terenu pod budowę),45111000-8 (Roboty w zakresie burzenia, roboty ziemne),45111200-0 (Roboty w zakresie przygotowania terenu pod budowę i roboty ziemne),45112000-5 (Roboty w zakresie usuwania gleby),45113000-2 (Roboty na placu budowy),45223000-6 (Roboty budowlane w zakresie konstrukcji),45231000-5 (Roboty budowlane w zakresie budowy rurociągów, ciągów komunikacyjnych i linii energetycznych),45232000-2 (Roboty pomocnicze w zakresie rurociągów i kabli),45232150-8 (Roboty w zakresie rurociągów do przesyłu wody),45232400-6 (Roboty budowlane w zakresie kanałów ściekowych),45232410-9 (Roboty w zakresie kanalizacji ściekowej),45232421-9 (Roboty w zakresie oczyszczania ścieków),45232423-3 (Roboty budowlane w zakresie przepompowni ścieków),45252127-4 (Roboty budowlane w zakresie oczyszczalni ścieków),45252200-0 (Wyposażenie oczyszczalni ścieków),45255600-5 (Roboty w zakresie kładzenia rur w kanalizacji),45233000-9 (Roboty w zakresie konstruowania, fundamentowania oraz wykonywania nawierzchni autostrad, dróg),45233200-1 (Roboty w zakresie różnych nawierzchni),45310000-3 (Roboty instalacyjne elektryczne),45311000-0 (Roboty w zakresie okablowania oraz instalacji elektrycznych),45311100-1 (Roboty w zakresie okablowania elektrycznego),45311200-2 (Roboty w zakresie instalacji elektrycznych),45314300-4 (Instalowanie infrastruktury okablowania),45314310-7 (Układanie kabli),71351810-4 (Usługi topograficzne)\", \"order_type\": \"Works\", \"organization_name\": \"Gmina Czernikowo\", \"organization_nip\": \"8792466869\", \"organization_id\": \"10716\", \"organization_city\": \"Czernikowo\", \"organization_province\": \"PL04\", \"procedure_result\": null, \"contractors\": [], \"url\": \"https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc846b-60bd-458e-1a46-3000018a35eb\", \"is_below_eu\": true, \"structured\": {\"changes\": [], \"info\": {\"parts\": [], \"provisions\": \"Zamawiający przewiduje możliwość zmiany postanowień zawartej umowy w stosunku do treści wybranej oferty w zakresie uregulowanym w art. 454 – 455 ustawy Pzp oraz wskazanym we Wzorze umowy stanowiącym Załącznik nr 2 do SWZ.\", \"result_ref\": null, \"notice_ref\": null, \"cancel\": []}}}",
           "link_id": 11,
           "source_id": 31,
-          "created_at": "2026-11-22T06:34:03+00:00"
+          "created_at": "2026-11-22T07:15:10+00:00"
         },
         {
           "id": 9,
@@ -143,7 +143,7 @@
           "raw_json": "{\"notice_type\": \"TenderResultNotice\", \"notice_number\": \"2024/BZP 00418711/01\", \"bzp_number\": \"2024/BZP 00418711\", \"object_id\": \"08dca708-fd21-83c3-ba4f-e10001de327b\", \"tender_id\": \"ocds-148610-6b092479-223f-11ef-87ba-8eb060fd7bb8\", \"publication_date\": \"2024-07-18T09:07:02\", \"title\": \"Budowa oczyszczalni ścieków w miejscowości Steklin w formule „zaprojektuj i wybuduj”.\", \"cpv\": \"45231300-8 (Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków),71000000-8 (Usługi architektoniczne, budowlane, inżynieryjne i kontrolne),71300000-1 (Usługi inżynieryjne),71320000-7 (Usługi inżynieryjne w zakresie projektowania),71322000-1 (Usługi inżynierii projektowej w zakresie inżynierii lądowej i wodnej),71242000-6 (Przygotowanie przedsięwzięcia i projektu, oszacowanie kosztów),71245000-7 (Plany zatwierdzające, rysunki robocze i specyfikacje),45000000-7 (Roboty budowlane),45100000-8 (Przygotowanie terenu pod budowę),45111000-8 (Roboty w zakresie burzenia, roboty ziemne),45111200-0 (Roboty w zakresie przygotowania terenu pod budowę i roboty ziemne),45112000-5 (Roboty w zakresie usuwania gleby),45113000-2 (Roboty na placu budowy),45223000-6 (Roboty budowlane w zakresie konstrukcji),45231000-5 (Roboty budowlane w zakresie budowy rurociągów, ciągów komunikacyjnych i linii energetycznych),45232000-2 (Roboty pomocnicze w zakresie rurociągów i kabli),45232150-8 (Roboty w zakresie rurociągów do przesyłu wody),45232400-6 (Roboty budowlane w zakresie kanałów ściekowych),45232410-9 (Roboty w zakresie kanalizacji ściekowej),45232421-9 (Roboty w zakresie oczyszczania ścieków),45232423-3 (Roboty budowlane w zakresie przepompowni ścieków),45252127-4 (Roboty budowlane w zakresie oczyszczalni ścieków),45252200-0 (Wyposażenie oczyszczalni ścieków),45255600-5 (Roboty w zakresie kładzenia rur w kanalizacji),45233000-9 (Roboty w zakresie konstruowania, fundamentowania oraz wykonywania nawierzchni autostrad, dróg),45233200-1 (Roboty w zakresie różnych nawierzchni),45310000-3 (Roboty instalacyjne elektryczne),45311000-0 (Roboty w zakresie okablowania oraz instalacji elektrycznych),45311100-1 (Roboty w zakresie okablowania elektrycznego),45311200-2 (Roboty w zakresie instalacji elektrycznych),45314300-4 (Instalowanie infrastruktury okablowania),45314310-7 (Układanie kabli),71351810-4 (Usługi topograficzne)\", \"order_type\": \"Works\", \"organization_name\": \"Gmina Czernikowo\", \"organization_nip\": \"8792466869\", \"organization_id\": \"10716\", \"organization_city\": \"Czernikowo\", \"organization_province\": \"PL04\", \"procedure_result\": \"zawarcieUmowy\", \"contractors\": [{\"name\": \"Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek\", \"nip\": null, \"city\": \"Golub-Dobrzyń\"}], \"url\": \"https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dca708-fd21-83c3-ba4f-e10001de327b\", \"is_below_eu\": true, \"structured\": {\"changes\": [], \"info\": {\"parts\": [], \"provisions\": null, \"result_ref\": null, \"notice_ref\": \"2024/BZP 00349631\", \"cancel\": []}}}",
           "link_id": 12,
           "source_id": 32,
-          "created_at": "2026-11-22T06:34:03+00:00"
+          "created_at": "2026-11-22T07:15:10+00:00"
         },
         {
           "id": 10,
@@ -161,7 +161,7 @@
           "raw_json": "{\"notice_type\": \"AgreementUpdateNotice\", \"notice_number\": \"2024/BZP 00618384/01\", \"bzp_number\": \"2024/BZP 00618384\", \"object_id\": \"08dd0ec6-aa87-c6a2-985c-bb0001354954\", \"tender_id\": \"ocds-148610-6b092479-223f-11ef-87ba-8eb060fd7bb8\", \"publication_date\": \"2024-11-27T09:34:18\", \"title\": \"Budowa oczyszczalni ścieków w miejscowości Steklin w formule „zaprojektuj i wybuduj”.\", \"cpv\": \"45231300-8 (Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków),71000000-8 (Usługi architektoniczne, budowlane, inżynieryjne i kontrolne),71300000-1 (Usługi inżynieryjne),71320000-7 (Usługi inżynieryjne w zakresie projektowania),71322000-1 (Usługi inżynierii projektowej w zakresie inżynierii lądowej i wodnej),71242000-6 (Przygotowanie przedsięwzięcia i projektu, oszacowanie kosztów),71245000-7 (Plany zatwierdzające, rysunki robocze i specyfikacje),45000000-7 (Roboty budowlane),45100000-8 (Przygotowanie terenu pod budowę),45111000-8 (Roboty w zakresie burzenia, roboty ziemne),45111200-0 (Roboty w zakresie przygotowania terenu pod budowę i roboty ziemne),45112000-5 (Roboty w zakresie usuwania gleby),45113000-2 (Roboty na placu budowy),45223000-6 (Roboty budowlane w zakresie konstrukcji),45231000-5 (Roboty budowlane w zakresie budowy rurociągów, ciągów komunikacyjnych i linii energetycznych),45232000-2 (Roboty pomocnicze w zakresie rurociągów i kabli),45232150-8 (Roboty w zakresie rurociągów do przesyłu wody),45232400-6 (Roboty budowlane w zakresie kanałów ściekowych),45232410-9 (Roboty w zakresie kanalizacji ściekowej),45232421-9 (Roboty w zakresie oczyszczania ścieków),45232423-3 (Roboty budowlane w zakresie przepompowni ścieków),45252127-4 (Roboty budowlane w zakresie oczyszczalni ścieków),45252200-0 (Wyposażenie oczyszczalni ścieków),45255600-5 (Roboty w zakresie kładzenia rur w kanalizacji),45233000-9 (Roboty w zakresie konstruowania, fundamentowania oraz wykonywania nawierzchni autostrad, dróg),45233200-1 (Roboty w zakresie różnych nawierzchni),45310000-3 (Roboty instalacyjne elektryczne),45311000-0 (Roboty w zakresie okablowania oraz instalacji elektrycznych),45311100-1 (Roboty w zakresie okablowania elektrycznego),45311200-2 (Roboty w zakresie instalacji elektrycznych),45314300-4 (Instalowanie infrastruktury okablowania),45314310-7 (Układanie kabli),71351810-4 (Usługi topograficzne)\", \"order_type\": \"Works\", \"organization_name\": \"Gmina Czernikowo\", \"organization_nip\": \"8792466869\", \"organization_id\": \"10716\", \"organization_city\": \"Czernikowo\", \"organization_province\": \"PL04\", \"procedure_result\": null, \"contractors\": [{\"name\": \"Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek\", \"nip\": null, \"city\": \"Golub-Dobrzyń\"}], \"url\": \"https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd0ec6-aa87-c6a2-985c-bb0001354954\", \"is_below_eu\": true, \"structured\": {\"changes\": [{\"no\": \"1\", \"date\": \"2024-11-25\", \"basis\": \"art. 455 ust. 1 pkt 3 ustawy\", \"reason\": \"W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy.\", \"description\": \"W § 1 ust. 2 dodaje się pkt 4) w brzmieniu: wykonania robót dodatkowych nieprzewidzianych w PFU, a niezbędnych do prawidłowej realizacji przedmiotu Umowy polegających w szczególności na wymianie odcinków sieci wodociągowej wykonanych z rur azbestowych na sieć wodociągową wykonaną z rur polimerowych wraz z robotami towarzyszącymi (szczegółowy zakres robót dodatkowych określa załącznik nr 1).\", \"value\": 100325.44, \"price_increase\": \"tak\", \"legal_basis\": \"art. 455 ust. 1 pkt 3\", \"quote\": \"5.1.) Data zmiany umowy/umowy ramowej): 2024-11-25 | 5.2.) Podstawa prawna zmiany umowy/umowy ramowej: art. 455 ust. 1 pkt 3 ustawy | 5.3.) Przyczyny dokonania zmian umowy/umowy ramowej: W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy. | 5.5.1.) Wartość zmiany: 100325,44\"}], \"info\": {\"parts\": [], \"provisions\": null, \"result_ref\": \"2024/BZP 00418711/01\", \"notice_ref\": \"2024/BZP 00349631\", \"cancel\": []}}}",
           "link_id": 13,
           "source_id": 33,
-          "created_at": "2026-11-22T06:34:03+00:00"
+          "created_at": "2026-11-22T07:15:10+00:00"
         },
         {
           "id": 11,
@@ -179,7 +179,7 @@
           "raw_json": "{\"notice_type\": \"AgreementUpdateNotice\", \"notice_number\": \"2024/BZP 00554831/01\", \"bzp_number\": \"2024/BZP 00554831\", \"object_id\": \"08dcf1a8-45f7-79a7-985c-bb0001c794c0\", \"tender_id\": \"ocds-148610-6b092479-223f-11ef-87ba-8eb060fd7bb8\", \"publication_date\": \"2024-10-21T08:13:41\", \"title\": \"Budowa oczyszczalni ścieków w miejscowości Steklin w formule „zaprojektuj i wybuduj”.\", \"cpv\": \"45231300-8 (Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków),71000000-8 (Usługi architektoniczne, budowlane, inżynieryjne i kontrolne),71300000-1 (Usługi inżynieryjne),71320000-7 (Usługi inżynieryjne w zakresie projektowania),71322000-1 (Usługi inżynierii projektowej w zakresie inżynierii lądowej i wodnej),71242000-6 (Przygotowanie przedsięwzięcia i projektu, oszacowanie kosztów),71245000-7 (Plany zatwierdzające, rysunki robocze i specyfikacje),45000000-7 (Roboty budowlane),45100000-8 (Przygotowanie terenu pod budowę),45111000-8 (Roboty w zakresie burzenia, roboty ziemne),45111200-0 (Roboty w zakresie przygotowania terenu pod budowę i roboty ziemne),45112000-5 (Roboty w zakresie usuwania gleby),45113000-2 (Roboty na placu budowy),45223000-6 (Roboty budowlane w zakresie konstrukcji),45231000-5 (Roboty budowlane w zakresie budowy rurociągów, ciągów komunikacyjnych i linii energetycznych),45232000-2 (Roboty pomocnicze w zakresie rurociągów i kabli),45232150-8 (Roboty w zakresie rurociągów do przesyłu wody),45232400-6 (Roboty budowlane w zakresie kanałów ściekowych),45232410-9 (Roboty w zakresie kanalizacji ściekowej),45232421-9 (Roboty w zakresie oczyszczania ścieków),45232423-3 (Roboty budowlane w zakresie przepompowni ścieków),45252127-4 (Roboty budowlane w zakresie oczyszczalni ścieków),45252200-0 (Wyposażenie oczyszczalni ścieków),45255600-5 (Roboty w zakresie kładzenia rur w kanalizacji),45233000-9 (Roboty w zakresie konstruowania, fundamentowania oraz wykonywania nawierzchni autostrad, dróg),45233200-1 (Roboty w zakresie różnych nawierzchni),45310000-3 (Roboty instalacyjne elektryczne),45311000-0 (Roboty w zakresie okablowania oraz instalacji elektrycznych),45311100-1 (Roboty w zakresie okablowania elektrycznego),45311200-2 (Roboty w zakresie instalacji elektrycznych),45314300-4 (Instalowanie infrastruktury okablowania),45314310-7 (Układanie kabli),71351810-4 (Usługi topograficzne)\", \"order_type\": \"Works\", \"organization_name\": \"Gmina Czernikowo\", \"organization_nip\": \"8792466869\", \"organization_id\": \"10716\", \"organization_city\": \"Czernikowo\", \"organization_province\": \"PL04\", \"procedure_result\": null, \"contractors\": [{\"name\": \"Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek\", \"nip\": null, \"city\": \"Golub-Dobrzyń\"}], \"url\": \"https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dcf1a8-45f7-79a7-985c-bb0001c794c0\", \"is_below_eu\": true, \"structured\": {\"changes\": [{\"no\": \"1\", \"date\": \"2024-10-09\", \"basis\": \"art. 455 ust. 1 pkt 3 ustawy\", \"reason\": \"W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy.\", \"description\": \"W § 1 ust. 2 dodaje się pkt 3) w brzmieniu: wykonania robót dodatkowych nieprzewidzianych w PFU, a niezbędnych do prawidłowej realizacji przedmiotu Umowy oraz mających na celu zmniejszenie kosztów eksploatacji przedmiotu Umowy, polegających w szczególności na wymianie odcinków kanalizacji sanitarnej wraz z montażem studni, wymianie pokryw wraz z włazami na istniejących studniach kanalizacji sanitarnej, wymianie hydrantu, montażu dodatkowych studni wodomierzowych wraz z uzbrojeniem oraz montażu instalacji fotowoltaicznej (szczegółowy zakres robót dodatkowych określa załącznik nr 1).\", \"value\": 758084.56, \"price_increase\": \"tak\", \"legal_basis\": \"art. 455 ust. 1 pkt 3\", \"quote\": \"5.1.) Data zmiany umowy/umowy ramowej): 2024-10-09 | 5.2.) Podstawa prawna zmiany umowy/umowy ramowej: art. 455 ust. 1 pkt 3 ustawy | 5.3.) Przyczyny dokonania zmian umowy/umowy ramowej: W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy. | 5.5.1.) Wartość zmiany: 758084,56\"}], \"info\": {\"parts\": [], \"provisions\": null, \"result_ref\": \"2024/BZP 00418711/01\", \"notice_ref\": \"2024/BZP 00349631\", \"cancel\": []}}}",
           "link_id": 14,
           "source_id": 34,
-          "created_at": "2026-11-22T06:34:03+00:00"
+          "created_at": "2026-11-22T07:15:10+00:00"
         },
         {
           "id": 12,
@@ -197,7 +197,7 @@
           "raw_json": "{\"notice_type\": \"ContractPerformingNotice\", \"notice_number\": \"2026/BZP 00276065/01\", \"bzp_number\": \"2026/BZP 00276065\", \"object_id\": \"08dec172-3030-00de-5fad-9500015c599a\", \"tender_id\": \"ocds-148610-6b092479-223f-11ef-87ba-8eb060fd7bb8\", \"publication_date\": \"2026-06-03T13:15:31\", \"title\": \"Budowa oczyszczalni ścieków w miejscowości Steklin w formule „zaprojektuj i wybuduj”.\", \"cpv\": \"45231300-8 (Roboty budowlane w zakresie budowy wodociągów i rurociągów do odprowadzania ścieków),71000000-8 (Usługi architektoniczne, budowlane, inżynieryjne i kontrolne),71300000-1 (Usługi inżynieryjne),71320000-7 (Usługi inżynieryjne w zakresie projektowania),71322000-1 (Usługi inżynierii projektowej w zakresie inżynierii lądowej i wodnej),71242000-6 (Przygotowanie przedsięwzięcia i projektu, oszacowanie kosztów),71245000-7 (Plany zatwierdzające, rysunki robocze i specyfikacje),45000000-7 (Roboty budowlane),45100000-8 (Przygotowanie terenu pod budowę),45111000-8 (Roboty w zakresie burzenia, roboty ziemne),45111200-0 (Roboty w zakresie przygotowania terenu pod budowę i roboty ziemne),45112000-5 (Roboty w zakresie usuwania gleby),45113000-2 (Roboty na placu budowy),45223000-6 (Roboty budowlane w zakresie konstrukcji),45231000-5 (Roboty budowlane w zakresie budowy rurociągów, ciągów komunikacyjnych i linii energetycznych),45232000-2 (Roboty pomocnicze w zakresie rurociągów i kabli),45232150-8 (Roboty w zakresie rurociągów do przesyłu wody),45232400-6 (Roboty budowlane w zakresie kanałów ściekowych),45232410-9 (Roboty w zakresie kanalizacji ściekowej),45232421-9 (Roboty w zakresie oczyszczania ścieków),45232423-3 (Roboty budowlane w zakresie przepompowni ścieków),45252127-4 (Roboty budowlane w zakresie oczyszczalni ścieków),45252200-0 (Wyposażenie oczyszczalni ścieków),45255600-5 (Roboty w zakresie kładzenia rur w kanalizacji),45233000-9 (Roboty w zakresie konstruowania, fundamentowania oraz wykonywania nawierzchni autostrad, dróg),45233200-1 (Roboty w zakresie różnych nawierzchni),45310000-3 (Roboty instalacyjne elektryczne),45311000-0 (Roboty w zakresie okablowania oraz instalacji elektrycznych),45311100-1 (Roboty w zakresie okablowania elektrycznego),45311200-2 (Roboty w zakresie instalacji elektrycznych),45314300-4 (Instalowanie infrastruktury okablowania),45314310-7 (Układanie kabli),71351810-4 (Usługi topograficzne)\", \"order_type\": \"Works\", \"organization_name\": \"Gmina Czernikowo\", \"organization_nip\": \"8792466869\", \"organization_id\": \"10716\", \"organization_city\": \"Czernikowo\", \"organization_province\": \"PL04\", \"procedure_result\": null, \"contractors\": [{\"name\": \"Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek\", \"nip\": null, \"city\": \"Golub-Dobrzyń\"}], \"url\": \"https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec172-3030-00de-5fad-9500015c599a\", \"is_below_eu\": true, \"structured\": {\"changes\": [{\"no\": \"1\", \"basis\": \"art. 455 ust. 1 pkt 3 ustawy\", \"reason\": \"W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy.\", \"description\": \"Wykonanie robót dodatkowych nieprzewidzianych w Programie Funkcjonalno Użytkowym, a niezbędnych do prawidłowej realizacji przedmiotu zamówienia oraz mających na celu zmniejszenie kosztów eksploatacji przedmiotu zamówienia, polegających w szczególności na wymianie odcinków kanalizacji sanitarnej wraz z montażem studni, wymianie pokryw wraz z włazami na istniejących studniach kanalizacji sanitarnej, wymianie hydrantu, montażu dodatkowych studni wodomierzowych wraz z uzbrojeniem oraz montażu instalacji fotowoltaicznej (szczegółowy zakres robót dodatkowych określa załącznik nr 1 do Aneksu nr 1).\", \"value\": 758084.56, \"price_increase\": \"tak\", \"legal_basis\": \"art. 455 ust. 1 pkt 3\", \"quote\": \"5.4.2.) Numer zmiany: 1 | 5.4.3.) Podstawa prawna zmiany: art. 455 ust. 1 pkt 3 ustawy | 5.4.4.) Przyczyny dokonania zmian: W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy. | 5.4.6.) Wartość zmiany: 758084,56\"}, {\"no\": \"2\", \"basis\": \"art. 455 ust. 1 pkt 3 ustawy\", \"reason\": \"W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy.\", \"description\": \"Wykonanie robót dodatkowych nieprzewidzianych w Programie Funkcjonalno Użytkowym, a niezbędnych do prawidłowej realizacji przedmiotu Umowy, polegających w szczególności na wymianie odcinków sieci wodociągowej wykonanych z rur azbestowych na sieć wodociągową wykonaną z rur polimerowych wraz z robotami towarzyszącymi (szczegółowy zakres robót dodatkowych określa załącznik nr 1 do Aneksu nr 2).\", \"value\": 100325.44, \"price_increase\": \"tak\", \"legal_basis\": \"art. 455 ust. 1 pkt 3\", \"quote\": \"5.4.2.) Numer zmiany: 2 | 5.4.3.) Podstawa prawna zmiany: art. 455 ust. 1 pkt 3 ustawy | 5.4.4.) Przyczyny dokonania zmian: W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy. | 5.4.6.) Wartość zmiany: 100325,44\"}, {\"no\": \"3\", \"basis\": \"art. 455 ust. 1 pkt 1 ustawy\", \"reason\": \"Przedłużające się postępowanie administracyjne prowadzone przez Państwowe Gospodarstwo Wodne Wody Polskie w sprawie udzielenia pozwolenia wodnoprawnego na usługę wodną obejmującą wprowadzanie oczyszczonych ścieków bytowych pochodzących z oczyszczalni ścieków w Steklinie do urządzenia wodnego w postaci czterech złóż gruntowo-roślinnych i dalej do wód jeziora Steklin oraz wykonanie wylotu ścieków do jeziora Steklin.\", \"description\": \"W związku z koniecznością oczekiwania na wydanie przez Państwowe Gospodarstwo Wodne Wody Polskie pozwolenia wodnoprawnego na usługę wodną obejmującą wprowadzanie oczyszczonych ścieków bytowych pochodzących z oczyszczalni ścieków w Steklinie do urządzenia wodnego w postaci czterech złóż gruntowo-roślinnych i dalej do wód jeziora Steklin oraz wykonanie wylotu ścieków do jeziora Steklin termin wykonania przedmiotu umowy został wydłużony do dnia 26.05.2026 r.\", \"price_increase\": \"nie\", \"legal_basis\": \"art. 455 ust. 1 pkt 1\", \"quote\": \"5.4.2.) Numer zmiany: 3 | 5.4.3.) Podstawa prawna zmiany: art. 455 ust. 1 pkt 1 ustawy | 5.4.4.) Przyczyny dokonania zmian: Przedłużające się postępowanie administracyjne prowadzone przez Państwowe Gospodarstwo Wodne Wody Polskie w sprawie udzielenia pozwolenia wodnoprawnego na usługę wodną obejmującą wprowadzanie oczyszczonych ścieków bytowych pochodzących z oczyszczalni ścieków w Steklinie do urządzenia wodnego w postaci czterech złóż gruntowo-roślinnych i dalej do wód jeziora Steklin oraz wykonanie wylotu ścieków do jeziora Steklin.\"}], \"info\": {\"parts\": [], \"provisions\": null, \"result_ref\": \"2024/BZP 00418711/01\", \"notice_ref\": \"2024/BZP 00349631\", \"cancel\": []}}}",
           "link_id": 15,
           "source_id": 35,
-          "created_at": "2026-11-22T06:34:03+00:00"
+          "created_at": "2026-11-22T07:15:10+00:00"
         }
       ],
       "contracts": [
@@ -219,7 +219,7 @@
           "status": "wykonana po terminie",
           "source_id": 32,
           "quote": "8.2.) Wartość umowy/umowy ramowej: 2131590,00 PLN",
-          "created_at": "2026-11-22T06:34:04+00:00",
+          "created_at": "2026-11-22T07:15:10+00:00",
           "changes": [
             {
               "id": 7,
@@ -237,7 +237,7 @@
               "fingerprint": "728eba2ccdacd4dcc248ae75",
               "status": "proposed",
               "part": null,
-              "created_at": "2026-11-22T06:34:03+00:00"
+              "created_at": "2026-11-22T07:15:10+00:00"
             },
             {
               "id": 8,
@@ -255,7 +255,7 @@
               "fingerprint": "31ee42ba4801206e6f710527",
               "status": "proposed",
               "part": null,
-              "created_at": "2026-11-22T06:34:03+00:00"
+              "created_at": "2026-11-22T07:15:10+00:00"
             },
             {
               "id": 9,
@@ -273,7 +273,7 @@
               "fingerprint": "6ad63aaf63e295538a9f53bd",
               "status": "proposed",
               "part": null,
-              "created_at": "2026-11-22T06:34:04+00:00"
+              "created_at": "2026-11-22T07:15:10+00:00"
             }
           ]
         }
@@ -300,7 +300,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 79,
@@ -321,7 +321,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 80,
@@ -342,7 +342,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 81,
@@ -363,7 +363,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 82,
@@ -384,7 +384,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 83,
@@ -405,7 +405,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 84,
@@ -426,7 +426,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 85,
@@ -447,7 +447,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 86,
@@ -468,7 +468,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 87,
@@ -489,7 +489,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 88,
@@ -510,7 +510,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 89,
@@ -531,7 +531,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 90,
@@ -552,7 +552,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 91,
@@ -573,7 +573,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 92,
@@ -594,7 +594,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 93,
@@ -615,7 +615,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 94,
@@ -636,7 +636,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 95,
@@ -657,7 +657,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 96,
@@ -678,7 +678,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 97,
@@ -699,7 +699,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 98,
@@ -720,7 +720,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 99,
@@ -741,7 +741,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 100,
@@ -762,7 +762,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 101,
@@ -783,7 +783,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 102,
@@ -804,7 +804,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 103,
@@ -825,7 +825,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 104,
@@ -846,7 +846,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 105,
@@ -867,7 +867,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 106,
@@ -888,7 +888,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 107,
@@ -909,7 +909,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 108,
@@ -930,7 +930,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 109,
@@ -951,7 +951,7 @@
       "method": "formularz BZP",
       "status": "proposed",
       "part": null,
-      "created_at": "2026-11-22T06:34:04+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     }
   ],
   "events": [
@@ -983,7 +983,7 @@
       "reviewer": null,
       "review_comment": null,
       "reviewed_at": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 11,
@@ -1013,7 +1013,7 @@
       "reviewer": null,
       "review_comment": null,
       "reviewed_at": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 12,
@@ -1043,7 +1043,7 @@
       "reviewer": null,
       "review_comment": null,
       "reviewed_at": null,
-      "created_at": "2026-11-22T06:34:04+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 13,
@@ -1073,7 +1073,7 @@
       "reviewer": null,
       "review_comment": null,
       "reviewed_at": null,
-      "created_at": "2026-11-22T06:34:04+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 14,
@@ -1103,7 +1103,7 @@
       "reviewer": null,
       "review_comment": null,
       "reviewed_at": null,
-      "created_at": "2026-11-22T06:34:04+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     }
   ],
   "links": [
@@ -1121,7 +1121,7 @@
       "reviewer": null,
       "review_comment": null,
       "reviewed_at": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 12,
@@ -1137,7 +1137,7 @@
       "reviewer": null,
       "review_comment": null,
       "reviewed_at": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 13,
@@ -1153,7 +1153,7 @@
       "reviewer": null,
       "review_comment": null,
       "reviewed_at": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 14,
@@ -1169,7 +1169,7 @@
       "reviewer": null,
       "review_comment": null,
       "reviewed_at": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     },
     {
       "id": 15,
@@ -1185,7 +1185,7 @@
       "reviewer": null,
       "review_comment": null,
       "reviewed_at": null,
-      "created_at": "2026-11-22T06:34:03+00:00"
+      "created_at": "2026-11-22T07:15:10+00:00"
     }
   ],
   "documents": [],
@@ -1246,7 +1246,7 @@
       "title": "Risk_Miner_dane_projekty.xlsx — Projekty, wiersz 4",
       "url": null,
       "ref": "Risk_Miner_dane_projekty.xlsx:Projekty!4",
-      "fetched_at": "2026-11-22T06:34:02+00:00",
+      "fetched_at": "2026-11-22T07:15:10+00:00",
       "sha256": "2c25b797e3f8e149ae92ac0d6e740e5b0168b921627b11a95e1999d29866536e",
       "meta": "{\"file_source_id\": 1}"
     },
@@ -1256,7 +1256,7 @@
       "title": "Ogłoszenie o zamówieniu 2024/BZP 00349631/01",
       "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dc846b-60bd-458e-1a46-3000018a35eb",
       "ref": "2024/BZP 00349631/01",
-      "fetched_at": "2026-11-22T06:34:03+00:00",
+      "fetched_at": "2026-11-22T07:15:10+00:00",
       "sha256": "508a4793bfa46b491c9529bd76d9d1f62d162b6d2ee9c82178a82b213abbb981",
       "meta": null
     },
@@ -1266,7 +1266,7 @@
       "title": "Ogłoszenie o wyniku postępowania 2024/BZP 00418711/01",
       "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dca708-fd21-83c3-ba4f-e10001de327b",
       "ref": "2024/BZP 00418711/01",
-      "fetched_at": "2026-11-22T06:34:03+00:00",
+      "fetched_at": "2026-11-22T07:15:10+00:00",
       "sha256": "83942feff038ebfa25c20a88279086bf2d2fa1ef10915713eabb55ffe877fdd9",
       "meta": "{\"api_url\": \"kopia lokalna BZP (data/bzp_local.json, tryb awaryjny)\"}"
     },
@@ -1276,7 +1276,7 @@
       "title": "Ogłoszenie o zmianie umowy 2024/BZP 00618384/01",
       "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd0ec6-aa87-c6a2-985c-bb0001354954",
       "ref": "2024/BZP 00618384/01",
-      "fetched_at": "2026-11-22T06:34:03+00:00",
+      "fetched_at": "2026-11-22T07:15:10+00:00",
       "sha256": "7b08e82d6623e9dfabbec12f0801a747b9b05ad535c3bdd32101aa2402b7859b",
       "meta": "{\"api_url\": \"kopia lokalna BZP (data/bzp_local.json, tryb awaryjny)\"}"
     },
@@ -1286,7 +1286,7 @@
       "title": "Ogłoszenie o zmianie umowy 2024/BZP 00554831/01",
       "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dcf1a8-45f7-79a7-985c-bb0001c794c0",
       "ref": "2024/BZP 00554831/01",
-      "fetched_at": "2026-11-22T06:34:03+00:00",
+      "fetched_at": "2026-11-22T07:15:10+00:00",
       "sha256": "048fd1e1994cd4b087fdbc3a171c4733a316f2a4de6644f8d71a393a8cd450b6",
       "meta": "{\"api_url\": \"kopia lokalna BZP (data/bzp_local.json, tryb awaryjny)\"}"
     },
@@ -1296,7 +1296,7 @@
       "title": "Ogłoszenie o wykonaniu umowy 2026/BZP 00276065/01",
       "url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec172-3030-00de-5fad-9500015c599a",
       "ref": "2026/BZP 00276065/01",
-      "fetched_at": "2026-11-22T06:34:03+00:00",
+      "fetched_at": "2026-11-22T07:15:10+00:00",
       "sha256": "a06258174c96879b70c86cc5cee1a284f3a687ba7153ee0a6458d57e698e009f",
       "meta": "{\"api_url\": \"kopia lokalna BZP (data/bzp_local.json, tryb awaryjny)\"}"
     }
@@ -1304,18 +1304,18 @@
   "history": [
     {
       "id": 3,
-      "ts": "2026-11-22T06:34:02+00:00",
+      "ts": "2026-11-22T07:15:10+00:00",
       "actor": "eksport",
       "action": "project.create",
       "entity": "project",
       "entity_id": "3",
       "before": null,
-      "after": "{\"record_id\": \"RM-2026-003\", \"beneficiary_id_type\": \"NIP\", \"beneficiary_id\": \"8792466869\", \"beneficiary_name\": \"Gmina Czernikowo\", \"beneficiary_type\": \"Jednostka samorządu terytorialnego\", \"country\": \"Polska\", \"teryt\": \"04\", \"voivodeship\": \"kujawsko-pomorskie\", \"city\": \"Czernikowo\", \"name\": \"Budowa oczyszczalni ścieków w miejscowości Steklin w formule zaprojektuj i wybuduj\", \"scope\": \"całe postępowanie\", \"public_id_type\": \"Ogłoszenie BZP\", \"public_id\": \"2024/BZP 00349631/01\", \"theme\": \"Gospodarka wodno-ściekowa\", \"order_type\": \"Roboty budowlane\", \"legal_regime\": \"Ustawa Pzp – zamówienie krajowe\", \"currency\": \"PLN\", \"status\": \"Zakończone\", \"record_source\": \"Rejestr publiczny\", \"record_date\": \"2026-11-20\", \"record_version\": \"2.0\", \"public_id_normalized\": \"2024/BZP 00349631/01\", \"nip_valid\": true, \"subsector_main\": \"Oczyszczalnia ścieków\", \"subsectors_extra\": [], \"work_type\": \"budowa\", \"formula\": \"zaprojektuj i wybuduj\", \"length_km\": null, \"source_id\": 4, \"created_at\": \"2026-11-22T06:34:02+00:00\", \"enrich_status\": \"nowy\"}",
+      "after": "{\"record_id\": \"RM-2026-003\", \"beneficiary_id_type\": \"NIP\", \"beneficiary_id\": \"8792466869\", \"beneficiary_name\": \"Gmina Czernikowo\", \"beneficiary_type\": \"Jednostka samorządu terytorialnego\", \"country\": \"Polska\", \"teryt\": \"04\", \"voivodeship\": \"kujawsko-pomorskie\", \"city\": \"Czernikowo\", \"name\": \"Budowa oczyszczalni ścieków w miejscowości Steklin w formule zaprojektuj i wybuduj\", \"scope\": \"całe postępowanie\", \"public_id_type\": \"Ogłoszenie BZP\", \"public_id\": \"2024/BZP 00349631/01\", \"theme\": \"Gospodarka wodno-ściekowa\", \"order_type\": \"Roboty budowlane\", \"legal_regime\": \"Ustawa Pzp – zamówienie krajowe\", \"currency\": \"PLN\", \"status\": \"Zakończone\", \"record_source\": \"Rejestr publiczny\", \"record_date\": \"2026-11-20\", \"record_version\": \"2.0\", \"public_id_normalized\": \"2024/BZP 00349631/01\", \"nip_valid\": true, \"subsector_main\": \"Oczyszczalnia ścieków\", \"subsectors_extra\": [], \"work_type\": \"budowa\", \"formula\": \"zaprojektuj i wybuduj\", \"length_km\": null, \"source_id\": 4, \"created_at\": \"2026-11-22T07:15:10+00:00\", \"enrich_status\": \"nowy\"}",
       "comment": "import Risk_Miner_dane_projekty.xlsx"
     },
     {
       "id": 25,
-      "ts": "2026-11-22T06:34:04+00:00",
+      "ts": "2026-11-22T07:15:10+00:00",
       "actor": "system",
       "action": "project.enrich",
       "entity": "project",

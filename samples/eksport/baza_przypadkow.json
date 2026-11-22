@@ -35,11 +35,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:03+00:00 Projekt RM-2026-001: identyfikator BZP 2022/BZP 00058537/01, zakres: całe postępowanie, okno 2021-01-01–2026-12-31\n2026-11-22T06:34:03+00:00 Błąd: URLError: <urlopen error Tunnel connection failed: 403 host is not on the allow list> (https://bzp.cytr.us/mo-board/api/v1/notice?NoticeType=ContractNotice&PageSize=500&NoticeNumber=2022%2FBZP+00058537%2F01&PublicationDateFrom=2022-01-01T00%3A00%3A00Z&PublicationDateTo=2022-12-31T23%3A59%3A59Z)\n2026-11-22T06:34:03+00:00 Błąd: URLError: <urlopen error Tunnel connection failed: 403 host is not on the allow list> (https://ezamowienia.gov.pl/mo-board/api/v1/notice?NoticeType=ContractNotice&PageSize=500&NoticeNumber=2022%2FBZP+00058537%2F01&PublicationDateFrom=2022-01-01T00%3A00%3A00Z&PublicationDateTo=2022-12-31T23%3A59%3A59Z)\n2026-11-22T06:34:03+00:00 API BZP na żywo nie odpowiedziało (URLError: <urlopen error Tunnel connection failed: 403 host is not on the allow list> (https://ezamowienia.gov.pl/mo-board/api/v1/notice?NoticeType=ContractNotice&PageSize=500&NoticeNumber=2022%2FBZP+00058537%2F01&PublicationDateFrom=2022-01-01T00%3A00%3A00Z&PublicationDateTo=2022-12-31T23%3A59%3A59Z)) — automatyczne przełączenie na zapasową kopię offline.\n2026-11-22T06:34:03+00:00 Postępowanie 2022/BZP 00058537 (99%, identifier): Budowa rurociągu tłocznego kanalizacji sanitarnej Godzikowice – Jaczkowice, gmina Oława\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00   + Ogłoszenie o wyniku postępowania 2022/BZP 00115288/01 (99%)\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00147223/01 (99%)\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:03+00:00",
+   "enrich_log": "2026-11-22T07:15:10+00:00 Projekt RM-2026-001: identyfikator BZP 2022/BZP 00058537/01, zakres: całe postępowanie, okno 2021-01-01–2026-12-31\n2026-11-22T07:15:10+00:00 Błąd: URLError: <urlopen error Tunnel connection failed: 403 host is not on the allow list> (https://bzp.cytr.us/mo-board/api/v1/notice?NoticeType=ContractNotice&PageSize=500&NoticeNumber=2022%2FBZP+00058537%2F01&PublicationDateFrom=2022-01-01T00%3A00%3A00Z&PublicationDateTo=2022-12-31T23%3A59%3A59Z)\n2026-11-22T07:15:10+00:00 Błąd: URLError: <urlopen error Tunnel connection failed: 403 host is not on the allow list> (https://ezamowienia.gov.pl/mo-board/api/v1/notice?NoticeType=ContractNotice&PageSize=500&NoticeNumber=2022%2FBZP+00058537%2F01&PublicationDateFrom=2022-01-01T00%3A00%3A00Z&PublicationDateTo=2022-12-31T23%3A59%3A59Z)\n2026-11-22T07:15:10+00:00 API BZP na żywo nie odpowiedziało (URLError: <urlopen error Tunnel connection failed: 403 host is not on the allow list> (https://ezamowienia.gov.pl/mo-board/api/v1/notice?NoticeType=ContractNotice&PageSize=500&NoticeNumber=2022%2FBZP+00058537%2F01&PublicationDateFrom=2022-01-01T00%3A00%3A00Z&PublicationDateTo=2022-12-31T23%3A59%3A59Z)) — automatyczne przełączenie na zapasową kopię offline.\n2026-11-22T07:15:10+00:00 Postępowanie 2022/BZP 00058537 (99%, identifier): Budowa rurociągu tłocznego kanalizacji sanitarnej Godzikowice – Jaczkowice, gmina Oława\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wyniku postępowania 2022/BZP 00115288/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00147223/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:10+00:00",
    "source_id": 2,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 2,
@@ -76,11 +76,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:03+00:00 Projekt RM-2026-002: identyfikator KPO KPOD.03.15-IW.13-0004/25, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00 Kandydaci (zamawiający „Zagrodno”, 6 ogłoszeń w oknie): 5 powyżej progu\n2026-11-22T06:34:03+00:00 Postępowanie 2026/BZP 00089794 (94%, text-match): Budowa kanalizacji sanitarnej na terenie  Gminy Zagrodno w  miejscowości Modlikowice\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00143366/01 (99%)\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00285691/01 (99%)\n2026-11-22T06:34:03+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00277648/01 (99%)\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00 Ogłoszenie 2026/BZP 00277648/01 zastąpione przez 2026/BZP 00285691/01\n2026-11-22T06:34:03+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:03+00:00",
+   "enrich_log": "2026-11-22T07:15:10+00:00 Projekt RM-2026-002: identyfikator KPO KPOD.03.15-IW.13-0004/25, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 Kandydaci (zamawiający „Zagrodno”, 6 ogłoszeń w oknie): 5 powyżej progu\n2026-11-22T07:15:10+00:00 Postępowanie 2026/BZP 00089794 (94%, text-match): Budowa kanalizacji sanitarnej na terenie  Gminy Zagrodno w  miejscowości Modlikowice\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00143366/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00285691/01 (99%)\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00277648/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 Ogłoszenie 2026/BZP 00277648/01 zastąpione przez 2026/BZP 00285691/01\n2026-11-22T07:15:10+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:10+00:00",
    "source_id": 3,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 3,
@@ -117,11 +117,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:03+00:00 Projekt RM-2026-003: identyfikator BZP 2024/BZP 00349631/01, zakres: całe postępowanie, okno 2023-01-01–2027-12-31\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00 Postępowanie 2024/BZP 00349631 (99%, identifier): Budowa oczyszczalni ścieków w miejscowości Steklin w formule „zaprojektuj i wybuduj”.\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00   + Ogłoszenie o wyniku postępowania 2024/BZP 00418711/01 (99%)\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:03+00:00   + Ogłoszenie o zmianie umowy 2024/BZP 00618384/01 (99%)\n2026-11-22T06:34:03+00:00   + Ogłoszenie o zmianie umowy 2024/BZP 00554831/01 (99%)\n2026-11-22T06:34:03+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00276065/01 (99%)\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:04+00:00",
+   "enrich_log": "2026-11-22T07:15:10+00:00 Projekt RM-2026-003: identyfikator BZP 2024/BZP 00349631/01, zakres: całe postępowanie, okno 2023-01-01–2027-12-31\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 Postępowanie 2024/BZP 00349631 (99%, identifier): Budowa oczyszczalni ścieków w miejscowości Steklin w formule „zaprojektuj i wybuduj”.\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wyniku postępowania 2024/BZP 00418711/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o zmianie umowy 2024/BZP 00618384/01 (99%)\n2026-11-22T07:15:10+00:00   + Ogłoszenie o zmianie umowy 2024/BZP 00554831/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00276065/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:10+00:00",
    "source_id": 4,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 4,
@@ -158,11 +158,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:04+00:00 Projekt RM-2026-004: identyfikator BZP 2025/BZP 00569258/01, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00 Postępowanie 2025/BZP 00569258 (99%, identifier): Modernizacja Stacji Uzdatniania Wody w Czernikowie.\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00061193/01 (99%)\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00514691/01 (99%)\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:04+00:00",
+   "enrich_log": "2026-11-22T07:15:10+00:00 Projekt RM-2026-004: identyfikator BZP 2025/BZP 00569258/01, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 Postępowanie 2025/BZP 00569258 (99%, identifier): Modernizacja Stacji Uzdatniania Wody w Czernikowie.\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00061193/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00514691/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:10+00:00",
    "source_id": 5,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 5,
@@ -199,11 +199,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:04+00:00 Projekt RM-2026-005: identyfikator KPO KPOD.03.15-IW.14-0032/25, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00 Kandydaci (zamawiający „Zławieś Wielka”, 10 ogłoszeń w oknie): 7 powyżej progu\n2026-11-22T06:34:04+00:00 Postępowanie 2025/BZP 00245492 (94%, text-match): Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania wody w miejscowości Pędzewo\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00342797/01 (99%)\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00021981/01 (99%)\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:04+00:00",
+   "enrich_log": "2026-11-22T07:15:10+00:00 Projekt RM-2026-005: identyfikator KPO KPOD.03.15-IW.14-0032/25, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 Kandydaci (zamawiający „Zławieś Wielka”, 10 ogłoszeń w oknie): 7 powyżej progu\n2026-11-22T07:15:10+00:00 Postępowanie 2025/BZP 00245492 (94%, text-match): Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania wody w miejscowości Pędzewo\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00342797/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00021981/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:10+00:00",
    "source_id": 6,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 6,
@@ -240,11 +240,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:04+00:00 Projekt RM-2026-006: identyfikator BZP 2024/BZP 00067908/01, zakres: całe postępowanie, okno 2023-01-01–2027-12-31\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00 Postępowanie 2024/BZP 00067908 (99%, identifier): Przebudowa (modernizacja) oczyszczalni ścieków w m. Gościeradów Folwark\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00   + Ogłoszenie o wyniku postępowania 2024/BZP 00245620/01 (99%)\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00   + Ogłoszenie o zmianie umowy 2024/BZP 00452852/01 (99%)\n2026-11-22T06:34:04+00:00   + Ogłoszenie o zmianie umowy 2024/BZP 00404273/01 (99%)\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00   + Ogłoszenie o wykonaniu umowy 2024/BZP 00572624/01 (99%)\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:04+00:00",
+   "enrich_log": "2026-11-22T07:15:10+00:00 Projekt RM-2026-006: identyfikator BZP 2024/BZP 00067908/01, zakres: całe postępowanie, okno 2023-01-01–2027-12-31\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 Postępowanie 2024/BZP 00067908 (99%, identifier): Przebudowa (modernizacja) oczyszczalni ścieków w m. Gościeradów Folwark\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wyniku postępowania 2024/BZP 00245620/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o zmianie umowy 2024/BZP 00452852/01 (99%)\n2026-11-22T07:15:10+00:00   + Ogłoszenie o zmianie umowy 2024/BZP 00404273/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wykonaniu umowy 2024/BZP 00572624/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:10+00:00",
    "source_id": 7,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 7,
@@ -281,11 +281,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:04+00:00 Projekt RM-2026-007: identyfikator KPO KPOD.03.15-IW.15-0081/25, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00 Kandydaci (zamawiający „Kamionka”, 6 ogłoszeń w oknie): 6 powyżej progu\n2026-11-22T06:34:04+00:00 Postępowanie 2026/BZP 00139226 (94%, text-match): \"Rozbudowa sieci wodociągowej w gminie Kamionka\"\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00204390/01 (99%)\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:04+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00343684/01 (99%)\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:05+00:00",
+   "enrich_log": "2026-11-22T07:15:10+00:00 Projekt RM-2026-007: identyfikator KPO KPOD.03.15-IW.15-0081/25, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00 Kandydaci (zamawiający „Kamionka”, 6 ogłoszeń w oknie): 6 powyżej progu\n2026-11-22T07:15:10+00:00 Postępowanie 2026/BZP 00139226 (94%, text-match): \"Rozbudowa sieci wodociągowej w gminie Kamionka\"\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:10+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00204390/01 (99%)\n2026-11-22T07:15:10+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00343684/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 8,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 8,
@@ -322,11 +322,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:05+00:00 Projekt RM-2026-008: identyfikator BZP 2026/BZP 00084760/01, zakres: część 1, okno 2025-01-01–2027-12-31\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00 Postępowanie 2026/BZP 00084760 (99%, identifier): Budowa sieci kanalizacji sanitarnej na terenie Gminy Biecz\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00166534/01 (99%)\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00255185/01 (99%)\n2026-11-22T06:34:05+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00255161/01 (99%)\n2026-11-22T06:34:05+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00255135/01 (99%)\n2026-11-22T06:34:05+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00255110/01 (99%)\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:05+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-008: identyfikator BZP 2026/BZP 00084760/01, zakres: część 1, okno 2025-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Postępowanie 2026/BZP 00084760 (99%, identifier): Budowa sieci kanalizacji sanitarnej na terenie Gminy Biecz\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00166534/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00255185/01 (99%)\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00255161/01 (99%)\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00255135/01 (99%)\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00255110/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 9,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 9,
@@ -363,11 +363,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:05+00:00 Projekt RM-2026-009: identyfikator BZP 2025/BZP 00307948/01, zakres: część 2, okno 2024-01-01–2027-12-31\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00 Postępowanie 2025/BZP 00307948 (99%, identifier): „Budowa sieci wodociągowej na terenie gminy Zakrzew”\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00422149/01 (99%)\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00   + Ogłoszenie o wykonaniu umowy 2025/BZP 00568661/01 (99%)\n2026-11-22T06:34:05+00:00   + Ogłoszenie o wykonaniu umowy 2025/BZP 00568576/01 (99%)\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:05+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-009: identyfikator BZP 2025/BZP 00307948/01, zakres: część 2, okno 2024-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Postępowanie 2025/BZP 00307948 (99%, identifier): „Budowa sieci wodociągowej na terenie gminy Zakrzew”\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00422149/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2025/BZP 00568661/01 (99%)\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2025/BZP 00568576/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 10,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 10,
@@ -404,11 +404,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:05+00:00 Projekt RM-2026-010: identyfikator KPO KPOD.03.15-IW.21-0025/25, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00 Kandydaci (zamawiający „Grodzisko Dolne”, 4 ogłoszeń w oknie): 4 powyżej progu\n2026-11-22T06:34:05+00:00 Postępowanie 2025/BZP 00211437 (94%, text-match): Budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne, gmina Grodzisko Dolne\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00347687/01 (99%)\n2026-11-22T06:34:05+00:00   ? Ogłoszenie o wyniku postępowania 2025/BZP 00303625/01 (66%) — do decyzji eksperta\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00004536/01 (99%)\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:05+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-010: identyfikator KPO KPOD.03.15-IW.21-0025/25, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Kandydaci (zamawiający „Grodzisko Dolne”, 4 ogłoszeń w oknie): 4 powyżej progu\n2026-11-22T07:15:11+00:00 Postępowanie 2025/BZP 00211437 (94%, text-match): Budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne, gmina Grodzisko Dolne\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00347687/01 (99%)\n2026-11-22T07:15:11+00:00   ? Ogłoszenie o wyniku postępowania 2025/BZP 00303625/01 (66%) — do decyzji eksperta\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00004536/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 11,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 11,
@@ -445,11 +445,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:05+00:00 Projekt RM-2026-011: identyfikator BZP 2023/BZP 00271948/01, zakres: całe postępowanie, okno 2022-01-01–2027-12-31\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00 Postępowanie 2023/BZP 00271948 (99%, identifier): Budowa sieci wodociągowej w miejscowości Czerteż, Zabłotce oraz w części miejscowości Sanoczek\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:05+00:00   + Ogłoszenie o wyniku postępowania 2023/BZP 00328063/01 (99%)\n2026-11-22T06:34:05+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00   + Ogłoszenie o wykonaniu umowy 2024/BZP 00016072/01 (99%)\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:06+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-011: identyfikator BZP 2023/BZP 00271948/01, zakres: całe postępowanie, okno 2022-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Postępowanie 2023/BZP 00271948 (99%, identifier): Budowa sieci wodociągowej w miejscowości Czerteż, Zabłotce oraz w części miejscowości Sanoczek\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2023/BZP 00328063/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2024/BZP 00016072/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 12,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 12,
@@ -486,11 +486,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:06+00:00 Projekt RM-2026-012: identyfikator BZP 2025/BZP 00119683/01, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 Postępowanie 2025/BZP 00119683 (99%, identifier): Budowa tranzytu przesyłowego sieci kanalizacji sanitarnej ze Smętowa Chmieleńskiego do Kos.\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00245411/01 (99%)\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00025187/01 (99%)\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:06+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-012: identyfikator BZP 2025/BZP 00119683/01, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Postępowanie 2025/BZP 00119683 (99%, identifier): Budowa tranzytu przesyłowego sieci kanalizacji sanitarnej ze Smętowa Chmieleńskiego do Kos.\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00245411/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00025187/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 13,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 13,
@@ -527,11 +527,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:06+00:00 Projekt RM-2026-013: identyfikator BZP 2023/BZP 00206497/01, zakres: całe postępowanie, okno 2022-01-01–2027-12-31\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 Postępowanie 2023/BZP 00206497 (99%, identifier): „Budowa sieci kanalizacji sanitarnej w Gminie Bestwina – sołectwo Kaniów”\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00   + Ogłoszenie o wyniku postępowania 2023/BZP 00261764/01 (99%)\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00   + Ogłoszenie o wykonaniu umowy 2024/BZP 00637524/01 (99%)\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:06+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-013: identyfikator BZP 2023/BZP 00206497/01, zakres: całe postępowanie, okno 2022-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Postępowanie 2023/BZP 00206497 (99%, identifier): „Budowa sieci kanalizacji sanitarnej w Gminie Bestwina – sołectwo Kaniów”\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2023/BZP 00261764/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2024/BZP 00637524/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 14,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 14,
@@ -568,11 +568,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:06+00:00 Projekt RM-2026-014: identyfikator BZP 2026/BZP 00130634/01, zakres: całe postępowanie, okno 2025-01-01–2027-12-31\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 Postępowanie 2026/BZP 00130634 (99%, identifier): ,,Budowa sieci kanalizacji sanitarnej ul. Słoneczna w Siemoni”\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00195507/01 (99%)\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00331672/01 (99%)\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:06+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-014: identyfikator BZP 2026/BZP 00130634/01, zakres: całe postępowanie, okno 2025-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Postępowanie 2026/BZP 00130634 (99%, identifier): ,,Budowa sieci kanalizacji sanitarnej ul. Słoneczna w Siemoni”\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00195507/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00331672/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 15,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 15,
@@ -609,11 +609,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:06+00:00 Projekt RM-2026-015: identyfikator BZP 2023/BZP 00135041/01, zakres: całe postępowanie, okno 2022-01-01–2027-12-31\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 Postępowanie 2023/BZP 00135041 (99%, identifier): Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów” w formule zaprojektuj i wybuduj\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00   + Ogłoszenie o wyniku postępowania 2023/BZP 00198087/01 (99%)\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00   + Ogłoszenie o zmianie umowy 2025/BZP 00388035/01 (99%)\n2026-11-22T06:34:06+00:00   + Ogłoszenie o zmianie umowy 2025/BZP 00228324/01 (99%)\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00   + Ogłoszenie o wykonaniu umowy 2025/BZP 00494163/01 (99%)\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:06+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-015: identyfikator BZP 2023/BZP 00135041/01, zakres: całe postępowanie, okno 2022-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Postępowanie 2023/BZP 00135041 (99%, identifier): Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów” w formule zaprojektuj i wybuduj\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2023/BZP 00198087/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o zmianie umowy 2025/BZP 00388035/01 (99%)\n2026-11-22T07:15:11+00:00   + Ogłoszenie o zmianie umowy 2025/BZP 00228324/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2025/BZP 00494163/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 16,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 16,
@@ -650,11 +650,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:06+00:00 Projekt RM-2026-016: identyfikator BZP 2022/BZP 00308854/01, zakres: całe postępowanie, okno 2021-01-01–2026-12-31\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:06+00:00 Postępowanie 2022/BZP 00308854 (99%, identifier): Budowa sieci wodociągowej o długości 22,616 km i sieci kanalizacji sanitarnej na odcinku 18,09 km na obszarach wiejskich Gminy Miłakowo\n2026-11-22T06:34:06+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00   + Ogłoszenie o wyniku postępowania 2022/BZP 00377000/01 (99%)\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00   + Ogłoszenie o wykonaniu umowy 2025/BZP 00183165/01 (99%)\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:07+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-016: identyfikator BZP 2022/BZP 00308854/01, zakres: całe postępowanie, okno 2021-01-01–2026-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Postępowanie 2022/BZP 00308854 (99%, identifier): Budowa sieci wodociągowej o długości 22,616 km i sieci kanalizacji sanitarnej na odcinku 18,09 km na obszarach wiejskich Gminy Miłakowo\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2022/BZP 00377000/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2025/BZP 00183165/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 17,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 17,
@@ -691,11 +691,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:07+00:00 Projekt RM-2026-017: identyfikator KPO KPOD.03.15-IW.27-0013/25, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00 Kandydaci (zamawiający „Kleszczewo”, 2 ogłoszeń w oknie): 2 powyżej progu\n2026-11-22T06:34:07+00:00 Postępowanie 2025/BZP 00358528 (94%, text-match): Budowa sieci kanalizacji sanitarnej wraz z przyłączami w miejscowości Tanibórz, Gmina Kleszczewo\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00000230/01 (99%)\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00325837/01 (99%)\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:07+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-017: identyfikator KPO KPOD.03.15-IW.27-0013/25, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Kandydaci (zamawiający „Kleszczewo”, 2 ogłoszeń w oknie): 2 powyżej progu\n2026-11-22T07:15:11+00:00 Postępowanie 2025/BZP 00358528 (94%, text-match): Budowa sieci kanalizacji sanitarnej wraz z przyłączami w miejscowości Tanibórz, Gmina Kleszczewo\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00000230/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00325837/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 18,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 18,
@@ -732,11 +732,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:07+00:00 Projekt RM-2026-018: identyfikator KPO KPOD.03.15-IW.27-0107/25, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00 Kandydaci (zamawiający „Zduny”, 6 ogłoszeń w oknie): 5 powyżej progu\n2026-11-22T06:34:07+00:00 Postępowanie 2025/BZP 00620692 (94%, text-match): Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny - etap II\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00   ? Ogłoszenie o wyniku postępowania 2026/BZP 00223055/01 (66%) — do decyzji eksperta\n2026-11-22T06:34:07+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00194260/01 (99%)\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00   ? Ogłoszenie o wykonaniu umowy 2026/BZP 00342646/01 (66%) — do decyzji eksperta\n2026-11-22T06:34:07+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00324517/01 (99%)\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:07+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-018: identyfikator KPO KPOD.03.15-IW.27-0107/25, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Kandydaci (zamawiający „Zduny”, 6 ogłoszeń w oknie): 5 powyżej progu\n2026-11-22T07:15:11+00:00 Postępowanie 2025/BZP 00620692 (94%, text-match): Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny - etap II\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   ? Ogłoszenie o wyniku postępowania 2026/BZP 00223055/01 (66%) — do decyzji eksperta\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2026/BZP 00194260/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   ? Ogłoszenie o wykonaniu umowy 2026/BZP 00342646/01 (66%) — do decyzji eksperta\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00324517/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 19,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 19,
@@ -773,11 +773,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:07+00:00 Projekt RM-2026-019: identyfikator BZP 2024/BZP 00354928/01, zakres: całe postępowanie, okno 2023-01-01–2027-12-31\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00 Postępowanie 2024/BZP 00354928 (99%, identifier): Budowa kanalizacji deszczowej w ciągu drogi wojewódzkiej nr 444 w miejscowości Sulmierzyce.\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00   + Ogłoszenie o wyniku postępowania 2024/BZP 00451447/01 (99%)\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00   + Ogłoszenie o wykonaniu umowy 2025/BZP 00626318/01 (99%)\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:07+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:07+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-019: identyfikator BZP 2024/BZP 00354928/01, zakres: całe postępowanie, okno 2023-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Postępowanie 2024/BZP 00354928 (99%, identifier): Budowa kanalizacji deszczowej w ciągu drogi wojewódzkiej nr 444 w miejscowości Sulmierzyce.\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2024/BZP 00451447/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2025/BZP 00626318/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 20,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 20,
@@ -814,11 +814,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:07+00:00 Projekt RM-2026-020: identyfikator KPO KPOD.03.15-IW.28-0003/24, zakres: całe postępowanie, okno 2023-01-01–2027-12-31\n2026-11-22T06:34:07+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00 Kandydaci (zamawiający „Nowogard”, 15 ogłoszeń w oknie): 11 powyżej progu\n2026-11-22T06:34:08+00:00 Postępowanie 2025/BZP 00113651 (94%, text-match): Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00206455/01 (99%)\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00   + Ogłoszenie o zmianie umowy 2026/BZP 00280220/01 (99%)\n2026-11-22T06:34:08+00:00   + Ogłoszenie o zmianie umowy 2025/BZP 00558908/01 (99%)\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00291637/01 (99%)\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:08+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-020: identyfikator KPO KPOD.03.15-IW.28-0003/24, zakres: całe postępowanie, okno 2023-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Kandydaci (zamawiający „Nowogard”, 15 ogłoszeń w oknie): 11 powyżej progu\n2026-11-22T07:15:11+00:00 Postępowanie 2025/BZP 00113651 (94%, text-match): Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00206455/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o zmianie umowy 2026/BZP 00280220/01 (99%)\n2026-11-22T07:15:11+00:00   + Ogłoszenie o zmianie umowy 2025/BZP 00558908/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00291637/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 21,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 21,
@@ -855,11 +855,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:08+00:00 Projekt RM-2026-021: identyfikator BZP 2025/BZP 00364116/01, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00 Postępowanie 2025/BZP 00364116 (99%, identifier): Zwiększenie odporności hydrologicznej Aglomeracji Nowogard poprzez rozdział kanalizacji sanitarnej na ul. 700-lecia\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00434530/01 (99%)\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00   + Ogłoszenie o zmianie umowy 2026/BZP 00498398/01 (99%)\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00498447/01 (99%)\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:08+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-021: identyfikator BZP 2025/BZP 00364116/01, zakres: całe postępowanie, okno 2024-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Postępowanie 2025/BZP 00364116 (99%, identifier): Zwiększenie odporności hydrologicznej Aglomeracji Nowogard poprzez rozdział kanalizacji sanitarnej na ul. 700-lecia\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00434530/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o zmianie umowy 2026/BZP 00498398/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2026/BZP 00498447/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 22,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 22,
@@ -896,11 +896,11 @@
    "is_exemplar": 0,
    "needs_review": 1,
    "enrich_status": "wzbogacony",
-   "enrich_log": "2026-11-22T06:34:08+00:00 Projekt RM-2026-022: identyfikator BZP 2023/BZP 00110672/01, zakres: całe postępowanie, okno 2022-01-01–2027-12-31\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00 Numer 2023/BZP 00110672/01 nie występuje w BZP — szukam postępowania po zamawiającym i przedmiocie.\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00 Kandydaci (zamawiający „Wolin”, 9 ogłoszeń w oknie): 6 powyżej progu\n2026-11-22T06:34:08+00:00 Postępowanie 2024/BZP 00657628 (77%, text-match): „Budowa przyłączy wodociągowych w miejscowości Żółwino w Gminie Wolin”\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00093929/01 (99%)\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:08+00:00   + Ogłoszenie o wykonaniu umowy 2025/BZP 00312311/01 (99%)\n2026-11-22T06:34:09+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T06:34:09+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
-   "last_checked": "2026-11-22T06:34:09+00:00",
+   "enrich_log": "2026-11-22T07:15:11+00:00 Projekt RM-2026-022: identyfikator BZP 2023/BZP 00110672/01, zakres: całe postępowanie, okno 2022-01-01–2027-12-31\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Numer 2023/BZP 00110672/01 nie występuje w BZP — szukam postępowania po zamawiającym i przedmiocie.\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 Kandydaci (zamawiający „Wolin”, 9 ogłoszeń w oknie): 6 powyżej progu\n2026-11-22T07:15:11+00:00 Postępowanie 2024/BZP 00657628 (77%, text-match): „Budowa przyłączy wodociągowych w miejscowości Żółwino w Gminie Wolin”\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wyniku postępowania 2025/BZP 00093929/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00   + Ogłoszenie o wykonaniu umowy 2025/BZP 00312311/01 (99%)\n2026-11-22T07:15:11+00:00 API BZP niedostępne — używam zapasowej kopii offline (kopia lokalna BZP (data/bzp_local.json, tryb awaryjny))\n2026-11-22T07:15:11+00:00 TED niedostępny: <urlopen error Tunnel connection failed: 403 host is not on the allow list>",
+   "last_checked": "2026-11-22T07:15:11+00:00",
    "source_id": 23,
-   "created_at": "2026-11-22T06:34:02+00:00",
-   "updated_at": "2026-11-22T06:34:09+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00",
+   "updated_at": "2026-11-22T07:15:11+00:00"
   }
  ],
  "procurements": [
@@ -920,7 +920,7 @@
    "n_offers": null,
    "link_id": 1,
    "source_id": 24,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 2,
@@ -938,7 +938,7 @@
    "n_offers": null,
    "link_id": 4,
    "source_id": 27,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 3,
@@ -956,7 +956,7 @@
    "n_offers": null,
    "link_id": 11,
    "source_id": 31,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 4,
@@ -974,7 +974,7 @@
    "n_offers": null,
    "link_id": 16,
    "source_id": 36,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 5,
@@ -992,7 +992,7 @@
    "n_offers": null,
    "link_id": 19,
    "source_id": 39,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 6,
@@ -1010,7 +1010,7 @@
    "n_offers": null,
    "link_id": 25,
    "source_id": 42,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 7,
@@ -1028,7 +1028,7 @@
    "n_offers": null,
    "link_id": 30,
    "source_id": 47,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 8,
@@ -1046,7 +1046,7 @@
    "n_offers": null,
    "link_id": 36,
    "source_id": 50,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 9,
@@ -1064,7 +1064,7 @@
    "n_offers": null,
    "link_id": 42,
    "source_id": 56,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 10,
@@ -1082,7 +1082,7 @@
    "n_offers": null,
    "link_id": 46,
    "source_id": 60,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 11,
@@ -1100,7 +1100,7 @@
    "n_offers": null,
    "link_id": 53,
    "source_id": 64,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 12,
@@ -1118,7 +1118,7 @@
    "n_offers": null,
    "link_id": 56,
    "source_id": 67,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 13,
@@ -1136,7 +1136,7 @@
    "n_offers": null,
    "link_id": 59,
    "source_id": 70,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 14,
@@ -1154,7 +1154,7 @@
    "n_offers": null,
    "link_id": 62,
    "source_id": 73,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 15,
@@ -1172,7 +1172,7 @@
    "n_offers": null,
    "link_id": 65,
    "source_id": 76,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 16,
@@ -1190,7 +1190,7 @@
    "n_offers": null,
    "link_id": 70,
    "source_id": 81,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 17,
@@ -1208,7 +1208,7 @@
    "n_offers": null,
    "link_id": 73,
    "source_id": 84,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 18,
@@ -1226,7 +1226,7 @@
    "n_offers": null,
    "link_id": 77,
    "source_id": 87,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 19,
@@ -1244,7 +1244,7 @@
    "n_offers": null,
    "link_id": 85,
    "source_id": 92,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 20,
@@ -1262,7 +1262,7 @@
    "n_offers": null,
    "link_id": 88,
    "source_id": 95,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 21,
@@ -1280,7 +1280,7 @@
    "n_offers": null,
    "link_id": 96,
    "source_id": 100,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 22,
@@ -1298,7 +1298,7 @@
    "n_offers": null,
    "link_id": 100,
    "source_id": 104,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   }
  ],
  "notices": [
@@ -2567,7 +2567,7 @@
    "status": "wykonana po terminie",
    "source_id": 25,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 2107348,39 PLN",
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 2,
@@ -2587,7 +2587,7 @@
    "status": "wykonana po terminie",
    "source_id": 28,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 5350782,65 PLN",
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 3,
@@ -2607,7 +2607,7 @@
    "status": "wykonana po terminie",
    "source_id": 32,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 2131590,00 PLN",
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 4,
@@ -2627,7 +2627,7 @@
    "status": "wykonana po terminie",
    "source_id": 37,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 3918954,08 PLN",
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 5,
@@ -2647,7 +2647,7 @@
    "status": "wykonana po terminie",
    "source_id": 40,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 2936010,00 PLN",
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 6,
@@ -2667,7 +2667,7 @@
    "status": "wykonana po terminie",
    "source_id": 43,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 2499110,30 PLN",
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 7,
@@ -2687,7 +2687,7 @@
    "status": "wykonana po terminie",
    "source_id": 48,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 1478460,00 PLN",
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 8,
@@ -2707,7 +2707,7 @@
    "status": "wykonana w terminie",
    "source_id": 51,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 1952120,53 PLN",
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 9,
@@ -2727,7 +2727,7 @@
    "status": "wykonana w terminie",
    "source_id": 51,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 1200000,00 PLN",
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 10,
@@ -2747,7 +2747,7 @@
    "status": "wykonana w terminie",
    "source_id": 51,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 1113623,55 PLN",
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 11,
@@ -2767,7 +2767,7 @@
    "status": "wykonana w terminie",
    "source_id": 51,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 205000,02 PLN",
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 12,
@@ -2787,7 +2787,7 @@
    "status": "wykonana po terminie",
    "source_id": 57,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 420935,30 PLN",
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 13,
@@ -2807,7 +2807,7 @@
    "status": "wykonana w terminie",
    "source_id": 57,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 1810533,92 PLN",
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 14,
@@ -2827,7 +2827,7 @@
    "status": "wykonana po terminie",
    "source_id": 61,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 3348882,44 PLN",
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 15,
@@ -2847,7 +2847,7 @@
    "status": "wykonana w terminie",
    "source_id": 65,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 2880536,18 PLN",
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 16,
@@ -2867,7 +2867,7 @@
    "status": "wykonana po terminie",
    "source_id": 68,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 3616200,00 PLN",
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 17,
@@ -2887,7 +2887,7 @@
    "status": "wykonana po terminie",
    "source_id": 71,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 5991655,95 PLN",
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 18,
@@ -2907,7 +2907,7 @@
    "status": "wykonana po terminie",
    "source_id": 74,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 1193100,00 PLN",
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 19,
@@ -2927,7 +2927,7 @@
    "status": "wykonana w terminie",
    "source_id": 77,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 3744316,00 PLN",
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 20,
@@ -2947,7 +2947,7 @@
    "status": "wykonana po terminie",
    "source_id": 82,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 4879410,00 PLN",
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 21,
@@ -2967,7 +2967,7 @@
    "status": "wykonana po terminie",
    "source_id": 85,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 4275775,94 PLN",
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 22,
@@ -2987,7 +2987,7 @@
    "status": "wykonana po terminie",
    "source_id": 89,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 3665400,00 PLN",
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 23,
@@ -3007,7 +3007,7 @@
    "status": "wykonana po terminie",
    "source_id": 93,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 3154932,64 PLN",
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 24,
@@ -3027,7 +3027,7 @@
    "status": "wykonana po terminie",
    "source_id": 96,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 1969611,30 PLN",
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 25,
@@ -3047,7 +3047,7 @@
    "status": "wykonana po terminie",
    "source_id": 101,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 5421102,00 PLN",
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 26,
@@ -3067,7 +3067,7 @@
    "status": "wykonana w terminie",
    "source_id": 105,
    "quote": "8.2.) Wartość umowy/umowy ramowej: 444898,38 PLN",
-   "created_at": "2026-11-22T06:34:09+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   }
  ],
  "contract_changes": [
@@ -3087,7 +3087,7 @@
    "fingerprint": "90b18f2eda627e350b28ba37",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 2,
@@ -3105,7 +3105,7 @@
    "fingerprint": "14eeb3b226a10f5813aa676b",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 3,
@@ -3123,7 +3123,7 @@
    "fingerprint": "6a54b34dd393acb0fbfa3107",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 4,
@@ -3141,7 +3141,7 @@
    "fingerprint": "5879a5a74ebc69e8154149af",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 5,
@@ -3159,7 +3159,7 @@
    "fingerprint": "8c5f8c59702fbe130539e783",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 6,
@@ -3177,7 +3177,7 @@
    "fingerprint": "de881f0546f593db2aa9331b",
    "status": "rejected",
    "part": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 7,
@@ -3195,7 +3195,7 @@
    "fingerprint": "728eba2ccdacd4dcc248ae75",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 8,
@@ -3213,7 +3213,7 @@
    "fingerprint": "31ee42ba4801206e6f710527",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 9,
@@ -3231,7 +3231,7 @@
    "fingerprint": "6ad63aaf63e295538a9f53bd",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 10,
@@ -3249,7 +3249,7 @@
    "fingerprint": "0aaa0c8fa351c5de3aa96063",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 11,
@@ -3267,7 +3267,7 @@
    "fingerprint": "576a3424fe9662b8442af184",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 12,
@@ -3285,7 +3285,7 @@
    "fingerprint": "df4b7f2d7fca5c24bfa58dad",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 13,
@@ -3303,7 +3303,7 @@
    "fingerprint": "75294f5aa42cc83341c35e9d",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 14,
@@ -3321,7 +3321,7 @@
    "fingerprint": "e59f51d1b68d9b627cddd3b6",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 15,
@@ -3339,7 +3339,7 @@
    "fingerprint": "f66c0d7698335ecc30582fe3",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 16,
@@ -3357,7 +3357,7 @@
    "fingerprint": "4ebbc7999c62dfd0e42ae77f",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 17,
@@ -3375,7 +3375,7 @@
    "fingerprint": "d53423d030ce8d8ee6057bcf",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 18,
@@ -3393,7 +3393,7 @@
    "fingerprint": "1dd99403ac604e9878266f5d",
    "status": "rejected",
    "part": 3,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 19,
@@ -3411,7 +3411,7 @@
    "fingerprint": "0f3c00d6876c3862a8c85bf7",
    "status": "proposed",
    "part": 1,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 20,
@@ -3429,7 +3429,7 @@
    "fingerprint": "4383654af4eefdf873772837",
    "status": "proposed",
    "part": 2,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 21,
@@ -3447,7 +3447,7 @@
    "fingerprint": "7b51b16ef42b9f7cd77b38e4",
    "status": "rejected",
    "part": 1,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 22,
@@ -3465,7 +3465,7 @@
    "fingerprint": "45c03a8622e0a91fd269bc81",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 23,
@@ -3483,7 +3483,7 @@
    "fingerprint": "c94163d3f3613b5cb87006a2",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 24,
@@ -3501,7 +3501,7 @@
    "fingerprint": "29b9d910200757de6014b281",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 25,
@@ -3519,7 +3519,7 @@
    "fingerprint": "032cadd580d7b0bd36689871",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 26,
@@ -3537,7 +3537,7 @@
    "fingerprint": "ceff57f0bbbe753369192e31",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 27,
@@ -3555,7 +3555,7 @@
    "fingerprint": "01a65016e4e0a45c814c3046",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 28,
@@ -3573,7 +3573,7 @@
    "fingerprint": "2745be31462297551d064070",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 29,
@@ -3591,7 +3591,7 @@
    "fingerprint": "755972db8017beacdffd754f",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 30,
@@ -3609,7 +3609,7 @@
    "fingerprint": "f51821871a95859424471f16",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 31,
@@ -3627,7 +3627,7 @@
    "fingerprint": "cb0986bc7d6b6ae33960fc08",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 32,
@@ -3645,7 +3645,7 @@
    "fingerprint": "f06a6a9594733e9695a34cfa",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 33,
@@ -3663,7 +3663,7 @@
    "fingerprint": "72cb7328717db37d52312f17",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 34,
@@ -3681,7 +3681,7 @@
    "fingerprint": "77046132bdb8da91dd04875f",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 35,
@@ -3699,7 +3699,7 @@
    "fingerprint": "2c9bffe2f6e50334970e4ce4",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 36,
@@ -3717,7 +3717,7 @@
    "fingerprint": "0b745b98691ba77c7b832bda",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 37,
@@ -3735,7 +3735,7 @@
    "fingerprint": "f315007e00f7c755fe2460be",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 38,
@@ -3753,7 +3753,7 @@
    "fingerprint": "321f922cc22bd643e2e39abc",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 39,
@@ -3771,7 +3771,7 @@
    "fingerprint": "9695e1e443834386d5d072ab",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 40,
@@ -3789,7 +3789,7 @@
    "fingerprint": "1196d72ee49b7ede9311d5f8",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 41,
@@ -3807,7 +3807,7 @@
    "fingerprint": "e32d84af2c32d89a97cffb27",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 42,
@@ -3825,7 +3825,7 @@
    "fingerprint": "05106c467eaeed8778b2b235",
    "status": "proposed",
    "part": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   }
  ],
  "events": [
@@ -3857,7 +3857,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 2,
@@ -3887,7 +3887,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 3,
@@ -3917,7 +3917,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 4,
@@ -3947,7 +3947,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 5,
@@ -3977,7 +3977,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 6,
@@ -4007,7 +4007,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 7,
@@ -4037,7 +4037,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 8,
@@ -4067,7 +4067,7 @@
    "reviewer": "system",
    "review_comment": "zastąpione nowszym ogłoszeniem 2026/BZP 00285691/01",
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 9,
@@ -4097,7 +4097,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 10,
@@ -4127,7 +4127,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 11,
@@ -4157,7 +4157,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 12,
@@ -4187,7 +4187,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 13,
@@ -4217,7 +4217,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 14,
@@ -4247,7 +4247,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 15,
@@ -4277,7 +4277,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 16,
@@ -4307,7 +4307,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 17,
@@ -4337,7 +4337,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 18,
@@ -4367,7 +4367,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 19,
@@ -4397,7 +4397,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 20,
@@ -4427,7 +4427,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 21,
@@ -4457,7 +4457,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 22,
@@ -4487,7 +4487,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 23,
@@ -4517,7 +4517,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 24,
@@ -4547,7 +4547,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 25,
@@ -4577,7 +4577,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 26,
@@ -4607,7 +4607,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 27,
@@ -4637,7 +4637,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 28,
@@ -4667,7 +4667,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 29,
@@ -4697,7 +4697,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 30,
@@ -4727,7 +4727,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 31,
@@ -4757,7 +4757,7 @@
    "reviewer": "system",
    "review_comment": "dotyczy części 3, a rekord obejmuje część 1",
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 32,
@@ -4787,7 +4787,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 33,
@@ -4817,7 +4817,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 34,
@@ -4847,7 +4847,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 35,
@@ -4877,7 +4877,7 @@
    "reviewer": "system",
    "review_comment": "dotyczy części 1, a rekord obejmuje część 2",
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 36,
@@ -4907,7 +4907,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 37,
@@ -4937,7 +4937,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 38,
@@ -4967,7 +4967,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 39,
@@ -4997,7 +4997,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 40,
@@ -5027,7 +5027,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 41,
@@ -5057,7 +5057,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 42,
@@ -5087,7 +5087,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 43,
@@ -5117,7 +5117,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 44,
@@ -5147,7 +5147,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 45,
@@ -5177,7 +5177,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 46,
@@ -5207,7 +5207,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 47,
@@ -5237,7 +5237,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 48,
@@ -5267,7 +5267,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 49,
@@ -5297,7 +5297,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 50,
@@ -5327,7 +5327,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 51,
@@ -5357,7 +5357,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 52,
@@ -5387,7 +5387,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 53,
@@ -5417,7 +5417,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 54,
@@ -5447,7 +5447,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 55,
@@ -5477,7 +5477,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 56,
@@ -5507,7 +5507,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 57,
@@ -5537,7 +5537,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 58,
@@ -5567,7 +5567,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 59,
@@ -5597,7 +5597,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 60,
@@ -5627,7 +5627,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 61,
@@ -5657,7 +5657,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 62,
@@ -5687,7 +5687,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 63,
@@ -5717,7 +5717,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 64,
@@ -5747,7 +5747,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 65,
@@ -5777,7 +5777,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 66,
@@ -5807,7 +5807,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 67,
@@ -5837,7 +5837,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 68,
@@ -5867,7 +5867,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 69,
@@ -5897,7 +5897,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 70,
@@ -5927,7 +5927,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 71,
@@ -5957,7 +5957,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 72,
@@ -5987,7 +5987,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 73,
@@ -6017,7 +6017,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 74,
@@ -6047,7 +6047,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 75,
@@ -6077,7 +6077,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 76,
@@ -6107,7 +6107,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 77,
@@ -6137,7 +6137,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 78,
@@ -6167,7 +6167,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 79,
@@ -6197,7 +6197,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 80,
@@ -6227,7 +6227,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 81,
@@ -6257,7 +6257,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 82,
@@ -6287,7 +6287,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   }
  ],
  "links": [
@@ -6305,7 +6305,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 2,
@@ -6321,7 +6321,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 3,
@@ -6337,7 +6337,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 4,
@@ -6353,7 +6353,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 5,
@@ -6369,7 +6369,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 6,
@@ -6385,7 +6385,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 7,
@@ -6401,7 +6401,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 8,
@@ -6417,7 +6417,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 9,
@@ -6433,7 +6433,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 10,
@@ -6449,7 +6449,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 11,
@@ -6465,7 +6465,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 12,
@@ -6481,7 +6481,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 13,
@@ -6497,7 +6497,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 14,
@@ -6513,7 +6513,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 15,
@@ -6529,7 +6529,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:03+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 16,
@@ -6545,7 +6545,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 17,
@@ -6561,7 +6561,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 18,
@@ -6577,7 +6577,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 19,
@@ -6593,7 +6593,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 20,
@@ -6609,7 +6609,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 21,
@@ -6625,7 +6625,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 22,
@@ -6641,7 +6641,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 23,
@@ -6657,7 +6657,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 24,
@@ -6673,7 +6673,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 25,
@@ -6689,7 +6689,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 26,
@@ -6705,7 +6705,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 27,
@@ -6721,7 +6721,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 28,
@@ -6737,7 +6737,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 29,
@@ -6753,7 +6753,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 30,
@@ -6769,7 +6769,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 31,
@@ -6785,7 +6785,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 32,
@@ -6801,7 +6801,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 33,
@@ -6817,7 +6817,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 34,
@@ -6833,7 +6833,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:10+00:00"
   },
   {
    "id": 35,
@@ -6849,7 +6849,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:04+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 36,
@@ -6865,7 +6865,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 37,
@@ -6881,7 +6881,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 38,
@@ -6897,7 +6897,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 39,
@@ -6913,7 +6913,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 40,
@@ -6929,7 +6929,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 41,
@@ -6945,7 +6945,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 42,
@@ -6961,7 +6961,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 43,
@@ -6977,7 +6977,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 44,
@@ -6993,7 +6993,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 45,
@@ -7009,7 +7009,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 46,
@@ -7025,7 +7025,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 47,
@@ -7041,7 +7041,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 48,
@@ -7057,7 +7057,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 49,
@@ -7073,7 +7073,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 50,
@@ -7089,7 +7089,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 51,
@@ -7105,7 +7105,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 52,
@@ -7121,7 +7121,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 53,
@@ -7137,7 +7137,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 54,
@@ -7153,7 +7153,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:05+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 55,
@@ -7169,7 +7169,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 56,
@@ -7185,7 +7185,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 57,
@@ -7201,7 +7201,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 58,
@@ -7217,7 +7217,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 59,
@@ -7233,7 +7233,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 60,
@@ -7249,7 +7249,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 61,
@@ -7265,7 +7265,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 62,
@@ -7281,7 +7281,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 63,
@@ -7297,7 +7297,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 64,
@@ -7313,7 +7313,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 65,
@@ -7329,7 +7329,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 66,
@@ -7345,7 +7345,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 67,
@@ -7361,7 +7361,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 68,
@@ -7377,7 +7377,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 69,
@@ -7393,7 +7393,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 70,
@@ -7409,7 +7409,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:06+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 71,
@@ -7425,7 +7425,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 72,
@@ -7441,7 +7441,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 73,
@@ -7457,7 +7457,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 74,
@@ -7473,7 +7473,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 75,
@@ -7489,7 +7489,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 76,
@@ -7505,7 +7505,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 77,
@@ -7521,7 +7521,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 78,
@@ -7537,7 +7537,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 79,
@@ -7553,7 +7553,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 80,
@@ -7569,7 +7569,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 81,
@@ -7585,7 +7585,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 82,
@@ -7601,7 +7601,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 83,
@@ -7617,7 +7617,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 84,
@@ -7633,7 +7633,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 85,
@@ -7649,7 +7649,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 86,
@@ -7665,7 +7665,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 87,
@@ -7681,7 +7681,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:07+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 88,
@@ -7697,7 +7697,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 89,
@@ -7713,7 +7713,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 90,
@@ -7729,7 +7729,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 91,
@@ -7745,7 +7745,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 92,
@@ -7761,7 +7761,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 93,
@@ -7777,7 +7777,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 94,
@@ -7793,7 +7793,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 95,
@@ -7809,7 +7809,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 96,
@@ -7825,7 +7825,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 97,
@@ -7841,7 +7841,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 98,
@@ -7857,7 +7857,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 99,
@@ -7873,7 +7873,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 100,
@@ -7889,7 +7889,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 101,
@@ -7905,7 +7905,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 102,
@@ -7921,7 +7921,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 103,
@@ -7937,7 +7937,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 104,
@@ -7953,7 +7953,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   },
   {
    "id": 105,
@@ -7969,7 +7969,7 @@
    "reviewer": null,
    "review_comment": null,
    "reviewed_at": null,
-   "created_at": "2026-11-22T06:34:08+00:00"
+   "created_at": "2026-11-22T07:15:11+00:00"
   }
  ]
 }
