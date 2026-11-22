@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir -r requirements-optional.txt
 COPY . .
 RUN useradd -m riskminer && mkdir -p /app/data && chown -R riskminer /app/data && [ -f config.json ] || cp config.example.json config.json
 USER riskminer
-ENV RISKMINER_HOST=0.0.0.0 RISKMINER_PORT=8080
+ENV RISKMINER_HOST=0.0.0.0 PORT=8080
 EXPOSE 8080
 CMD ["python", "app.py"]

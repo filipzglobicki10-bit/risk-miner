@@ -10,6 +10,10 @@ import zipfile
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 from . import analysis, bzp, config, db, exporter, extract, jobs, knowledge, llm, monitor, pipeline, review
+
+# Tryb demonstracyjny online (RISKMINER_DEMO=1): baza sama wczytuje dane organizatora przy starcie
+# i po wyczyszczeniu, a interfejs pokazuje baner o wspólnych danych.
+DEMO = os.environ.get("RISKMINER_DEMO") == "1"
 from . import forecast as refclass
 from .util import now_iso
 
@@ -66,6 +70,7 @@ def status(r):
         "capabilities": extract.capabilities(), "llm": llm.info(), "bzp_url": config.get()["bzp"]["base_url"],
         "bzp_local": os.path.exists(os.path.join(config.get()["data_dir"], "bzp_local.json")),
         "bzp_fallback_active": bzp.fallback_active(),
+        "demo": DEMO,
         "recent": db.q("SELECT * FROM audit_log ORDER BY id DESC LIMIT 12"),
         "by_risk": db.q("SELECT risk_code, COUNT(*) n, SUM(CASE WHEN status IN ('approved','edited') THEN 1 ELSE 0 END) approved FROM events WHERE status!='rejected' AND risk_code IS NOT NULL GROUP BY risk_code ORDER BY risk_code"),
         "risk_names": knowledge.risk_names(),
@@ -560,7 +565,21 @@ def admin_reset(r):
               "rule_feedback", "analyses", "monitor_events", "jobs", "sources"):
         db.x(f"DELETE FROM {t}")
     db.audit("admin.reset", "database", None, actor=r.actor)
+    if DEMO:
+        _demo_seed()
+        return {"ok": True, "reseeded": True}
     return {"ok": True}
+
+
+def _demo_seed():
+    """Wersja online: pusta baza → wczytaj 22 projekty organizatora i wyszukaj ich ogłoszenia w BZP (w tle)."""
+    if db.q1("SELECT COUNT(*) n FROM projects")["n"]:
+        return
+    path = os.path.join(SAMPLES, "Risk_Miner_dane_projekty.xlsx")
+    with open(path, "rb") as f:
+        res = pipeline.import_records(os.path.basename(path), f.read(), actor="demo")
+    jobs.start("enrich", jobs.enrich_many, res["project_ids"])
+    print("Tryb demo: wczytano dane organizatora, trwa wyszukiwanie ogłoszeń w BZP.")
 
 
 # ---------------------------------------------------------------- handler
@@ -637,6 +656,8 @@ def serve():
     db.conn()
     knowledge.seed()
     jobs.start_scheduler()
+    if DEMO:
+        _demo_seed()
     host, port = cfg["server"]["host"], cfg["server"]["port"]
     httpd = ThreadingHTTPServer((host, port), Handler)
     print(f"Risk Miner działa: http://{host}:{port}  (dane: {cfg['data_dir']}, BZP: {cfg['bzp']['base_url']}, LLM: {llm.info()['provider']})")

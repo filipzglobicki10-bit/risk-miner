@@ -1,0 +1,16 @@
+# Render.com — wersja demonstracyjna online (darmowy plan).
+# Render → New → Blueprint → wybierz to repozytorium → Apply.
+services:
+  - type: web
+    name: risk-miner
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./deploy/Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/status
+    envVars:
+      - key: RISKMINER_DEMO
+        value: "1"
+      - key: PORT
+        value: "8080"

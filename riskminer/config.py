@@ -88,6 +88,8 @@ def load():
     env = os.environ
     if env.get("RISKMINER_PORT"):
         cfg["server"]["port"] = int(env["RISKMINER_PORT"])
+    elif env.get("PORT"):  # hostingi typu Render/Railway podają port w zmiennej PORT
+        cfg["server"]["port"] = int(env["PORT"])
     if env.get("RISKMINER_HOST"):
         cfg["server"]["host"] = env["RISKMINER_HOST"]
     if env.get("RISKMINER_BZP_URL"):

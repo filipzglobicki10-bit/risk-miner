@@ -1396,5 +1396,6 @@ setAvatar();
 $("#user").oninput = setAvatar;
 $("#user").onchange = (e) => { localStorage.setItem("rm_user", e.target.value || "ekspert"); setAvatar(); };
 document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+api("/api/status").then((s) => { if (s && s.demo) $("#demo-bar").hidden = false; }).catch(() => {});
 $("#modal").addEventListener("click", (e) => { if (e.target.id === "modal") closeModal(); });
 router();

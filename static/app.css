@@ -435,3 +435,9 @@ svg a:focus-visible>circle,svg a:focus-visible>rect{stroke:var(--river);stroke-w
 .vt .vk{color:var(--ink);font-weight:600}
 .vt .vb{font-size:22px}
 .knows .vt .vb{font-size:22px}
+
+/* wersja demonstracyjna online */
+.demo-bar{position:fixed;right:16px;bottom:16px;z-index:60;max-width:430px;background:#FFF4DD;color:var(--ink);border:1px solid #E5BE6E;border-radius:10px;box-shadow:0 8px 24px rgba(14,34,54,.16);padding:10px 34px 10px 14px;font-size:13.5px;line-height:1.45}
+.demo-bar[hidden]{display:none}
+.demo-x{position:absolute;top:4px;right:6px;border:0;background:transparent;font-size:18px;line-height:1;color:var(--muted);cursor:pointer;padding:4px}
+@media print{.demo-bar{display:none}}

@@ -121,6 +121,15 @@ Docker (z OCR skanów):  `docker compose -f deploy/docker-compose.yml up --build
 
 **Wymagania sprzętowe:** dowolny laptop (≈60 MB RAM, SQLite w pliku `data/riskminer.sqlite`). Bez GPU.
 
+### Wersja online (Render)
+
+Repozytorium zawiera `render.yaml`, więc wersję demonstracyjną wystawia się kilkoma kliknięciami:
+**render.com → New → Blueprint → wybierz to repozytorium → Apply** (plan darmowy, bez karty).
+W trybie demo (`RISKMINER_DEMO=1`) baza sama wczytuje 22 projekty organizatora i wyszukuje ich ogłoszenia
+w BZP, a interfejs pokazuje informację, że dane są wspólne dla odwiedzających. Dane wracają do stanu
+początkowego po restarcie serwera (darmowa instancja usypia się po ok. 15 min bez ruchu; pierwsze wejście
+po przerwie trwa ok. minuty). Do pracy na własnych, poufnych dokumentach służy wersja lokalna.
+
 ### Co jest w folderze
 
 ```
@@ -136,7 +145,7 @@ risk-miner/
 ├── tests/                      ← testy jednostkowe i test całego przepływu z atrapą BZP
 ├── docs/                       ← opis rozwiązania, architektura, raport z testów, scenariusz demo, system wyglądu
 ├── scripts/                    ← run.sh / run.bat — uruchomienie z terminala
-├── deploy/                     ← Dockerfile i docker-compose.yml (wersja z OCR)
+├── deploy/                     ← Dockerfile i docker-compose.yml (wersja z OCR); render.yaml w katalogu głównym
 └── data/                       ← baza SQLite i cache (tworzone przy starcie, poza gitem)
 ```
 
