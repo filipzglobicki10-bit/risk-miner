@@ -1,0 +1,3001 @@
+{
+  "id": 1,
+  "title": "Przykład: kanalizacja 6,5 km, zaprojektuj i wybuduj",
+  "input_text": "Gmina planuje budowę sieci kanalizacji sanitarnej grawitacyjno-tłocznej o długości ok. 6,5 km wraz z dwiema przepompowniami ścieków i przyłączami do granic 140 nieruchomości w miejscowościach poza aglomeracją. Ścieki będą odprowadzane do istniejącej oczyszczalni. Trasa przebiega w pasie dróg gminnych i powiatowych, częściowo przez grunty prywatne; przewidziano przekroczenie cieku i drogi wojewódzkiej przewiertem. Szacowana wartość inwestycji: 7 800 000 zł brutto. Planowana formuła: zaprojektuj i wybuduj, termin realizacji 14 miesięcy. Inwestycja w województwie wielkopolskim. Ogłoszenie przetargu planowane na styczeń 2027. Umowa o dofinansowanie wymaga zakończenia rzeczowego projektu do 30.06.2028.\n",
+  "status": "gotowa",
+  "created_at": "2026-11-22T06:16:56+00:00",
+  "result": {
+    "title": "Przykład: kanalizacja 6,5 km, zaprojektuj i wybuduj",
+    "created_at": "2026-11-22T06:16:56+00:00",
+    "input": {
+      "text": "Gmina planuje budowę sieci kanalizacji sanitarnej grawitacyjno-tłocznej o długości ok. 6,5 km wraz z dwiema przepompowniami ścieków i przyłączami do granic 140 nieruchomości w miejscowościach poza aglomeracją. Ścieki będą odprowadzane do istniejącej oczyszczalni. Trasa przebiega w pasie dróg gminnych i powiatowych, częściowo przez grunty prywatne; przewidziano przekroczenie cieku i drogi wojewódzkiej przewiertem. Szacowana wartość inwestycji: 7 800 000 zł brutto. Planowana formuła: zaprojektuj i wybuduj, termin realizacji 14 miesięcy. Inwestycja w województwie wielkopolskim. Ogłoszenie przetargu planowane na styczeń 2027. Umowa o dofinansowanie wymaga zakończenia rzeczowego projektu do 30.06.2028.\n",
+      "documents": [
+        {
+          "id": 1,
+          "filename": "projekt_umowy_przyklad.txt",
+          "doc_type": "Umowa",
+          "pages": 1
+        }
+      ],
+      "features": {
+        "subsector_main": "Kanalizacja sanitarna",
+        "subsectors_extra": [
+          "Oczyszczalnia ścieków"
+        ],
+        "work_type": "budowa",
+        "formula": "zaprojektuj i wybuduj",
+        "length_km": 6.5,
+        "value": 7800000.0,
+        "voivodeship": "wielkopolskie"
+      }
+    },
+    "dane_zrodlowe": {
+      "similar": [
+        {
+          "project_id": 17,
+          "record_id": "RM-2026-017",
+          "name": "Budowa sieci kanalizacji sanitarnej wraz z przyłączami w miejscowości Tanibórz, Gmina Kleszczewo",
+          "beneficiary": "Gmina Kleszczewo",
+          "voivodeship": "wielkopolskie",
+          "status": "Zakończone",
+          "subsector": "Kanalizacja sanitarna",
+          "score": 0.88,
+          "explanation": [
+            {
+              "feature": "text",
+              "contribution": 0.43,
+              "why": "podobieństwo treści opisu 0.13 (wspólne rdzenie słów: przepo, przyla, grawit, przedm, tloczn, sieci)"
+            },
+            {
+              "feature": "subsector",
+              "contribution": 0.215,
+              "why": "ten sam podsektor główny: Kanalizacja sanitarna"
+            },
+            {
+              "feature": "value",
+              "contribution": 0.095,
+              "why": "wartość 4 275 776 zł vs 7 800 000 zł"
+            },
+            {
+              "feature": "work_type",
+              "contribution": 0.086,
+              "why": "rodzaj prac: budowa"
+            },
+            {
+              "feature": "region",
+              "contribution": 0.054,
+              "why": "województwo: wielkopolskie"
+            },
+            {
+              "feature": "formula",
+              "contribution": 0.0,
+              "why": "formuła: tradycyjna (wg dokumentacji zamawiającego)"
+            }
+          ],
+          "metrics": {
+            "basis": {
+              "contract_value": [
+                21
+              ],
+              "final_paid": [
+                21
+              ]
+            },
+            "n_procurements": 1,
+            "scope_part": null,
+            "n_contracts": 1,
+            "contract_value": 4275775.94,
+            "final_paid": 5422833.43,
+            "cost_dev_pct": 0.2682688489986683,
+            "cost_dev_method": "wypłacono vs wartość umowy (ogłoszenie o wykonaniu umowy)",
+            "signed_date": "2025-12-23",
+            "planned_end_date": "2026-04-23",
+            "actual_end_date": "2026-06-15",
+            "planned_duration_days": 121,
+            "delay_days": 53,
+            "delay_method": "data wykonania vs termin umowny",
+            "actual_duration_days": 174,
+            "completed": true,
+            "n_offers": 6,
+            "estimated_value_net": 8191290.8,
+            "price_vs_estimate": -0.5756174836783945,
+            "n_changes": 1,
+            "project_value": 4052494.96,
+            "funding": 3294711.35,
+            "value_for_comparison": 4275775.94,
+            "cost_per_km": null
+          }
+        },
+        {
+          "project_id": 18,
+          "record_id": "RM-2026-018",
+          "name": "Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny – etap II",
+          "beneficiary": "Gmina Zduny",
+          "voivodeship": "wielkopolskie",
+          "status": "Zakończone",
+          "subsector": "Kanalizacja sanitarna",
+          "score": 0.833,
+          "explanation": [
+            {
+              "feature": "text",
+              "contribution": 0.391,
+              "why": "podobieństwo treści opisu 0.12 (wspólne rdzenie słów: wykona, kanalo, przyla, obejmu, granic, budowe)"
+            },
+            {
+              "feature": "subsector",
+              "contribution": 0.215,
+              "why": "ten sam podsektor główny: Kanalizacja sanitarna"
+            },
+            {
+              "feature": "value",
+              "contribution": 0.087,
+              "why": "wartość 3 665 400 zł vs 7 800 000 zł"
+            },
+            {
+              "feature": "work_type",
+              "contribution": 0.086,
+              "why": "rodzaj prac: budowa"
+            },
+            {
+              "feature": "region",
+              "contribution": 0.054,
+              "why": "województwo: wielkopolskie"
+            },
+            {
+              "feature": "formula",
+              "contribution": 0.0,
+              "why": "formuła: tradycyjna (wg dokumentacji zamawiającego)"
+            }
+          ],
+          "metrics": {
+            "basis": {
+              "contract_value": [
+                22
+              ],
+              "final_paid": [
+                22
+              ]
+            },
+            "n_procurements": 1,
+            "scope_part": null,
+            "n_contracts": 1,
+            "contract_value": 3665400.0,
+            "final_paid": 4194312.76,
+            "cost_dev_pct": 0.14429878321602002,
+            "cost_dev_method": "wypłacono vs wartość umowy (ogłoszenie o wykonaniu umowy)",
+            "signed_date": "2026-02-17",
+            "planned_end_date": "2026-05-08",
+            "actual_end_date": "2026-06-17",
+            "planned_duration_days": 80,
+            "delay_days": 40,
+            "delay_method": "data wykonania vs termin umowny",
+            "actual_duration_days": 120,
+            "completed": true,
+            "n_offers": 7,
+            "estimated_value_net": 3673478.77,
+            "price_vs_estimate": -0.18877984967910943,
+            "n_changes": 2,
+            "project_value": 3847757.34,
+            "funding": 3128258.0,
+            "value_for_comparison": 3665400.0,
+            "cost_per_km": null
+          }
+        },
+        {
+          "project_id": 2,
+          "record_id": "RM-2026-002",
+          "name": "Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice",
+          "beneficiary": "Gmina Zagrodno",
+          "voivodeship": "dolnośląskie",
+          "status": "Zakończone",
+          "subsector": "Kanalizacja sanitarna",
+          "score": 0.791,
+          "explanation": [
+            {
+              "feature": "text",
+              "contribution": 0.375,
+              "why": "podobieństwo treści opisu 0.12 (wspólne rdzenie słów: realiz, przedm, planow, granic, scieko, budowe)"
+            },
+            {
+              "feature": "subsector",
+              "contribution": 0.2,
+              "why": "ten sam podsektor główny: Kanalizacja sanitarna"
+            },
+            {
+              "feature": "value",
+              "contribution": 0.1,
+              "why": "wartość 5 350 783 zł vs 7 800 000 zł"
+            },
+            {
+              "feature": "work_type",
+              "contribution": 0.08,
+              "why": "rodzaj prac: budowa"
+            },
+            {
+              "feature": "length",
+              "contribution": 0.036,
+              "why": "długość sieci 2.4 km vs 6.5 km"
+            },
+            {
+              "feature": "formula",
+              "contribution": 0.0,
+              "why": "formuła: tradycyjna (wg dokumentacji zamawiającego)"
+            },
+            {
+              "feature": "region",
+              "contribution": 0.0,
+              "why": "województwo: dolnośląskie"
+            }
+          ],
+          "metrics": {
+            "basis": {
+              "contract_value": [
+                2
+              ],
+              "final_paid": [
+                2
+              ]
+            },
+            "n_procurements": 1,
+            "scope_part": null,
+            "n_contracts": 1,
+            "contract_value": 5350782.65,
+            "final_paid": 5350782.65,
+            "cost_dev_pct": 0.0,
+            "cost_dev_method": "wypłacono vs wartość umowy (ogłoszenie o wykonaniu umowy)",
+            "signed_date": "2026-03-05",
+            "planned_end_date": "2026-05-05",
+            "actual_end_date": "2026-06-01",
+            "planned_duration_days": 61,
+            "delay_days": 27,
+            "delay_method": "data wykonania vs termin umowny",
+            "actual_duration_days": 88,
+            "completed": true,
+            "n_offers": 2,
+            "estimated_value_net": 4350229.8,
+            "price_vs_estimate": -7.475541297097266e-10,
+            "n_changes": 1,
+            "project_value": 5350782.65,
+            "funding": 4333677.17,
+            "value_for_comparison": 5350782.65,
+            "cost_per_km": 2248228.004201681
+          }
+        },
+        {
+          "project_id": 3,
+          "record_id": "RM-2026-003",
+          "name": "Budowa oczyszczalni ścieków w miejscowości Steklin w formule zaprojektuj i wybuduj",
+          "beneficiary": "Gmina Czernikowo",
+          "voivodeship": "kujawsko-pomorskie",
+          "status": "Zakończone",
+          "subsector": "Oczyszczalnia ścieków",
+          "score": 0.675,
+          "explanation": [
+            {
+              "feature": "text",
+              "contribution": 0.392,
+              "why": "podobieństwo treści opisu 0.12 (wspólne rdzenie słów: wybudu, formul, zaproj, scieko, oczysz, budowa)"
+            },
+            {
+              "feature": "work_type",
+              "contribution": 0.086,
+              "why": "rodzaj prac: budowa"
+            },
+            {
+              "feature": "formula",
+              "contribution": 0.086,
+              "why": "formuła: zaprojektuj i wybuduj"
+            },
+            {
+              "feature": "value",
+              "contribution": 0.056,
+              "why": "wartość 2 131 590 zł vs 7 800 000 zł"
+            },
+            {
+              "feature": "subsector",
+              "contribution": 0.054,
+              "why": "podsektory: Oczyszczalnia ścieków"
+            },
+            {
+              "feature": "region",
+              "contribution": 0.0,
+              "why": "województwo: kujawsko-pomorskie"
+            }
+          ],
+          "metrics": {
+            "basis": {
+              "contract_value": [
+                3
+              ],
+              "final_paid": [
+                3
+              ]
+            },
+            "n_procurements": 1,
+            "scope_part": null,
+            "n_contracts": 1,
+            "contract_value": 2131590.0,
+            "final_paid": 2990000.0,
+            "cost_dev_pct": 0.4027087760779512,
+            "cost_dev_method": "wypłacono vs wartość umowy (ogłoszenie o wykonaniu umowy)",
+            "signed_date": "2024-07-18",
+            "planned_end_date": "2025-08-18",
+            "actual_end_date": "2026-05-22",
+            "planned_duration_days": 396,
+            "delay_days": 277,
+            "delay_method": "data wykonania vs termin umowny",
+            "actual_duration_days": 673,
+            "completed": true,
+            "n_offers": 2,
+            "estimated_value_net": 2602091.26,
+            "price_vs_estimate": -0.33399722498587536,
+            "n_changes": 3,
+            "project_value": null,
+            "funding": null,
+            "value_for_comparison": 2131590.0,
+            "cost_per_km": null
+          }
+        },
+        {
+          "project_id": 8,
+          "record_id": "RM-2026-008",
+          "name": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Biecz",
+          "beneficiary": "Gmina Biecz",
+          "voivodeship": "małopolskie",
+          "status": "Zakończone",
+          "subsector": "Kanalizacja sanitarna",
+          "score": 0.669,
+          "explanation": [
+            {
+              "feature": "text",
+              "contribution": 0.291,
+              "why": "podobieństwo treści opisu 0.09 (wspólne rdzenie słów: przedm, przewi, realiz, miejsc, komple, sanita)"
+            },
+            {
+              "feature": "subsector",
+              "contribution": 0.2,
+              "why": "ten sam podsektor główny: Kanalizacja sanitarna"
+            },
+            {
+              "feature": "work_type",
+              "contribution": 0.08,
+              "why": "rodzaj prac: budowa"
+            },
+            {
+              "feature": "length",
+              "contribution": 0.05,
+              "why": "długość sieci 11.9 km vs 6.5 km"
+            },
+            {
+              "feature": "value",
+              "contribution": 0.048,
+              "why": "wartość 1 952 121 zł vs 7 800 000 zł"
+            },
+            {
+              "feature": "formula",
+              "contribution": 0.0,
+              "why": "formuła: tradycyjna (wg dokumentacji zamawiającego)"
+            },
+            {
+              "feature": "region",
+              "contribution": 0.0,
+              "why": "województwo: małopolskie"
+            }
+          ],
+          "metrics": {
+            "basis": {
+              "contract_value": [
+                8
+              ],
+              "final_paid": [
+                8
+              ]
+            },
+            "n_procurements": 1,
+            "scope_part": 1,
+            "scope_note": "rekord obejmuje część 1 postępowania — liczone tylko dla tej części",
+            "n_contracts": 1,
+            "contract_value": 1952120.53,
+            "final_paid": 2375309.26,
+            "cost_dev_pct": 0.21678411936992423,
+            "cost_dev_method": "wypłacono vs wartość umowy (ogłoszenie o wykonaniu umowy)",
+            "signed_date": "2026-03-12",
+            "planned_end_date": "2026-04-27",
+            "actual_end_date": "2026-04-27",
+            "planned_duration_days": 46,
+            "delay_days": 0,
+            "delay_method": "data wykonania vs termin umowny",
+            "actual_duration_days": 46,
+            "completed": true,
+            "n_offers": 9,
+            "estimated_value_net": 2396367.72,
+            "price_vs_estimate": -0.3377102151131389,
+            "n_changes": 1,
+            "project_value": 6188345.13,
+            "funding": 5000000.0,
+            "value_for_comparison": 1952120.53,
+            "cost_per_km": 164444.48909106225
+          }
+        },
+        {
+          "project_id": 15,
+          "record_id": "RM-2026-015",
+          "name": "Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów w formule zaprojektuj i wybuduj",
+          "beneficiary": "Gmina Elbląg",
+          "voivodeship": "warmińsko-mazurskie",
+          "status": "Zakończone",
+          "subsector": "Sieć wodociągowa",
+          "score": 0.637,
+          "explanation": [
+            {
+              "feature": "text",
+              "contribution": 0.383,
+              "why": "podobieństwo treści opisu 0.11 (wspólne rdzenie słów: wybudu, formul, zaproj, przyla, scieko, oczysz)"
+            },
+            {
+              "feature": "value",
+              "contribution": 0.088,
+              "why": "wartość 3 744 316 zł vs 7 800 000 zł"
+            },
+            {
+              "feature": "formula",
+              "contribution": 0.086,
+              "why": "formuła: zaprojektuj i wybuduj"
+            },
+            {
+              "feature": "subsector",
+              "contribution": 0.054,
+              "why": "podsektory: Kanalizacja sanitarna, Oczyszczalnia ścieków"
+            },
+            {
+              "feature": "work_type",
+              "contribution": 0.026,
+              "why": "rodzaj prac: przebudowa/modernizacja"
+            },
+            {
+              "feature": "region",
+              "contribution": 0.0,
+              "why": "województwo: warmińsko-mazurskie"
+            }
+          ],
+          "metrics": {
+            "basis": {
+              "contract_value": [
+                19
+              ],
+              "final_paid": [
+                19
+              ]
+            },
+            "n_procurements": 1,
+            "scope_part": null,
+            "n_contracts": 1,
+            "contract_value": 3744316.0,
+            "final_paid": 4703039.5,
+            "cost_dev_pct": 0.2560477000338647,
+            "cost_dev_method": "wypłacono vs wartość umowy (ogłoszenie o wykonaniu umowy)",
+            "signed_date": "2023-04-28",
+            "planned_end_date": "2025-04-28",
+            "actual_end_date": "2025-09-25",
+            "planned_duration_days": 731,
+            "delay_days": 150,
+            "delay_method": "data wykonania vs termin umowny",
+            "actual_duration_days": 881,
+            "completed": true,
+            "n_offers": 2,
+            "estimated_value_net": 3044159.35,
+            "price_vs_estimate": -1.3353573802277197e-10,
+            "n_changes": 3,
+            "project_value": null,
+            "funding": null,
+            "value_for_comparison": 3744316.0,
+            "cost_per_km": null
+          }
+        }
+      ],
+      "all_ranked": [
+        {
+          "project_id": 17,
+          "record_id": "RM-2026-017",
+          "name": "Budowa sieci kanalizacji sanitarnej wraz z przyłączami w miejscowości Tanibórz, Gmina Kleszczewo",
+          "score": 0.88
+        },
+        {
+          "project_id": 18,
+          "record_id": "RM-2026-018",
+          "name": "Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny – etap II",
+          "score": 0.833
+        },
+        {
+          "project_id": 2,
+          "record_id": "RM-2026-002",
+          "name": "Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice",
+          "score": 0.791
+        },
+        {
+          "project_id": 3,
+          "record_id": "RM-2026-003",
+          "name": "Budowa oczyszczalni ścieków w miejscowości Steklin w formule zaprojektuj i wybuduj",
+          "score": 0.675
+        },
+        {
+          "project_id": 8,
+          "record_id": "RM-2026-008",
+          "name": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Biecz",
+          "score": 0.669
+        },
+        {
+          "project_id": 15,
+          "record_id": "RM-2026-015",
+          "name": "Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów w formule zaprojektuj i wybuduj",
+          "score": 0.637
+        },
+        {
+          "project_id": 10,
+          "record_id": "RM-2026-010",
+          "name": "Budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne, gmina Grodzisko Dolne",
+          "score": 0.569
+        },
+        {
+          "project_id": 20,
+          "record_id": "RM-2026-020",
+          "name": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+          "score": 0.557
+        },
+        {
+          "project_id": 14,
+          "record_id": "RM-2026-014",
+          "name": "Budowa sieci kanalizacji sanitarnej ul. Słoneczna w Siemoni",
+          "score": 0.546
+        },
+        {
+          "project_id": 13,
+          "record_id": "RM-2026-013",
+          "name": "Budowa sieci kanalizacji sanitarnej w Gminie Bestwina – sołectwo Kaniów",
+          "score": 0.502
+        },
+        {
+          "project_id": 1,
+          "record_id": "RM-2026-001",
+          "name": "Budowa rurociągu tłocznego kanalizacji sanitarnej Godzikowice – Jaczkowice, gmina Oława",
+          "score": 0.495
+        },
+        {
+          "project_id": 21,
+          "record_id": "RM-2026-021",
+          "name": "Zwiększenie odporności hydrologicznej Aglomeracji Nowogard poprzez rozdział kanalizacji sanitarnej na ul. 700-lecia",
+          "score": 0.481
+        },
+        {
+          "project_id": 12,
+          "record_id": "RM-2026-012",
+          "name": "Budowa tranzytu przesyłowego sieci kanalizacji sanitarnej ze Smętowa Chmieleńskiego do Kos",
+          "score": 0.457
+        },
+        {
+          "project_id": 5,
+          "record_id": "RM-2026-005",
+          "name": "Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania wody w miejscowości Pędzewo",
+          "score": 0.406
+        },
+        {
+          "project_id": 19,
+          "record_id": "RM-2026-019",
+          "name": "Budowa kanalizacji deszczowej w ciągu drogi wojewódzkiej nr 444 w miejscowości Sulmierzyce",
+          "score": 0.406
+        }
+      ],
+      "risk_examples": [
+        {
+          "code": "R06",
+          "name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
+          "projects": [
+            "RM-2026-002",
+            "RM-2026-003",
+            "RM-2026-015",
+            "RM-2026-017",
+            "RM-2026-018"
+          ],
+          "approved": 0,
+          "proposed": 8,
+          "examples": [
+            {
+              "event_id": 7,
+              "project": "RM-2026-002",
+              "title": "Zmiana umowy nr 1: zmiana przewidziana w dokumentach zamówienia (art. 455 ust. 1 pkt 1)",
+              "quote": "5.4.2.) Numer zmiany: 1 | 5.4.3.) Podstawa prawna zmiany: art. 455 ust. 1 pkt 1 ustawy | 5.4.4.) Przyczyny dokonania zmian: zmiana terminu wykonania umowy | 5.4.6.) Wartość zmiany: 5350782,65",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec7a5-add3-9ae4-5fad-950001d1b535",
+              "page": null
+            },
+            {
+              "event_id": 9,
+              "project": "RM-2026-002",
+              "title": "Wykonanie po pierwotnym terminie (+27 dni)",
+              "quote": "Termin umowny 2026-05-05 (Ogłoszenie o wyniku postępowania 2026/BZP 00143366/01: „8.3.) Okres realizacji zamówienia albo umowy ramowej: 2 miesiące”); wykonanie 2026-06-01 (Ogłoszenie o wykonaniu umowy 2026/BZP 00285691/01: „5.2.) Termin wykonania umowy: 2026-06-01”).",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec7a5-add3-9ae4-5fad-950001d1b535",
+              "page": null
+            },
+            {
+              "event_id": 14,
+              "project": "RM-2026-003",
+              "title": "Wykonanie po pierwotnym terminie (+277 dni)",
+              "quote": "Termin umowny 2025-08-18 (Ogłoszenie o wyniku postępowania 2024/BZP 00418711/01: „8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2025-08-18”); wykonanie 2026-05-22 (Ogłoszenie o wykonaniu umowy 2026/BZP 00276065/01: „5.2.) Termin wykonania umowy: 2026-05-22”).",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec172-3030-00de-5fad-9500015c599a",
+              "page": null
+            },
+            {
+              "event_id": 59,
+              "project": "RM-2026-015",
+              "title": "Wykonanie po pierwotnym terminie (+150 dni)",
+              "quote": "Termin umowny 2025-04-28 (Ogłoszenie o wyniku postępowania 2023/BZP 00198087/01: „8.3.) Okres realizacji zamówienia albo umowy ramowej: 24 miesiące”); wykonanie 2025-09-25 (Ogłoszenie o wykonaniu umowy 2025/BZP 00494163/01: „5.2.) Termin wykonania umowy: 2025-09-25”).",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de12c8-723a-60cb-6f2a-fc0001f5b951",
+              "page": null
+            }
+          ],
+          "cost": 1147057.49,
+          "delay": 697,
+          "n_projects": 5,
+          "share": 0.8333333333333334
+        },
+        {
+          "code": "R07",
+          "name": "Nieprzewidziane zmiany i roboty dodatkowe",
+          "projects": [
+            "RM-2026-003",
+            "RM-2026-008",
+            "RM-2026-015",
+            "RM-2026-017",
+            "RM-2026-018"
+          ],
+          "approved": 0,
+          "proposed": 7,
+          "examples": [
+            {
+              "event_id": 13,
+              "project": "RM-2026-003",
+              "title": "Wypłata wyższa niż wartość umowy o 40,3%",
+              "quote": "Wartość umowy 2 131 590,00 zł (Ogłoszenie o wyniku postępowania 2024/BZP 00418711/01: „8.2.) Wartość umowy/umowy ramowej: 2131590,00 PLN”); łącznie wypłacono 2 990 000,00 zł (Ogłoszenie o wykonaniu umowy 2026/BZP 00276065/01: „5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec172-3030-00de-5fad-9500015c599a",
+              "page": null
+            },
+            {
+              "event_id": 33,
+              "project": "RM-2026-008",
+              "title": "Wypłata wyższa niż wartość umowy o 21,7% [część 1]",
+              "quote": "Wartość umowy 1 952 120,53 zł (Ogłoszenie o wyniku postępowania 2026/BZP 00166534/01: „8.2.) Wartość umowy/umowy ramowej: 1952120,53 PLN”); łącznie wypłacono 2 375 309,26 zł (Ogłoszenie o wykonaniu umowy 2026/BZP 00255110/01: „5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08deb72a-3c2d-0f0d-5fad-9500012ba59e",
+              "page": null
+            },
+            {
+              "event_id": 55,
+              "project": "RM-2026-015",
+              "title": "Zmiana umowy nr 1: okoliczności nieprzewidywalne (art. 455 ust. 1 pkt 4)",
+              "quote": "5.1.) Data zmiany umowy/umowy ramowej): 2025-08-12 | 5.2.) Podstawa prawna zmiany umowy/umowy ramowej: art. 455 ust. 1 pkt 4 ustawy | 5.3.) Przyczyny dokonania zmian umowy/umowy ramowej: Wykonawca zgłosił konieczność wykonania robót dodatkowych nieobjętych pierwotną dokumentacją PFU i warunkami tech",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dde179-afc1-9410-e769-360001c7b366",
+              "page": null
+            },
+            {
+              "event_id": 57,
+              "project": "RM-2026-015",
+              "title": "Zmiana umowy nr 2: okoliczności nieprzewidywalne (art. 455 ust. 1 pkt 4)",
+              "quote": "5.4.2.) Numer zmiany: 2 | 5.4.3.) Podstawa prawna zmiany: art. 455 ust. 1 pkt 4 ustawy | 5.4.4.) Przyczyny dokonania zmian: Wykonawca zgłosił konieczność wykonania robót dodatkowych nieobjętych pierwotną dokumentacją PFU i warunkami technicznymi: 1) wykonanie dodatkowej płyty żelbetowej 2) przebudow",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08de12c8-723a-60cb-6f2a-fc0001f5b951",
+              "page": null
+            }
+          ],
+          "cost": 5859323.479999999,
+          "delay": 0,
+          "n_projects": 5,
+          "share": 0.8333333333333334
+        },
+        {
+          "code": "R01",
+          "name": "Niepełny lub niespójny zakres",
+          "projects": [
+            "RM-2026-003",
+            "RM-2026-018"
+          ],
+          "approved": 0,
+          "proposed": 3,
+          "examples": [
+            {
+              "event_id": 10,
+              "project": "RM-2026-003",
+              "title": "Zmiana umowy nr 1: roboty/dostawy/usługi dodatkowe (art. 455 ust. 1 pkt 3)",
+              "quote": "5.1.) Data zmiany umowy/umowy ramowej): 2024-11-25 | 5.2.) Podstawa prawna zmiany umowy/umowy ramowej: art. 455 ust. 1 pkt 3 ustawy | 5.3.) Przyczyny dokonania zmian umowy/umowy ramowej: W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Uż",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd0ec6-aa87-c6a2-985c-bb0001354954",
+              "page": null
+            },
+            {
+              "event_id": 11,
+              "project": "RM-2026-003",
+              "title": "Zmiana umowy nr 1: roboty/dostawy/usługi dodatkowe (art. 455 ust. 1 pkt 3)",
+              "quote": "5.1.) Data zmiany umowy/umowy ramowej): 2024-10-09 | 5.2.) Podstawa prawna zmiany umowy/umowy ramowej: art. 455 ust. 1 pkt 3 ustawy | 5.3.) Przyczyny dokonania zmian umowy/umowy ramowej: W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Uż",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dcf1a8-45f7-79a7-985c-bb0001c794c0",
+              "page": null
+            },
+            {
+              "event_id": 68,
+              "project": "RM-2026-018",
+              "title": "Zmiana umowy nr 1: zmiana o niewielkiej wartości (art. 455 ust. 2)",
+              "quote": "5.4.2.) Numer zmiany: 1 | 5.4.3.) Podstawa prawna zmiany: art. 455 ust. 2 ustawy | 5.4.4.) Przyczyny dokonania zmian: W toku realizacji umowy wystąpiła potrzeba rozszerzenia zakresu zamówienia , których wykonanie było niezbędne dla prawidłowej i kompletnej realizacji zamówienia. Zmiana nie powoduje ",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dedb3f-426c-687a-2028-230001aee96a",
+              "page": null
+            }
+          ],
+          "cost": 1387322.76,
+          "delay": 0,
+          "n_projects": 2,
+          "share": 0.3333333333333333
+        },
+        {
+          "code": "R03",
+          "name": "Kolizje, dostęp do terenu i prawa do nieruchomości",
+          "projects": [
+            "RM-2026-008",
+            "RM-2026-015"
+          ],
+          "approved": 0,
+          "proposed": 2,
+          "examples": [
+            {
+              "event_id": 32,
+              "project": "RM-2026-008",
+              "title": "Zmiana umowy nr 1: zmiana przewidziana w dokumentach zamówienia (art. 455 ust. 1 pkt 1) [część 1]",
+              "quote": "5.4.2.) Numer zmiany: 1 | 5.4.3.) Podstawa prawna zmiany: art. 455 ust. 1 pkt 1 ustawy | 5.4.4.) Przyczyny dokonania zmian: Na podstawie § 14 ust 2 pkt 1) lit b) oraz § 14 ust 2 i pkt 2) lit a umowy nr ZP.272.1.2026 część 1 z dnia 12.04.2026 r. w związku z zastosowaniem odmiennych rozwiązań technolo",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08deb72a-3c2d-0f0d-5fad-9500012ba59e",
+              "page": null
+            },
+            {
+              "event_id": 56,
+              "project": "RM-2026-015",
+              "title": "Zmiana umowy nr 1: okoliczności nieprzewidywalne (art. 455 ust. 1 pkt 4)",
+              "quote": "5.1.) Data zmiany umowy/umowy ramowej): 2025-04-29 | 5.2.) Podstawa prawna zmiany umowy/umowy ramowej: art. 455 ust. 1 pkt 4 ustawy | 5.3.) Przyczyny dokonania zmian umowy/umowy ramowej: Przedłużenie terminu realizacji zadania wynika z konieczności zwiększenia zakresu robót, których wykonanie w spos",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dd9208-4613-aee9-eaaa-350001a43ed9",
+              "page": null
+            }
+          ],
+          "cost": 423188.73,
+          "delay": 120,
+          "n_projects": 2,
+          "share": 0.3333333333333333
+        },
+        {
+          "code": "R04",
+          "name": "Decyzje, pozwolenia i uzgodnienia zależne od podmiotów trzecich",
+          "projects": [
+            "RM-2026-003"
+          ],
+          "approved": 0,
+          "proposed": 1,
+          "examples": [
+            {
+              "event_id": 12,
+              "project": "RM-2026-003",
+              "title": "Zmiana umowy nr 3: zmiana przewidziana w dokumentach zamówienia (art. 455 ust. 1 pkt 1)",
+              "quote": "5.4.2.) Numer zmiany: 3 | 5.4.3.) Podstawa prawna zmiany: art. 455 ust. 1 pkt 1 ustawy | 5.4.4.) Przyczyny dokonania zmian: Przedłużające się postępowanie administracyjne prowadzone przez Państwowe Gospodarstwo Wodne Wody Polskie w sprawie udzielenia pozwolenia wodnoprawnego na usługę wodną obejmują",
+              "status": "proposed",
+              "source_url": "https://ezamowienia.gov.pl/mo-client-board/bzp/notice-details/id/08dec172-3030-00de-5fad-9500015c599a",
+              "page": null
+            }
+          ],
+          "cost": 0.0,
+          "delay": 0,
+          "n_projects": 1,
+          "share": 0.16666666666666666
+        }
+      ]
+    },
+    "obliczenia": {
+      "stats": {
+        "cost_dev_pct": {
+          "n": 6,
+          "min": 0.0,
+          "p25": 0.16242011725449607,
+          "median": 0.23641590970189447,
+          "p75": 0.2652135617574674,
+          "max": 0.4027087760779512,
+          "mean": 0.21468470461607145,
+          "projects": [
+            "RM-2026-017",
+            "RM-2026-018",
+            "RM-2026-002",
+            "RM-2026-003",
+            "RM-2026-008",
+            "RM-2026-015"
+          ]
+        },
+        "delay_days": {
+          "n": 6,
+          "min": 0,
+          "p25": 30.25,
+          "median": 46.5,
+          "p75": 125.75,
+          "max": 277,
+          "mean": 91.16666666666667,
+          "projects": [
+            "RM-2026-017",
+            "RM-2026-018",
+            "RM-2026-002",
+            "RM-2026-003",
+            "RM-2026-008",
+            "RM-2026-015"
+          ]
+        },
+        "planned_duration_days": {
+          "n": 6,
+          "min": 46,
+          "p25": 65.75,
+          "median": 100.5,
+          "p75": 327.25,
+          "max": 731,
+          "mean": 239.16666666666666,
+          "projects": [
+            "RM-2026-017",
+            "RM-2026-018",
+            "RM-2026-002",
+            "RM-2026-003",
+            "RM-2026-008",
+            "RM-2026-015"
+          ]
+        },
+        "cost_per_km": {
+          "n": 2,
+          "min": 164444.48909106225,
+          "p25": 685390.367868717,
+          "median": 1206336.2466463717,
+          "p75": 1727282.1254240263,
+          "max": 2248228.004201681,
+          "mean": 1206336.2466463717,
+          "projects": [
+            "RM-2026-002",
+            "RM-2026-008"
+          ]
+        },
+        "contract_value": {
+          "n": 6,
+          "min": 1952120.53,
+          "p25": 2515042.5,
+          "median": 3704858.0,
+          "p75": 4142910.955,
+          "max": 5350782.65,
+          "mean": 3519997.52,
+          "projects": [
+            "RM-2026-017",
+            "RM-2026-018",
+            "RM-2026-002",
+            "RM-2026-003",
+            "RM-2026-008",
+            "RM-2026-015"
+          ]
+        },
+        "value_for_comparison": {
+          "n": 6,
+          "min": 1952120.53,
+          "p25": 2515042.5,
+          "median": 3704858.0,
+          "p75": 4142910.955,
+          "max": 5350782.65,
+          "mean": 3519997.52,
+          "projects": [
+            "RM-2026-017",
+            "RM-2026-018",
+            "RM-2026-002",
+            "RM-2026-003",
+            "RM-2026-008",
+            "RM-2026-015"
+          ]
+        },
+        "n_offers": {
+          "n": 6,
+          "min": 2,
+          "p25": 2.0,
+          "median": 4.0,
+          "p75": 6.75,
+          "max": 9,
+          "mean": 4.666666666666667,
+          "projects": [
+            "RM-2026-017",
+            "RM-2026-018",
+            "RM-2026-002",
+            "RM-2026-003",
+            "RM-2026-008",
+            "RM-2026-015"
+          ]
+        }
+      },
+      "forecast": {
+        "value_input": 7800000.0,
+        "length_km": 6.5,
+        "cost_range": [
+          9066876.914585069,
+          9644044.095674777,
+          9868665.781708246
+        ],
+        "cost_method": "wartość z opisu × (1 + odchylenie kosztu podobnych zakończonych: p25 / mediana / p75), n=6",
+        "cost_by_length": [
+          4455037.39114666,
+          7841185.603201415,
+          11227333.81525617
+        ],
+        "cost_by_length_method": "długość 6.50 km × koszt na km w grupie (p25 / mediana / p75), n=2",
+        "duration_range_days": [
+          130.75,
+          147.0,
+          226.25
+        ],
+        "duration_method": "mediana terminu umownego (100 dni, n=6) + opóźnienia podobnych (p25/mediana/p75, n=6)",
+        "confidence": "średnia",
+        "sample_note": "Grupa porównawcza: 6 projektów (w tym 6 zakończonych z danymi o realizacji). Przedziały to rozrzut obserwacji, nie przedział ufności — przy małej próbie traktować orientacyjnie."
+      },
+      "reference": {
+        "rcf": {
+          "n_class": 22,
+          "cost": {
+            "label": "rozliczenie vs wartość umowy",
+            "n": 22,
+            "n_eff": 13.7,
+            "p50": 0.08873708271490162,
+            "p80": 0.26666663956596287,
+            "p90": 0.36601148535782774,
+            "p80_ci": [
+              0.21678411936992423,
+              0.4027087760779512
+            ],
+            "share_over": 0.8502541900565601,
+            "share_over_raw": [
+              16,
+              22
+            ],
+            "points": [
+              {
+                "record_id": "RM-2026-021",
+                "value": -0.4502992528087463,
+                "weight": 0.231,
+                "score": 0.481,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-020",
+                "value": -0.12692859753597066,
+                "weight": 0.078,
+                "score": 0.557,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-007",
+                "value": -0.006425605021441229,
+                "weight": 0.006,
+                "score": 0.155,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-002",
+                "value": 0.0,
+                "weight": 0.156,
+                "score": 0.791,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-010",
+                "value": 0.0,
+                "weight": 0.081,
+                "score": 0.569,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-022",
+                "value": 0.0,
+                "weight": 0.014,
+                "score": 0.238,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-012",
+                "value": 0.009607975222609333,
+                "weight": 0.209,
+                "score": 0.457,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-016",
+                "value": 0.03850000102471406,
+                "weight": 0.116,
+                "score": 0.34,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-009",
+                "value": 0.03913167779811603,
+                "weight": 0.035,
+                "score": 0.188,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-006",
+                "value": 0.042191371065134715,
+                "weight": 0.062,
+                "score": 0.248,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-005",
+                "value": 0.05159435424266268,
+                "weight": 0.041,
+                "score": 0.406,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-004",
+                "value": 0.05510810680384398,
+                "weight": 0.013,
+                "score": 0.116,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-001",
+                "value": 0.0658786514174811,
+                "weight": 0.245,
+                "score": 0.495,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-013",
+                "value": 0.06774344244515565,
+                "weight": 0.252,
+                "score": 0.502,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-014",
+                "value": 0.08457622998910394,
+                "weight": 0.298,
+                "score": 0.546,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-011",
+                "value": 0.08806805544098381,
+                "weight": 0.104,
+                "score": 0.323,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-018",
+                "value": 0.14429878321602002,
+                "weight": 0.173,
+                "score": 0.833,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-008",
+                "value": 0.21678411936992423,
+                "weight": 0.448,
+                "score": 0.669,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-015",
+                "value": 0.2560477000338647,
+                "weight": 0.406,
+                "score": 0.637,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-017",
+                "value": 0.2682688489986683,
+                "weight": 0.194,
+                "score": 0.88,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-019",
+                "value": 0.3270446274884652,
+                "weight": 0.165,
+                "score": 0.406,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-003",
+                "value": 0.4027087760779512,
+                "weight": 0.456,
+                "score": 0.675,
+                "verified": true
+              }
+            ]
+          },
+          "time": {
+            "label": "faktyczny vs umowny czas realizacji",
+            "n": 22,
+            "n_eff": 13.7,
+            "p50": 0.33790948416634015,
+            "p80": 0.7153095287816186,
+            "p90": 1.0950311927448353,
+            "p80_ci": [
+              0.4426229508196721,
+              1.1336822498613401
+            ],
+            "share_over": 0.8410164667889455,
+            "share_over_raw": [
+              18,
+              22
+            ],
+            "points": [
+              {
+                "record_id": "RM-2026-022",
+                "value": -0.09166666666666666,
+                "weight": 0.014,
+                "score": 0.238,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-011",
+                "value": -0.0392156862745098,
+                "weight": 0.104,
+                "score": 0.323,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-009",
+                "value": -0.024390243902439025,
+                "weight": 0.035,
+                "score": 0.188,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-008",
+                "value": 0.0,
+                "weight": 0.448,
+                "score": 0.669,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-016",
+                "value": 0.03766707168894289,
+                "weight": 0.116,
+                "score": 0.34,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-013",
+                "value": 0.06352459016393443,
+                "weight": 0.252,
+                "score": 0.502,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-015",
+                "value": 0.2051983584131327,
+                "weight": 0.406,
+                "score": 0.637,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-001",
+                "value": 0.21095890410958903,
+                "weight": 0.245,
+                "score": 0.495,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-021",
+                "value": 0.22442244224422442,
+                "weight": 0.231,
+                "score": 0.481,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-005",
+                "value": 0.3333333333333333,
+                "weight": 0.041,
+                "score": 0.406,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-012",
+                "value": 0.3625,
+                "weight": 0.209,
+                "score": 0.457,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-010",
+                "value": 0.4090909090909091,
+                "weight": 0.081,
+                "score": 0.569,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-017",
+                "value": 0.4380165289256198,
+                "weight": 0.194,
+                "score": 0.88,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-002",
+                "value": 0.4426229508196721,
+                "weight": 0.156,
+                "score": 0.791,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-018",
+                "value": 0.5,
+                "weight": 0.173,
+                "score": 0.833,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-004",
+                "value": 0.5414364640883977,
+                "weight": 0.013,
+                "score": 0.116,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-006",
+                "value": 0.6639344262295082,
+                "weight": 0.062,
+                "score": 0.248,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-003",
+                "value": 0.6994949494949495,
+                "weight": 0.456,
+                "score": 0.675,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-007",
+                "value": 0.9047619047619048,
+                "weight": 0.006,
+                "score": 0.155,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-020",
+                "value": 1.010928961748634,
+                "weight": 0.078,
+                "score": 0.557,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-014",
+                "value": 1.1388888888888888,
+                "weight": 0.298,
+                "score": 0.546,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-019",
+                "value": 2.9477611940298507,
+                "weight": 0.165,
+                "score": 0.406,
+                "verified": true
+              }
+            ]
+          },
+          "tender": {
+            "label": "cena umowy (brutto) vs wartość szacunkowa (netto + 23% VAT)",
+            "n": 14,
+            "n_eff": 8.9,
+            "p50": -0.3323050514077856,
+            "p80": -0.1712456019452875,
+            "p90": -0.09375337414198776,
+            "p80_ci": [
+              -0.2740118757439957,
+              -0.11454877300526262
+            ],
+            "share_over": 0.013665428031042993,
+            "share_over_raw": [
+              1,
+              14
+            ],
+            "points": [
+              {
+                "record_id": "RM-2026-017",
+                "value": -0.5756174836783945,
+                "weight": 0.194,
+                "score": 0.88,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-010",
+                "value": -0.45058231037242047,
+                "weight": 0.081,
+                "score": 0.569,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-011",
+                "value": -0.3428443777867066,
+                "weight": 0.104,
+                "score": 0.323,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-021",
+                "value": -0.34144471802929977,
+                "weight": 0.231,
+                "score": 0.481,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-008",
+                "value": -0.3377102151131389,
+                "weight": 0.448,
+                "score": 0.669,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-003",
+                "value": -0.33399722498587536,
+                "weight": 0.456,
+                "score": 0.675,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-020",
+                "value": -0.27453432965202473,
+                "weight": 0.078,
+                "score": 0.557,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-014",
+                "value": -0.25653797249550736,
+                "weight": 0.298,
+                "score": 0.546,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-018",
+                "value": -0.18877984967910943,
+                "weight": 0.173,
+                "score": 0.833,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-004",
+                "value": -0.17120985631306174,
+                "weight": 0.013,
+                "score": 0.116,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-013",
+                "value": -0.15816510368557068,
+                "weight": 0.252,
+                "score": 0.502,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-022",
+                "value": -0.08998012531447619,
+                "weight": 0.014,
+                "score": 0.238,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-012",
+                "value": -0.07470533881360397,
+                "weight": 0.209,
+                "score": 0.457,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-009",
+                "value": 0.07888586773135442,
+                "weight": 0.035,
+                "score": 0.188,
+                "verified": true
+              }
+            ]
+          },
+          "total": {
+            "label": "rozliczenie vs wartość szacunkowa (netto + 23% VAT)",
+            "n": 14,
+            "n_eff": 8.9,
+            "p50": -0.189819938812172,
+            "p80": -0.06580970675372717,
+            "p90": -0.062352016405092324,
+            "p80_ci": [
+              -0.10515486274203681,
+              -0.06579206259541814
+            ],
+            "share_over": 0.013665428031042993,
+            "share_over_raw": [
+              1,
+              14
+            ],
+            "points": [
+              {
+                "record_id": "RM-2026-021",
+                "value": -0.6379916694339594,
+                "weight": 0.231,
+                "score": 0.481,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-017",
+                "value": -0.4617688744896389,
+                "weight": 0.194,
+                "score": 0.88,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-010",
+                "value": -0.45058231037242047,
+                "weight": 0.081,
+                "score": 0.569,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-020",
+                "value": -0.366616669749786,
+                "weight": 0.078,
+                "score": 0.557,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-011",
+                "value": -0.28496996001627206,
+                "weight": 0.104,
+                "score": 0.323,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-008",
+                "value": -0.1941363073287442,
+                "weight": 0.448,
+                "score": 0.669,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-014",
+                "value": -0.19365875706912195,
+                "weight": 0.298,
+                "score": 0.546,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-004",
+                "value": -0.12553680055678873,
+                "weight": 0.013,
+                "score": 0.116,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-013",
+                "value": -0.10113630983877064,
+                "weight": 0.252,
+                "score": 0.502,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-022",
+                "value": -0.08998012531447619,
+                "weight": 0.014,
+                "score": 0.238,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-018",
+                "value": -0.07172176906748806,
+                "weight": 0.173,
+                "score": 0.833,
+                "verified": false
+              },
+              {
+                "record_id": "RM-2026-012",
+                "value": -0.06581513063531241,
+                "weight": 0.209,
+                "score": 0.457,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-003",
+                "value": -0.06579206259541814,
+                "weight": 0.456,
+                "score": 0.675,
+                "verified": true
+              },
+              {
+                "record_id": "RM-2026-009",
+                "value": 0.12110448188835865,
+                "weight": 0.035,
+                "score": 0.188,
+                "verified": true
+              }
+            ]
+          },
+          "stage": "kosztorys",
+          "estimate_suspect": [
+            "RM-2026-002",
+            "RM-2026-015",
+            "RM-2026-006"
+          ],
+          "method": "Klasa referencyjna: umowy z bazy z wynikiem realizacji w BZP (ogłoszenie o wykonaniu umowy). Waga projektu = podobieństwo² do planowanej inwestycji (dopasowania do weryfikacji ×0,25); n_eff = efektywna liczebność próby. P80 = narzut, przy którym budżet/termin wystarczyłby w 80% ważonych przypadków; przedział P80 z bootstrapu (500 losowań). Wartość szacunkowa z ogłoszenia o wyniku (pole 4.3, netto) ×1,23. Pominięto szacunek równy co do grosza cenie umowy netto (pole wypełnione wartością umowy): RM-2026-002, RM-2026-015, RM-2026-006.",
+          "result": {
+            "estimate_basis": "rozliczenie vs wartość szacunkowa",
+            "p50": {
+              "uplift": -0.189819938812172,
+              "budget": 7800000.0,
+              "budget_raw": 6319404.477265059
+            },
+            "p80": {
+              "uplift": -0.06580970675372717,
+              "budget": 7800000.0,
+              "budget_raw": 7286684.287320928
+            },
+            "p90": {
+              "uplift": -0.062352016405092324,
+              "budget": 7800000.0,
+              "budget_raw": 7313654.27204028
+            },
+            "reserve_p80": 0.0,
+            "contract": {
+              "p50": 0.08873708271490162,
+              "p80": 0.26666663956596287,
+              "p90": 0.36601148535782774,
+              "expected_price": 5208020.599019272,
+              "reserve_p80_pln": 1388805.3519307824
+            },
+            "tender_note": "Ceny umów względem wartości szacunkowej: mediana −33,2%, P80 −17,1% (n=14). Oszczędność przetargowa nie jest jednak „wolnymi środkami”: po podpisaniu umowy rozliczenie rośnie o +8,9% (mediana), a w 20% umów o ponad +26,7%.",
+            "time_p50": {
+              "uplift": 0.33790948416634015,
+              "days": 569.4142764611943
+            },
+            "time_p80": {
+              "uplift": 0.7153095287816186,
+              "days": 730.0357354494568
+            },
+            "time_p90": {
+              "uplift": 1.0950311927448353,
+              "days": 891.6452756322018
+            },
+            "time_reserve_p80_days": 304.43573544945684
+          },
+          "confidence": "umiarkowana — przedziały szerokie, traktować jako rząd wielkości"
+        },
+        "months_input": 14,
+        "duration_days_input": 425.59999999999997,
+        "funding": {
+          "start": "2027-01-01",
+          "planned_days": 425.59999999999997,
+          "tender": {
+            "n": 22,
+            "p50": 44.543979003800814,
+            "p80": 52.88362833592412,
+            "p90": 83.03332128434715
+          },
+          "finish": {
+            "p50": "2028-09-17",
+            "p80": "2029-02-12",
+            "p90": "2029-07-29"
+          },
+          "days": {
+            "p50": 624.5316246542149,
+            "p80": 773.4193837618272,
+            "p90": 939.5284233789771
+          },
+          "naive_finish": "2028-04-15",
+          "n": 22,
+          "n_eff": 13.7,
+          "paths": [
+            {
+              "record_id": "RM-2026-022",
+              "days": 438,
+              "weight": 0.014,
+              "score": 0.238,
+              "verified": false,
+              "tender_days": 51
+            },
+            {
+              "record_id": "RM-2026-011",
+              "days": 444,
+              "weight": 0.104,
+              "score": 0.323,
+              "verified": true,
+              "tender_days": 35
+            },
+            {
+              "record_id": "RM-2026-008",
+              "days": 467,
+              "weight": 0.448,
+              "score": 0.669,
+              "verified": true,
+              "tender_days": 41
+            },
+            {
+              "record_id": "RM-2026-009",
+              "days": 468,
+              "weight": 0.035,
+              "score": 0.188,
+              "verified": true,
+              "tender_days": 53
+            },
+            {
+              "record_id": "RM-2026-013",
+              "days": 490,
+              "weight": 0.252,
+              "score": 0.502,
+              "verified": true,
+              "tender_days": 37
+            },
+            {
+              "record_id": "RM-2026-016",
+              "days": 490,
+              "weight": 0.116,
+              "score": 0.34,
+              "verified": true,
+              "tender_days": 48
+            },
+            {
+              "record_id": "RM-2026-015",
+              "days": 558,
+              "weight": 0.406,
+              "score": 0.637,
+              "verified": true,
+              "tender_days": 45
+            },
+            {
+              "record_id": "RM-2026-001",
+              "days": 564,
+              "weight": 0.245,
+              "score": 0.495,
+              "verified": true,
+              "tender_days": 49
+            },
+            {
+              "record_id": "RM-2026-021",
+              "days": 568,
+              "weight": 0.231,
+              "score": 0.481,
+              "verified": true,
+              "tender_days": 47
+            },
+            {
+              "record_id": "RM-2026-005",
+              "days": 619,
+              "weight": 0.041,
+              "score": 0.406,
+              "verified": false,
+              "tender_days": 52
+            },
+            {
+              "record_id": "RM-2026-002",
+              "days": 645,
+              "weight": 0.156,
+              "score": 0.791,
+              "verified": false,
+              "tender_days": 31
+            },
+            {
+              "record_id": "RM-2026-012",
+              "days": 663,
+              "weight": 0.209,
+              "score": 0.457,
+              "verified": true,
+              "tender_days": 83
+            },
+            {
+              "record_id": "RM-2026-010",
+              "days": 690,
+              "weight": 0.081,
+              "score": 0.569,
+              "verified": false,
+              "tender_days": 90
+            },
+            {
+              "record_id": "RM-2026-018",
+              "days": 694,
+              "weight": 0.173,
+              "score": 0.833,
+              "verified": false,
+              "tender_days": 56
+            },
+            {
+              "record_id": "RM-2026-004",
+              "days": 707,
+              "weight": 0.013,
+              "score": 0.116,
+              "verified": true,
+              "tender_days": 51
+            },
+            {
+              "record_id": "RM-2026-006",
+              "days": 754,
+              "weight": 0.062,
+              "score": 0.248,
+              "verified": true,
+              "tender_days": 46
+            },
+            {
+              "record_id": "RM-2026-017",
+              "days": 756,
+              "weight": 0.194,
+              "score": 0.88,
+              "verified": false,
+              "tender_days": 144
+            },
+            {
+              "record_id": "RM-2026-003",
+              "days": 767,
+              "weight": 0.456,
+              "score": 0.675,
+              "verified": true,
+              "tender_days": 44
+            },
+            {
+              "record_id": "RM-2026-007",
+              "days": 847,
+              "weight": 0.006,
+              "score": 0.155,
+              "verified": false,
+              "tender_days": 36
+            },
+            {
+              "record_id": "RM-2026-020",
+              "days": 919,
+              "weight": 0.078,
+              "score": 0.557,
+              "verified": false,
+              "tender_days": 63
+            },
+            {
+              "record_id": "RM-2026-014",
+              "days": 950,
+              "weight": 0.298,
+              "score": 0.546,
+              "verified": true,
+              "tender_days": 40
+            },
+            {
+              "record_id": "RM-2026-019",
+              "days": 1715,
+              "weight": 0.165,
+              "score": 0.406,
+              "verified": true,
+              "tender_days": 35
+            }
+          ],
+          "method": "Ścieżka każdej podobnej umowy: jej czas przetargu (ogłoszenie o zamówieniu → zawarcie umowy, BZP) + planowany czas realizacji × (1 + jej faktyczne wydłużenie). Uwaga: przetargi unieważnione i powtórzone nie są tu liczone — realne ryzyko jest raczej wyższe.",
+          "deadline": "2028-06-30",
+          "available_days": 546,
+          "p_miss": 0.7438374367961512,
+          "k_miss": [
+            16,
+            22
+          ],
+          "latest_start_p80": "2026-05-19",
+          "start_too_late": true,
+          "max_planned_days_p80": 275
+        },
+        "deadline_detected": "2028-06-30",
+        "tender_start_detected": "2027-01-01"
+      },
+      "register": {
+        "rows": [
+          {
+            "code": "R03",
+            "name": "Kolizje, dostęp do terenu i prawa do nieruchomości",
+            "probability": 0.1935149373077456,
+            "k": 3,
+            "n": 22,
+            "projects": [
+              "RM-2026-008",
+              "RM-2026-015",
+              "RM-2026-020"
+            ],
+            "impact_cost_pct": 0.21678411936992434,
+            "impact_delay_days": 120,
+            "n_cost_obs": 1,
+            "n_delay_obs": 1,
+            "emv_pct": 0.04195096526918575,
+            "emv_pln": 327217.5290996489,
+            "emv_days": 23.221792476929473,
+            "bases": [
+              {
+                "basis": "art. 455 ust. 1 pkt 4",
+                "meaning": "okoliczności nieprzewidywalne",
+                "n": 2
+              },
+              {
+                "basis": "art. 455 ust. 1 pkt 1",
+                "meaning": "zmiana przewidziana w dokumentach zamówienia",
+                "n": 1
+              }
+            ],
+            "examples": [
+              {
+                "event_id": 32,
+                "project": "RM-2026-008",
+                "title": "Zmiana umowy nr 1: zmiana przewidziana w dokumentach zamówienia (art. 455 ust. 1 pkt 1) [część 1]",
+                "cause": "Na podstawie § 14 ust 2 pkt 1) lit b) oraz § 14 ust 2 i pkt 2) lit a umowy nr ZP.272.1.2026 część 1 z dnia 12.04.2026 r. w związku z zastosowaniem odmiennych rozwiązań technologicznych w postaci przewiertu sterownego zamiast rozkopu wynikaj"
+              },
+              {
+                "event_id": 56,
+                "project": "RM-2026-015",
+                "title": "Zmiana umowy nr 1: okoliczności nieprzewidywalne (art. 455 ust. 1 pkt 4)",
+                "cause": "Przedłużenie terminu realizacji zadania wynika z konieczności zwiększenia zakresu robót, których wykonanie w sposób obiektywny uniemożliwia terminowe zakończenie realizacji przedmiotu umowy tj. zwiększenia przepustowości oczyszczalni ściekó"
+              },
+              {
+                "event_id": 77,
+                "project": "RM-2026-020",
+                "title": "Zmiana umowy nr 1: okoliczności nieprzewidywalne (art. 455 ust. 1 pkt 4)",
+                "cause": "konieczność ustanowienia służebności przesyłu na działce nr 3/39 obręb Konarzewo"
+              }
+            ]
+          },
+          {
+            "code": "R06",
+            "name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
+            "probability": 0.5409510343157604,
+            "k": 9,
+            "n": 22,
+            "projects": [
+              "RM-2026-001",
+              "RM-2026-002",
+              "RM-2026-004",
+              "RM-2026-010",
+              "RM-2026-012",
+              "RM-2026-013",
+              "RM-2026-016",
+              "RM-2026-017",
+              "RM-2026-018"
+            ],
+            "impact_cost_pct": 0.06774344244515575,
+            "impact_delay_days": 90.0,
+            "n_cost_obs": 3,
+            "n_delay_obs": 2,
+            "emv_pct": 0.036645885258817186,
+            "emv_pln": 285837.90501877404,
+            "emv_days": 48.685593088418436,
+            "bases": [
+              {
+                "basis": "art. 455 ust. 1 pkt 1",
+                "meaning": "zmiana przewidziana w dokumentach zamówienia",
+                "n": 10
+              },
+              {
+                "basis": "art. 455 ust. 2",
+                "meaning": "zmiana o niewielkiej wartości",
+                "n": 2
+              }
+            ],
+            "examples": [
+              {
+                "event_id": 1,
+                "project": "RM-2026-001",
+                "title": "Zmiana umowy nr 1: zmiana przewidziana w dokumentach zamówienia (art. 455 ust. 1 pkt 1)",
+                "cause": "zmiana harmonogramu rzeczowo-finansowego"
+              },
+              {
+                "event_id": 3,
+                "project": "RM-2026-001",
+                "title": "Zmiana umowy nr 4: zmiana przewidziana w dokumentach zamówienia (art. 455 ust. 1 pkt 1)",
+                "cause": "protokół"
+              },
+              {
+                "event_id": 7,
+                "project": "RM-2026-002",
+                "title": "Zmiana umowy nr 1: zmiana przewidziana w dokumentach zamówienia (art. 455 ust. 1 pkt 1)",
+                "cause": "zmiana terminu wykonania umowy"
+              }
+            ]
+          },
+          {
+            "code": "R01",
+            "name": "Niepełny lub niespójny zakres",
+            "probability": 0.19117578578195019,
+            "k": 2,
+            "n": 22,
+            "projects": [
+              "RM-2026-003",
+              "RM-2026-018"
+            ],
+            "impact_cost_pct": 0.14429878321602008,
+            "impact_delay_days": null,
+            "n_cost_obs": 3,
+            "n_delay_obs": 0,
+            "emv_pct": 0.027586433268701922,
+            "emv_pln": 215174.179495875,
+            "emv_days": null,
+            "bases": [
+              {
+                "basis": "art. 455 ust. 1 pkt 3",
+                "meaning": "roboty/dostawy/usługi dodatkowe",
+                "n": 2
+              },
+              {
+                "basis": "art. 455 ust. 2",
+                "meaning": "zmiana o niewielkiej wartości",
+                "n": 1
+              }
+            ],
+            "examples": [
+              {
+                "event_id": 10,
+                "project": "RM-2026-003",
+                "title": "Zmiana umowy nr 1: roboty/dostawy/usługi dodatkowe (art. 455 ust. 1 pkt 3)",
+                "cause": "W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy."
+              },
+              {
+                "event_id": 11,
+                "project": "RM-2026-003",
+                "title": "Zmiana umowy nr 1: roboty/dostawy/usługi dodatkowe (art. 455 ust. 1 pkt 3)",
+                "cause": "W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy."
+              },
+              {
+                "event_id": 68,
+                "project": "RM-2026-018",
+                "title": "Zmiana umowy nr 1: zmiana o niewielkiej wartości (art. 455 ust. 2)",
+                "cause": "W toku realizacji umowy wystąpiła potrzeba rozszerzenia zakresu zamówienia , których wykonanie było niezbędne dla prawidłowej i kompletnej realizacji zamówienia. Zmiana nie powoduje zmiany ogólnego charakteru umowy, a jej wartość jest niższ"
+              }
+            ]
+          },
+          {
+            "code": "R07",
+            "name": "Nieprzewidziane zmiany i roboty dodatkowe",
+            "probability": 0.25461743355578975,
+            "k": 9,
+            "n": 22,
+            "projects": [
+              "RM-2026-001",
+              "RM-2026-004",
+              "RM-2026-005",
+              "RM-2026-006",
+              "RM-2026-009",
+              "RM-2026-012",
+              "RM-2026-015",
+              "RM-2026-019",
+              "RM-2026-021"
+            ],
+            "impact_cost_pct": 0.05159435424266266,
+            "impact_delay_days": null,
+            "n_cost_obs": 13,
+            "n_delay_obs": 0,
+            "emv_pct": 0.01313682206323504,
+            "emv_pln": 102467.2120932333,
+            "emv_days": null,
+            "bases": [
+              {
+                "basis": "art. 455 ust. 1 pkt 1",
+                "meaning": "zmiana przewidziana w dokumentach zamówienia",
+                "n": 6
+              },
+              {
+                "basis": "art. 455 ust. 2",
+                "meaning": "zmiana o niewielkiej wartości",
+                "n": 5
+              },
+              {
+                "basis": "art. 455 ust. 1 pkt 4",
+                "meaning": "okoliczności nieprzewidywalne",
+                "n": 5
+              }
+            ],
+            "examples": [
+              {
+                "event_id": 2,
+                "project": "RM-2026-001",
+                "title": "Zmiana umowy nr 3: zmiana o niewielkiej wartości (art. 455 ust. 2)",
+                "cause": "roboty uzupełniające - zmiany o niskiej wartości, na podstawie protokołu - konieczność wykonania robót polegających na wyburzeniu murów ceglano -betonowych wraz z transportem koparki i młota oraz załadunkiem i wywozem gruzu o wartości koszt"
+              },
+              {
+                "event_id": 4,
+                "project": "RM-2026-001",
+                "title": "Zmiana umowy nr 6: zmiana przewidziana w dokumentach zamówienia (art. 455 ust. 1 pkt 1)",
+                "cause": "porozumienie"
+              },
+              {
+                "event_id": 15,
+                "project": "RM-2026-004",
+                "title": "Zmiana umowy nr 1: zmiana przewidziana w dokumentach zamówienia (art. 455 ust. 1 pkt 1)",
+                "cause": "• Protokół konieczności nr 1 sporządzony w dniu 29 kwietnia 2026 r. Docieplenie ścian fundamentowych jest kluczowym elementem, wpływającym na efektywność energetyczną i trwałość budynku. Ocieplenie fundamentów zmniejsza straty ciepła w stre"
+              }
+            ]
+          },
+          {
+            "code": "R02",
+            "name": "Niedostateczne rozpoznanie stanu istniejącego",
+            "probability": 0.11852820885355138,
+            "k": 3,
+            "n": 22,
+            "projects": [
+              "RM-2026-011",
+              "RM-2026-014",
+              "RM-2026-020"
+            ],
+            "impact_cost_pct": 0.09167659039476993,
+            "impact_delay_days": null,
+            "n_cost_obs": 1,
+            "n_delay_obs": 0,
+            "emv_pct": 0.010866262053292773,
+            "emv_pln": 84756.84401568363,
+            "emv_days": null,
+            "bases": [
+              {
+                "basis": "art. 455 ust. 2",
+                "meaning": "zmiana o niewielkiej wartości",
+                "n": 2
+              },
+              {
+                "basis": "art. 455 ust. 1 pkt 1",
+                "meaning": "zmiana przewidziana w dokumentach zamówienia",
+                "n": 1
+              },
+              {
+                "basis": "art. 455 ust. 1 pkt 4",
+                "meaning": "okoliczności nieprzewidywalne",
+                "n": 1
+              }
+            ],
+            "examples": [
+              {
+                "event_id": 39,
+                "project": "RM-2026-011",
+                "title": "Zmiana umowy nr 1: zmiana o niewielkiej wartości (art. 455 ust. 2)",
+                "cause": "W związku z pojawieniem się w trakcie realizacji robót budowlanych budowy sieci wodociągowej w miejscowości Sanoczek gruntu skalnego na odcinku W150 – T80, tj. w miejscu przekroczenia DP5 drogi powiatowej nr 2212R Sanok – Bukowsko w km 1+92"
+              },
+              {
+                "event_id": 50,
+                "project": "RM-2026-014",
+                "title": "Zmiana umowy nr 1: zmiana przewidziana w dokumentach zamówienia (art. 455 ust. 1 pkt 1)",
+                "cause": "Wystąpienie niesprzyjających warunków gruntowych częściowo odmiennego gruntu, tj. kategorii V i VI (grunt skalny)"
+              },
+              {
+                "event_id": 51,
+                "project": "RM-2026-014",
+                "title": "Zmiana umowy nr 2: zmiana o niewielkiej wartości (art. 455 ust. 2)",
+                "cause": "Wykonanie dodatkowych robót w zakresie odspojenia częściowo odmiennego gruntu skalnego."
+              }
+            ]
+          },
+          {
+            "code": "R08",
+            "name": "Model wynagrodzenia niedopasowany do niepewności zakresu",
+            "probability": 0.019225447307639098,
+            "k": 1,
+            "n": 22,
+            "projects": [
+              "RM-2026-016"
+            ],
+            "impact_cost_pct": 0.038500001024714056,
+            "impact_delay_days": null,
+            "n_cost_obs": 1,
+            "n_delay_obs": 0,
+            "emv_pct": 0.0007401797410446913,
+            "emv_pln": 5773.401980148592,
+            "emv_days": null,
+            "bases": [
+              {
+                "basis": "art. 455 ust. 1 pkt 1",
+                "meaning": "zmiana przewidziana w dokumentach zamówienia",
+                "n": 1
+              }
+            ],
+            "examples": [
+              {
+                "event_id": 61,
+                "project": "RM-2026-016",
+                "title": "Zmiana umowy nr 2: zmiana przewidziana w dokumentach zamówienia (art. 455 ust. 1 pkt 1)",
+                "cause": "Waloryzacja wynagrodzenia"
+              }
+            ]
+          },
+          {
+            "code": "R04",
+            "name": "Decyzje, pozwolenia i uzgodnienia zależne od podmiotów trzecich",
+            "probability": 0.07577503831784656,
+            "k": 1,
+            "n": 22,
+            "projects": [
+              "RM-2026-003"
+            ],
+            "impact_cost_pct": null,
+            "impact_delay_days": null,
+            "n_cost_obs": 0,
+            "n_delay_obs": 0,
+            "emv_pct": null,
+            "emv_pln": null,
+            "emv_days": null,
+            "bases": [
+              {
+                "basis": "art. 455 ust. 1 pkt 1",
+                "meaning": "zmiana przewidziana w dokumentach zamówienia",
+                "n": 1
+              }
+            ],
+            "examples": [
+              {
+                "event_id": 12,
+                "project": "RM-2026-003",
+                "title": "Zmiana umowy nr 3: zmiana przewidziana w dokumentach zamówienia (art. 455 ust. 1 pkt 1)",
+                "cause": "Przedłużające się postępowanie administracyjne prowadzone przez Państwowe Gospodarstwo Wodne Wody Polskie w sprawie udzielenia pozwolenia wodnoprawnego na usługę wodną obejmującą wprowadzanie oczyszczonych ścieków bytowych pochodzących z oc"
+              }
+            ]
+          }
+        ],
+        "n": 22,
+        "method": "Prawdopodobieństwo = ważony (podobieństwo²) udział projektów z danymi, w których ryzyko się zmaterializowało (zdarzenie przyczynowe: zmiana umowy w BZP, dokument, wpis eksperta). Skutek = mediana kosztu zmian w % wartości umowy i mediana wydłużenia. EMV = prawdopodobieństwo × skutek."
+      },
+      "change_bases": {
+        "n": 40,
+        "rows": [
+          {
+            "basis": "art. 455 ust. 1 pkt 1",
+            "meaning": "zmiana przewidziana w dokumentach zamówienia",
+            "n": 20,
+            "share": 0.5
+          },
+          {
+            "basis": "art. 455 ust. 2",
+            "meaning": "zmiana o niewielkiej wartości",
+            "n": 10,
+            "share": 0.25
+          },
+          {
+            "basis": "art. 455 ust. 1 pkt 4",
+            "meaning": "okoliczności nieprzewidywalne",
+            "n": 8,
+            "share": 0.2
+          },
+          {
+            "basis": "art. 455 ust. 1 pkt 3",
+            "meaning": "roboty/dostawy/usługi dodatkowe",
+            "n": 2,
+            "share": 0.05
+          }
+        ],
+        "foreseen_share": 0.5,
+        "note": "Zmiana „przewidziana” (art. 455 ust. 1 pkt 1 Pzp) jest możliwa tylko, gdy umowa zawiera jasną klauzulę. Pozostałe podstawy (roboty dodatkowe, okoliczności nieprzewidziane, zmiana o niewielkiej wartości) mają limity wartości i większe ryzyko zarzutów przy kontroli — duży ich udział oznacza, że umowy nie przewidziały, co się stanie."
+      }
+    },
+    "wnioski": {
+      "flags": [
+        {
+          "risk_code": "R13",
+          "name": "Ryzyko utraty dofinansowania (termin zakończenia)",
+          "level": "wysoki",
+          "why": "w 16 z 22 podobnych przebiegów inwestycja nie zdążyłaby przed 2028-06-30 (ważone prawdopodobieństwo 74%); realny termin zakończenia P80: 2029-02-12",
+          "basis": "prognoza referencyjna"
+        },
+        {
+          "risk_code": "R08",
+          "name": "Waloryzacja wynagrodzenia (zmiana cen materiałów i kosztów)",
+          "level": "wysoki",
+          "why": "art. 439 Pzp: obowiązkowa w umowie na roboty budowlane zawartej na okres dłuższy niż 6 miesięcy — w projekcie umowy: wyłączona (umowa wprost wyłącza ten mechanizm)",
+          "basis": "audyt klauzul"
+        },
+        {
+          "risk_code": "R12",
+          "name": "Kary umowne z łącznym limitem",
+          "level": "wysoki",
+          "why": "art. 436 pkt 3 Pzp: umowa określa łączną maksymalną wysokość kar umownych — w projekcie umowy: niepełna (są kary umowne, ale brak łącznego limitu — wymóg art. 436 pkt 3 Pzp)",
+          "basis": "audyt klauzul"
+        },
+        {
+          "risk_code": "R06",
+          "name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
+          "level": "wysoki",
+          "why": "wystąpiło w 5 z 6 podobnych projektów (0 zatwierdzonych, 8 do weryfikacji)",
+          "basis": "grupa porównawcza"
+        },
+        {
+          "risk_code": "R07",
+          "name": "Nieprzewidziane zmiany i roboty dodatkowe",
+          "level": "wysoki",
+          "why": "wystąpiło w 5 z 6 podobnych projektów (0 zatwierdzonych, 7 do weryfikacji)",
+          "basis": "grupa porównawcza"
+        },
+        {
+          "risk_code": "R02",
+          "name": "Niedostateczne rozpoznanie stanu istniejącego",
+          "level": "do sprawdzenia",
+          "why": "sygnał w opisie/dokumentach planowanej inwestycji",
+          "basis": "opis inwestycji"
+        },
+        {
+          "risk_code": "R03",
+          "name": "Kolizje, dostęp do terenu i prawa do nieruchomości",
+          "level": "do sprawdzenia",
+          "why": "sygnał w opisie/dokumentach planowanej inwestycji",
+          "basis": "opis inwestycji"
+        },
+        {
+          "risk_code": "R04",
+          "name": "Decyzje, pozwolenia i uzgodnienia zależne od podmiotów trzecich",
+          "level": "do sprawdzenia",
+          "why": "sygnał w opisie/dokumentach planowanej inwestycji",
+          "basis": "opis inwestycji"
+        },
+        {
+          "risk_code": "R08",
+          "name": "Model wynagrodzenia niedopasowany do niepewności zakresu",
+          "level": "do sprawdzenia",
+          "why": "sygnał w opisie/dokumentach planowanej inwestycji",
+          "basis": "opis inwestycji"
+        },
+        {
+          "risk_code": "R10",
+          "name": "Niedookreślone próby, rozruch i odbiór",
+          "level": "do sprawdzenia",
+          "why": "sygnał w opisie/dokumentach planowanej inwestycji",
+          "basis": "opis inwestycji"
+        },
+        {
+          "risk_code": "R12",
+          "name": "Niewystarczająca zdolność wykonawcy lub łańcucha dostaw",
+          "level": "do sprawdzenia",
+          "why": "sygnał w opisie/dokumentach planowanej inwestycji",
+          "basis": "opis inwestycji"
+        },
+        {
+          "risk_code": "R09",
+          "name": "Niejednoznaczne lub niemierzalne wymagania techniczne",
+          "level": "do sprawdzenia",
+          "why": "formuła „zaprojektuj i wybuduj” przenosi decyzje i projekt na wykonawcę — kluczowe są PFU i podział odpowiedzialności",
+          "basis": "reguła ekspercka"
+        },
+        {
+          "risk_code": "R07",
+          "name": "Nieprzewidziane zmiany i roboty dodatkowe",
+          "level": "podwyższony",
+          "why": "w klasie referencyjnej 16 z 22 umów rozliczono powyżej wartości umowy; po podpisaniu umowy utrzymaj rezerwę P80 ≈ +27% ceny umowy (≈ 1 388 805 zł przy typowej cenie ofert) — oszczędności przetargowych nie zwalniaj w całości",
+          "basis": "prognoza referencyjna"
+        }
+      ],
+      "recommendations": [
+        {
+          "risk_code": "R06",
+          "name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
+          "mitigations": [
+            "Harmonogram uwzględniający okres zimowy, czas decyzji i odbiorów operatora.",
+            "Kamienie milowe i aktualizacja harmonogramu co miesiąc."
+          ],
+          "clauses": [
+            "Przesłanki przedłużenia terminu (warunki atmosferyczne uniemożliwiające roboty potwierdzone danymi IMGW, opóźnienia organów, kolizje)."
+          ],
+          "checks": [
+            "Czy termin realizacji jest zgodny z medianą dla podobnych projektów?",
+            "Czy uwzględniono okres zimowy?"
+          ]
+        },
+        {
+          "risk_code": "R07",
+          "name": "Nieprzewidziane zmiany i roboty dodatkowe",
+          "mitigations": [
+            "Rezerwa budżetowa na roboty nieprzewidziane; ścieżka szybkiej akceptacji zmian (protokół konieczności)."
+          ],
+          "clauses": [
+            "Katalog zmian przewidzianych (art. 455 ust. 1 pkt 1 Pzp) z zasadami wyceny i limitem łącznej wartości."
+          ],
+          "checks": [
+            "Czy przewidziano rezerwę na roboty nieprzewidziane?",
+            "Czy umowa zawiera katalog zmian?"
+          ]
+        },
+        {
+          "risk_code": "R02",
+          "name": "Niedostateczne rozpoznanie stanu istniejącego",
+          "mitigations": [
+            "Badania geotechniczne i inwentaryzacja uzbrojenia przed przetargiem.",
+            "Rezerwa na nieprzewidziane warunki (5–10%) w budżecie."
+          ],
+          "clauses": [
+            "Mechanizm podziału ryzyka warunków gruntowych odmiennych od opisanych w dokumentacji geotechnicznej (raport bazowy)."
+          ],
+          "checks": [
+            "Czy wykonano badania gruntu na trasie i w miejscach obiektów?",
+            "Czy zinwentaryzowano istniejące uzbrojenie?"
+          ]
+        },
+        {
+          "risk_code": "R03",
+          "name": "Kolizje, dostęp do terenu i prawa do nieruchomości",
+          "mitigations": [
+            "Uzyskanie zgód właścicieli / służebności przed ogłoszeniem przetargu.",
+            "Prowadzenie trasy w pasach drogowych tam, gdzie to możliwe; wczesne uzgodnienia z zarządcami dróg."
+          ],
+          "clauses": [
+            "Termin przekazania terenu w podziale na odcinki; przedłużenie terminu o czas opóźnienia w przekazaniu terenu z przyczyn Zamawiającego."
+          ],
+          "checks": [
+            "Czy dla wszystkich działek na trasie jest prawo do dysponowania terenem?",
+            "Czy znane są kolizje z innymi sieciami?"
+          ]
+        },
+        {
+          "risk_code": "R04",
+          "name": "Decyzje, pozwolenia i uzgodnienia zależne od podmiotów trzecich",
+          "mitigations": [
+            "Harmonogram decyzji z rezerwą czasową; uzyskanie kluczowych decyzji przed przetargiem w formule tradycyjnej.",
+            "W „zaprojektuj i wybuduj” — jasny podział, kto i w jakim terminie występuje o decyzje."
+          ],
+          "clauses": [
+            "Wydłużenie terminu o czas procedowania decyzji przez organy ponad terminy ustawowe (art. 455 ust. 1 pkt 1 Pzp — zmiana przewidziana)."
+          ],
+          "checks": [
+            "Czy wymagana jest decyzja środowiskowa / pozwolenie wodnoprawne?",
+            "Kto odpowiada za uzyskanie decyzji?"
+          ]
+        },
+        {
+          "risk_code": "R08",
+          "name": "Model wynagrodzenia niedopasowany do niepewności zakresu",
+          "mitigations": [
+            "Dobór modelu: ryczałt tylko przy pełnej dokumentacji; przy niepewnym zakresie — kosztorysowe lub mieszane.",
+            "Klauzula waloryzacyjna (art. 439 Pzp) oparta na wskaźniku GUS."
+          ],
+          "clauses": [
+            "Klauzula waloryzacyjna wg wskaźnika cen produkcji budowlano-montażowej GUS, z progiem i limitem zmiany."
+          ],
+          "checks": [
+            "Czy wybrany model wynagrodzenia odpowiada kompletności dokumentacji?"
+          ]
+        },
+        {
+          "risk_code": "R10",
+          "name": "Niedookreślone próby, rozruch i odbiór",
+          "mitigations": [
+            "Program prób i rozruchu w dokumentach zamówienia; udział operatora w odbiorach."
+          ],
+          "clauses": [
+            "Warunki odbioru końcowego: pozytywne próby, inspekcja TV kanałów, dokumentacja powykonawcza, szkolenie obsługi."
+          ],
+          "checks": [
+            "Czy określono program prób, rozruchu i kryteria odbioru?"
+          ]
+        },
+        {
+          "risk_code": "R12",
+          "name": "Niewystarczająca zdolność wykonawcy lub łańcucha dostaw",
+          "mitigations": [
+            "Weryfikacja doświadczenia i potencjału; zabezpieczenie należytego wykonania; kontrola podwykonawców."
+          ],
+          "clauses": [
+            "Kary umowne proporcjonalne z limitem; prawo odstąpienia przy opóźnieniu ponad X dni; bezpośrednia płatność podwykonawcom."
+          ],
+          "checks": [
+            "Czy przewidziano zabezpieczenie i mechanizmy reakcji na niewykonanie?"
+          ]
+        },
+        {
+          "risk_code": "R09",
+          "name": "Niejednoznaczne lub niemierzalne wymagania techniczne",
+          "mitigations": [
+            "Mierzalne parametry w PFU/OPZ (wydajność, ciśnienie, parametry ścieków oczyszczonych) i metody ich weryfikacji."
+          ],
+          "clauses": [
+            "Opis sposobu wykazania równoważności oraz metodyki prób potwierdzających parametry."
+          ],
+          "checks": [
+            "Czy wymagania techniczne są mierzalne i sprawdzalne przy odbiorze?"
+          ]
+        }
+      ],
+      "clause_audit": {
+        "has_contract": true,
+        "months": 14,
+        "rows": [
+          {
+            "id": "K09",
+            "name": "Kary umowne z łącznym limitem",
+            "ref": "art. 436 pkt 3 Pzp",
+            "risks": [
+              "R12"
+            ],
+            "status": "niepełna",
+            "note": "są kary umowne, ale brak łącznego limitu — wymóg art. 436 pkt 3 Pzp",
+            "required": true,
+            "required_text": "umowa określa łączną maksymalną wysokość kar umownych",
+            "legal_gap": true,
+            "evidence": {
+              "page": 1,
+              "doc": "projekt_umowy_przyklad.txt",
+              "quote": "Wykonawca zapłaci Zamawiającemu kary umowne:",
+              "pattern": "kar\\w* umown"
+            },
+            "data_why": [],
+            "probability": 0,
+            "emv_pct": null,
+            "model": "Łączna maksymalna wysokość kar umownych — np. 20% wynagrodzenia brutto; kary za zwłokę liczone od wartości niewykonanego etapu, nie całej umowy.",
+            "priority": 105
+          },
+          {
+            "id": "K01",
+            "name": "Waloryzacja wynagrodzenia (zmiana cen materiałów i kosztów)",
+            "ref": "art. 439 Pzp",
+            "risks": [
+              "R08",
+              "R13"
+            ],
+            "status": "wyłączona",
+            "note": "umowa wprost wyłącza ten mechanizm",
+            "required": true,
+            "required_text": "obowiązkowa w umowie na roboty budowlane zawartej na okres dłuższy niż 6 miesięcy",
+            "legal_gap": true,
+            "evidence": {
+              "page": 1,
+              "doc": "projekt_umowy_przyklad.txt",
+              "quote": "Wynagrodzenie, o którym mowa w ust. 1, jest stałe i nie podlega waloryzacji przez cały okres obowiązywania umowy.",
+              "pattern": "nie (podlega|przewiduje|przewiduj\\w*)[^.]{0,40}waloryzac"
+            },
+            "data_why": [
+              "R08 Model wynagrodzenia niedopasowany do niepewności zakresu: 1 z 22 podobnych umów, mediana kosztu zmian +3,9% wartości umowy; zmieniano na podstawie: art. 455 ust. 1 pkt 1 (1×)"
+            ],
+            "probability": 0.019225447307639098,
+            "emv_pct": 0.0007401797410446913,
+            "model": "Wynagrodzenie podlega waloryzacji wg wskaźnika cen produkcji budowlano-montażowej GUS, po przekroczeniu progu zmiany (np. 5%) liczonego od miesiąca złożenia oferty; maksymalna łączna zmiana — np. 10% wynagrodzenia; wskazanie, jak zmiana przenosi się na wynagrodzenie podwykonawców.",
+            "priority": 102
+          },
+          {
+            "id": "K02",
+            "name": "Katalog zmian przewidzianych (przesłanki, sposób wyceny, limit)",
+            "ref": "art. 455 ust. 1 pkt 1 Pzp",
+            "risks": [
+              "R07",
+              "R06",
+              "R01"
+            ],
+            "status": "jest",
+            "note": null,
+            "required": false,
+            "required_text": null,
+            "legal_gap": false,
+            "evidence": {
+              "page": 1,
+              "doc": "projekt_umowy_przyklad.txt",
+              "quote": "Zamawiający przewiduje możliwość dokonania istotnych zmian postanowień zawartej umowy w stosunku do treści oferty w następującym zakresie:",
+              "pattern": "przewiduje (sie )?(mozliwos\\w* )?(dokonani\\w* )?(istotn\\w* )?zmian"
+            },
+            "data_why": [
+              "R07 Nieprzewidziane zmiany i roboty dodatkowe: 9 z 22 podobnych umów, mediana kosztu zmian +5,2% wartości umowy; zmieniano na podstawie: art. 455 ust. 1 pkt 1 (6×), art. 455 ust. 2 (5×), art. 455 ust. 1 pkt 4 (5×)",
+              "R06 Nierealistyczny harmonogram i nieuwzględnione zależności: 9 z 22 podobnych umów, mediana kosztu zmian +6,8% wartości umowy, mediana wydłużenia 90 dni; zmieniano na podstawie: art. 455 ust. 1 pkt 1 (10×), art. 455 ust. 2 (2×)",
+              "R01 Niepełny lub niespójny zakres: 2 z 22 podobnych umów, mediana kosztu zmian +14,4% wartości umowy; zmieniano na podstawie: art. 455 ust. 1 pkt 3 (2×), art. 455 ust. 2 (1×)"
+            ],
+            "probability": 0.5409510343157604,
+            "emv_pct": 0.07736914059075414,
+            "model": "Zamknięty katalog zmian: przesłanka (zdarzenie), jej udokumentowanie, skutek (termin/wynagrodzenie), sposób wyceny (składniki cenotwórcze z oferty) i łączny limit wartości zmian. Zmiana „przewidziana” wymaga jasnych, precyzyjnych i jednoznacznych postanowień — inaczej zostają podstawy z limitami (pkt 3–4, ust. 2).",
+            "priority": 93
+          },
+          {
+            "id": "K04",
+            "name": "Przedłużenie terminu — warunki atmosferyczne z obiektywnym kryterium",
+            "ref": "art. 455 ust. 1 pkt 1 Pzp",
+            "risks": [
+              "R06"
+            ],
+            "status": "niepełna",
+            "note": "brak obiektywnego kryterium (np. dane IMGW, temperatura, liczba dni z opadem) — spór o to, czy pogoda „uniemożliwiała” roboty",
+            "required": false,
+            "required_text": null,
+            "legal_gap": false,
+            "evidence": {
+              "page": 1,
+              "doc": "projekt_umowy_przyklad.txt",
+              "quote": "a) zmiana terminu realizacji w przypadku wystąpienia niekorzystnych warunków atmosferycznych uniemożliwiających prowadzenie robót,",
+              "pattern": "warunk\\w* atmosferyczn"
+            },
+            "data_why": [
+              "R06 Nierealistyczny harmonogram i nieuwzględnione zależności: 9 z 22 podobnych umów, mediana kosztu zmian +6,8% wartości umowy, mediana wydłużenia 90 dni; zmieniano na podstawie: art. 455 ust. 1 pkt 1 (10×), art. 455 ust. 2 (2×)"
+            ],
+            "probability": 0.5409510343157604,
+            "emv_pct": 0.036645885258817186,
+            "model": "Termin wydłuża się o liczbę dni, w których warunki uniemożliwiały roboty, potwierdzone danymi IMGW (np. temperatura poniżej −5°C lub opad powyżej 10 mm/dobę) i wpisem do dziennika budowy.",
+            "priority": 58
+          },
+          {
+            "id": "K07",
+            "name": "Roboty zamienne, dodatkowe i zaniechane — zasady wyceny",
+            "ref": "art. 455 ust. 1 pkt 1 / pkt 3 Pzp",
+            "risks": [
+              "R07",
+              "R01"
+            ],
+            "status": "brak",
+            "note": null,
+            "required": false,
+            "required_text": null,
+            "legal_gap": false,
+            "evidence": null,
+            "data_why": [
+              "R07 Nieprzewidziane zmiany i roboty dodatkowe: 9 z 22 podobnych umów, mediana kosztu zmian +5,2% wartości umowy; zmieniano na podstawie: art. 455 ust. 1 pkt 1 (6×), art. 455 ust. 2 (5×), art. 455 ust. 1 pkt 4 (5×)",
+              "R01 Niepełny lub niespójny zakres: 2 z 22 podobnych umów, mediana kosztu zmian +14,4% wartości umowy; zmieniano na podstawie: art. 455 ust. 1 pkt 3 (2×), art. 455 ust. 2 (1×)"
+            ],
+            "probability": 0.25461743355578975,
+            "emv_pct": 0.040723255331936964,
+            "model": "Wycena zmian z kosztorysu ofertowego, a gdy brak pozycji — wg składników cenotwórczych z oferty i nakładów KNR/KNNR, ceny materiałów wg SEKOCENBUD; protokół konieczności przed wykonaniem robót.",
+            "priority": 54
+          },
+          {
+            "id": "K06",
+            "name": "Teren budowy, kolizje i prawa do nieruchomości",
+            "ref": "podział ryzyka (dobra praktyka)",
+            "risks": [
+              "R03"
+            ],
+            "status": "jest",
+            "note": null,
+            "required": false,
+            "required_text": null,
+            "legal_gap": false,
+            "evidence": {
+              "page": 1,
+              "doc": "projekt_umowy_przyklad.txt",
+              "quote": "Zamawiający przekaże Wykonawcy teren budowy w terminie 14 dni od dnia przedłożenia prawomocnej decyzji o pozwoleniu na budowę.",
+              "pattern": "przekaz\\w* (wykonawcy )?(terenu|teren|placu|plac) budowy"
+            },
+            "data_why": [
+              "R03 Kolizje, dostęp do terenu i prawa do nieruchomości: 3 z 22 podobnych umów, mediana kosztu zmian +21,7% wartości umowy, mediana wydłużenia 120 dni; zmieniano na podstawie: art. 455 ust. 1 pkt 4 (2×), art. 455 ust. 1 pkt 1 (1×)"
+            ],
+            "probability": 0.1935149373077456,
+            "emv_pct": 0.04195096526918575,
+            "model": "Przekazanie terenu w podziale na odcinki z terminami; przedłużenie terminu o czas opóźnienia w przekazaniu terenu lub ustanowieniu służebności z przyczyn zamawiającego; procedura dla kolizji z niezinwentaryzowanym uzbrojeniem.",
+            "priority": 48
+          },
+          {
+            "id": "K14",
+            "name": "Model wynagrodzenia dopasowany do niepewności zakresu",
+            "ref": "dobra praktyka",
+            "risks": [
+              "R08",
+              "R01",
+              "R02"
+            ],
+            "status": "do przemyślenia",
+            "note": "wynagrodzenie ryczałtowe przy niepewnym zakresie (R01/R02 w podobnych umowach) — rozważ rozliczenie mieszane albo mocny mechanizm zmian",
+            "required": false,
+            "required_text": null,
+            "legal_gap": false,
+            "evidence": {
+              "page": 1,
+              "doc": "projekt_umowy_przyklad.txt",
+              "quote": "Za wykonanie przedmiotu umowy Strony ustalają wynagrodzenie ryczałtowe w wysokości ……… zł brutto.",
+              "pattern": "ryczalt"
+            },
+            "data_why": [
+              "R08 Model wynagrodzenia niedopasowany do niepewności zakresu: 1 z 22 podobnych umów, mediana kosztu zmian +3,9% wartości umowy; zmieniano na podstawie: art. 455 ust. 1 pkt 1 (1×)",
+              "R01 Niepełny lub niespójny zakres: 2 z 22 podobnych umów, mediana kosztu zmian +14,4% wartości umowy; zmieniano na podstawie: art. 455 ust. 1 pkt 3 (2×), art. 455 ust. 2 (1×)",
+              "R02 Niedostateczne rozpoznanie stanu istniejącego: 3 z 22 podobnych umów, mediana kosztu zmian +9,2% wartości umowy; zmieniano na podstawie: art. 455 ust. 2 (2×), art. 455 ust. 1 pkt 1 (1×), art. 455 ust. 1 pkt 4 (1×)"
+            ],
+            "probability": 0.19117578578195019,
+            "emv_pct": 0.03919287506303939,
+            "model": "Przy niepewnym zakresie (sieci, grunt, przyłącza) — rozliczenie mieszane: ryczałt za projekt i obiekty, kosztorys/obmiar za długość sieci i przyłącza; albo ryczałt z jasnym mechanizmem zmian (K02, K07).",
+            "priority": 45
+          },
+          {
+            "id": "K08",
+            "name": "Hierarchia dokumentów umowy",
+            "ref": "dobra praktyka (spójność zakresu)",
+            "risks": [
+              "R01",
+              "R05"
+            ],
+            "status": "brak",
+            "note": null,
+            "required": false,
+            "required_text": null,
+            "legal_gap": false,
+            "evidence": null,
+            "data_why": [
+              "R01 Niepełny lub niespójny zakres: 2 z 22 podobnych umów, mediana kosztu zmian +14,4% wartości umowy; zmieniano na podstawie: art. 455 ust. 1 pkt 3 (2×), art. 455 ust. 2 (1×)"
+            ],
+            "probability": 0.19117578578195019,
+            "emv_pct": 0.027586433268701922,
+            "model": "W razie rozbieżności: Umowa > SWZ z wyjaśnieniami > PFU/projekt > STWiORB > przedmiar (pomocniczo przy ryczałcie).",
+            "priority": 39
+          },
+          {
+            "id": "K03",
+            "name": "Warunki gruntowe i stan istniejący odmienne od dokumentacji",
+            "ref": "podział ryzyka (dobra praktyka, raport bazowy)",
+            "risks": [
+              "R02"
+            ],
+            "status": "brak",
+            "note": null,
+            "required": false,
+            "required_text": null,
+            "legal_gap": false,
+            "evidence": null,
+            "data_why": [
+              "R02 Niedostateczne rozpoznanie stanu istniejącego: 3 z 22 podobnych umów, mediana kosztu zmian +9,2% wartości umowy; zmieniano na podstawie: art. 455 ust. 2 (2×), art. 455 ust. 1 pkt 1 (1×), art. 455 ust. 1 pkt 4 (1×)"
+            ],
+            "probability": 0.11852820885355138,
+            "emv_pct": 0.010866262053292773,
+            "model": "Dokumentacja geotechniczna jako „raport bazowy”: warunki gorsze niż opisane uprawniają do zmiany terminu i wynagrodzenia (wycena wg składników z oferty); ryzyko warunków opisanych w raporcie ponosi wykonawca.",
+            "priority": 20
+          },
+          {
+            "id": "K11",
+            "name": "Podwykonawstwo i bezpośrednia zapłata podwykonawcom",
+            "ref": "art. 437, art. 463–465 Pzp",
+            "risks": [
+              "R12"
+            ],
+            "status": "niepełna",
+            "note": "podwykonawstwo wspomniane, ale bez zasad zapłaty i akceptacji umów (art. 464–465 Pzp)",
+            "required": false,
+            "required_text": null,
+            "legal_gap": false,
+            "evidence": {
+              "page": 1,
+              "doc": "projekt_umowy_przyklad.txt",
+              "quote": "Wykonawca może powierzyć wykonanie części robót podwykonawcom po uzyskaniu akceptacji Zamawiającego.",
+              "pattern": "podwykonaw"
+            },
+            "data_why": [],
+            "probability": 0,
+            "emv_pct": null,
+            "model": "Akceptacja projektów umów o podwykonawstwo, dowody zapłaty jako warunek zapłaty wykonawcy, bezpośrednia zapłata podwykonawcy i potrącenie z wynagrodzenia wykonawcy.",
+            "priority": 5
+          },
+          {
+            "id": "K05",
+            "name": "Przedłużenie terminu — decyzje, organy, gestorzy sieci",
+            "ref": "art. 455 ust. 1 pkt 1 Pzp",
+            "risks": [
+              "R04"
+            ],
+            "status": "jest",
+            "note": null,
+            "required": false,
+            "required_text": null,
+            "legal_gap": false,
+            "evidence": {
+              "page": 1,
+              "doc": "projekt_umowy_przyklad.txt",
+              "quote": "b) zmiana terminu realizacji o czas przedłużającego się ponad terminy ustawowe postępowania organu w sprawie wydania decyzji lub uzgodnień, o ile Wykonawca złożył kompletny wniosek,",
+              "pattern": "(przedluz|zmian\\w* terminu|wydluz)[^.]{0,140}(decyzj|pozwoleni|uzgodnieni|organ\\w*|gestor)"
+            },
+            "data_why": [
+              "R04 Decyzje, pozwolenia i uzgodnienia zależne od podmiotów trzecich: 1 z 22 podobnych umów; zmieniano na podstawie: art. 455 ust. 1 pkt 1 (1×)"
+            ],
+            "probability": 0.07577503831784656,
+            "emv_pct": null,
+            "model": "Wydłużenie terminu o czas procedowania decyzji/uzgodnień ponad terminy ustawowe, jeśli wykonawca złożył kompletny wniosek w terminie z harmonogramu; obowiązek bieżącego informowania zamawiającego.",
+            "priority": 2
+          },
+          {
+            "id": "K10",
+            "name": "Płatności częściowe / zaliczki",
+            "ref": "art. 443 i art. 447 Pzp",
+            "risks": [
+              "R13",
+              "R12"
+            ],
+            "status": "jest",
+            "note": null,
+            "required": true,
+            "required_text": "w umowie na okres dłuższy niż 12 miesięcy — zapłata częściowego wynagrodzenia lub zaliczki (art. 447 Pzp)",
+            "legal_gap": false,
+            "evidence": {
+              "page": 1,
+              "doc": "projekt_umowy_przyklad.txt",
+              "quote": "Rozliczenie nastąpi fakturami częściowymi za odebrane elementy harmonogramu rzeczowo-finansowego, do 80% wynagrodzenia, oraz fakturą końcową.",
+              "pattern": "(platnos|wynagrodzeni|faktur)\\w* czesciow"
+            },
+            "data_why": [],
+            "probability": 0,
+            "emv_pct": null,
+            "model": "Płatności częściowe za odebrane elementy harmonogramu rzeczowo-finansowego (np. co kwartał), z limitem przed odbiorem końcowym; zgodność z harmonogramem wypłat dofinansowania.",
+            "priority": 0
+          },
+          {
+            "id": "K12",
+            "name": "Odbiory, próby i rozruch (kryteria odbioru)",
+            "ref": "dobra praktyka (sektor wod-kan)",
+            "risks": [
+              "R10",
+              "R15"
+            ],
+            "status": "jest",
+            "note": null,
+            "required": false,
+            "required_text": null,
+            "legal_gap": false,
+            "evidence": {
+              "page": 1,
+              "doc": "projekt_umowy_przyklad.txt",
+              "quote": "Strony przewidują odbiory robót zanikających, odbiory częściowe i odbiór końcowy.",
+              "pattern": "odbior\\w* (koncow|czesciow|robot zanikajac)"
+            },
+            "data_why": [],
+            "probability": 0,
+            "emv_pct": null,
+            "model": "Warunki odbioru: pozytywne próby szczelności, inspekcja TV kanałów z raportem, rozruch przepompowni, dokumentacja powykonawcza i inwentaryzacja geodezyjna, szkolenie obsługi.",
+            "priority": 0
+          },
+          {
+            "id": "K13",
+            "name": "Zabezpieczenie należytego wykonania umowy",
+            "ref": "art. 449–453 Pzp",
+            "risks": [
+              "R12"
+            ],
+            "status": "jest",
+            "note": null,
+            "required": false,
+            "required_text": null,
+            "legal_gap": false,
+            "evidence": {
+              "page": 1,
+              "doc": "projekt_umowy_przyklad.txt",
+              "quote": "§ 7. Zabezpieczenie należytego wykonania umowy",
+              "pattern": "zabezpieczeni\\w* nalezyt"
+            },
+            "data_why": [],
+            "probability": 0,
+            "emv_pct": null,
+            "model": "Zabezpieczenie (np. 5% ceny ofertowej), 70% zwracane po odbiorze końcowym, 30% po okresie rękojmi.",
+            "priority": 0
+          }
+        ],
+        "summary": "Sprawdzono 14 klauzul. Wymogi ustawowe niespełnione: 2 (art. 436 pkt 3 Pzp, art. 439 Pzp). Luki wobec ryzyk, które wystąpiły w podobnych umowach: 5.",
+        "n_reference": 22,
+        "bases": {
+          "n": 40,
+          "rows": [
+            {
+              "basis": "art. 455 ust. 1 pkt 1",
+              "meaning": "zmiana przewidziana w dokumentach zamówienia",
+              "n": 20,
+              "share": 0.5
+            },
+            {
+              "basis": "art. 455 ust. 2",
+              "meaning": "zmiana o niewielkiej wartości",
+              "n": 10,
+              "share": 0.25
+            },
+            {
+              "basis": "art. 455 ust. 1 pkt 4",
+              "meaning": "okoliczności nieprzewidywalne",
+              "n": 8,
+              "share": 0.2
+            },
+            {
+              "basis": "art. 455 ust. 1 pkt 3",
+              "meaning": "roboty/dostawy/usługi dodatkowe",
+              "n": 2,
+              "share": 0.05
+            }
+          ],
+          "foreseen_share": 0.5,
+          "note": "Zmiana „przewidziana” (art. 455 ust. 1 pkt 1 Pzp) jest możliwa tylko, gdy umowa zawiera jasną klauzulę. Pozostałe podstawy (roboty dodatkowe, okoliczności nieprzewidziane, zmiana o niewielkiej wartości) mają limity wartości i większe ryzyko zarzutów przy kontroli — duży ich udział oznacza, że umowy nie przewidziały, co się stanie."
+        },
+        "disclaimer": "Lista kontrolna dla eksperta i prawnika — nie stanowi opinii prawnej. Wzorcowe zapisy wymagają dostosowania."
+      },
+      "issues_to_check": [
+        {
+          "id": "C1",
+          "text": "Konkretny problem zaopatrzenia w wodę / odprowadzania ścieków i oczekiwany efekt inwestycji.",
+          "ref": "1.1–1.2",
+          "note": "Brak informacji w opisie — uzupełnić przed uruchomieniem projektu."
+        },
+        {
+          "id": "C8",
+          "text": "Wstępne rozpoznanie potrzeby decyzji środowiskowej i ograniczeń ochrony przyrody.",
+          "ref": "6.3–6.5",
+          "note": "Brak informacji w opisie — uzupełnić przed uruchomieniem projektu."
+        }
+      ],
+      "signals_in_input": [
+        {
+          "risk_code": "R08",
+          "name": "Model wynagrodzenia niedopasowany do niepewności zakresu",
+          "quote": "Wynagrodzenie, o którym mowa w ust. 1, jest stałe i nie podlega waloryzacji przez cały okres obowiązywania umowy."
+        },
+        {
+          "risk_code": "R12",
+          "name": "Niewystarczająca zdolność wykonawcy lub łańcucha dostaw",
+          "quote": "c) z tytułu odstąpienia od umowy z przyczyn leżących po stronie Wykonawcy — 20% wynagrodzenia brutto."
+        },
+        {
+          "risk_code": "R06",
+          "name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
+          "quote": "a) zmiana terminu realizacji w przypadku wystąpienia niekorzystnych warunków atmosferycznych uniemożliwiających prowadzenie robót,"
+        },
+        {
+          "risk_code": "R06",
+          "name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
+          "quote": "a) zmiana terminu realizacji w przypadku wystąpienia niekorzystnych warunków atmosferycznych uniemożliwiających prowadzenie robót,"
+        },
+        {
+          "risk_code": "R06",
+          "name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
+          "quote": "b) zmiana terminu realizacji o czas przedłużającego się ponad terminy ustawowe postępowania organu w sprawie wydania decyzji lub uzgodnień, o ile Wykonawca złożył kompletny wniosek,"
+        },
+        {
+          "risk_code": "R03",
+          "name": "Kolizje, dostęp do terenu i prawa do nieruchomości",
+          "quote": "c) zmiana sposobu wykonania przedmiotu umowy w przypadku wystąpienia kolizji z niezinwentaryzowanymi sieciami uzbrojenia terenu."
+        },
+        {
+          "risk_code": "R03",
+          "name": "Kolizje, dostęp do terenu i prawa do nieruchomości",
+          "quote": "Trasa przebiega w pasie dróg gminnych i powiatowych, częściowo przez grunty prywatne; przewidziano przekroczenie cieku i drogi wojewódzkiej przewiertem."
+        },
+        {
+          "risk_code": "R04",
+          "name": "Decyzje, pozwolenia i uzgodnienia zależne od podmiotów trzecich",
+          "quote": "Zamawiający przekaże Wykonawcy teren budowy w terminie 14 dni od dnia przedłożenia prawomocnej decyzji o pozwoleniu na budowę."
+        },
+        {
+          "risk_code": "R08",
+          "name": "Model wynagrodzenia niedopasowany do niepewności zakresu",
+          "quote": "Za wykonanie przedmiotu umowy Strony ustalają wynagrodzenie ryczałtowe w wysokości ……… zł brutto."
+        },
+        {
+          "risk_code": "R08",
+          "name": "Model wynagrodzenia niedopasowany do niepewności zakresu",
+          "quote": "Wynagrodzenie, o którym mowa w ust. 1, jest stałe i nie podlega waloryzacji przez cały okres obowiązywania umowy."
+        },
+        {
+          "risk_code": "R06",
+          "name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
+          "quote": "Rozliczenie nastąpi fakturami częściowymi za odebrane elementy harmonogramu rzeczowo-finansowego, do 80% wynagrodzenia, oraz fakturą końcową."
+        },
+        {
+          "risk_code": "R10",
+          "name": "Niedookreślone próby, rozruch i odbiór",
+          "quote": "Warunkiem odbioru końcowego jest przedłożenie protokołów prób szczelności, raportu z inspekcji TV kanałów oraz dokumentacji powykonawczej z inwentaryzacją geodezyjną."
+        },
+        {
+          "risk_code": "R12",
+          "name": "Niewystarczająca zdolność wykonawcy lub łańcucha dostaw",
+          "quote": "Wykonawca zapłaci Zamawiającemu kary umowne:"
+        },
+        {
+          "risk_code": "R12",
+          "name": "Niewystarczająca zdolność wykonawcy lub łańcucha dostaw",
+          "quote": "c) z tytułu odstąpienia od umowy z przyczyn leżących po stronie Wykonawcy — 20% wynagrodzenia brutto."
+        },
+        {
+          "risk_code": "R06",
+          "name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
+          "quote": "a) zmiana terminu realizacji w przypadku wystąpienia niekorzystnych warunków atmosferycznych uniemożliwiających prowadzenie robót,"
+        },
+        {
+          "risk_code": "R06",
+          "name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
+          "quote": "b) zmiana terminu realizacji o czas przedłużającego się ponad terminy ustawowe postępowania organu w sprawie wydania decyzji lub uzgodnień, o ile Wykonawca złożył kompletny wniosek,"
+        },
+        {
+          "risk_code": "R02",
+          "name": "Niedostateczne rozpoznanie stanu istniejącego",
+          "quote": "c) zmiana sposobu wykonania przedmiotu umowy w przypadku wystąpienia kolizji z niezinwentaryzowanymi sieciami uzbrojenia terenu."
+        },
+        {
+          "risk_code": "R03",
+          "name": "Kolizje, dostęp do terenu i prawa do nieruchomości",
+          "quote": "c) zmiana sposobu wykonania przedmiotu umowy w przypadku wystąpienia kolizji z niezinwentaryzowanymi sieciami uzbrojenia terenu."
+        },
+        {
+          "risk_code": "R07",
+          "name": "Nieprzewidziane zmiany i roboty dodatkowe",
+          "quote": "Zmiana umowy wymaga formy pisemnej pod rygorem nieważności."
+        }
+      ],
+      "checklist": [
+        {
+          "id": "C1",
+          "text": "Konkretny problem zaopatrzenia w wodę / odprowadzania ścieków i oczekiwany efekt inwestycji.",
+          "ref": "1.1–1.2",
+          "covered": false,
+          "evidence": []
+        },
+        {
+          "id": "C2",
+          "text": "Obszar obsługi oraz przybliżona liczba i charakter odbiorców.",
+          "ref": "1.3–1.4",
+          "covered": true,
+          "evidence": [
+            "nieruchomos"
+          ]
+        },
+        {
+          "id": "C3",
+          "text": "Przewidywani odbiorcy początkowi i wiarygodne przesłanki dalszego przyłączania nieruchomości.",
+          "ref": "2.1–2.3",
+          "covered": true,
+          "evidence": [
+            "przylacz"
+          ]
+        },
+        {
+          "id": "C4",
+          "text": "Orientacyjny przebieg i długość sieci oraz zakres przewidywanych przyłączy.",
+          "ref": "3.1–3.4",
+          "covered": true,
+          "evidence": [
+            "\\d+[,.]?\\d*\\s*(km|mb|m)\\b",
+            "dlugos",
+            "przebieg"
+          ]
+        },
+        {
+          "id": "C5",
+          "text": "Przewidywane miejsce zasilania / odbioru ścieków i stanowisko operatora.",
+          "ref": "4.1–4.4",
+          "covered": true,
+          "evidence": [
+            "istniejac\\w* (sieci|oczyszczalni|kanalizacj)"
+          ]
+        },
+        {
+          "id": "C6",
+          "text": "Wstępna trasa sieci, rodzaj własności gruntów i znane trudności z dostępem.",
+          "ref": "5.1–5.4",
+          "covered": true,
+          "evidence": [
+            "grunt",
+            "pas\\w* drog",
+            "prywatn"
+          ]
+        },
+        {
+          "id": "C7",
+          "text": "Główne przeszkody lokalizacyjne i zależności od innych inwestycji.",
+          "ref": "5.4; 6.1–6.2",
+          "covered": true,
+          "evidence": [
+            "kolizj",
+            "ciek",
+            "przekroczen"
+          ]
+        },
+        {
+          "id": "C8",
+          "text": "Wstępne rozpoznanie potrzeby decyzji środowiskowej i ograniczeń ochrony przyrody.",
+          "ref": "6.3–6.5",
+          "covered": false,
+          "evidence": []
+        },
+        {
+          "id": "C9",
+          "text": "Podział odpowiedzialności za przygotowanie, projekt, nieruchomości, decyzje i eksploatację oraz główne ryzyka.",
+          "ref": "7.1–7.5",
+          "covered": true,
+          "evidence": [
+            "zaprojektuj i wybuduj"
+          ]
+        }
+      ],
+      "method_note": "Wnioski generowane regułami katalogu eksperckiego na podstawie danych i obliczeń powyżej. Wymagają oceny eksperta."
+    },
+    "llm": {
+      "enabled": false,
+      "provider": "none",
+      "model": "",
+      "base_url": "",
+      "data_location": "nie dotyczy (LLM wyłączony)"
+    }
+  },
+  "documents": [
+    {
+      "id": 1,
+      "filename": "projekt_umowy_przyklad.txt",
+      "doc_type": "Umowa",
+      "n_pages": 1
+    }
+  ]
+}

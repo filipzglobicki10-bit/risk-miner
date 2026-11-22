@@ -1,0 +1,1868 @@
+{
+ "generated_at": "2026-11-22T06:16:56+00:00",
+ "summary": {
+  "poprawne": 72,
+  "niepewne": 33,
+  "błędne": 0
+ },
+ "links": {
+  "poprawne": [
+   {
+    "project": "RM-2026-001",
+    "name": "Budowa rurociągu tłocznego kanalizacji sanitarnej Godzikowice – Jaczkowice, gmina Oława",
+    "from": "project#1",
+    "to": "bzp:2022/BZP 00058537/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2022/BZP 00058537/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-001",
+    "name": "Budowa rurociągu tłocznego kanalizacji sanitarnej Godzikowice – Jaczkowice, gmina Oława",
+    "from": "procurement#1",
+    "to": "bzp:2022/BZP 00115288/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-386e6a91-8d90-11ec-94c8-de8df8ed9da1)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-001",
+    "name": "Budowa rurociągu tłocznego kanalizacji sanitarnej Godzikowice – Jaczkowice, gmina Oława",
+    "from": "procurement#1",
+    "to": "bzp:2026/BZP 00147223/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-386e6a91-8d90-11ec-94c8-de8df8ed9da1)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-002",
+    "name": "Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice",
+    "from": "procurement#2",
+    "to": "bzp:2026/BZP 00143366/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-7ae14583-9ae6-40e4-bbf5-11c0fdbdaff8)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-002",
+    "name": "Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice",
+    "from": "procurement#2",
+    "to": "bzp:2026/BZP 00285691/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-7ae14583-9ae6-40e4-bbf5-11c0fdbdaff8)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-002",
+    "name": "Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice",
+    "from": "procurement#2",
+    "to": "bzp:2026/BZP 00277648/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-7ae14583-9ae6-40e4-bbf5-11c0fdbdaff8)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-003",
+    "name": "Budowa oczyszczalni ścieków w miejscowości Steklin w formule zaprojektuj i wybuduj",
+    "from": "project#3",
+    "to": "bzp:2024/BZP 00349631/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2024/BZP 00349631/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-003",
+    "name": "Budowa oczyszczalni ścieków w miejscowości Steklin w formule zaprojektuj i wybuduj",
+    "from": "procurement#3",
+    "to": "bzp:2024/BZP 00418711/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-6b092479-223f-11ef-87ba-8eb060fd7bb8)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-003",
+    "name": "Budowa oczyszczalni ścieków w miejscowości Steklin w formule zaprojektuj i wybuduj",
+    "from": "procurement#3",
+    "to": "bzp:2024/BZP 00618384/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-6b092479-223f-11ef-87ba-8eb060fd7bb8)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-003",
+    "name": "Budowa oczyszczalni ścieków w miejscowości Steklin w formule zaprojektuj i wybuduj",
+    "from": "procurement#3",
+    "to": "bzp:2024/BZP 00554831/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-6b092479-223f-11ef-87ba-8eb060fd7bb8)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-003",
+    "name": "Budowa oczyszczalni ścieków w miejscowości Steklin w formule zaprojektuj i wybuduj",
+    "from": "procurement#3",
+    "to": "bzp:2026/BZP 00276065/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-6b092479-223f-11ef-87ba-8eb060fd7bb8)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-004",
+    "name": "Modernizacja Stacji Uzdatniania Wody w Czernikowie",
+    "from": "project#4",
+    "to": "bzp:2025/BZP 00569258/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2025/BZP 00569258/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-004",
+    "name": "Modernizacja Stacji Uzdatniania Wody w Czernikowie",
+    "from": "procurement#4",
+    "to": "bzp:2026/BZP 00061193/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-7a870ddc-987c-458c-b435-1decc430d54b)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-004",
+    "name": "Modernizacja Stacji Uzdatniania Wody w Czernikowie",
+    "from": "procurement#4",
+    "to": "bzp:2026/BZP 00514691/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-7a870ddc-987c-458c-b435-1decc430d54b)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-005",
+    "name": "Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania wody w miejscowości Pędzewo",
+    "from": "procurement#5",
+    "to": "bzp:2025/BZP 00342797/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-178b5ecf-5d3b-4d67-8a10-2a0d1597c00d)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-005",
+    "name": "Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania wody w miejscowości Pędzewo",
+    "from": "procurement#5",
+    "to": "bzp:2026/BZP 00021981/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-178b5ecf-5d3b-4d67-8a10-2a0d1597c00d)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-006",
+    "name": "Przebudowa (modernizacja) oczyszczalni ścieków w m. Gościeradów Folwark",
+    "from": "project#6",
+    "to": "bzp:2024/BZP 00067908/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2024/BZP 00067908/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-006",
+    "name": "Przebudowa (modernizacja) oczyszczalni ścieków w m. Gościeradów Folwark",
+    "from": "procurement#6",
+    "to": "bzp:2024/BZP 00245620/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-89142c9f-bb81-11ee-b7da-22bd761ba7f3)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-006",
+    "name": "Przebudowa (modernizacja) oczyszczalni ścieków w m. Gościeradów Folwark",
+    "from": "procurement#6",
+    "to": "bzp:2024/BZP 00452852/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-89142c9f-bb81-11ee-b7da-22bd761ba7f3)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-006",
+    "name": "Przebudowa (modernizacja) oczyszczalni ścieków w m. Gościeradów Folwark",
+    "from": "procurement#6",
+    "to": "bzp:2024/BZP 00404273/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-89142c9f-bb81-11ee-b7da-22bd761ba7f3)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-006",
+    "name": "Przebudowa (modernizacja) oczyszczalni ścieków w m. Gościeradów Folwark",
+    "from": "procurement#6",
+    "to": "bzp:2024/BZP 00572624/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-89142c9f-bb81-11ee-b7da-22bd761ba7f3)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-007",
+    "name": "Rozbudowa sieci wodociągowej w gminie Kamionka",
+    "from": "procurement#7",
+    "to": "bzp:2026/BZP 00204390/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-54d2a7cc-2602-4beb-a8f1-f165fa9f5643)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-007",
+    "name": "Rozbudowa sieci wodociągowej w gminie Kamionka",
+    "from": "procurement#7",
+    "to": "bzp:2026/BZP 00343684/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-54d2a7cc-2602-4beb-a8f1-f165fa9f5643)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-008",
+    "name": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Biecz",
+    "from": "project#8",
+    "to": "bzp:2026/BZP 00084760/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2026/BZP 00084760/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-008",
+    "name": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Biecz",
+    "from": "procurement#8",
+    "to": "bzp:2026/BZP 00166534/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-e7a9ab5f-b563-4052-8061-b7c7f627317f)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-008",
+    "name": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Biecz",
+    "from": "procurement#8",
+    "to": "bzp:2026/BZP 00255185/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-e7a9ab5f-b563-4052-8061-b7c7f627317f)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-008",
+    "name": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Biecz",
+    "from": "procurement#8",
+    "to": "bzp:2026/BZP 00255161/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-e7a9ab5f-b563-4052-8061-b7c7f627317f)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-008",
+    "name": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Biecz",
+    "from": "procurement#8",
+    "to": "bzp:2026/BZP 00255135/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-e7a9ab5f-b563-4052-8061-b7c7f627317f)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-008",
+    "name": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Biecz",
+    "from": "procurement#8",
+    "to": "bzp:2026/BZP 00255110/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-e7a9ab5f-b563-4052-8061-b7c7f627317f)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-009",
+    "name": "Budowa sieci wodociągowej na terenie gminy Zakrzew",
+    "from": "project#9",
+    "to": "bzp:2025/BZP 00307948/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2025/BZP 00307948/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-009",
+    "name": "Budowa sieci wodociągowej na terenie gminy Zakrzew",
+    "from": "procurement#9",
+    "to": "bzp:2025/BZP 00422149/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-3effd421-a978-4e81-abfa-5fa0743da387)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-009",
+    "name": "Budowa sieci wodociągowej na terenie gminy Zakrzew",
+    "from": "procurement#9",
+    "to": "bzp:2025/BZP 00568661/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-3effd421-a978-4e81-abfa-5fa0743da387)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-009",
+    "name": "Budowa sieci wodociągowej na terenie gminy Zakrzew",
+    "from": "procurement#9",
+    "to": "bzp:2025/BZP 00568576/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-3effd421-a978-4e81-abfa-5fa0743da387)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-010",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne, gmina Grodzisko Dolne",
+    "from": "procurement#10",
+    "to": "bzp:2025/BZP 00347687/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-308b01d6-76cd-4660-ac66-193bc03593ae)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-010",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne, gmina Grodzisko Dolne",
+    "from": "procurement#10",
+    "to": "bzp:2026/BZP 00004536/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-308b01d6-76cd-4660-ac66-193bc03593ae)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-011",
+    "name": "Budowa sieci wodociągowej w miejscowości Czerteż, Zabłotce oraz w części miejscowości Sanoczek",
+    "from": "project#11",
+    "to": "bzp:2023/BZP 00271948/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2023/BZP 00271948/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-011",
+    "name": "Budowa sieci wodociągowej w miejscowości Czerteż, Zabłotce oraz w części miejscowości Sanoczek",
+    "from": "procurement#11",
+    "to": "bzp:2023/BZP 00328063/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-b3207930-10ec-11ee-b70f-ae2d9e28ec7b)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-011",
+    "name": "Budowa sieci wodociągowej w miejscowości Czerteż, Zabłotce oraz w części miejscowości Sanoczek",
+    "from": "procurement#11",
+    "to": "bzp:2024/BZP 00016072/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-b3207930-10ec-11ee-b70f-ae2d9e28ec7b)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-012",
+    "name": "Budowa tranzytu przesyłowego sieci kanalizacji sanitarnej ze Smętowa Chmieleńskiego do Kos",
+    "from": "project#12",
+    "to": "bzp:2025/BZP 00119683/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2025/BZP 00119683/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-012",
+    "name": "Budowa tranzytu przesyłowego sieci kanalizacji sanitarnej ze Smętowa Chmieleńskiego do Kos",
+    "from": "procurement#12",
+    "to": "bzp:2025/BZP 00245411/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-33255305-30b2-465f-b54f-adc9c07cb712)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-012",
+    "name": "Budowa tranzytu przesyłowego sieci kanalizacji sanitarnej ze Smętowa Chmieleńskiego do Kos",
+    "from": "procurement#12",
+    "to": "bzp:2026/BZP 00025187/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-33255305-30b2-465f-b54f-adc9c07cb712)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-013",
+    "name": "Budowa sieci kanalizacji sanitarnej w Gminie Bestwina – sołectwo Kaniów",
+    "from": "project#13",
+    "to": "bzp:2023/BZP 00206497/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2023/BZP 00206497/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-013",
+    "name": "Budowa sieci kanalizacji sanitarnej w Gminie Bestwina – sołectwo Kaniów",
+    "from": "procurement#13",
+    "to": "bzp:2023/BZP 00261764/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-d906b948-eb2f-11ed-9355-06954b8c6cb9)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-013",
+    "name": "Budowa sieci kanalizacji sanitarnej w Gminie Bestwina – sołectwo Kaniów",
+    "from": "procurement#13",
+    "to": "bzp:2024/BZP 00637524/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-d906b948-eb2f-11ed-9355-06954b8c6cb9)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-014",
+    "name": "Budowa sieci kanalizacji sanitarnej ul. Słoneczna w Siemoni",
+    "from": "project#14",
+    "to": "bzp:2026/BZP 00130634/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2026/BZP 00130634/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-014",
+    "name": "Budowa sieci kanalizacji sanitarnej ul. Słoneczna w Siemoni",
+    "from": "procurement#14",
+    "to": "bzp:2026/BZP 00195507/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-ce3ed521-c6ce-45c4-b8af-ec1751be1dde)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-014",
+    "name": "Budowa sieci kanalizacji sanitarnej ul. Słoneczna w Siemoni",
+    "from": "procurement#14",
+    "to": "bzp:2026/BZP 00331672/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-ce3ed521-c6ce-45c4-b8af-ec1751be1dde)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-015",
+    "name": "Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów w formule zaprojektuj i wybuduj",
+    "from": "project#15",
+    "to": "bzp:2023/BZP 00135041/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2023/BZP 00135041/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-015",
+    "name": "Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów w formule zaprojektuj i wybuduj",
+    "from": "procurement#15",
+    "to": "bzp:2023/BZP 00198087/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-9faadc91-c25f-11ed-8261-62cbbe4d0ca4)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-015",
+    "name": "Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów w formule zaprojektuj i wybuduj",
+    "from": "procurement#15",
+    "to": "bzp:2025/BZP 00388035/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-9faadc91-c25f-11ed-8261-62cbbe4d0ca4)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-015",
+    "name": "Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów w formule zaprojektuj i wybuduj",
+    "from": "procurement#15",
+    "to": "bzp:2025/BZP 00228324/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-9faadc91-c25f-11ed-8261-62cbbe4d0ca4)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-015",
+    "name": "Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów w formule zaprojektuj i wybuduj",
+    "from": "procurement#15",
+    "to": "bzp:2025/BZP 00494163/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-9faadc91-c25f-11ed-8261-62cbbe4d0ca4)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-016",
+    "name": "Budowa sieci wodociągowej o długości 22,616 km i sieci kanalizacji sanitarnej na odcinku 18,09 km na obszarach wiejskich Gminy Miłakowo",
+    "from": "project#16",
+    "to": "bzp:2022/BZP 00308854/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2022/BZP 00308854/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-016",
+    "name": "Budowa sieci wodociągowej o długości 22,616 km i sieci kanalizacji sanitarnej na odcinku 18,09 km na obszarach wiejskich Gminy Miłakowo",
+    "from": "procurement#16",
+    "to": "bzp:2022/BZP 00377000/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-c271f196-1e1f-11ed-b950-8227d40187e8)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-016",
+    "name": "Budowa sieci wodociągowej o długości 22,616 km i sieci kanalizacji sanitarnej na odcinku 18,09 km na obszarach wiejskich Gminy Miłakowo",
+    "from": "procurement#16",
+    "to": "bzp:2025/BZP 00183165/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-c271f196-1e1f-11ed-b950-8227d40187e8)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-017",
+    "name": "Budowa sieci kanalizacji sanitarnej wraz z przyłączami w miejscowości Tanibórz, Gmina Kleszczewo",
+    "from": "procurement#17",
+    "to": "bzp:2026/BZP 00000230/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-e7f4b839-309a-4602-99cc-b9799d3465f7)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-017",
+    "name": "Budowa sieci kanalizacji sanitarnej wraz z przyłączami w miejscowości Tanibórz, Gmina Kleszczewo",
+    "from": "procurement#17",
+    "to": "bzp:2026/BZP 00325837/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-e7f4b839-309a-4602-99cc-b9799d3465f7)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-018",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny – etap II",
+    "from": "procurement#18",
+    "to": "bzp:2026/BZP 00194260/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-7e0ea9c9-6750-4265-9084-990373d449f5)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-018",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny – etap II",
+    "from": "procurement#18",
+    "to": "bzp:2026/BZP 00324517/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-7e0ea9c9-6750-4265-9084-990373d449f5)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-019",
+    "name": "Budowa kanalizacji deszczowej w ciągu drogi wojewódzkiej nr 444 w miejscowości Sulmierzyce",
+    "from": "project#19",
+    "to": "bzp:2024/BZP 00354928/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2024/BZP 00354928/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-019",
+    "name": "Budowa kanalizacji deszczowej w ciągu drogi wojewódzkiej nr 444 w miejscowości Sulmierzyce",
+    "from": "procurement#19",
+    "to": "bzp:2024/BZP 00451447/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-6e8c2e8c-23dd-11ef-87ba-8eb060fd7bb8)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-019",
+    "name": "Budowa kanalizacji deszczowej w ciągu drogi wojewódzkiej nr 444 w miejscowości Sulmierzyce",
+    "from": "procurement#19",
+    "to": "bzp:2025/BZP 00626318/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-6e8c2e8c-23dd-11ef-87ba-8eb060fd7bb8)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-020",
+    "name": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+    "from": "procurement#20",
+    "to": "bzp:2025/BZP 00206455/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-740158c8-9281-4fe9-9f58-59edc56af25c)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-020",
+    "name": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+    "from": "procurement#20",
+    "to": "bzp:2026/BZP 00280220/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-740158c8-9281-4fe9-9f58-59edc56af25c)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-020",
+    "name": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+    "from": "procurement#20",
+    "to": "bzp:2025/BZP 00558908/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-740158c8-9281-4fe9-9f58-59edc56af25c)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-020",
+    "name": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+    "from": "procurement#20",
+    "to": "bzp:2026/BZP 00291637/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-740158c8-9281-4fe9-9f58-59edc56af25c)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-021",
+    "name": "Zwiększenie odporności hydrologicznej Aglomeracji Nowogard poprzez rozdział kanalizacji sanitarnej na ul. 700-lecia",
+    "from": "project#21",
+    "to": "bzp:2025/BZP 00364116/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "identyfikator: numer ogłoszenia BZP 2025/BZP 00364116/01",
+     "NIP zamawiającego zgodny z rekordem"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-021",
+    "name": "Zwiększenie odporności hydrologicznej Aglomeracji Nowogard poprzez rozdział kanalizacji sanitarnej na ul. 700-lecia",
+    "from": "procurement#21",
+    "to": "bzp:2025/BZP 00434530/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-7724b53b-3893-4de1-8aac-824afe7b77f9)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-021",
+    "name": "Zwiększenie odporności hydrologicznej Aglomeracji Nowogard poprzez rozdział kanalizacji sanitarnej na ul. 700-lecia",
+    "from": "procurement#21",
+    "to": "bzp:2026/BZP 00498398/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-7724b53b-3893-4de1-8aac-824afe7b77f9)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-021",
+    "name": "Zwiększenie odporności hydrologicznej Aglomeracji Nowogard poprzez rozdział kanalizacji sanitarnej na ul. 700-lecia",
+    "from": "procurement#21",
+    "to": "bzp:2026/BZP 00498447/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-7724b53b-3893-4de1-8aac-824afe7b77f9)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-022",
+    "name": "Budowa sieci wodociągowych i kanalizacji sanitarnej w Gminie Wolin",
+    "from": "procurement#22",
+    "to": "bzp:2025/BZP 00093929/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-4a470f91-f930-4381-abfc-71f2de051740)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-022",
+    "name": "Budowa sieci wodociągowych i kanalizacji sanitarnej w Gminie Wolin",
+    "from": "procurement#22",
+    "to": "bzp:2025/BZP 00312311/01",
+    "confidence": 0.99,
+    "method": "identifier",
+    "reasons": [
+     "wspólny identyfikator postępowania (tenderId ocds-148610-4a470f91-f930-4381-abfc-71f2de051740)"
+    ],
+    "status": "auto",
+    "reviewer": null,
+    "comment": null
+   }
+  ],
+  "niepewne": [
+   {
+    "project": "RM-2026-002",
+    "name": "Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice",
+    "from": "project#2",
+    "to": "bzp:2026/BZP 00089794/01",
+    "confidence": 0.94,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (6941566139)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 100%",
+     "miejscowość „Zagrodno” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-002",
+    "name": "Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice",
+    "from": "project#2",
+    "to": "bzp:2026/BZP 00286175/01",
+    "confidence": 0.65,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (6941566139)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 31%",
+     "miejscowość „Zagrodno” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-002",
+    "name": "Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice",
+    "from": "project#2",
+    "to": "bzp:2025/BZP 00476803/01",
+    "confidence": 0.62,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (6941566139)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 24%",
+     "miejscowość „Zagrodno” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-002",
+    "name": "Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice",
+    "from": "project#2",
+    "to": "bzp:2024/BZP 00387443/01",
+    "confidence": 0.56,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (6941566139)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 12%",
+     "miejscowość „Zagrodno” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-005",
+    "name": "Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania wody w miejscowości Pędzewo",
+    "from": "project#5",
+    "to": "bzp:2025/BZP 00245492/01",
+    "confidence": 0.94,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (8792469951)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 100%",
+     "miejscowość „Zławieś Wielka” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-005",
+    "name": "Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania wody w miejscowości Pędzewo",
+    "from": "project#5",
+    "to": "bzp:2026/BZP 00137858/01",
+    "confidence": 0.74,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (8792469951)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 47%",
+     "miejscowość „Zławieś Wielka” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-005",
+    "name": "Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania wody w miejscowości Pędzewo",
+    "from": "project#5",
+    "to": "bzp:2024/BZP 00372020/01",
+    "confidence": 0.72,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (8792469951)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 44%",
+     "miejscowość „Zławieś Wielka” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-005",
+    "name": "Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania wody w miejscowości Pędzewo",
+    "from": "project#5",
+    "to": "bzp:2024/BZP 00232107/01",
+    "confidence": 0.71,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (8792469951)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 42%",
+     "miejscowość „Zławieś Wielka” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-007",
+    "name": "Rozbudowa sieci wodociągowej w gminie Kamionka",
+    "from": "project#7",
+    "to": "bzp:2026/BZP 00139226/01",
+    "confidence": 0.94,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (7141896261)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 100%",
+     "miejscowość „Kamionka” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-007",
+    "name": "Rozbudowa sieci wodociągowej w gminie Kamionka",
+    "from": "project#7",
+    "to": "bzp:2024/BZP 00409199/01",
+    "confidence": 0.75,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (7141896261)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 50%",
+     "miejscowość „Kamionka” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-007",
+    "name": "Rozbudowa sieci wodociągowej w gminie Kamionka",
+    "from": "project#7",
+    "to": "bzp:2024/BZP 00401607/01",
+    "confidence": 0.62,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (7141896261)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 25%",
+     "miejscowość „Kamionka” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-007",
+    "name": "Rozbudowa sieci wodociągowej w gminie Kamionka",
+    "from": "project#7",
+    "to": "bzp:2025/BZP 00441810/01",
+    "confidence": 0.61,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (7141896261)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 22%",
+     "miejscowość „Kamionka” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-010",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne, gmina Grodzisko Dolne",
+    "from": "project#10",
+    "to": "bzp:2025/BZP 00211437/01",
+    "confidence": 0.94,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (8161570014)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 100%",
+     "miejscowość „Grodzisko Dolne” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-010",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne, gmina Grodzisko Dolne",
+    "from": "project#10",
+    "to": "bzp:2025/BZP 00234353/01",
+    "confidence": 0.81,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (8161570014)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 62%",
+     "miejscowość „Grodzisko Dolne” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-010",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne, gmina Grodzisko Dolne",
+    "from": "project#10",
+    "to": "bzp:2024/BZP 00349336/01",
+    "confidence": 0.75,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (8161570014)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 50%",
+     "miejscowość „Grodzisko Dolne” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-010",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne, gmina Grodzisko Dolne",
+    "from": "procurement#10",
+    "to": "bzp:2025/BZP 00303625/01",
+    "confidence": 0.66,
+    "method": "text-match",
+    "reasons": [
+     "ten sam zamawiający (NIP)",
+     "podobieństwo przedmiotu zamówienia 62%",
+     "brak wspólnego tenderId — do weryfikacji"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-010",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne, gmina Grodzisko Dolne",
+    "from": "project#10",
+    "to": "bzp:2025/BZP 00432149/01",
+    "confidence": 0.64,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (8161570014)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 29%",
+     "miejscowość „Grodzisko Dolne” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-017",
+    "name": "Budowa sieci kanalizacji sanitarnej wraz z przyłączami w miejscowości Tanibórz, Gmina Kleszczewo",
+    "from": "project#17",
+    "to": "bzp:2025/BZP 00358528/01",
+    "confidence": 0.94,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (7773157115)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 100%",
+     "miejscowość „Kleszczewo” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-017",
+    "name": "Budowa sieci kanalizacji sanitarnej wraz z przyłączami w miejscowości Tanibórz, Gmina Kleszczewo",
+    "from": "project#17",
+    "to": "bzp:2026/BZP 00157916/01",
+    "confidence": 0.61,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (7773157115)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 22%",
+     "miejscowość „Kleszczewo” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-018",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny – etap II",
+    "from": "project#18",
+    "to": "bzp:2025/BZP 00620692/01",
+    "confidence": 0.94,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (6211694095)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 100%",
+     "miejscowość „Zduny” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-018",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny – etap II",
+    "from": "project#18",
+    "to": "bzp:2024/BZP 00410320/01",
+    "confidence": 0.9,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (6211694095)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 80%",
+     "miejscowość „Zduny” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-018",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny – etap II",
+    "from": "project#18",
+    "to": "bzp:2026/BZP 00004921/01",
+    "confidence": 0.81,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (6211694095)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 62%",
+     "miejscowość „Zduny” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-018",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny – etap II",
+    "from": "procurement#18",
+    "to": "bzp:2026/BZP 00223055/01",
+    "confidence": 0.66,
+    "method": "text-match",
+    "reasons": [
+     "ten sam zamawiający (NIP)",
+     "podobieństwo przedmiotu zamówienia 62%",
+     "brak wspólnego tenderId — do weryfikacji"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-018",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny – etap II",
+    "from": "procurement#18",
+    "to": "bzp:2026/BZP 00342646/01",
+    "confidence": 0.66,
+    "method": "text-match",
+    "reasons": [
+     "ten sam zamawiający (NIP)",
+     "podobieństwo przedmiotu zamówienia 62%",
+     "brak wspólnego tenderId — do weryfikacji"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-018",
+    "name": "Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny – etap II",
+    "from": "project#18",
+    "to": "bzp:2024/BZP 00104453/01",
+    "confidence": 0.61,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (6211694095)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 22%",
+     "miejscowość „Zduny” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-020",
+    "name": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+    "from": "project#20",
+    "to": "bzp:2025/BZP 00113651/01",
+    "confidence": 0.94,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (8590012007)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 100%",
+     "miejscowość „Nowogard” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-020",
+    "name": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+    "from": "project#20",
+    "to": "bzp:2025/BZP 00607580/01",
+    "confidence": 0.69,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (8590012007)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 38%",
+     "miejscowość „Nowogard” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-020",
+    "name": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+    "from": "project#20",
+    "to": "bzp:2025/BZP 00364116/01",
+    "confidence": 0.68,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (8590012007)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 35%",
+     "miejscowość „Nowogard” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-020",
+    "name": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+    "from": "project#20",
+    "to": "bzp:2025/BZP 00618370/01",
+    "confidence": 0.62,
+    "method": "text-match",
+    "reasons": [
+     "brak wspólnego identyfikatora (KPO) — dopasowanie przybliżone",
+     "NIP zamawiającego zgodny (8590012007)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 25%",
+     "miejscowość „Nowogard” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-022",
+    "name": "Budowa sieci wodociągowych i kanalizacji sanitarnej w Gminie Wolin",
+    "from": "project#22",
+    "to": "bzp:2024/BZP 00657628/01",
+    "confidence": 0.77,
+    "method": "text-match",
+    "reasons": [
+     "numer 2023/BZP 00110672/01 z rekordu nie istnieje w BZP",
+     "NIP zamawiającego zgodny (9860164852)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 55%",
+     "miejscowość „Wolin” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-022",
+    "name": "Budowa sieci wodociągowych i kanalizacji sanitarnej w Gminie Wolin",
+    "from": "project#22",
+    "to": "bzp:2022/BZP 00292606/01",
+    "confidence": 0.67,
+    "method": "text-match",
+    "reasons": [
+     "numer 2023/BZP 00110672/01 z rekordu nie istnieje w BZP",
+     "NIP zamawiającego zgodny (9860164852)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 33%",
+     "miejscowość „Wolin” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-022",
+    "name": "Budowa sieci wodociągowych i kanalizacji sanitarnej w Gminie Wolin",
+    "from": "project#22",
+    "to": "bzp:2022/BZP 00323933/01",
+    "confidence": 0.65,
+    "method": "text-match",
+    "reasons": [
+     "numer 2023/BZP 00110672/01 z rekordu nie istnieje w BZP",
+     "NIP zamawiającego zgodny (9860164852)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 31%",
+     "miejscowość „Wolin” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   },
+   {
+    "project": "RM-2026-022",
+    "name": "Budowa sieci wodociągowych i kanalizacji sanitarnej w Gminie Wolin",
+    "from": "project#22",
+    "to": "bzp:2022/BZP 00039674/01",
+    "confidence": 0.57,
+    "method": "text-match",
+    "reasons": [
+     "numer 2023/BZP 00110672/01 z rekordu nie istnieje w BZP",
+     "NIP zamawiającego zgodny (9860164852)",
+     "podobieństwo przedmiotu zamówienia do nazwy przedsięwzięcia: 14%",
+     "miejscowość „Wolin” w danych ogłoszenia"
+    ],
+    "status": "proposed",
+    "reviewer": null,
+    "comment": null
+   }
+  ],
+  "błędne": []
+ },
+ "projects": [
+  {
+   "record_id": "RM-2026-001",
+   "name": "Budowa rurociągu tłocznego kanalizacji sanitarnej Godzikowice – Jaczkowice, gmina Oława",
+   "identyfikator": "Ogłoszenie BZP: 2022/BZP 00058537/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 3,
+   "zdarzenia": 6,
+   "wartosc_umowy": 2107348.39,
+   "odchylenie_kosztu": 0.0658786514174811,
+   "opoznienie_dni": 77
+  },
+  {
+   "record_id": "RM-2026-002",
+   "name": "Budowa kanalizacji sanitarnej na terenie Gminy Zagrodno w miejscowości Modlikowice",
+   "identyfikator": "Projekt KPO: KPOD.03.15-IW.13-0004/25",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 4,
+   "zdarzenia": 2,
+   "wartosc_umowy": 5350782.65,
+   "odchylenie_kosztu": 0.0,
+   "opoznienie_dni": 27
+  },
+  {
+   "record_id": "RM-2026-003",
+   "name": "Budowa oczyszczalni ścieków w miejscowości Steklin w formule zaprojektuj i wybuduj",
+   "identyfikator": "Ogłoszenie BZP: 2024/BZP 00349631/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 5,
+   "zdarzenia": 5,
+   "wartosc_umowy": 2131590.0,
+   "odchylenie_kosztu": 0.4027087760779512,
+   "opoznienie_dni": 277
+  },
+  {
+   "record_id": "RM-2026-004",
+   "name": "Modernizacja Stacji Uzdatniania Wody w Czernikowie",
+   "identyfikator": "Ogłoszenie BZP: 2025/BZP 00569258/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 3,
+   "zdarzenia": 5,
+   "wartosc_umowy": 3918954.08,
+   "odchylenie_kosztu": 0.05510810680384398,
+   "opoznienie_dni": 98
+  },
+  {
+   "record_id": "RM-2026-005",
+   "name": "Budowa sieci kanalizacji sanitarnej w miejscowości Zławieś Wielka i Zławieś Mała wraz z modernizacją stacji uzdatniania wody w miejscowości Pędzewo",
+   "identyfikator": "Projekt KPO: KPOD.03.15-IW.14-0032/25",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 3,
+   "zdarzenia": 3,
+   "wartosc_umowy": 2936010.0,
+   "odchylenie_kosztu": 0.05159435424266268,
+   "opoznienie_dni": 36
+  },
+  {
+   "record_id": "RM-2026-006",
+   "name": "Przebudowa (modernizacja) oczyszczalni ścieków w m. Gościeradów Folwark",
+   "identyfikator": "Ogłoszenie BZP: 2024/BZP 00067908/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 5,
+   "zdarzenia": 6,
+   "wartosc_umowy": 2499110.3,
+   "odchylenie_kosztu": 0.042191371065134715,
+   "opoznienie_dni": 81
+  },
+  {
+   "record_id": "RM-2026-007",
+   "name": "Rozbudowa sieci wodociągowej w gminie Kamionka",
+   "identyfikator": "Projekt KPO: KPOD.03.15-IW.15-0081/25",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 3,
+   "zdarzenia": 2,
+   "wartosc_umowy": 1478460.0,
+   "odchylenie_kosztu": -0.006425605021441229,
+   "opoznienie_dni": 19
+  },
+  {
+   "record_id": "RM-2026-008",
+   "name": "Budowa sieci kanalizacji sanitarnej na terenie Gminy Biecz",
+   "identyfikator": "Ogłoszenie BZP: 2026/BZP 00084760/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 6,
+   "zdarzenia": 2,
+   "wartosc_umowy": 1952120.53,
+   "odchylenie_kosztu": 0.21678411936992423,
+   "opoznienie_dni": 0
+  },
+  {
+   "record_id": "RM-2026-009",
+   "name": "Budowa sieci wodociągowej na terenie gminy Zakrzew",
+   "identyfikator": "Ogłoszenie BZP: 2025/BZP 00307948/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 4,
+   "zdarzenia": 2,
+   "wartosc_umowy": 1810533.92,
+   "odchylenie_kosztu": 0.03913167779811603,
+   "opoznienie_dni": -2
+  },
+  {
+   "record_id": "RM-2026-010",
+   "name": "Budowa kanalizacji sanitarnej w miejscowości Zmysłówka i Grodzisko Dolne, gmina Grodzisko Dolne",
+   "identyfikator": "Projekt KPO: KPOD.03.15-IW.21-0025/25",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 4,
+   "zdarzenia": 2,
+   "wartosc_umowy": 3348882.44,
+   "odchylenie_kosztu": 0.0,
+   "opoznienie_dni": 45
+  },
+  {
+   "record_id": "RM-2026-011",
+   "name": "Budowa sieci wodociągowej w miejscowości Czerteż, Zabłotce oraz w części miejscowości Sanoczek",
+   "identyfikator": "Ogłoszenie BZP: 2023/BZP 00271948/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 3,
+   "zdarzenia": 2,
+   "wartosc_umowy": 2880536.18,
+   "odchylenie_kosztu": 0.08806805544098381,
+   "opoznienie_dni": -6
+  },
+  {
+   "record_id": "RM-2026-012",
+   "name": "Budowa tranzytu przesyłowego sieci kanalizacji sanitarnej ze Smętowa Chmieleńskiego do Kos",
+   "identyfikator": "Ogłoszenie BZP: 2025/BZP 00119683/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 3,
+   "zdarzenia": 5,
+   "wartosc_umowy": 3616200.0,
+   "odchylenie_kosztu": 0.009607975222609333,
+   "opoznienie_dni": 58
+  },
+  {
+   "record_id": "RM-2026-013",
+   "name": "Budowa sieci kanalizacji sanitarnej w Gminie Bestwina – sołectwo Kaniów",
+   "identyfikator": "Ogłoszenie BZP: 2023/BZP 00206497/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 3,
+   "zdarzenia": 4,
+   "wartosc_umowy": 5991655.95,
+   "odchylenie_kosztu": 0.06774344244515565,
+   "opoznienie_dni": 31
+  },
+  {
+   "record_id": "RM-2026-014",
+   "name": "Budowa sieci kanalizacji sanitarnej ul. Słoneczna w Siemoni",
+   "identyfikator": "Ogłoszenie BZP: 2026/BZP 00130634/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 3,
+   "zdarzenia": 5,
+   "wartosc_umowy": 1193100.0,
+   "odchylenie_kosztu": 0.08457622998910394,
+   "opoznienie_dni": 41
+  },
+  {
+   "record_id": "RM-2026-015",
+   "name": "Przebudowa sieci wodociągowej oraz kanalizacji sanitarnej i deszczowej wraz z przyłączami i modernizacją oczyszczalni ścieków w miejscowości Janów w formule zaprojektuj i wybuduj",
+   "identyfikator": "Ogłoszenie BZP: 2023/BZP 00135041/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 5,
+   "zdarzenia": 5,
+   "wartosc_umowy": 3744316.0,
+   "odchylenie_kosztu": 0.2560477000338647,
+   "opoznienie_dni": 150
+  },
+  {
+   "record_id": "RM-2026-016",
+   "name": "Budowa sieci wodociągowej o długości 22,616 km i sieci kanalizacji sanitarnej na odcinku 18,09 km na obszarach wiejskich Gminy Miłakowo",
+   "identyfikator": "Ogłoszenie BZP: 2022/BZP 00308854/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 3,
+   "zdarzenia": 4,
+   "wartosc_umowy": 4879410.0,
+   "odchylenie_kosztu": 0.03850000102471406,
+   "opoznienie_dni": 31
+  },
+  {
+   "record_id": "RM-2026-017",
+   "name": "Budowa sieci kanalizacji sanitarnej wraz z przyłączami w miejscowości Tanibórz, Gmina Kleszczewo",
+   "identyfikator": "Projekt KPO: KPOD.03.15-IW.27-0013/25",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 3,
+   "zdarzenia": 3,
+   "wartosc_umowy": 4275775.94,
+   "odchylenie_kosztu": 0.2682688489986683,
+   "opoznienie_dni": 53
+  },
+  {
+   "record_id": "RM-2026-018",
+   "name": "Budowa kanalizacji sanitarnej w miejscowości Baszków Gmina Zduny – etap II",
+   "identyfikator": "Projekt KPO: KPOD.03.15-IW.27-0107/25",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 5,
+   "zdarzenia": 4,
+   "wartosc_umowy": 3665400.0,
+   "odchylenie_kosztu": 0.14429878321602002,
+   "opoznienie_dni": 40
+  },
+  {
+   "record_id": "RM-2026-019",
+   "name": "Budowa kanalizacji deszczowej w ciągu drogi wojewódzkiej nr 444 w miejscowości Sulmierzyce",
+   "identyfikator": "Ogłoszenie BZP: 2024/BZP 00354928/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 3,
+   "zdarzenia": 5,
+   "wartosc_umowy": 3154932.64,
+   "odchylenie_kosztu": 0.3270446274884652,
+   "opoznienie_dni": 395
+  },
+  {
+   "record_id": "RM-2026-020",
+   "name": "Budowa kanalizacji sanitarnej wraz z oczyszczalnią ścieków na terenie gminy Nowogard w m. Konarzewo",
+   "identyfikator": "Projekt KPO: KPOD.03.15-IW.28-0003/24",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 5,
+   "zdarzenia": 4,
+   "wartosc_umowy": 1969611.3,
+   "odchylenie_kosztu": -0.12692859753597066,
+   "opoznienie_dni": 185
+  },
+  {
+   "record_id": "RM-2026-021",
+   "name": "Zwiększenie odporności hydrologicznej Aglomeracji Nowogard poprzez rozdział kanalizacji sanitarnej na ul. 700-lecia",
+   "identyfikator": "Ogłoszenie BZP: 2025/BZP 00364116/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 4,
+   "zdarzenia": 4,
+   "wartosc_umowy": 5421102.0,
+   "odchylenie_kosztu": -0.4502992528087463,
+   "opoznienie_dni": 68
+  },
+  {
+   "record_id": "RM-2026-022",
+   "name": "Budowa sieci wodociągowych i kanalizacji sanitarnej w Gminie Wolin",
+   "identyfikator": "Ogłoszenie BZP: 2023/BZP 00110672/01",
+   "status_wzbogacenia": "wzbogacony",
+   "postepowania": 1,
+   "ogloszenia": 3,
+   "zdarzenia": 0,
+   "wartosc_umowy": 444898.38,
+   "odchylenie_kosztu": 0.0,
+   "opoznienie_dni": -11
+  }
+ ],
+ "analyses": [
+  {
+   "id": 1,
+   "title": "Przykład: kanalizacja 6,5 km, zaprojektuj i wybuduj",
+   "created_at": "2026-11-22T06:16:56+00:00"
+  }
+ ]
+}

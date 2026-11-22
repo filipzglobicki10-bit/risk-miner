@@ -33,7 +33,7 @@ Przeglądarka otworzy się sama na **http://127.0.0.1:8080**. Okna terminala nie
 Po kilku sekundach pojawi się wykres 22 umów, mapa i liczby. Bez internetu aplikacja sama użyje wbudowanej kopii BZP.
 
 **4. Przeanalizuj nową inwestycję** — **Analizuj nową inwestycję → „wstaw przykładowy opis”** → dołącz plik
-`samples/projekt_umowy_przyklad.txt` → **Analizuj**. Wynik eksportujesz przyciskami JSON / CSV / karta ryzyka.
+`samples/projekt_umowy_przyklad.txt` → **Analizuj**. Wynik eksportujesz przyciskami JSON / CSV / karta ryzyka. Gotowy przykład eksportu bez uruchamiania aplikacji: [`samples/eksport/`](samples/eksport/).
 
 ## Spis treści
 
@@ -142,6 +142,7 @@ risk-miner/
 ├── riskminer/                  ← logika: BZP, łączenie, ekstrakcja, prognoza, audyt klauzul, serwer
 ├── static/                     ← interfejs (HTML, CSS, JS, fonty)
 ├── samples/                    ← dane organizatora: 22 projekty (.xlsx), kopia BZP, przykładowy opis i umowa
+│   └── eksport/                ← przykładowy eksport: baza przypadków, raport łączenia, wynik analizy (CSV i JSON)
 ├── tests/                      ← testy jednostkowe i test całego przepływu z atrapą BZP
 ├── docs/                       ← opis rozwiązania, architektura, raport z testów, scenariusz demo, system wyglądu
 ├── scripts/                    ← run.sh / run.bat — uruchomienie z terminala

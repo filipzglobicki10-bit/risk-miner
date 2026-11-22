@@ -1,0 +1,715 @@
+﻿id;project_id;procurement_id;contract_id;key;value_num;value_text;unit;vat;source_id;notice_id;document_id;page;quote;confidence;method;status;part;created_at
+1;2;;;project_value;5350782.65;;PLN;brutto;3;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 5 350 782,65 zł; dofinansowanie: 4 333 677,17 zł. Opis: „Przedmiot projektu: Planuje się budowę sieci kanalizacji sanitarnej o długości 2,38 kilometra. W ramach przedsięwzięcia realizowane będą także sięgacze sieciowe do granicy działek. Planowana jes";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+2;2;;;funding;4333677.17;;PLN;brutto;3;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 5 350 782,65 zł; dofinansowanie: 4 333 677,17 zł. Opis: „Przedmiot projektu: Planuje się budowę sieci kanalizacji sanitarnej o długości 2,38 kilometra. W ramach przedsięwzięcia realizowane będą także sięgacze sieciowe do granicy działek. Planowana jes";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+3;5;;;project_value;3087491.54;;PLN;brutto;6;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 3 087 491,54 zł; dofinansowanie: 2 349 408,96 zł. Opis: „Projekt dotyczy budowy sieci kanalizacji sanitarnej oraz modernizacji stacji uzdatniania wody na terenie Gminy Zławieś Wielka.”";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+4;5;;;funding;2349408.96;;PLN;brutto;6;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 3 087 491,54 zł; dofinansowanie: 2 349 408,96 zł. Opis: „Projekt dotyczy budowy sieci kanalizacji sanitarnej oraz modernizacji stacji uzdatniania wody na terenie Gminy Zławieś Wielka.”";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+5;7;;;project_value;3096863.9;;PLN;brutto;8;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 3 096 863,90 zł; dofinansowanie: 2 517 775,52 zł. Opis: „Celem projektu jest rozwój równoważonej gospodarki wodno-ściekowej na terenach wiejskich (poza aglomeracjami) poprzez rozbudowę sieci wodociągowej w gminie Kamionka.”";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+6;7;;;funding;2517775.52;;PLN;brutto;8;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 3 096 863,90 zł; dofinansowanie: 2 517 775,52 zł. Opis: „Celem projektu jest rozwój równoważonej gospodarki wodno-ściekowej na terenach wiejskich (poza aglomeracjami) poprzez rozbudowę sieci wodociągowej w gminie Kamionka.”";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+7;8;;;project_value;6188345.13;;PLN;brutto;9;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 6 188 345,13 zł; dofinansowanie: 5 000 000,00 zł. Opis: „Budowa kanalizacji sanitarnej na terenie Gminy Biecz w Miejscowościach: Libusza „Ogniwo Jedle”, Libusza „Podwójtowie”, Strzeszyn, Biecz „Przedmieście” o łącznej długości 11,871 km W tym: Libusza";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+8;8;;;funding;5000000.0;;PLN;brutto;9;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 6 188 345,13 zł; dofinansowanie: 5 000 000,00 zł. Opis: „Budowa kanalizacji sanitarnej na terenie Gminy Biecz w Miejscowościach: Libusza „Ogniwo Jedle”, Libusza „Podwójtowie”, Strzeszyn, Biecz „Przedmieście” o łącznej długości 11,871 km W tym: Libusza";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+9;9;;;project_value;2329043.45;;PLN;brutto;10;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 2 329 043,45 zł; dofinansowanie: 1 894 503,63 zł. Opis: „Niniejszy projekt dotyczy 3 odcinków sieci wodociągowej położonych na terenie gminy Zakrzew: 1. budowa sieci wodociągowej o długości 371,5 m zlokalizowanej w miejscowości Dąbrówka Podłężna, dz. ";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+10;9;;;funding;1894503.63;;PLN;brutto;10;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 2 329 043,45 zł; dofinansowanie: 1 894 503,63 zł. Opis: „Niniejszy projekt dotyczy 3 odcinków sieci wodociągowej położonych na terenie gminy Zakrzew: 1. budowa sieci wodociągowej o długości 371,5 m zlokalizowanej w miejscowości Dąbrówka Podłężna, dz. ";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+11;10;;;project_value;3373482.44;;PLN;brutto;11;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 3 373 482,44 zł; dofinansowanie: 2 742 668,65 zł. Opis: „Realizacja projektu polega na budowie sieci kanalizacji sanitarnej w miejscowości Zmysłówka oraz Grodzisko Dolne, w części poza znajdującej się poza aglomeracją (zgodnie z załącznikiem graficzny";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+12;10;;;funding;2742668.65;;PLN;brutto;11;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 3 373 482,44 zł; dofinansowanie: 2 742 668,65 zł. Opis: „Realizacja projektu polega na budowie sieci kanalizacji sanitarnej w miejscowości Zmysłówka oraz Grodzisko Dolne, w części poza znajdującej się poza aglomeracją (zgodnie z załącznikiem graficzny";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+13;14;;;project_value;1714989.0;;PLN;brutto;15;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 1 714 989,00 zł; dofinansowanie: 1 394 300,00 zł. Opis: „Wnioskowaną inwestycją jest zbudowanie sieci kanalizacji sanitarnej na potrzeby mieszkalnictwa jednorodzinnego w Siemoni przy ul.Słonecznej w Gminie Bobrowniki. Planowana inwestycja zlokalizowan";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+14;14;;;funding;1394300.0;;PLN;brutto;15;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 1 714 989,00 zł; dofinansowanie: 1 394 300,00 zł. Opis: „Wnioskowaną inwestycją jest zbudowanie sieci kanalizacji sanitarnej na potrzeby mieszkalnictwa jednorodzinnego w Siemoni przy ul.Słonecznej w Gminie Bobrowniki. Planowana inwestycja zlokalizowan";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+15;17;;;project_value;4052494.96;;PLN;brutto;18;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 4 052 494,96 zł; dofinansowanie: 3 294 711,35 zł. Opis: „Przedmiotem projektu jest budowa sieci kanalizacji sanitarnej (grawitacyjnej oraz tłocznej) wraz z przyłączami oraz przepompowniami ścieków w miejscowości Tanibórz, gm. Kleszczewo.”";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+16;17;;;funding;3294711.35;;PLN;brutto;18;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 4 052 494,96 zł; dofinansowanie: 3 294 711,35 zł. Opis: „Przedmiotem projektu jest budowa sieci kanalizacji sanitarnej (grawitacyjnej oraz tłocznej) wraz z przyłączami oraz przepompowniami ścieków w miejscowości Tanibórz, gm. Kleszczewo.”";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+17;18;;;project_value;3847757.34;;PLN;brutto;19;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 3 847 757,34 zł; dofinansowanie: 3 128 258,00 zł. Opis: „Projekt dotyczy budowy kanalizacji sanitarnej w miejscowości Baszków, obejmującej kanały KS2 i KS4. Głównym celem projektu jest zapewnienie sprawnego odprowadzania ścieków sanitarnych z obszaru ";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+18;18;;;funding;3128258.0;;PLN;brutto;19;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 3 847 757,34 zł; dofinansowanie: 3 128 258,00 zł. Opis: „Projekt dotyczy budowy kanalizacji sanitarnej w miejscowości Baszków, obejmującej kanały KS2 i KS4. Głównym celem projektu jest zapewnienie sprawnego odprowadzania ścieków sanitarnych z obszaru ";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+19;20;;;project_value;1749991.33;;PLN;brutto;21;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 1 749 991,33 zł; dofinansowanie: 1 414 257,17 zł. Opis: „Projekt obejmuje przebudowę i budowę oczyszczalni ścieków w m. Konarzewo, gm. Nowogard oraz budowę sieci kanalizacji sanitarnej z 17 przyłączami i rozgałęzieniami sieci wraz z niezbędną infrastr";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+20;20;;;funding;1414257.17;;PLN;brutto;21;;;;"KPO, inwestycja B3.1.1. Wartość przedsięwzięcia: 1 749 991,33 zł; dofinansowanie: 1 414 257,17 zł. Opis: „Projekt obejmuje przebudowę i budowę oczyszczalni ścieków w m. Konarzewo, gm. Nowogard oraz budowę sieci kanalizacji sanitarnej z 17 przyłączami i rozgałęzieniami sieci wraz z niezbędną infrastr";0.95;xlsx;approved;;2026-11-22T06:16:54+00:00
+21;1;1;;planned_duration_days;360.0;12 mies.;dni;nd;24;1;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 12 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+22;1;1;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;24;1;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+23;1;1;;security_required;;tak;;nd;24;1;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+24;1;1;;procedure_result;;zawarcie umowy;;nd;25;2;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+25;1;1;;n_offers;4.0;;szt.;nd;25;2;;;6.1.) Liczba otrzymanych ofert lub wniosków: 4;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+26;1;1;;n_rejected;0.0;;szt.;nd;25;2;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+27;1;1;;offer_min;2107348.39;;PLN;brutto;25;2;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 2107348,39 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+28;1;1;;offer_max;4079410.03;;PLN;brutto;25;2;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 4079410,03 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+29;1;1;;awarded_price;2107348.39;;PLN;brutto;25;2;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 2107348,39 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+30;1;1;;contractor;;Przedsiębiorstwo Budowlane COMPLEX-BUD Leon Szuturma;;nd;25;2;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Przedsiębiorstwo Budowlane COMPLEX-BUD Leon Szuturma;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+31;1;1;;signed_date;;2022-04-06;;nd;25;2;;;8.1.) Data zawarcia umowy: 2022-04-06;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+32;1;1;;contract_value;2107348.39;;PLN;brutto;25;2;;;8.2.) Wartość umowy/umowy ramowej: 2107348,39 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+33;1;1;;planned_duration_days;360.0;12 mies.;dni;nd;25;2;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 12 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+34;1;1;;signed_date;;2022-04-06;;nd;26;3;;;4.1.) Data zawarcia umowy: 2022-04-06;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+35;1;1;;planned_duration_days;360.0;12 mies.;dni;nd;26;3;;;4.2.) Okres realizacji zamówienia: 12 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+36;1;1;;contractor;;Przedsiębiorstwo Budowlane COMPLEX-BUD Leon Szuturma;;nd;26;3;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Przedsiębiorstwo Budowlane COMPLEX-BUD Leon Szuturma;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+37;1;1;;contract_value;2107348.39;;PLN;brutto;26;3;;;4.4.) Wartość umowy: 2107348,39 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+38;1;1;;performed;;tak;;nd;26;3;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+39;1;1;;actual_end_date;;2023-06-22;;nd;26;3;;;5.2.) Termin wykonania umowy: 2023-06-22;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+40;1;1;;performed_on_time;;nie;;nd;26;3;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+41;1;1;;n_changes;6.0;;;nd;26;3;;;5.4.1.) Liczba zmian: 6;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+42;1;1;;final_paid;2246177.66;;PLN;brutto;26;3;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 2246177,66 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+43;1;1;;performed_properly;;tak;;nd;26;3;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+44;2;2;;planned_duration_days;60.0;2 mies.;dni;nd;27;4;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 2 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+45;2;2;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;27;4;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+46;2;2;;security_required;;tak;;nd;27;4;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+47;2;2;;estimated_value_net;4350229.8;;PLN;netto;28;5;;;4.3.) Wartość zamówienia: 4350229,80 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+48;2;2;;procedure_result;;zawarcie umowy;;nd;28;5;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+49;2;2;;n_offers;2.0;;szt.;nd;28;5;;;6.1.) Liczba otrzymanych ofert lub wniosków: 2;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+50;2;2;;n_rejected;0.0;;szt.;nd;28;5;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+51;2;2;;offer_min;5350782.65;;PLN;brutto;28;5;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 5350782,65 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+52;2;2;;offer_max;5350782.65;;PLN;brutto;28;5;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 5350782,65 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+53;2;2;;awarded_price;5350782.65;;PLN;brutto;28;5;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 5350782,65 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+54;2;2;;contractor;;Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.;;nd;28;5;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+55;2;2;;signed_date;;2026-03-05;;nd;28;5;;;8.1.) Data zawarcia umowy: 2026-03-05;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+56;2;2;;contract_value;5350782.65;;PLN;brutto;28;5;;;8.2.) Wartość umowy/umowy ramowej: 5350782,65 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+57;2;2;;planned_duration_days;60.0;2 mies.;dni;nd;28;5;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 2 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+58;2;2;;signed_date;;2026-03-05;;nd;29;6;;;4.1.) Data zawarcia umowy: 2026-03-05;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+59;2;2;;planned_duration_days;60.0;2 mies.;dni;nd;29;6;;;4.2.) Okres realizacji zamówienia: 2 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+60;2;2;;contractor;;Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.;;nd;29;6;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+61;2;2;;contract_value;5350782.65;;PLN;brutto;29;6;;;4.4.) Wartość umowy: 5350782,65 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+62;2;2;;performed;;tak;;nd;29;6;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+63;2;2;;actual_end_date;;2026-06-01;;nd;29;6;;;5.2.) Termin wykonania umowy: 2026-06-01;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+64;2;2;;performed_on_time;;nie;;nd;29;6;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+65;2;2;;n_changes;1.0;;;nd;29;6;;;5.4.1.) Liczba zmian: 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+66;2;2;;final_paid;5350782.65;;PLN;brutto;29;6;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 5350782,65 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+67;2;2;;performed_properly;;tak;;nd;29;6;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+68;2;2;;signed_date;;2026-03-05;;nd;30;7;;;4.1.) Data zawarcia umowy: 2026-03-05;0.9;formularz BZP;superseded;;2026-11-22T06:16:54+00:00
+69;2;2;;planned_duration_days;90.0;3 mies.;dni;nd;30;7;;;4.2.) Okres realizacji zamówienia: 3 miesiące;0.9;formularz BZP;superseded;;2026-11-22T06:16:54+00:00
+70;2;2;;contractor;;Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.;;nd;30;7;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Przedsiębiorstwo Transportowo Budowlane Sp. z o.o.;0.9;formularz BZP;superseded;;2026-11-22T06:16:54+00:00
+71;2;2;;contract_value;5350782.65;;PLN;brutto;30;7;;;4.4.) Wartość umowy: 5350782,65 PLN;0.9;formularz BZP;superseded;;2026-11-22T06:16:54+00:00
+72;2;2;;performed;;tak;;nd;30;7;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;superseded;;2026-11-22T06:16:54+00:00
+73;2;2;;actual_end_date;;2026-06-01;;nd;30;7;;;5.2.) Termin wykonania umowy: 2026-06-01;0.9;formularz BZP;superseded;;2026-11-22T06:16:54+00:00
+74;2;2;;performed_on_time;;nie;;nd;30;7;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;superseded;;2026-11-22T06:16:54+00:00
+75;2;2;;n_changes;1.0;;;nd;30;7;;;5.4.1.) Liczba zmian: 1;0.9;formularz BZP;superseded;;2026-11-22T06:16:54+00:00
+76;2;2;;final_paid;5350782.65;;PLN;brutto;30;7;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 5350782,65 PLN;0.9;formularz BZP;superseded;;2026-11-22T06:16:54+00:00
+77;2;2;;performed_properly;;tak;;nd;30;7;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;superseded;;2026-11-22T06:16:54+00:00
+78;3;3;;planned_duration_days;390.0;13 mies.;dni;nd;31;8;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 13 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+79;3;3;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;31;8;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+80;3;3;;security_required;;tak;;nd;31;8;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+81;3;3;;estimated_value_net;2602091.26;;PLN;netto;32;9;;;4.3.) Wartość zamówienia: 2602091,26 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+82;3;3;;procedure_result;;zawarcie umowy;;nd;32;9;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+83;3;3;;n_offers;2.0;;szt.;nd;32;9;;;6.1.) Liczba otrzymanych ofert lub wniosków: 2;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+84;3;3;;n_rejected;0.0;;szt.;nd;32;9;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+85;3;3;;offer_min;2131590.0;;PLN;brutto;32;9;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 2131590,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+86;3;3;;offer_max;2797975.71;;PLN;brutto;32;9;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 2797975,71 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+87;3;3;;awarded_price;2131590.0;;PLN;brutto;32;9;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 2131590,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+88;3;3;;contractor;;Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek;;nd;32;9;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+89;3;3;;signed_date;;2024-07-18;;nd;32;9;;;8.1.) Data zawarcia umowy: 2024-07-18;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+90;3;3;;contract_value;2131590.0;;PLN;brutto;32;9;;;8.2.) Wartość umowy/umowy ramowej: 2131590,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+91;3;3;;planned_end_date;;2025-08-18;;nd;32;9;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2025-08-18;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+92;3;3;;signed_date;;2024-07-18;;nd;33;10;;;4.1.) Data zawarcia umowy/umowy ramowej: 2024-07-18;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+93;3;3;;planned_end_date;;2025-08-18;;nd;33;10;;;4.2.) Okres realizacji zamówienia/umowy ramowej: do 2025-08-18;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+94;3;3;;contractor;;Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek;;nd;33;10;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+95;3;3;;contract_value;2131590.0;;PLN;brutto;33;10;;;4.4.) Wartość umowy/umowy ramowej: 2131590,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+96;3;3;;signed_date;;2024-07-18;;nd;34;11;;;4.1.) Data zawarcia umowy/umowy ramowej: 2024-07-18;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+97;3;3;;planned_end_date;;2025-08-18;;nd;34;11;;;4.2.) Okres realizacji zamówienia/umowy ramowej: do 2025-08-18;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+98;3;3;;contractor;;Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek;;nd;34;11;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+99;3;3;;contract_value;2131590.0;;PLN;brutto;34;11;;;4.4.) Wartość umowy/umowy ramowej: 2131590,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+100;3;3;;signed_date;;2024-07-18;;nd;35;12;;;4.1.) Data zawarcia umowy: 2024-07-18;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+101;3;3;;planned_end_date;;2025-08-18;;nd;35;12;;;4.2.) Okres realizacji zamówienia: do 2025-08-18;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+102;3;3;;contractor;;Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek;;nd;35;12;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Zakład Usług Melioracyjnych i Geodezyjnych Piotr Rojek;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+103;3;3;;contract_value;2131590.0;;PLN;brutto;35;12;;;4.4.) Wartość umowy: 2131590,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+104;3;3;;performed;;tak;;nd;35;12;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+105;3;3;;actual_end_date;;2026-05-22;;nd;35;12;;;5.2.) Termin wykonania umowy: 2026-05-22;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+106;3;3;;performed_on_time;;nie;;nd;35;12;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+107;3;3;;n_changes;3.0;;;nd;35;12;;;5.4.1.) Liczba zmian: 3;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+108;3;3;;final_paid;2990000.0;;PLN;brutto;35;12;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 2990000,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+109;3;3;;performed_properly;;tak;;nd;35;12;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+110;4;4;;planned_duration_days;180.0;6 mies.;dni;nd;36;13;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 6 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+111;4;4;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;36;13;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+112;4;4;;security_required;;tak;;nd;36;13;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+113;4;4;;estimated_value_net;3844328.45;;PLN;netto;37;14;;;4.3.) Wartość zamówienia: 3844328,45 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+114;4;4;;procedure_result;;zawarcie umowy;;nd;37;14;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+115;4;4;;n_offers;13.0;;szt.;nd;37;14;;;6.1.) Liczba otrzymanych ofert lub wniosków: 13;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+116;4;4;;n_rejected;1.0;;szt.;nd;37;14;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+117;4;4;;offer_min;3918954.08;;PLN;brutto;37;14;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 3918954,08 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+118;4;4;;offer_max;5845910.47;;PLN;brutto;37;14;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 5845910,47 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+119;4;4;;awarded_price;3918954.08;;PLN;brutto;37;14;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 3918954,08 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+120;4;4;;contractor;;Instalcompact Sp. z o.o.;;nd;37;14;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Instalcompact Sp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+121;4;4;;signed_date;;2026-01-22;;nd;37;14;;;8.1.) Data zawarcia umowy: 2026-01-22;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+122;4;4;;contract_value;3918954.08;;PLN;brutto;37;14;;;8.2.) Wartość umowy/umowy ramowej: 3918954,08 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+123;4;4;;planned_end_date;;2026-07-22;;nd;37;14;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2026-07-22;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+124;4;4;;signed_date;;2026-01-22;;nd;38;15;;;4.1.) Data zawarcia umowy: 2026-01-22;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+125;4;4;;planned_end_date;;2026-07-22;;nd;38;15;;;4.2.) Okres realizacji zamówienia: do 2026-07-22;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+126;4;4;;contractor;;Instalcompact Sp. z o.o.;;nd;38;15;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Instalcompact Sp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+127;4;4;;contract_value;3918954.08;;PLN;brutto;38;15;;;4.4.) Wartość umowy: 3918954,08 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+128;4;4;;performed;;tak;;nd;38;15;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+129;4;4;;actual_end_date;;2026-10-28;;nd;38;15;;;5.2.) Termin wykonania umowy: 2026-10-28;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+130;4;4;;performed_on_time;;nie;;nd;38;15;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:54+00:00
+131;4;4;;n_changes;4.0;;;nd;38;15;;;5.4.1.) Liczba zmian: 4;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+132;4;4;;final_paid;4134920.22;;PLN;brutto;38;15;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 4134920,22 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+133;4;4;;performed_properly;;tak;;nd;38;15;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+134;5;5;;planned_end_date;;2025-10-30;;nd;39;16;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: do 2025-10-30;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+135;5;5;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;39;16;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+136;5;5;;security_required;;tak;;nd;39;16;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+137;5;5;;procedure_result;;zawarcie umowy;;nd;40;17;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+138;5;5;;n_offers;5.0;;szt.;nd;40;17;;;6.1.) Liczba otrzymanych ofert lub wniosków: 5;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+139;5;5;;n_rejected;0.0;;szt.;nd;40;17;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+140;5;5;;offer_min;2936010.0;;PLN;brutto;40;17;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 2936010,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+141;5;5;;offer_max;4831440.0;;PLN;brutto;40;17;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 4831440,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+142;5;5;;awarded_price;2936010.0;;PLN;brutto;40;17;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 2936010,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+143;5;5;;contractor;;Wimar Spółka z ograniczona odpowiedzialnością;;nd;40;17;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Wimar Spółka z ograniczona odpowiedzialnością;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+144;5;5;;signed_date;;2025-07-14;;nd;40;17;;;8.1.) Data zawarcia umowy: 2025-07-14;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+145;5;5;;contract_value;2936010.0;;PLN;brutto;40;17;;;8.2.) Wartość umowy/umowy ramowej: 2936010,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+146;5;5;;planned_end_date;;2025-10-30;;nd;40;17;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2025-10-30;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+147;5;5;;signed_date;;2025-07-14;;nd;41;18;;;4.1.) Data zawarcia umowy: 2025-07-14;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+148;5;5;;planned_end_date;;2025-10-30;;nd;41;18;;;4.2.) Okres realizacji zamówienia: do 2025-10-30;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+149;5;5;;contractor;;Wimar Spółka z ograniczona odpowiedzialnością;;nd;41;18;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Wimar Spółka z ograniczona odpowiedzialnością;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+150;5;5;;contract_value;2936010.0;;PLN;brutto;41;18;;;4.4.) Wartość umowy: 2936010,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+151;5;5;;performed;;tak;;nd;41;18;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+152;5;5;;actual_end_date;;2025-12-05;;nd;41;18;;;5.2.) Termin wykonania umowy: 2025-12-05;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+153;5;5;;performed_on_time;;nie;;nd;41;18;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+154;5;5;;n_changes;1.0;;;nd;41;18;;;5.4.1.) Liczba zmian: 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+155;5;5;;final_paid;3087491.54;;PLN;brutto;41;18;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 3087491,54 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+156;5;5;;performed_properly;;tak;;nd;41;18;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+157;6;6;;planned_duration_days;120.0;4 mies.;dni;nd;42;19;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 4 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+158;6;6;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;42;19;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+159;6;6;;security_required;;tak;;nd;42;19;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+160;6;6;;estimated_value_net;2031769.99;;PLN;netto;43;20;;;4.3.) Wartość zamówienia: 2031769,99 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+161;6;6;;procedure_result;;zawarcie umowy;;nd;43;20;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+162;6;6;;n_offers;3.0;;szt.;nd;43;20;;;6.1.) Liczba otrzymanych ofert lub wniosków: 3;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+163;6;6;;n_rejected;1.0;;szt.;nd;43;20;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+164;6;6;;offer_min;2499110.3;;PLN;brutto;43;20;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 2499110,30 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+165;6;6;;offer_max;6150000.0;;PLN;brutto;43;20;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 6150000,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+166;6;6;;awarded_price;2499110.3;;PLN;brutto;43;20;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 2499110,30 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+167;6;6;;contractor;;EKOMELSp. z o.o.;;nd;43;20;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: EKOMELSp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+168;6;6;;signed_date;;2024-03-11;;nd;43;20;;;8.1.) Data zawarcia umowy: 2024-03-11;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+169;6;6;;contract_value;2499110.3;;PLN;brutto;43;20;;;8.2.) Wartość umowy/umowy ramowej: 2499110,30 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+170;6;6;;planned_duration_days;120.0;4 mies.;dni;nd;43;20;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 4 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+171;6;6;;signed_date;;2024-03-11;;nd;44;21;;;4.1.) Data zawarcia umowy/umowy ramowej: 2024-03-11;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+172;6;6;;planned_duration_days;120.0;4 mies.;dni;nd;44;21;;;4.2.) Okres realizacji zamówienia/umowy ramowej: 4 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+173;6;6;;contractor;;EKOMELSp. z o.o.;;nd;44;21;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): EKOMELSp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+174;6;6;;contract_value;2499110.3;;PLN;brutto;44;21;;;4.4.) Wartość umowy/umowy ramowej: 2499110,30 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+175;6;6;;signed_date;;2024-03-11;;nd;45;22;;;4.1.) Data zawarcia umowy/umowy ramowej: 2024-03-11;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+176;6;6;;planned_duration_days;120.0;4 mies.;dni;nd;45;22;;;4.2.) Okres realizacji zamówienia/umowy ramowej: 4 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+177;6;6;;contractor;;EKOMELSp. z o.o.;;nd;45;22;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): EKOMELSp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+178;6;6;;contract_value;2499110.3;;PLN;brutto;45;22;;;4.4.) Wartość umowy/umowy ramowej: 2499110,30 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+179;6;6;;signed_date;;2024-03-11;;nd;46;23;;;4.1.) Data zawarcia umowy: 2024-03-11;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+180;6;6;;planned_duration_days;120.0;4 mies.;dni;nd;46;23;;;4.2.) Okres realizacji zamówienia: 4 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+181;6;6;;contractor;;EKOMELSp. z o.o.;;nd;46;23;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): EKOMELSp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+182;6;6;;contract_value;2499110.3;;PLN;brutto;46;23;;;4.4.) Wartość umowy: 2499110,30 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+183;6;6;;performed;;tak;;nd;46;23;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+184;6;6;;actual_end_date;;2024-09-30;;nd;46;23;;;5.2.) Termin wykonania umowy: 2024-09-30;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+185;6;6;;performed_on_time;;nie;;nd;46;23;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+186;6;6;;n_changes;2.0;;;nd;46;23;;;5.4.1.) Liczba zmian: 2;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+187;6;6;;final_paid;2604551.19;;PLN;brutto;46;23;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 2604551,19 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+188;6;6;;performed_properly;;tak;;nd;46;23;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+189;7;7;;planned_end_date;;2026-04-30;;nd;47;24;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: do 2026-04-30;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+190;7;7;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;47;24;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+191;7;7;;security_required;;tak;;nd;47;24;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+192;7;7;;procedure_result;;zawarcie umowy;;nd;48;25;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+193;7;7;;n_offers;4.0;;szt.;nd;48;25;;;6.1.) Liczba otrzymanych ofert lub wniosków: 4;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+194;7;7;;n_rejected;0.0;;szt.;nd;48;25;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+195;7;7;;offer_min;1389000.0;;PLN;brutto;48;25;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 1389000 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+196;7;7;;offer_max;3286166.4;;PLN;brutto;48;25;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 3286166,40 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+197;7;7;;awarded_price;1478460.0;;PLN;brutto;48;25;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 1478460,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+198;7;7;;contractor;;HYDRO-SYSTEM Mateusz Kwiatkowski , Jana Kasprowicza 88 , 20-232 Lublin Nazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiębiorstwo Robót Inżynieryjnych „En;;nd;48;25;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): HYDRO-SYSTEM Mateusz Kwiatkowski , Jana Kasprowicza 88 , 20-232 Lublin Nazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiębiorstwo Robót Inżynieryjnych „Energopol-Lublin” Sp. z o.o., ul. Jana Kasprowicza 88, 20-232 Lublin;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+199;7;7;;signed_date;;2026-04-09;;nd;48;25;;;8.1.) Data zawarcia umowy: 2026-04-09;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+200;7;7;;contract_value;1478460.0;;PLN;brutto;48;25;;;8.2.) Wartość umowy/umowy ramowej: 1478460,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+201;7;7;;planned_end_date;;2026-04-30;;nd;48;25;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2026-04-30;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+202;7;7;;signed_date;;2026-04-09;;nd;49;26;;;4.1.) Data zawarcia umowy: 2026-04-09;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+203;7;7;;planned_end_date;;2026-04-30;;nd;49;26;;;4.2.) Okres realizacji zamówienia: do 2026-04-30;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+204;7;7;;contractor;;HYDRO-SYSTEM Mateusz Kwiatkowski , Jana Kasprowicza 88 , 20-232 Lublin;;nd;49;26;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): HYDRO-SYSTEM Mateusz Kwiatkowski , Jana Kasprowicza 88 , 20-232 Lublin;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+205;7;7;;contract_value;1478460.0;;PLN;brutto;49;26;;;4.4.) Wartość umowy: 1478460,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+206;7;7;;performed;;tak;;nd;49;26;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+207;7;7;;actual_end_date;;2026-05-19;;nd;49;26;;;5.2.) Termin wykonania umowy: 2026-05-19;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+208;7;7;;performed_on_time;;nie;;nd;49;26;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+209;7;7;;n_changes;0.0;;;nd;49;26;;;5.4.1.) Liczba zmian: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+210;7;7;;final_paid;1468960.0;;PLN;brutto;49;26;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 1468960,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+211;7;7;;performed_properly;;nie;;nd;49;26;;;5.6.) Czy umowa została wykonana należycie: Nie;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+212;8;8;;planned_end_date;;2026-04-27;;nd;50;27;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: do 2026-04-27;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+213;8;8;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;50;27;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+214;8;8;;planned_end_date;;2026-04-27;;nd;50;27;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: do 2026-04-27;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+215;8;8;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;50;27;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+216;8;8;;planned_end_date;;2026-04-27;;nd;50;27;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: do 2026-04-27;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+217;8;8;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;50;27;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+218;8;8;;planned_end_date;;2026-04-27;;nd;50;27;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: do 2026-04-27;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+219;8;8;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;50;27;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+220;8;8;;security_required;;tak;;nd;50;27;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+221;8;8;;part_value_net;2396367.72;;PLN;netto;51;28;;;4.5.5.) Wartość części: 2396367,72 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+222;8;8;;part_value_net;1340783.74;;PLN;netto;51;28;;;4.5.5.) Wartość części: 1340783,74 PLN;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+223;8;8;;part_value_net;1063770.84;;PLN;netto;51;28;;;4.5.5.) Wartość części: 1063770,84 PLN;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+224;8;8;;part_value_net;230252.6;;PLN;netto;51;28;;;4.5.5.) Wartość części: 230252,60 PLN SEKCJA V ZAKOŃCZENIE POSTĘPOWANIA;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+225;8;8;;procedure_result;;zawarcie umowy;;nd;51;28;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY (dla części 1);0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+226;8;8;;n_offers;9.0;;szt.;nd;51;28;;;6.1.) Liczba otrzymanych ofert lub wniosków: 9;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+227;8;8;;n_rejected;4.0;;szt.;nd;51;28;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 4;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+228;8;8;;offer_min;1952120.53;;PLN;brutto;51;28;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 1952120,53 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+229;8;8;;offer_max;2952000.0;;PLN;brutto;51;28;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 2952000,00 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+230;8;8;;awarded_price;1952120.53;;PLN;brutto;51;28;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 1952120,53 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+231;8;8;;contractor;;Multikop Sp. z o. o.;;nd;51;28;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Multikop Sp. z o. o.;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+232;8;8;;signed_date;;2026-03-12;;nd;51;28;;;8.1.) Data zawarcia umowy: 2026-03-12;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+233;8;8;;contract_value;1952120.53;;PLN;brutto;51;28;;;8.2.) Wartość umowy/umowy ramowej: 1952120,53 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+234;8;8;;planned_end_date;;2026-04-27;;nd;51;28;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2026-04-27;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+235;8;8;;procedure_result;;zawarcie umowy;;nd;51;28;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY (dla części 2);0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+236;8;8;;n_offers;10.0;;szt.;nd;51;28;;;6.1.) Liczba otrzymanych ofert lub wniosków: 10;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+237;8;8;;n_rejected;1.0;;szt.;nd;51;28;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 1;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+238;8;8;;offer_min;1200000.0;;PLN;brutto;51;28;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 1200000,00 PLN;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+239;8;8;;offer_max;2361600.0;;PLN;brutto;51;28;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 2361600,00 PLN;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+240;8;8;;awarded_price;1200000.0;;PLN;brutto;51;28;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 1200000,00 PLN;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+241;8;8;;contractor;;"Przedsiębiorstwo Budownictwa Wodno-Sanitarnego ""POTOK"" Piotr Potok";;nd;51;28;;;"7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Przedsiębiorstwo Budownictwa Wodno-Sanitarnego ""POTOK"" Piotr Potok";0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+242;8;8;;signed_date;;2026-03-12;;nd;51;28;;;8.1.) Data zawarcia umowy: 2026-03-12;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+243;8;8;;contract_value;1200000.0;;PLN;brutto;51;28;;;8.2.) Wartość umowy/umowy ramowej: 1200000,00 PLN;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+244;8;8;;planned_end_date;;2026-04-27;;nd;51;28;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2026-04-27;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+245;8;8;;procedure_result;;zawarcie umowy;;nd;51;28;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY (dla części 3);0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+246;8;8;;n_offers;12.0;;szt.;nd;51;28;;;6.1.) Liczba otrzymanych ofert lub wniosków: 12;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+247;8;8;;n_rejected;2.0;;szt.;nd;51;28;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 2;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+248;8;8;;offer_min;1113623.55;;PLN;brutto;51;28;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 1113623,55 PLN;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+249;8;8;;offer_max;1783500.0;;PLN;brutto;51;28;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 1783500,00 PLN;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+250;8;8;;awarded_price;1113623.55;;PLN;brutto;51;28;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 1113623,55 PLN;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+251;8;8;;contractor;;Multikop Sp. z o.o.;;nd;51;28;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Multikop Sp. z o.o.;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+252;8;8;;signed_date;;2026-03-19;;nd;51;28;;;8.1.) Data zawarcia umowy: 2026-03-19;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+253;8;8;;contract_value;1113623.55;;PLN;brutto;51;28;;;8.2.) Wartość umowy/umowy ramowej: 1113623,55 PLN;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+254;8;8;;planned_end_date;;2026-04-27;;nd;51;28;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2026-04-27;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+255;8;8;;procedure_result;;zawarcie umowy;;nd;51;28;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY (dla części 4);0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+256;8;8;;n_offers;11.0;;szt.;nd;51;28;;;6.1.) Liczba otrzymanych ofert lub wniosków: 11;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+257;8;8;;n_rejected;1.0;;szt.;nd;51;28;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 1;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+258;8;8;;offer_min;205000.02;;PLN;brutto;51;28;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 205000,02 PLN;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+259;8;8;;offer_max;977850.0;;PLN;brutto;51;28;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 977850,00 PLN;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+260;8;8;;awarded_price;205000.0;;PLN;brutto;51;28;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 205000,00 PLN;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+261;8;8;;contractor;;"Przedsiębiorstwo Budownictwa Wodno-Sanitarnego ""POTOK"" Piotr Potok";;nd;51;28;;;"7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Przedsiębiorstwo Budownictwa Wodno-Sanitarnego ""POTOK"" Piotr Potok";0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+262;8;8;;signed_date;;2026-03-12;;nd;51;28;;;8.1.) Data zawarcia umowy: 2026-03-12;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+263;8;8;;contract_value;205000.02;;PLN;brutto;51;28;;;8.2.) Wartość umowy/umowy ramowej: 205000,02 PLN;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+264;8;8;;planned_end_date;;2026-04-27;;nd;51;28;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2026-04-27;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+265;8;8;;signed_date;;2026-03-12;;nd;52;29;;;4.1.) Data zawarcia umowy: 2026-03-12;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+266;8;8;;planned_end_date;;2026-04-27;;nd;52;29;;;4.2.) Okres realizacji zamówienia: do 2026-04-27;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+267;8;8;;contractor;;"Przedsiębiorstwo Budownictwa Wodno-Sanitarnego ""POTOK"" Piotr Potok";;nd;52;29;;;"4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Przedsiębiorstwo Budownictwa Wodno-Sanitarnego ""POTOK"" Piotr Potok";0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+268;8;8;;contract_value;205000.02;;PLN;brutto;52;29;;;4.4.) Wartość umowy: 205000,02 PLN;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+269;8;8;;performed;;tak;;nd;52;29;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+270;8;8;;actual_end_date;;2026-04-27;;nd;52;29;;;5.2.) Termin wykonania umowy: 2026-04-27;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+271;8;8;;performed_on_time;;tak;;nd;52;29;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Tak 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+272;8;8;;n_changes;0.0;;;nd;52;29;;;5.4.1.) Liczba zmian: 0;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+273;8;8;;final_paid;205000.02;;PLN;brutto;52;29;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 205000,02 PLN;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+274;8;8;;performed_properly;;tak;;nd;52;29;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;4;2026-11-22T06:16:55+00:00
+275;8;8;;signed_date;;2026-03-19;;nd;53;30;;;4.1.) Data zawarcia umowy: 2026-03-19;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+276;8;8;;planned_end_date;;2026-04-27;;nd;53;30;;;4.2.) Okres realizacji zamówienia: do 2026-04-27;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+277;8;8;;contractor;;Multikop Sp. z o.o.;;nd;53;30;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Multikop Sp. z o.o.;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+278;8;8;;contract_value;1113623.55;;PLN;brutto;53;30;;;4.4.) Wartość umowy: 1113623,55 PLN;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+279;8;8;;performed;;tak;;nd;53;30;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+280;8;8;;actual_end_date;;2026-04-27;;nd;53;30;;;5.2.) Termin wykonania umowy: 2026-04-27;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+281;8;8;;performed_on_time;;tak;;nd;53;30;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Tak 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+282;8;8;;n_changes;1.0;;;nd;53;30;;;5.4.1.) Liczba zmian: 1;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+283;8;8;;final_paid;1174746.76;;PLN;brutto;53;30;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 1174746,76 PLN;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+284;8;8;;performed_properly;;tak;;nd;53;30;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;3;2026-11-22T06:16:55+00:00
+285;8;8;;signed_date;;2026-03-12;;nd;54;31;;;4.1.) Data zawarcia umowy: 2026-03-12;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+286;8;8;;planned_end_date;;2026-04-27;;nd;54;31;;;4.2.) Okres realizacji zamówienia: do 2026-04-27;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+287;8;8;;contractor;;"Przedsiębiorstwo Budownictwa Wodno-Sanitarnego ""POTOK"" Piotr Potok";;nd;54;31;;;"4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Przedsiębiorstwo Budownictwa Wodno-Sanitarnego ""POTOK"" Piotr Potok";0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+288;8;8;;contract_value;1200000.0;;PLN;brutto;54;31;;;4.4.) Wartość umowy: 1200000,00 PLN;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+289;8;8;;performed;;tak;;nd;54;31;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+290;8;8;;actual_end_date;;2026-04-27;;nd;54;31;;;5.2.) Termin wykonania umowy: 2026-04-27;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+291;8;8;;performed_on_time;;tak;;nd;54;31;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Tak 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+292;8;8;;n_changes;0.0;;;nd;54;31;;;5.4.1.) Liczba zmian: 0;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+293;8;8;;final_paid;1200000.0;;PLN;brutto;54;31;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 1200000,00 PLN;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+294;8;8;;performed_properly;;tak;;nd;54;31;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+295;8;8;;signed_date;;2026-03-12;;nd;55;32;;;4.1.) Data zawarcia umowy: 2026-03-12;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+296;8;8;;planned_end_date;;2026-04-27;;nd;55;32;;;4.2.) Okres realizacji zamówienia: do 2026-04-27;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+297;8;8;;contractor;;Multikop Sp. z o. o.;;nd;55;32;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Multikop Sp. z o. o.;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+298;8;8;;contract_value;1952120.53;;PLN;brutto;55;32;;;4.4.) Wartość umowy: 1952120,53 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+299;8;8;;performed;;tak;;nd;55;32;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+300;8;8;;actual_end_date;;2026-04-27;;nd;55;32;;;5.2.) Termin wykonania umowy: 2026-04-27;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+301;8;8;;performed_on_time;;tak;;nd;55;32;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Tak 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+302;8;8;;n_changes;1.0;;;nd;55;32;;;5.4.1.) Liczba zmian: 1;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+303;8;8;;final_paid;2375309.26;;PLN;brutto;55;32;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 2375309,26 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+304;8;8;;performed_properly;;tak;;nd;55;32;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+305;9;9;;planned_end_date;;2025-11-15;;nd;56;33;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: do 2025-11-15;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+306;9;9;;criteria;;Wyłącznie kryterium ceny Kryterium 1;;nd;56;33;;;4.3.3.) Stosowane kryteria oceny ofert: Wyłącznie kryterium ceny Kryterium 1;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+307;9;9;;planned_end_date;;2025-11-15;;nd;56;33;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: do 2025-11-15;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+308;9;9;;criteria;;Wyłącznie kryterium ceny Kryterium 1;;nd;56;33;;;4.3.3.) Stosowane kryteria oceny ofert: Wyłącznie kryterium ceny Kryterium 1;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+309;9;9;;security_required;;tak;;nd;56;33;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+310;9;9;;part_value_net;1168848.67;;PLN;netto;57;34;;;4.5.5.) Wartość części: 1168848,67 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+311;9;9;;part_value_net;1364350.8;;PLN;netto;57;34;;;4.5.5.) Wartość części: 1364350,80 PLN SEKCJA V ZAKOŃCZENIE POSTĘPOWANIA;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+312;9;9;;procedure_result;;zawarcie umowy;;nd;57;34;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY (dla części 1);0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+313;9;9;;n_offers;4.0;;szt.;nd;57;34;;;6.1.) Liczba otrzymanych ofert lub wniosków: 4;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+314;9;9;;n_rejected;2.0;;szt.;nd;57;34;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 2;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+315;9;9;;offer_min;420935.3;;PLN;brutto;57;34;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 420935,30 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+316;9;9;;offer_max;806948.15;;PLN;brutto;57;34;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 806948,15 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+317;9;9;;awarded_price;420935.3;;PLN;brutto;57;34;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 420935,30 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+318;9;9;;contractor;;INSBUD-KLWÓW Bartłomiej Żułciński;;nd;57;34;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: INSBUD-KLWÓW Bartłomiej Żułciński;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+319;9;9;;signed_date;;2025-09-10;;nd;57;34;;;8.1.) Data zawarcia umowy: 2025-09-10;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+320;9;9;;contract_value;420935.3;;PLN;brutto;57;34;;;8.2.) Wartość umowy/umowy ramowej: 420935,30 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+321;9;9;;planned_end_date;;2025-11-15;;nd;57;34;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2025-11-15;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+322;9;9;;procedure_result;;zawarcie umowy;;nd;57;34;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY (dla części 2);0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+323;9;9;;n_offers;2.0;;szt.;nd;57;34;;;6.1.) Liczba otrzymanych ofert lub wniosków: 2;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+324;9;9;;n_rejected;1.0;;szt.;nd;57;34;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 1;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+325;9;9;;offer_min;1810533.92;;PLN;brutto;57;34;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 1810533,92 PLN;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+326;9;9;;offer_max;1810533.92;;PLN;brutto;57;34;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 1810533,92 PLN;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+327;9;9;;awarded_price;1810533.92;;PLN;brutto;57;34;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 1810533,92 PLN;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+328;9;9;;contractor;;AQUA SEEN SP. Z O.O.;;nd;57;34;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: AQUA SEEN SP. Z O.O.;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+329;9;9;;signed_date;;2025-08-25;;nd;57;34;;;8.1.) Data zawarcia umowy: 2025-08-25;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+330;9;9;;contract_value;1810533.92;;PLN;brutto;57;34;;;8.2.) Wartość umowy/umowy ramowej: 1810533,92 PLN;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+331;9;9;;planned_end_date;;2025-11-15;;nd;57;34;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2025-11-15;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+332;9;9;;signed_date;;2025-08-25;;nd;58;35;;;4.1.) Data zawarcia umowy: 2025-08-25;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+333;9;9;;planned_end_date;;2025-11-15;;nd;58;35;;;4.2.) Okres realizacji zamówienia: do 2025-11-15;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+334;9;9;;contractor;;AQUA SEEN SP. Z O.O.;;nd;58;35;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): AQUA SEEN SP. Z O.O.;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+335;9;9;;contract_value;1810533.92;;PLN;brutto;58;35;;;4.4.) Wartość umowy: 1810533,92 PLN;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+336;9;9;;performed;;tak;;nd;58;35;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+337;9;9;;actual_end_date;;2025-11-13;;nd;58;35;;;5.2.) Termin wykonania umowy: 2025-11-13;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+338;9;9;;performed_on_time;;tak;;nd;58;35;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Tak 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+339;9;9;;n_changes;1.0;;;nd;58;35;;;5.4.1.) Liczba zmian: 1;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+340;9;9;;final_paid;1881383.15;;PLN;brutto;58;35;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 1881383,15 PLN;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+341;9;9;;performed_properly;;tak;;nd;58;35;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;2;2026-11-22T06:16:55+00:00
+342;9;9;;signed_date;;2025-09-10;;nd;59;36;;;4.1.) Data zawarcia umowy: 2025-09-10;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+343;9;9;;planned_end_date;;2025-11-15;;nd;59;36;;;4.2.) Okres realizacji zamówienia: do 2025-11-15;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+344;9;9;;contractor;;INSBUD-KLWÓW Bartłomiej Żułciński ,;;nd;59;36;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): INSBUD-KLWÓW Bartłomiej Żułciński ,;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+345;9;9;;contract_value;420935.3;;PLN;brutto;59;36;;;4.4.) Wartość umowy: 420935,30 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+346;9;9;;performed;;tak;;nd;59;36;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+347;9;9;;actual_end_date;;2025-12-25;;nd;59;36;;;5.2.) Termin wykonania umowy: 2025-12-25;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+348;9;9;;performed_on_time;;nie;;nd;59;36;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+349;9;9;;n_changes;1.0;;;nd;59;36;;;5.4.1.) Liczba zmian: 1;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+350;9;9;;final_paid;420935.3;;PLN;brutto;59;36;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 420935,30 PLN;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+351;9;9;;performed_properly;;tak;;nd;59;36;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;1;2026-11-22T06:16:55+00:00
+352;10;10;;estimated_value_net;4955553.31;;PLN;netto;60;37;;;4.1.5.) Wartość zamówienia: 4955553,31 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+353;10;10;;planned_end_date;;2025-11-15;;nd;60;37;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: do 2025-11-15;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+354;10;10;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;60;37;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+355;10;10;;security_required;;tak;;nd;60;37;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+356;10;10;;estimated_value_net;4955553.31;;PLN;netto;61;38;;;4.3.) Wartość zamówienia: 4955553,31 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+357;10;10;;procedure_result;;zawarcie umowy;;nd;61;38;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+358;10;10;;n_offers;9.0;;szt.;nd;61;38;;;6.1.) Liczba otrzymanych ofert lub wniosków: 9;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+359;10;10;;n_rejected;3.0;;szt.;nd;61;38;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 3;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+360;10;10;;offer_min;3348882.44;;PLN;brutto;61;38;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 3348882,44 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+361;10;10;;offer_max;4901093.22;;PLN;brutto;61;38;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 4901093,22 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+362;10;10;;awarded_price;3348882.44;;PLN;brutto;61;38;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 3348882,44 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+363;10;10;;contractor;;HYDRO-MONT ŻĄDŁO Sp.z o.o.;;nd;61;38;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: HYDRO-MONT ŻĄDŁO Sp.z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+364;10;10;;signed_date;;2025-07-28;;nd;61;38;;;8.1.) Data zawarcia umowy: 2025-07-28;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+365;10;10;;contract_value;3348882.44;;PLN;brutto;61;38;;;8.2.) Wartość umowy/umowy ramowej: 3348882,44 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+366;10;10;;planned_end_date;;2025-11-15;;nd;61;38;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2025-11-15;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+367;10;10;;estimated_value_net;284552.85;;PLN;netto;62;39;;;4.3.) Wartość zamówienia: 284552,85 PLN;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+368;10;10;;procedure_result;;zawarcie umowy;;nd;62;39;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+369;10;10;;n_offers;5.0;;szt.;nd;62;39;;;6.1.) Liczba otrzymanych ofert lub wniosków: 5;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+370;10;10;;n_rejected;1.0;;szt.;nd;62;39;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 1;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+371;10;10;;offer_min;198675.9;;PLN;brutto;62;39;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 198675,90 PLN;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+372;10;10;;offer_max;402336.45;;PLN;brutto;62;39;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 402336,45 PLN;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+373;10;10;;awarded_price;198675.9;;PLN;brutto;62;39;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 198675,90 PLN;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+374;10;10;;contractor;;Przedsiębiorstwo Produkcyjno-Usługowo-Handlowe KILBUD Barbara Bieniasz;;nd;62;39;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Przedsiębiorstwo Produkcyjno-Usługowo-Handlowe KILBUD Barbara Bieniasz;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+375;10;10;;signed_date;;2025-07-02;;nd;62;39;;;8.1.) Data zawarcia umowy: 2025-07-02;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+376;10;10;;contract_value;198675.9;;PLN;brutto;62;39;;;8.2.) Wartość umowy/umowy ramowej: 198675,90 PLN;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+377;10;10;;planned_end_date;;2025-10-31;;nd;62;39;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2025-10-31;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+378;10;10;;signed_date;;2025-07-28;;nd;63;40;;;4.1.) Data zawarcia umowy: 2025-07-28;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+379;10;10;;planned_end_date;;2025-11-15;;nd;63;40;;;4.2.) Okres realizacji zamówienia: do 2025-11-15;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+380;10;10;;contractor;;HYDRO-MONT ŻĄDŁO Sp.z o.o.;;nd;63;40;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): HYDRO-MONT ŻĄDŁO Sp.z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+381;10;10;;contract_value;3348882.44;;PLN;brutto;63;40;;;4.4.) Wartość umowy: 3348882,44 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+382;10;10;;performed;;tak;;nd;63;40;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+383;10;10;;actual_end_date;;2025-12-30;;nd;63;40;;;5.2.) Termin wykonania umowy: 2025-12-30;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+384;10;10;;performed_on_time;;nie;;nd;63;40;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+385;10;10;;n_changes;1.0;;;nd;63;40;;;5.4.1.) Liczba zmian: 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+386;10;10;;final_paid;3348882.44;;PLN;brutto;63;40;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 3348882,44 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+387;10;10;;performed_properly;;tak;;nd;63;40;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+388;11;11;;planned_duration_days;150.0;5 mies.;dni;nd;64;41;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 5 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+389;11;11;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;64;41;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+390;11;11;;security_required;;nie;;nd;64;41;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Nie;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+391;11;11;;estimated_value_net;3563690.63;;PLN;netto;65;42;;;4.3.) Wartość zamówienia: 3563690,63 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+392;11;11;;procedure_result;;zawarcie umowy;;nd;65;42;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+393;11;11;;n_offers;7.0;;szt.;nd;65;42;;;6.1.) Liczba otrzymanych ofert lub wniosków: 7;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+394;11;11;;n_rejected;1.0;;szt.;nd;65;42;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+395;11;11;;offer_min;2880536.18;;PLN;brutto;65;42;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 2880536,18 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+396;11;11;;offer_max;3780745.83;;PLN;brutto;65;42;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 3780745,83 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+397;11;11;;awarded_price;2880536.18;;PLN;brutto;65;42;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 2880536,18 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+398;11;11;;contractor;;Zakład Instalacyjno-Budowlany Edward Kwiek;;nd;65;42;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Zakład Instalacyjno-Budowlany Edward Kwiek;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+399;11;11;;signed_date;;2023-07-27;;nd;65;42;;;8.1.) Data zawarcia umowy: 2023-07-27;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+400;11;11;;contract_value;2880536.18;;PLN;brutto;65;42;;;8.2.) Wartość umowy/umowy ramowej: 2880536,18 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+401;11;11;;planned_duration_days;150.0;5 mies.;dni;nd;65;42;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 5 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+402;11;11;;signed_date;;2023-07-27;;nd;66;43;;;4.1.) Data zawarcia umowy: 2023-07-27;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+403;11;11;;planned_duration_days;150.0;5 mies.;dni;nd;66;43;;;4.2.) Okres realizacji zamówienia: 5 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+404;11;11;;contractor;;Zakład Instalacyjno-Budowlany Edward Kwiek;;nd;66;43;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Zakład Instalacyjno-Budowlany Edward Kwiek;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+405;11;11;;contract_value;2880536.18;;PLN;brutto;66;43;;;4.4.) Wartość umowy: 2880536,18 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+406;11;11;;performed;;tak;;nd;66;43;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+407;11;11;;actual_end_date;;2023-12-21;;nd;66;43;;;5.2.) Termin wykonania umowy: 2023-12-21;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+408;11;11;;performed_on_time;;tak;;nd;66;43;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Tak 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+409;11;11;;n_changes;1.0;;;nd;66;43;;;5.4.1.) Liczba zmian: 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+410;11;11;;final_paid;3134219.4;;PLN;brutto;66;43;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 3134219,40 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+411;11;11;;performed_properly;;tak;;nd;66;43;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+412;12;12;;planned_duration_days;160.0;;dni;nd;67;44;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 160 dni;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+413;12;12;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;67;44;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+414;12;12;;security_required;;tak;;nd;67;44;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+415;12;12;;estimated_value_net;3177366.22;;PLN;netto;68;45;;;4.3.1) Wartość zamówienia stanowiącego przedmiot tego postępowania (bez VAT): 3177366,22 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+416;12;12;;procedure_result;;zawarcie umowy;;nd;68;45;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+417;12;12;;n_offers;7.0;;szt.;nd;68;45;;;6.1.) Liczba otrzymanych ofert lub wniosków: 7;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+418;12;12;;n_rejected;4.0;;szt.;nd;68;45;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 4;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+419;12;12;;offer_min;3616200.0;;PLN;brutto;68;45;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 3616200,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+420;12;12;;offer_max;5904000.0;;PLN;brutto;68;45;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 5904000,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+421;12;12;;awarded_price;3616200.0;;PLN;brutto;68;45;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 3616200,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+422;12;12;;contractor;;Przedsiębiorstwo Inżynieryjne Drewa – Hydroinstal sp. z o.o.;;nd;68;45;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Przedsiębiorstwo Inżynieryjne Drewa – Hydroinstal sp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+423;12;12;;signed_date;;2025-05-19;;nd;68;45;;;8.1.) Data zawarcia umowy: 2025-05-19;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+424;12;12;;contract_value;3616200.0;;PLN;brutto;68;45;;;8.2.) Wartość umowy/umowy ramowej: 3616200,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+425;12;12;;planned_duration_days;160.0;;dni;nd;68;45;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 160 dni;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+426;12;12;;signed_date;;2025-05-19;;nd;69;46;;;4.1.) Data zawarcia umowy: 2025-05-19;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+427;12;12;;planned_duration_days;160.0;;dni;nd;69;46;;;4.2.) Okres realizacji zamówienia: 160 dni;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+428;12;12;;contractor;;Przedsiębiorstwo Inżynieryjne Drewa – Hydroinstal sp. z o.o.;;nd;69;46;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Przedsiębiorstwo Inżynieryjne Drewa – Hydroinstal sp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+429;12;12;;contract_value;3616200.0;;PLN;brutto;69;46;;;4.4.) Wartość umowy: 3616200,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+430;12;12;;performed;;tak;;nd;69;46;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+431;12;12;;actual_end_date;;2025-12-23;;nd;69;46;;;5.2.) Termin wykonania umowy: 2025-12-23;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+432;12;12;;performed_on_time;;nie;;nd;69;46;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+433;12;12;;n_changes;2.0;;;nd;69;46;;;5.4.1.) Liczba zmian: 2;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+434;12;12;;final_paid;3650944.36;;PLN;brutto;69;46;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 3650944,36 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+435;12;12;;performed_properly;;nie;;nd;69;46;;;5.6.) Czy umowa została wykonana należycie: Nie;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+436;13;13;;planned_duration_days;480.0;16 mies.;dni;nd;70;47;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 16 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+437;13;13;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;70;47;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+438;13;13;;security_required;;tak;;nd;70;47;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+439;13;13;;estimated_value_net;5786485.0;;PLN;netto;71;48;;;4.3.) Wartość zamówienia: 5786485,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+440;13;13;;procedure_result;;zawarcie umowy;;nd;71;48;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+441;13;13;;n_offers;9.0;;szt.;nd;71;48;;;6.1.) Liczba otrzymanych ofert lub wniosków: 9;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+442;13;13;;n_rejected;0.0;;szt.;nd;71;48;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+443;13;13;;offer_min;5991655.95;;PLN;brutto;71;48;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 5991655,95 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+444;13;13;;offer_max;8844375.27;;PLN;brutto;71;48;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 8844375,27 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+445;13;13;;awarded_price;5991655.95;;PLN;brutto;71;48;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 5991655,95 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+446;13;13;;contractor;;EKOINSTAL Sp. z o.o.;;nd;71;48;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: EKOINSTAL Sp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+447;13;13;;signed_date;;2023-06-15;;nd;71;48;;;8.1.) Data zawarcia umowy: 2023-06-15;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+448;13;13;;contract_value;5991655.95;;PLN;brutto;71;48;;;8.2.) Wartość umowy/umowy ramowej: 5991655,95 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+449;13;13;;planned_duration_days;480.0;16 mies.;dni;nd;71;48;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 16 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+450;13;13;;signed_date;;2023-06-15;;nd;72;49;;;4.1.) Data zawarcia umowy: 2023-06-15;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+451;13;13;;planned_duration_days;480.0;16 mies.;dni;nd;72;49;;;4.2.) Okres realizacji zamówienia: 16 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+452;13;13;;contractor;;EKOINSTAL Sp. z o.o.;;nd;72;49;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): EKOINSTAL Sp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+453;13;13;;contract_value;5991655.95;;PLN;brutto;72;49;;;4.4.) Wartość umowy: 5991655,95 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+454;13;13;;performed;;tak;;nd;72;49;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+455;13;13;;actual_end_date;;2024-11-15;;nd;72;49;;;5.2.) Termin wykonania umowy: 2024-11-15;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+456;13;13;;performed_on_time;;nie;;nd;72;49;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+457;13;13;;n_changes;2.0;;;nd;72;49;;;5.4.1.) Liczba zmian: 2;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+458;13;13;;final_paid;6397551.35;;PLN;brutto;72;49;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 6397551,35 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+459;13;13;;performed_properly;;tak;;nd;72;49;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+460;14;14;;planned_end_date;;2026-05-13;;nd;73;50;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: do 2026-05-13;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+461;14;14;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;73;50;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+462;14;14;;security_required;;tak;;nd;73;50;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+463;14;14;;estimated_value_net;1304706.85;;PLN;netto;74;51;;;4.3.) Wartość zamówienia: 1304706,85 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+464;14;14;;procedure_result;;zawarcie umowy;;nd;74;51;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+465;14;14;;n_offers;12.0;;szt.;nd;74;51;;;6.1.) Liczba otrzymanych ofert lub wniosków: 12;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+466;14;14;;n_rejected;0.0;;szt.;nd;74;51;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+467;14;14;;offer_min;1193100.0;;PLN;brutto;74;51;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 1193100,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+468;14;14;;offer_max;1731392.12;;PLN;brutto;74;51;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 1731392,12 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+469;14;14;;awarded_price;1193100.0;;PLN;brutto;74;51;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 1193100,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+470;14;14;;contractor;;ALFA Bożena Habrajska;;nd;74;51;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: ALFA Bożena Habrajska;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+471;14;14;;signed_date;;2026-04-07;;nd;74;51;;;8.1.) Data zawarcia umowy: 2026-04-07;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+472;14;14;;contract_value;1193100.0;;PLN;brutto;74;51;;;8.2.) Wartość umowy/umowy ramowej: 1193100,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+473;14;14;;planned_end_date;;2026-05-13;;nd;74;51;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2026-05-13;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+474;14;14;;signed_date;;2026-04-07;;nd;75;52;;;4.1.) Data zawarcia umowy: 2026-04-07;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+475;14;14;;planned_end_date;;2026-05-13;;nd;75;52;;;4.2.) Okres realizacji zamówienia: do 2026-05-13;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+476;14;14;;contractor;;ALFA Bożena Habrajska;;nd;75;52;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): ALFA Bożena Habrajska;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+477;14;14;;contract_value;1193100.0;;PLN;brutto;75;52;;;4.4.) Wartość umowy: 1193100,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+478;14;14;;performed;;tak;;nd;75;52;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+479;14;14;;actual_end_date;;2026-06-23;;nd;75;52;;;5.2.) Termin wykonania umowy: 2026-06-23;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+480;14;14;;performed_on_time;;nie;;nd;75;52;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+481;14;14;;n_changes;2.0;;;nd;75;52;;;5.4.1.) Liczba zmian: 2;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+482;14;14;;final_paid;1294007.9;;PLN;brutto;75;52;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 1294007,90 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+483;14;14;;performed_properly;;nie;;nd;75;52;;;5.6.) Czy umowa została wykonana należycie: Nie;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+484;15;15;;planned_duration_days;720.0;24 mies.;dni;nd;76;53;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 24 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+485;15;15;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;76;53;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+486;15;15;;security_required;;tak;;nd;76;53;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+487;15;15;;estimated_value_net;3044159.35;;PLN;netto;77;54;;;4.3.) Wartość zamówienia: 3044159,35 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+488;15;15;;procedure_result;;zawarcie umowy;;nd;77;54;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+489;15;15;;n_offers;2.0;;szt.;nd;77;54;;;6.1.) Liczba otrzymanych ofert lub wniosków: 2;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+490;15;15;;n_rejected;0.0;;szt.;nd;77;54;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+491;15;15;;offer_min;3744316.0;;PLN;brutto;77;54;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 3744316 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+492;15;15;;offer_max;6848640.0;;PLN;brutto;77;54;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 6848640 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+493;15;15;;awarded_price;3744316.0;;PLN;brutto;77;54;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 3744316 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+494;15;15;;contractor;;ENERGO-EKO Sp. z o.o.;;nd;77;54;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: ENERGO-EKO Sp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+495;15;15;;signed_date;;2023-04-28;;nd;77;54;;;8.1.) Data zawarcia umowy: 2023-04-28;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+496;15;15;;contract_value;3744316.0;;PLN;brutto;77;54;;;8.2.) Wartość umowy/umowy ramowej: 3744316,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+497;15;15;;planned_duration_days;720.0;24 mies.;dni;nd;77;54;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 24 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+498;15;15;;signed_date;;2023-04-28;;nd;78;55;;;4.1.) Data zawarcia umowy/umowy ramowej: 2023-04-28;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+499;15;15;;planned_duration_days;840.0;28 mies.;dni;nd;78;55;;;4.2.) Okres realizacji zamówienia/umowy ramowej: 28 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+500;15;15;;contractor;;ENERGO-EKO Sp. z o.o.;;nd;78;55;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): ENERGO-EKO Sp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+501;15;15;;contract_value;3744316.0;;PLN;brutto;78;55;;;4.4.) Wartość umowy/umowy ramowej: 3744316,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+502;15;15;;signed_date;;2023-04-28;;nd;79;56;;;4.1.) Data zawarcia umowy/umowy ramowej: 2023-04-28;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+503;15;15;;planned_duration_days;840.0;28 mies.;dni;nd;79;56;;;4.2.) Okres realizacji zamówienia/umowy ramowej: 28 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+504;15;15;;contractor;;ENERGO-EKO Sp. z o.o.;;nd;79;56;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): ENERGO-EKO Sp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+505;15;15;;contract_value;3744316.0;;PLN;brutto;79;56;;;4.4.) Wartość umowy/umowy ramowej: 3744316,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+506;15;15;;signed_date;;2023-04-28;;nd;80;57;;;4.1.) Data zawarcia umowy: 2023-04-28;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+507;15;15;;planned_duration_days;840.0;28 mies.;dni;nd;80;57;;;4.2.) Okres realizacji zamówienia: 28 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+508;15;15;;contractor;;ENERGO-EKO Sp. z o.o.;;nd;80;57;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): ENERGO-EKO Sp. z o.o.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+509;15;15;;contract_value;3744316.0;;PLN;brutto;80;57;;;4.4.) Wartość umowy: 3744316,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+510;15;15;;performed;;tak;;nd;80;57;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+511;15;15;;actual_end_date;;2025-09-25;;nd;80;57;;;5.2.) Termin wykonania umowy: 2025-09-25;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+512;15;15;;performed_on_time;;tak;;nd;80;57;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Tak 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+513;15;15;;n_changes;2.0;;;nd;80;57;;;5.4.1.) Liczba zmian: 2;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+514;15;15;;final_paid;4703039.5;;PLN;brutto;80;57;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 4703039,50 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+515;15;15;;performed_properly;;tak;;nd;80;57;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+516;16;16;;planned_duration_days;810.0;27 mies.;dni;nd;81;58;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 27 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+517;16;16;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;81;58;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+518;16;16;;security_required;;tak;;nd;81;58;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+519;16;16;;procedure_result;;zawarcie umowy;;nd;82;59;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+520;16;16;;n_offers;3.0;;szt.;nd;82;59;;;6.1.) Liczba otrzymanych ofert lub wniosków: 3;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+521;16;16;;n_rejected;0.0;;szt.;nd;82;59;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+522;16;16;;offer_min;4879410.0;;PLN;brutto;82;59;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 4879410,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+523;16;16;;offer_max;13412512.55;;PLN;brutto;82;59;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 13412512,55 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+524;16;16;;awarded_price;4879410.0;;PLN;brutto;82;59;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 4879410,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+525;16;16;;contractor;;IŁAWSKIE PRZEDSIĘBIORSTWO INSTALACYJNO-BUDOWLANE SP. Z O.O.;;nd;82;59;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: IŁAWSKIE PRZEDSIĘBIORSTWO INSTALACYJNO-BUDOWLANE SP. Z O.O.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+526;16;16;;signed_date;;2022-10-04;;nd;82;59;;;8.1.) Data zawarcia umowy: 2022-10-04;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+527;16;16;;contract_value;4879410.0;;PLN;brutto;82;59;;;8.2.) Wartość umowy/umowy ramowej: 4879410,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+528;16;16;;planned_duration_days;810.0;27 mies.;dni;nd;82;59;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 27 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+529;16;16;;signed_date;;2022-10-04;;nd;83;60;;;4.1.) Data zawarcia umowy: 2022-10-04;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+530;16;16;;planned_duration_days;810.0;27 mies.;dni;nd;83;60;;;4.2.) Okres realizacji zamówienia: 27 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+531;16;16;;contractor;;IŁAWSKIE PRZEDSIĘBIORSTWO INSTALACYJNO-BUDOWLANE SP. Z O.O.;;nd;83;60;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): IŁAWSKIE PRZEDSIĘBIORSTWO INSTALACYJNO-BUDOWLANE SP. Z O.O.;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+532;16;16;;contract_value;4879410.0;;PLN;brutto;83;60;;;4.4.) Wartość umowy: 4879410,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+533;16;16;;performed;;tak;;nd;83;60;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+534;16;16;;actual_end_date;;2025-02-04;;nd;83;60;;;5.2.) Termin wykonania umowy: 2025-02-04;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+535;16;16;;performed_on_time;;nie;;nd;83;60;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+536;16;16;;n_changes;2.0;;;nd;83;60;;;5.4.1.) Liczba zmian: 2;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+537;16;16;;final_paid;5067267.29;;PLN;brutto;83;60;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 5067267,29 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+538;16;16;;performed_properly;;tak;;nd;83;60;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+539;17;17;;planned_duration_days;120.0;4 mies.;dni;nd;84;61;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 4 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+540;17;17;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;84;61;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+541;17;17;;security_required;;tak;;nd;84;61;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+542;17;17;;estimated_value_net;8191290.8;;PLN;netto;85;62;;;4.3.) Wartość zamówienia: 8191290,80 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+543;17;17;;procedure_result;;zawarcie umowy;;nd;85;62;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+544;17;17;;n_offers;6.0;;szt.;nd;85;62;;;6.1.) Liczba otrzymanych ofert lub wniosków: 6;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+545;17;17;;n_rejected;2.0;;szt.;nd;85;62;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 2;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+546;17;17;;offer_min;3476240.6;;PLN;brutto;85;62;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 3476240,60 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+547;17;17;;offer_max;7958438.57;;PLN;brutto;85;62;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 7958438,57 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+548;17;17;;awarded_price;3476240.6;;PLN;brutto;85;62;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 3476240,60 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+549;17;17;;contractor;;COMPLEX INSTAL Marcin Grygier;;nd;85;62;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: COMPLEX INSTAL Marcin Grygier;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+550;17;17;;signed_date;;2025-12-23;;nd;85;62;;;8.1.) Data zawarcia umowy: 2025-12-23;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+551;17;17;;contract_value;4275775.94;;PLN;brutto;85;62;;;8.2.) Wartość umowy/umowy ramowej: 4275775,94 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+552;17;17;;planned_duration_days;120.0;4 mies.;dni;nd;85;62;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 4 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+553;17;17;;signed_date;;2025-12-23;;nd;86;63;;;4.1.) Data zawarcia umowy: 2025-12-23;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+554;17;17;;planned_duration_days;120.0;4 mies.;dni;nd;86;63;;;4.2.) Okres realizacji zamówienia: 4 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+555;17;17;;contractor;;COMPLEX INSTAL Marcin Grygier;;nd;86;63;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): COMPLEX INSTAL Marcin Grygier;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+556;17;17;;contract_value;4275775.94;;PLN;brutto;86;63;;;4.4.) Wartość umowy: 4275775,94 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+557;17;17;;performed;;tak;;nd;86;63;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+558;17;17;;actual_end_date;;2026-06-15;;nd;86;63;;;5.2.) Termin wykonania umowy: 2026-06-15;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+559;17;17;;performed_on_time;;nie;;nd;86;63;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+560;17;17;;n_changes;1.0;;;nd;86;63;;;5.4.1.) Liczba zmian: 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+561;17;17;;final_paid;5422833.43;;PLN;brutto;86;63;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 5422833,43 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+562;17;17;;performed_properly;;tak;;nd;86;63;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+563;18;18;;planned_duration_days;80.0;;dni;nd;87;64;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 80 dni;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+564;18;18;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;87;64;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+565;18;18;;security_required;;tak;;nd;87;64;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+566;18;18;;estimated_value_net;414843.3;;PLN;netto;88;65;;;4.3.) Wartość zamówienia: 414843,30 PLN;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+567;18;18;;procedure_result;;zawarcie umowy;;nd;88;65;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+568;18;18;;n_offers;5.0;;szt.;nd;88;65;;;6.1.) Liczba otrzymanych ofert lub wniosków: 5;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+569;18;18;;n_rejected;2.0;;szt.;nd;88;65;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 2;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+570;18;18;;offer_min;487819.33;;PLN;brutto;88;65;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 487819,33 PLN;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+571;18;18;;offer_max;548837.84;;PLN;brutto;88;65;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 548837,84 PLN;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+572;18;18;;awarded_price;487819.33;;PLN;brutto;88;65;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 487819,33 PLN;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+573;18;18;;contractor;;Hydromontaż M. Cieplik B. Pawlak sp. jawna;;nd;88;65;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Hydromontaż M. Cieplik B. Pawlak sp. jawna;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+574;18;18;;signed_date;;2026-02-23;;nd;88;65;;;8.1.) Data zawarcia umowy: 2026-02-23;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+575;18;18;;contract_value;487819.33;;PLN;brutto;88;65;;;8.2.) Wartość umowy/umowy ramowej: 487819,33 PLN;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+576;18;18;;planned_duration_days;60.0;;dni;nd;88;65;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 60 dni;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+577;18;18;;estimated_value_net;3673478.77;;PLN;netto;89;66;;;4.3.) Wartość zamówienia: 3673478,77 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+578;18;18;;procedure_result;;zawarcie umowy;;nd;89;66;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+579;18;18;;n_offers;7.0;;szt.;nd;89;66;;;6.1.) Liczba otrzymanych ofert lub wniosków: 7;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+580;18;18;;n_rejected;1.0;;szt.;nd;89;66;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+581;18;18;;offer_min;3264311.58;;PLN;brutto;89;66;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 3264311,58 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+582;18;18;;offer_max;4300080.0;;PLN;brutto;89;66;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 4300080,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+583;18;18;;awarded_price;3665400.0;;PLN;brutto;89;66;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 3665400,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+584;18;18;;contractor;;Przedsiębiorstwo Wielobranżowe TOR Marian Iberhan;;nd;89;66;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Przedsiębiorstwo Wielobranżowe TOR Marian Iberhan;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+585;18;18;;signed_date;;2026-02-17;;nd;89;66;;;8.1.) Data zawarcia umowy: 2026-02-17;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+586;18;18;;contract_value;3665400.0;;PLN;brutto;89;66;;;8.2.) Wartość umowy/umowy ramowej: 3665400,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+587;18;18;;planned_duration_days;80.0;;dni;nd;89;66;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 80 dni;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+588;18;18;;signed_date;;2026-02-23;;nd;90;67;;;4.1.) Data zawarcia umowy: 2026-02-23;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+589;18;18;;planned_duration_days;60.0;;dni;nd;90;67;;;4.2.) Okres realizacji zamówienia: 60 dni;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+590;18;18;;contractor;;Hydromontaż M. Cieplik B. Pawlak sp. jawna;;nd;90;67;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Hydromontaż M. Cieplik B. Pawlak sp. jawna;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+591;18;18;;contract_value;487819.33;;PLN;brutto;90;67;;;4.4.) Wartość umowy: 487819,33 PLN;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+592;18;18;;performed;;tak;;nd;90;67;;;5.1.) Czy umowa została wykonana: Tak;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+593;18;18;;actual_end_date;;2026-06-15;;nd;90;67;;;5.2.) Termin wykonania umowy: 2026-06-15;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+594;18;18;;performed_on_time;;nie;;nd;90;67;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+595;18;18;;n_changes;1.0;;;nd;90;67;;;5.4.1.) Liczba zmian: 1;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+596;18;18;;final_paid;487819.33;;PLN;brutto;90;67;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 487819,33 PLN;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+597;18;18;;performed_properly;;tak;;nd;90;67;;;5.6.) Czy umowa została wykonana należycie: Tak;0.6;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+598;18;18;;signed_date;;2026-02-17;;nd;91;68;;;4.1.) Data zawarcia umowy: 2026-02-17;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+599;18;18;;planned_duration_days;80.0;;dni;nd;91;68;;;4.2.) Okres realizacji zamówienia: 80 dni;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+600;18;18;;contractor;;Przedsiębiorstwo Wielobranżowe TOR Marian Iberhan;;nd;91;68;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Przedsiębiorstwo Wielobranżowe TOR Marian Iberhan;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+601;18;18;;contract_value;3665400.0;;PLN;brutto;91;68;;;4.4.) Wartość umowy: 3665400,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+602;18;18;;performed;;tak;;nd;91;68;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+603;18;18;;actual_end_date;;2026-06-17;;nd;91;68;;;5.2.) Termin wykonania umowy: 2026-06-17;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+604;18;18;;performed_on_time;;nie;;nd;91;68;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+605;18;18;;n_changes;1.0;;;nd;91;68;;;5.4.1.) Liczba zmian: 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+606;18;18;;final_paid;4194312.76;;PLN;brutto;91;68;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 4194312,76 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+607;18;18;;performed_properly;;tak;;nd;91;68;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+608;19;19;;planned_duration_days;134.0;;dni;nd;92;69;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 134 dni;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+609;19;19;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;92;69;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+610;19;19;;security_required;;tak;;nd;92;69;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+611;19;19;;procedure_result;;zawarcie umowy;;nd;93;70;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+612;19;19;;n_offers;2.0;;szt.;nd;93;70;;;6.1.) Liczba otrzymanych ofert lub wniosków: 2;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+613;19;19;;n_rejected;0.0;;szt.;nd;93;70;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+614;19;19;;offer_min;3154932.64;;PLN;brutto;93;70;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 3154932,64 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+615;19;19;;offer_max;3185614.1;;PLN;brutto;93;70;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 3185614,10 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+616;19;19;;awarded_price;3154932.64;;PLN;brutto;93;70;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 3154932,64 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+617;19;19;;contractor;;Brukarstwo i Handel Włodzimierz Kasprzak;;nd;93;70;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: Brukarstwo i Handel Włodzimierz Kasprzak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+618;19;19;;signed_date;;2024-07-11;;nd;93;70;;;8.1.) Data zawarcia umowy: 2024-07-11;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+619;19;19;;contract_value;3154932.64;;PLN;brutto;93;70;;;8.2.) Wartość umowy/umowy ramowej: 3154932,64 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+620;19;19;;planned_end_date;;2024-11-22;;nd;93;70;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: do 2024-11-22;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+621;19;19;;signed_date;;2024-07-11;;nd;94;71;;;4.1.) Data zawarcia umowy: 2024-07-11;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+622;19;19;;planned_end_date;;2024-11-22;;nd;94;71;;;4.2.) Okres realizacji zamówienia: do 2024-11-22;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+623;19;19;;contractor;;Brukarstwo i Handel Włodzimierz Kasprzak;;nd;94;71;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Brukarstwo i Handel Włodzimierz Kasprzak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+624;19;19;;contract_value;3154932.64;;PLN;brutto;94;71;;;4.4.) Wartość umowy: 3154932,64 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+625;19;19;;performed;;tak;;nd;94;71;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+626;19;19;;actual_end_date;;2025-12-22;;nd;94;71;;;5.2.) Termin wykonania umowy: 2025-12-22;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+627;19;19;;performed_on_time;;nie;;nd;94;71;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+628;19;19;;n_changes;6.0;;;nd;94;71;;;5.4.1.) Liczba zmian: 6;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+629;19;19;;final_paid;4186736.41;;PLN;brutto;94;71;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 4186736,41 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+630;19;19;;performed_properly;;tak;;nd;94;71;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+631;20;20;;planned_duration_days;240.0;8 mies.;dni;nd;95;72;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 8 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+632;20;20;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;95;72;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+633;20;20;;security_required;;tak;;nd;95;72;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+634;20;20;;estimated_value_net;2207285.7;;PLN;netto;96;73;;;4.3.) Wartość zamówienia: 2207285,70 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+635;20;20;;procedure_result;;zawarcie umowy;;nd;96;73;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+636;20;20;;n_offers;10.0;;szt.;nd;96;73;;;6.1.) Liczba otrzymanych ofert lub wniosków: 10;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+637;20;20;;n_rejected;0.0;;szt.;nd;96;73;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+638;20;20;;offer_min;1969611.3;;PLN;brutto;96;73;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 1969611,30 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+639;20;20;;offer_max;3479874.18;;PLN;brutto;96;73;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 3479874,18 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+640;20;20;;awarded_price;1969611.3;;PLN;brutto;96;73;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 1969611,30 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+641;20;20;;contractor;;"Konsorcjum firm: ""Starkan"" Sp.z o.o Nazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiębiorstwo Usługowe ""Starkan""Marcin Pardus";;nd;96;73;;;"7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Konsorcjum firm: ""Starkan"" Sp.z o.o Nazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiębiorstwo Usługowe ""Starkan""Marcin Pardus";0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+642;20;20;;signed_date;;2025-04-24;;nd;96;73;;;8.1.) Data zawarcia umowy: 2025-04-24;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+643;20;20;;contract_value;1969611.3;;PLN;brutto;96;73;;;8.2.) Wartość umowy/umowy ramowej: 1969611,30 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+644;20;20;;planned_duration_days;180.0;6 mies.;dni;nd;96;73;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 6 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+645;20;20;;signed_date;;2025-04-24;;nd;97;74;;;4.1.) Data zawarcia umowy/umowy ramowej: 2025-04-24;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+646;20;20;;planned_duration_days;180.0;6 mies.;dni;nd;97;74;;;4.2.) Okres realizacji zamówienia/umowy ramowej: 6 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+647;20;20;;contractor;;"Konsorcjum firm: ""Starkan"" Sp.z o.o";;nd;97;74;;;"4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Konsorcjum firm: ""Starkan"" Sp.z o.o";0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+648;20;20;;contract_value;1969611.3;;PLN;brutto;97;74;;;4.4.) Wartość umowy/umowy ramowej: 1969611,30 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+649;20;20;;signed_date;;2025-04-24;;nd;98;75;;;4.1.) Data zawarcia umowy/umowy ramowej: 2025-04-24;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+650;20;20;;planned_duration_days;180.0;6 mies.;dni;nd;98;75;;;4.2.) Okres realizacji zamówienia/umowy ramowej: 6 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+651;20;20;;contractor;;"Konsorcjum firm: ""Starkan"" Sp.z o.o";;nd;98;75;;;"4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Konsorcjum firm: ""Starkan"" Sp.z o.o";0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+652;20;20;;contract_value;1969611.3;;PLN;brutto;98;75;;;4.4.) Wartość umowy/umowy ramowej: 1969611,30 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+653;20;20;;signed_date;;2025-04-24;;nd;99;76;;;4.1.) Data zawarcia umowy: 2025-04-24;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+654;20;20;;planned_duration_days;180.0;6 mies.;dni;nd;99;76;;;4.2.) Okres realizacji zamówienia: 6 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+655;20;20;;contractor;;"Konsorcjum firm: ""Starkan"" Sp.z o.o";;nd;99;76;;;"4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): Konsorcjum firm: ""Starkan"" Sp.z o.o";0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+656;20;20;;contract_value;1969611.3;;PLN;brutto;99;76;;;4.4.) Wartość umowy: 1969611,30 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+657;20;20;;performed;;tak;;nd;99;76;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+658;20;20;;actual_end_date;;2026-04-27;;nd;99;76;;;5.2.) Termin wykonania umowy: 2026-04-27;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+659;20;20;;performed_on_time;;nie;;nd;99;76;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+660;20;20;;n_changes;2.0;;;nd;99;76;;;5.4.1.) Liczba zmian: 2;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+661;20;20;;final_paid;1719611.3;;PLN;brutto;99;76;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 1719611,30 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+662;20;20;;performed_properly;;tak;;nd;99;76;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+663;21;21;;planned_duration_days;420.0;14 mies.;dni;nd;100;77;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 14 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+664;21;21;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;100;77;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+665;21;21;;security_required;;tak;;nd;100;77;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+666;21;21;;estimated_value_net;6692528.51;;PLN;netto;101;78;;;4.3.) Wartość zamówienia: 6692528,51 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+667;21;21;;procedure_result;;zawarcie umowy;;nd;101;78;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+668;21;21;;n_offers;6.0;;szt.;nd;101;78;;;6.1.) Liczba otrzymanych ofert lub wniosków: 6;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+669;21;21;;n_rejected;0.0;;szt.;nd;101;78;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+670;21;21;;offer_min;5421102.0;;PLN;brutto;101;78;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 5421102,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+671;21;21;;offer_max;8979000.0;;PLN;brutto;101;78;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 8979000,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+672;21;21;;awarded_price;5421102.0;;PLN;brutto;101;78;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 5421102,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+673;21;21;;contractor;;"""STARKAN"" Sp. z o.o. Nazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiebiorstwo Usługowe ""STARKAN"" Pardus Marcin";;nd;101;78;;;"7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): ""STARKAN"" Sp. z o.o. Nazwy (firmy) pozostałych wykonawców wspólnie ubiegających się o udzielenie zamówienia: Przedsiebiorstwo Usługowe ""STARKAN"" Pardus Marcin";0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+674;21;21;;signed_date;;2025-09-22;;nd;101;78;;;8.1.) Data zawarcia umowy: 2025-09-22;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+675;21;21;;contract_value;5421102.0;;PLN;brutto;101;78;;;8.2.) Wartość umowy/umowy ramowej: 5421102,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+676;21;21;;planned_duration_days;300.0;10 mies.;dni;nd;101;78;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 10 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+677;21;21;;signed_date;;2025-09-22;;nd;102;79;;;4.1.) Data zawarcia umowy/umowy ramowej: 2025-09-22;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+678;21;21;;planned_duration_days;300.0;10 mies.;dni;nd;102;79;;;4.2.) Okres realizacji zamówienia/umowy ramowej: 10 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+679;21;21;;contractor;;"""STARKAN"" Sp. z o.o.";;nd;102;79;;;"4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): ""STARKAN"" Sp. z o.o.";0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+680;21;21;;contract_value;5421102.0;;PLN;brutto;102;79;;;4.4.) Wartość umowy/umowy ramowej: 5421102,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+681;21;21;;signed_date;;2025-09-22;;nd;103;80;;;4.1.) Data zawarcia umowy: 2025-09-22;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+682;21;21;;planned_duration_days;300.0;10 mies.;dni;nd;103;80;;;4.2.) Okres realizacji zamówienia: 10 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+683;21;21;;contractor;;"""STARKAN"" Sp. z o.o.";;nd;103;80;;;"4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): ""STARKAN"" Sp. z o.o.";0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+684;21;21;;contract_value;5421102.0;;PLN;brutto;103;80;;;4.4.) Wartość umowy: 5421102,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+685;21;21;;performed;;tak;;nd;103;80;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+686;21;21;;actual_end_date;;2026-09-28;;nd;103;80;;;5.2.) Termin wykonania umowy: 2026-09-28;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+687;21;21;;performed_on_time;;nie;;nd;103;80;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Nie 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+688;21;21;;n_changes;1.0;;;nd;103;80;;;5.4.1.) Liczba zmian: 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+689;21;21;;final_paid;2979983.82;;PLN;brutto;103;80;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 2979983,82 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+690;21;21;;performed_properly;;nie;;nd;103;80;;;5.6.) Czy umowa została wykonana należycie: Nie;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+691;22;22;;planned_duration_days;120.0;4 mies.;dni;nd;104;81;;;4.2.10.) Okres realizacji zamówienia albo umowy ramowej: 4 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+692;22;22;;criteria;;Kryterium ceny oraz kryteria jakościowe Kryterium 1;;nd;104;81;;;4.3.3.) Stosowane kryteria oceny ofert: Kryterium ceny oraz kryteria jakościowe Kryterium 1;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+693;22;22;;security_required;;tak;;nd;104;81;;;6.5.) Zamawiający wymaga zabezpieczenia należytego wykonania umowy: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+694;22;22;;estimated_value_net;397470.44;;PLN;netto;105;82;;;4.3.) Wartość zamówienia: 397470,44 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+695;22;22;;procedure_result;;zawarcie umowy;;nd;105;82;;;5.1.) Postępowanie zakończyło się zawarciem umowy albo unieważnieniem postępowania: Postępowanie/cześć postępowania zakończyła się zawarciem umowy SEKCJA VI OFERTY;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+696;22;22;;n_offers;4.0;;szt.;nd;105;82;;;6.1.) Liczba otrzymanych ofert lub wniosków: 4;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+697;22;22;;n_rejected;0.0;;szt.;nd;105;82;;;6.1.6.) Liczba ofert odrzuconych, w tym liczba ofert zawierających rażąco niską cenę lub koszt: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+698;22;22;;offer_min;444898.38;;PLN;brutto;105;82;;;6.2.) Cena lub koszt oferty z najniższą ceną lub kosztem: 444898,38 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+699;22;22;;offer_max;720780.0;;PLN;brutto;105;82;;;6.3.) Cena lub koszt oferty z najwyższą ceną lub kosztem: 720780,00 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+700;22;22;;awarded_price;444898.38;;PLN;brutto;105;82;;;6.4.) Cena lub koszt oferty wykonawcy, któremu udzielono zamówienia: 444898,38 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+701;22;22;;contractor;;PPHU Konkret Sp. z o.o., Parnica 22, 74-110 Banie, NIP: PL 8581852883;;nd;105;82;;;7.3.1) Nazwa (firma) wykonawcy, któremu udzielono zamówienia: PPHU Konkret Sp. z o.o., Parnica 22, 74-110 Banie, NIP: PL 8581852883;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+702;22;22;;signed_date;;2025-02-06;;nd;105;82;;;8.1.) Data zawarcia umowy: 2025-02-06;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+703;22;22;;contract_value;444898.38;;PLN;brutto;105;82;;;8.2.) Wartość umowy/umowy ramowej: 444898,38 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+704;22;22;;planned_duration_days;120.0;4 mies.;dni;nd;105;82;;;8.3.) Okres realizacji zamówienia albo umowy ramowej: 4 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+705;22;22;;signed_date;;2025-02-06;;nd;106;83;;;4.1.) Data zawarcia umowy: 2025-02-06;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+706;22;22;;planned_duration_days;120.0;4 mies.;dni;nd;106;83;;;4.2.) Okres realizacji zamówienia: 4 miesiące;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+707;22;22;;contractor;;PPHU Konkret Sp. z o.o., Parnica 22, 74-110 Banie, NIP: PL 8581852883;;nd;106;83;;;4.3.1.) Nazwa (firma) wykonawcy, któremu udzielono zamówienia (w przypadku wykonawców ubiegających się wspólnie o udzielenie zamówienia – dotyczy pełnomocnika, o którym mowa w art. 58 ust. 2 ustawy): PPHU Konkret Sp. z o.o., Parnica 22, 74-110 Banie, NIP: PL 8581852883;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+708;22;22;;contract_value;444898.38;;PLN;brutto;106;83;;;4.4.) Wartość umowy: 444898,38 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+709;22;22;;performed;;tak;;nd;106;83;;;5.1.) Czy umowa została wykonana: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+710;22;22;;actual_end_date;;2025-05-26;;nd;106;83;;;5.2.) Termin wykonania umowy: 2025-05-26;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+711;22;22;;performed_on_time;;tak;;nd;106;83;;;5.3.) Czy umowę wykonano w pierwotnie określonym terminie: Tak 5.4.) Informacje o zmianach umowy;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+712;22;22;;n_changes;0.0;;;nd;106;83;;;5.4.1.) Liczba zmian: 0;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+713;22;22;;final_paid;444898.38;;PLN;brutto;106;83;;;5.5.) Łączna wartość wynagrodzenia wypłacona z tytułu zrealizowanej umowy: 444898,38 PLN;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
+714;22;22;;performed_properly;;tak;;nd;106;83;;;5.6.) Czy umowa została wykonana należycie: Tak;0.9;formularz BZP;proposed;;2026-11-22T06:16:55+00:00
