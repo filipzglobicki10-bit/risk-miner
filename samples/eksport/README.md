@@ -16,8 +16,8 @@ po zatwierdzeniu w Panelu eksperta status zmienia się na `approved`, `edited` a
 | `procurements.csv` | postępowania przetargowe powiązane z projektami |
 | `notices.csv` | 83 ogłoszenia BZP: typ, numer, data publikacji, link do źródła |
 | `contracts.csv` | 26 umów: wartość, data zawarcia, termin, wypłata, data wykonania |
-| `contract_changes.csv` | 40 zmian umów: przyczyna, podstawa prawna (art. 455 Pzp), zmiana wartości i terminu, cytat |
-| `events.csv` | 80 zdarzeń ryzyka z kategorią, przyczyną, skutkiem, pewnością i cytatem źródłowym |
+| `contract_changes.csv` | 39 zmian umów: przyczyna, podstawa prawna (art. 455 Pzp), zmiana wartości i terminu, cytat |
+| `events.csv` | 79 zdarzeń ryzyka z kategorią, przyczyną, skutkiem, pewnością i cytatem źródłowym |
 | `links.csv` | wszystkie powiązania rekordów z metodą dopasowania, pewnością i przesłankami |
 | `facts.csv` | 714 pojedynczych faktów (kwoty, daty, okresy) — każdy ze źródłem i fragmentem formularza |
 | `risk_catalog.csv` | katalog 15 kategorii ryzyka (wiedza ekspercka edytowana w aplikacji) |

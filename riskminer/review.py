@@ -109,6 +109,21 @@ def decide_link(lid, decision, actor="ekspert", comment=None):
             pipeline._reconcile(p, pr, None, stats)
             pipeline._build_contract(p, pr, None)
             pipeline._computed_events(p, None)
+    elif decision == "approved" and link["from_type"] == "procurement" and link["to_type"] == "bzp":
+        # zatwierdzone ogłoszenie powiązane z postępowaniem (np. zmiana umowy bez wspólnego tenderId):
+        # dopiero teraz jego zmiany umowy i zdarzenia wchodzą do bazy i statystyk
+        p = db.get("projects", pid)
+        prs = {}
+        for n in db.q("SELECT * FROM notices WHERE link_id=?", (lid,)):
+            if n.get("procurement_id"):
+                prs[n["procurement_id"]] = db.get("procurements", n["procurement_id"])
+                pipeline._structured_events(p, prs[n["procurement_id"]], n["id"])
+        stats = {"notices": 0, "procurements": 0, "facts": 0, "events": 0, "links_proposed": 0, "errors": 0}
+        for pr in prs.values():
+            pipeline._assign_parts(p, pr)
+            pipeline._reconcile(p, pr, None, stats)
+            pipeline._build_contract(p, pr, None)
+        pipeline._computed_events(p, None)
     return db.get("links", lid)
 
 

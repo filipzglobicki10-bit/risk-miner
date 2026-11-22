@@ -128,6 +128,14 @@ class E2E(unittest.TestCase):
         self.assertTrue(any(c["risk_code"] == "R02" and "skaln" in (c["description"] or "") for c in ch))
         raw_ch = call("/api/export/contract_changes")
         self.assertTrue(all(len(c.get("quote") or "") != 24 or " " in (c.get("quote") or "") for c in raw_ch))
+        # zmiany z ogłoszeń o niepotwierdzonym powiązaniu (bez wspólnego tenderId) nie zasilają bazy przed decyzją eksperta:
+        # 2026/BZP 00342646/01 to umowa „Zduny, ul. Masłowskiego”, nie „Baszków etap II” (RM-2026-018)
+        raw_no = {n["id"]: n for n in call("/api/export/notices")}
+        raw_li = {l["id"]: l for l in call("/api/export/links")}
+        for c in raw_ch:
+            n = raw_no.get(c["notice_id"]) or {}
+            self.assertNotEqual((raw_li.get(n.get("link_id")) or {}).get("status"), "proposed", n.get("notice_number"))
+        self.assertFalse(any((raw_no.get(c["notice_id"]) or {}).get("notice_number") == "2026/BZP 00342646/01" for c in raw_ch))
         # kolejka eksperta: fakty mają dołączone źródło (do testu źródłowego)
         q_check = call("/api/review/queue")
         self.assertTrue(q_check["facts"])

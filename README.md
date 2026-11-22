@@ -80,7 +80,7 @@ Po kilku sekundach pojawi się wykres 22 umów, mapa i liczby. Bez internetu apl
 7. **Odpowiedź w 30 sekund + historia projektu.** Na górze analizy: kafelki (dofinansowanie, budżet, rezerwa,
    termin, największe ryzyko, umowa) i lista „co zrobić przed ogłoszeniem przetargu”; przy każdym projekcie —
    jego przebieg opowiedziany w 3 zdaniach, złożony z ogłoszeń BZP bez modelu językowego.
-8. **Biblioteka zmian umów.** Wszystkie 40 zmian umów z BZP w jednym miejscu, z przyczyną, kategorią ryzyka,
+8. **Biblioteka zmian umów.** Wszystkie 39 zmian umów z BZP w jednym miejscu, z przyczyną, kategorią ryzyka,
    podstawą z art. 455 Pzp, kosztem i linkiem do ogłoszenia. Wpisujesz „grunt”, „służebność” albo „Wody Polskie”
    i widzisz, jak to się skończyło u innych. Ekran Start pokazuje wszystkie umowy na jednym wykresie
    „plan → rzeczywistość” (koszt × czas, klik otwiera projekt).

@@ -49,7 +49,7 @@ Aplikacja webowa, która:
 - Ceny umów wyszły poniżej szacunku inwestora w 13 z 14 przypadków (mediana −26%).
 - Po podpisaniu rozliczenie wzrosło w 16 z 22 umów: mediana +6,6%, P80 +23,8% (przedział bootstrap 8,7–32,7%).
 - 18 z 22 umów zakończono po terminie umownym: mediana +27% czasu, P80 +69%.
-- Połowa z 40 zmian umów szła przez zmiany przewidziane w umowie (art. 455 ust. 1 pkt 1); reszta — przez podstawy
+- Połowa z 39 zmian umów szła przez zmiany przewidziane w umowie (art. 455 ust. 1 pkt 1); reszta — przez podstawy
   z limitami (zmiana o niewielkiej wartości 25%, okoliczności nieprzewidywalne 20%, roboty dodatkowe 5%).
 - Najczęstsze przyczyny zmian: harmonogram i warunki atmosferyczne (R06, 9 z 22), zmiany i roboty dodatkowe
   (R07, 9 z 22), kolizje i prawa do terenu (R03, 3 z 22 — najwyższy skutek, mediana +21,7% wartości umowy),

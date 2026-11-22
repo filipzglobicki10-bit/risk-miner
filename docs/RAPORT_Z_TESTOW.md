@@ -44,6 +44,8 @@ aplikacja nigdy nie wysyła ignorowanych filtrów ani niepoprawnego typu ogłosz
 | 12 | Analiza nowej inwestycji + projekt umowy: okres 14 mies. odczytany, P80 kosztu i czasu, rezerwa od ceny umowy, przedział bootstrap, rejestr ryzyk | OK |
 | 13 | Audyt klauzul: waloryzacja **wyłączona** (wymóg art. 439 Pzp), kary bez łącznego limitu (art. 436 pkt 3), pogoda bez kryterium — „niepełna”, warunki gruntowe — „brak”, płatności częściowe — „jest”; flaga „audyt klauzul” | OK |
 | 14 | Eksport, raport łączenia, ponowne wzbogacenie i monitoring nie dublują ogłoszeń | OK |
+| 15 | Ogłoszenie innej umowy tego samego zamawiającego (bez wspólnego tenderId): powiązanie „do weryfikacji”, jego zmiany umowy, zdarzenia i terminy nie wchodzą do bazy przed decyzją eksperta (RM-2026-018: 2026/BZP 00342646/01 dotyczy umowy „Zduny, ul. Masłowskiego”) | OK |
+| 16 | Ogłoszenia w formacie BZP na żywo (`<h3>etykieta</h3> wartość`): przyczyna i opis zmiany odczytane, ta sama zmiana z ogłoszenia o zmianie umowy i o wykonaniu liczona raz | OK |
 
 Wynik: `Ran 1 test … OK` (e2e, ~2,5 s) i `Ran 11 tests … OK` (jednostkowe). Sprawdzono na Pythonie 3.13 (Linux); kod wymaga Pythona 3.9+.
 
@@ -68,7 +70,7 @@ Wynik: `Ran 1 test … OK` (e2e, ~2,5 s) i `Ran 11 tests … OK` (jednostkowe). 
 | RM-2026-015 | Ogłoszenie BZP | wzbogacony | 5 | 3 744 316 zł | 4 703 040 zł | +25,6% | +150 dni | 3 |
 | RM-2026-016 | Ogłoszenie BZP | wzbogacony | 3 | 4 879 410 zł | 5 067 267 zł | +3,9% | +31 dni | 2 |
 | RM-2026-017 | Projekt KPO | do weryfikacji | 3 | 4 275 776 zł | 5 422 833 zł | +26,8% | +53 dni | 1 |
-| RM-2026-018 | Projekt KPO | do weryfikacji | 5 | 3 665 400 zł | 4 194 313 zł | +14,4% | +40 dni | 2 |
+| RM-2026-018 | Projekt KPO | do weryfikacji | 5 | 3 665 400 zł | 4 194 313 zł | +14,4% | +40 dni | 1 |
 | RM-2026-019 | Ogłoszenie BZP | wzbogacony | 3 | 3 154 933 zł | 4 186 736 zł | +32,7% | +395 dni | 3 |
 | RM-2026-020 | Projekt KPO | do weryfikacji | 5 | 1 969 611 zł | 1 719 611 zł | −12,7% | +185 dni | 2 |
 | RM-2026-021 | Ogłoszenie BZP | wzbogacony | 4 | 5 421 102 zł | 2 979 984 zł | −45,0% | +68 dni | 1 |
@@ -82,6 +84,9 @@ Uwagi do pojedynczych wyników (sprawdzone w treści ogłoszeń):
   przelicza to na przyrost (0 zł) i zapisuje adnotację.
 - RM-2026-021: wypłata o 45% niższa od wartości umowy — zdarzenie „możliwe ograniczenie zakresu” (R01) do oceny eksperta.
 - RM-2026-008/009: dwa rekordy pakietu to dwie części jednego postępowania; każdy liczony dla swojej części.
+- RM-2026-018 i RM-2026-012: wyszukiwanie po zamawiającym znajduje też ogłoszenia innych umów tej samej gminy
+  (np. „Zduny, ul. Masłowskiego”, „sieć kanalizacyjna w Smętowie Chmieleńskim”). Bez wspólnego tenderId trafiają do
+  eksperta jako niepewne i nie zmieniają kosztów, terminów ani biblioteki zmian, dopóki ich nie zatwierdzi.
 
 ## 4. Weryfikacja wizualna
 

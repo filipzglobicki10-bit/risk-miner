@@ -3,10 +3,10 @@
   "title": "Przykład: kanalizacja 6,5 km, zaprojektuj i wybuduj",
   "input_text": "Gmina planuje budowę sieci kanalizacji sanitarnej grawitacyjno-tłocznej o długości ok. 6,5 km wraz z dwiema przepompowniami ścieków i przyłączami do granic 140 nieruchomości w miejscowościach poza aglomeracją. Ścieki będą odprowadzane do istniejącej oczyszczalni. Trasa przebiega w pasie dróg gminnych i powiatowych, częściowo przez grunty prywatne; przewidziano przekroczenie cieku i drogi wojewódzkiej przewiertem. Szacowana wartość inwestycji: 7 800 000 zł brutto. Planowana formuła: zaprojektuj i wybuduj, termin realizacji 14 miesięcy. Inwestycja w województwie wielkopolskim. Ogłoszenie przetargu planowane na styczeń 2027. Umowa o dofinansowanie wymaga zakończenia rzeczowego projektu do 30.06.2028.\n",
   "status": "gotowa",
-  "created_at": "2026-11-22T06:16:56+00:00",
+  "created_at": "2026-11-22T06:34:09+00:00",
   "result": {
     "title": "Przykład: kanalizacja 6,5 km, zaprojektuj i wybuduj",
-    "created_at": "2026-11-22T06:16:56+00:00",
+    "created_at": "2026-11-22T06:34:10+00:00",
     "input": {
       "text": "Gmina planuje budowę sieci kanalizacji sanitarnej grawitacyjno-tłocznej o długości ok. 6,5 km wraz z dwiema przepompowniami ścieków i przyłączami do granic 140 nieruchomości w miejscowościach poza aglomeracją. Ścieki będą odprowadzane do istniejącej oczyszczalni. Trasa przebiega w pasie dróg gminnych i powiatowych, częściowo przez grunty prywatne; przewidziano przekroczenie cieku i drogi wojewódzkiej przewiertem. Szacowana wartość inwestycji: 7 800 000 zł brutto. Planowana formuła: zaprojektuj i wybuduj, termin realizacji 14 miesięcy. Inwestycja w województwie wielkopolskim. Ogłoszenie przetargu planowane na styczeń 2027. Umowa o dofinansowanie wymaga zakończenia rzeczowego projektu do 30.06.2028.\n",
       "documents": [
@@ -174,7 +174,7 @@
             "n_offers": 7,
             "estimated_value_net": 3673478.77,
             "price_vs_estimate": -0.18877984967910943,
-            "n_changes": 2,
+            "n_changes": 1,
             "project_value": 3847757.34,
             "funding": 3128258.0,
             "value_for_comparison": 3665400.0,
@@ -274,7 +274,7 @@
             {
               "feature": "text",
               "contribution": 0.392,
-              "why": "podobieństwo treści opisu 0.12 (wspólne rdzenie słów: wybudu, formul, zaproj, scieko, oczysz, budowa)"
+              "why": "podobieństwo treści opisu 0.12 (wspólne rdzenie słów: formul, zaproj, wybudu, scieko, oczysz, budowa)"
             },
             {
               "feature": "work_type",
@@ -349,7 +349,7 @@
             {
               "feature": "text",
               "contribution": 0.291,
-              "why": "podobieństwo treści opisu 0.09 (wspólne rdzenie słów: przedm, przewi, realiz, miejsc, komple, sanita)"
+              "why": "podobieństwo treści opisu 0.09 (wspólne rdzenie słów: przedm, przewi, realiz, komple, miejsc, sanita)"
             },
             {
               "feature": "subsector",
@@ -430,7 +430,7 @@
             {
               "feature": "text",
               "contribution": 0.383,
-              "why": "podobieństwo treści opisu 0.11 (wspólne rdzenie słów: wybudu, formul, zaproj, przyla, scieko, oczysz)"
+              "why": "podobieństwo treści opisu 0.11 (wspólne rdzenie słów: formul, zaproj, wybudu, przyla, scieko, oczysz)"
             },
             {
               "feature": "value",
@@ -597,7 +597,7 @@
             "RM-2026-018"
           ],
           "approved": 0,
-          "proposed": 8,
+          "proposed": 7,
           "examples": [
             {
               "event_id": 7,
@@ -725,7 +725,7 @@
               "page": null
             },
             {
-              "event_id": 68,
+              "event_id": 67,
               "project": "RM-2026-018",
               "title": "Zmiana umowy nr 1: zmiana o niewielkiej wartości (art. 455 ust. 2)",
               "quote": "5.4.2.) Numer zmiany: 1 | 5.4.3.) Podstawa prawna zmiany: art. 455 ust. 2 ustawy | 5.4.4.) Przyczyny dokonania zmian: W toku realizacji umowy wystąpiła potrzeba rozszerzenia zakresu zamówienia , których wykonanie było niezbędne dla prawidłowej i kompletnej realizacji zamówienia. Zmiana nie powoduje ",
@@ -1836,7 +1836,7 @@
                 "cause": "Przedłużenie terminu realizacji zadania wynika z konieczności zwiększenia zakresu robót, których wykonanie w sposób obiektywny uniemożliwia terminowe zakończenie realizacji przedmiotu umowy tj. zwiększenia przepustowości oczyszczalni ściekó"
               },
               {
-                "event_id": 77,
+                "event_id": 76,
                 "project": "RM-2026-020",
                 "title": "Zmiana umowy nr 1: okoliczności nieprzewidywalne (art. 455 ust. 1 pkt 4)",
                 "cause": "konieczność ustanowienia służebności przesyłu na działce nr 3/39 obręb Konarzewo"
@@ -1846,8 +1846,8 @@
           {
             "code": "R06",
             "name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
-            "probability": 0.5409510343157604,
-            "k": 9,
+            "probability": 0.4255502868516568,
+            "k": 8,
             "n": 22,
             "projects": [
               "RM-2026-001",
@@ -1857,21 +1857,20 @@
               "RM-2026-012",
               "RM-2026-013",
               "RM-2026-016",
-              "RM-2026-017",
-              "RM-2026-018"
+              "RM-2026-017"
             ],
             "impact_cost_pct": 0.06774344244515575,
             "impact_delay_days": 90.0,
             "n_cost_obs": 3,
             "n_delay_obs": 2,
-            "emv_pct": 0.036645885258817186,
-            "emv_pln": 285837.90501877404,
-            "emv_days": 48.685593088418436,
+            "emv_pct": 0.02882824136485473,
+            "emv_pln": 224860.2826458669,
+            "emv_days": 38.299525816649115,
             "bases": [
               {
                 "basis": "art. 455 ust. 1 pkt 1",
                 "meaning": "zmiana przewidziana w dokumentach zamówienia",
-                "n": 10
+                "n": 9
               },
               {
                 "basis": "art. 455 ust. 2",
@@ -1943,7 +1942,7 @@
                 "cause": "W związku ze zwiększeniem zakresu robót w stosunku do przedmiotu zamówienia opisanego w Programie Funkcjonalno Użytkowym, zaszła konieczność dokonania zmian w zakresie przedmiotu zamówienia, co przedkłada się na zwiększenie wartości umowy."
               },
               {
-                "event_id": 68,
+                "event_id": 67,
                 "project": "RM-2026-018",
                 "title": "Zmiana umowy nr 1: zmiana o niewielkiej wartości (art. 455 ust. 2)",
                 "cause": "W toku realizacji umowy wystąpiła potrzeba rozszerzenia zakresu zamówienia , których wykonanie było niezbędne dla prawidłowej i kompletnej realizacji zamówienia. Zmiana nie powoduje zmiany ogólnego charakteru umowy, a jej wartość jest niższ"
@@ -2137,34 +2136,34 @@
         "method": "Prawdopodobieństwo = ważony (podobieństwo²) udział projektów z danymi, w których ryzyko się zmaterializowało (zdarzenie przyczynowe: zmiana umowy w BZP, dokument, wpis eksperta). Skutek = mediana kosztu zmian w % wartości umowy i mediana wydłużenia. EMV = prawdopodobieństwo × skutek."
       },
       "change_bases": {
-        "n": 40,
+        "n": 39,
         "rows": [
           {
             "basis": "art. 455 ust. 1 pkt 1",
             "meaning": "zmiana przewidziana w dokumentach zamówienia",
-            "n": 20,
-            "share": 0.5
+            "n": 19,
+            "share": 0.48717948717948717
           },
           {
             "basis": "art. 455 ust. 2",
             "meaning": "zmiana o niewielkiej wartości",
             "n": 10,
-            "share": 0.25
+            "share": 0.2564102564102564
           },
           {
             "basis": "art. 455 ust. 1 pkt 4",
             "meaning": "okoliczności nieprzewidywalne",
             "n": 8,
-            "share": 0.2
+            "share": 0.20512820512820512
           },
           {
             "basis": "art. 455 ust. 1 pkt 3",
             "meaning": "roboty/dostawy/usługi dodatkowe",
             "n": 2,
-            "share": 0.05
+            "share": 0.05128205128205128
           }
         ],
-        "foreseen_share": 0.5,
+        "foreseen_share": 0.48717948717948717,
         "note": "Zmiana „przewidziana” (art. 455 ust. 1 pkt 1 Pzp) jest możliwa tylko, gdy umowa zawiera jasną klauzulę. Pozostałe podstawy (roboty dodatkowe, okoliczności nieprzewidziane, zmiana o niewielkiej wartości) mają limity wartości i większe ryzyko zarzutów przy kontroli — duży ich udział oznacza, że umowy nie przewidziały, co się stanie."
       }
     },
@@ -2195,7 +2194,7 @@
           "risk_code": "R06",
           "name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
           "level": "wysoki",
-          "why": "wystąpiło w 5 z 6 podobnych projektów (0 zatwierdzonych, 8 do weryfikacji)",
+          "why": "wystąpiło w 5 z 6 podobnych projektów (0 zatwierdzonych, 7 do weryfikacji)",
           "basis": "grupa porównawcza"
         },
         {
@@ -2468,39 +2467,13 @@
             },
             "data_why": [
               "R07 Nieprzewidziane zmiany i roboty dodatkowe: 9 z 22 podobnych umów, mediana kosztu zmian +5,2% wartości umowy; zmieniano na podstawie: art. 455 ust. 1 pkt 1 (6×), art. 455 ust. 2 (5×), art. 455 ust. 1 pkt 4 (5×)",
-              "R06 Nierealistyczny harmonogram i nieuwzględnione zależności: 9 z 22 podobnych umów, mediana kosztu zmian +6,8% wartości umowy, mediana wydłużenia 90 dni; zmieniano na podstawie: art. 455 ust. 1 pkt 1 (10×), art. 455 ust. 2 (2×)",
+              "R06 Nierealistyczny harmonogram i nieuwzględnione zależności: 8 z 22 podobnych umów, mediana kosztu zmian +6,8% wartości umowy, mediana wydłużenia 90 dni; zmieniano na podstawie: art. 455 ust. 1 pkt 1 (9×), art. 455 ust. 2 (2×)",
               "R01 Niepełny lub niespójny zakres: 2 z 22 podobnych umów, mediana kosztu zmian +14,4% wartości umowy; zmieniano na podstawie: art. 455 ust. 1 pkt 3 (2×), art. 455 ust. 2 (1×)"
             ],
-            "probability": 0.5409510343157604,
-            "emv_pct": 0.07736914059075414,
+            "probability": 0.4255502868516568,
+            "emv_pct": 0.0695514966967917,
             "model": "Zamknięty katalog zmian: przesłanka (zdarzenie), jej udokumentowanie, skutek (termin/wynagrodzenie), sposób wyceny (składniki cenotwórcze z oferty) i łączny limit wartości zmian. Zmiana „przewidziana” wymaga jasnych, precyzyjnych i jednoznacznych postanowień — inaczej zostają podstawy z limitami (pkt 3–4, ust. 2).",
-            "priority": 93
-          },
-          {
-            "id": "K04",
-            "name": "Przedłużenie terminu — warunki atmosferyczne z obiektywnym kryterium",
-            "ref": "art. 455 ust. 1 pkt 1 Pzp",
-            "risks": [
-              "R06"
-            ],
-            "status": "niepełna",
-            "note": "brak obiektywnego kryterium (np. dane IMGW, temperatura, liczba dni z opadem) — spór o to, czy pogoda „uniemożliwiała” roboty",
-            "required": false,
-            "required_text": null,
-            "legal_gap": false,
-            "evidence": {
-              "page": 1,
-              "doc": "projekt_umowy_przyklad.txt",
-              "quote": "a) zmiana terminu realizacji w przypadku wystąpienia niekorzystnych warunków atmosferycznych uniemożliwiających prowadzenie robót,",
-              "pattern": "warunk\\w* atmosferyczn"
-            },
-            "data_why": [
-              "R06 Nierealistyczny harmonogram i nieuwzględnione zależności: 9 z 22 podobnych umów, mediana kosztu zmian +6,8% wartości umowy, mediana wydłużenia 90 dni; zmieniano na podstawie: art. 455 ust. 1 pkt 1 (10×), art. 455 ust. 2 (2×)"
-            ],
-            "probability": 0.5409510343157604,
-            "emv_pct": 0.036645885258817186,
-            "model": "Termin wydłuża się o liczbę dni, w których warunki uniemożliwiały roboty, potwierdzone danymi IMGW (np. temperatura poniżej −5°C lub opad powyżej 10 mm/dobę) i wpisem do dziennika budowy.",
-            "priority": 58
+            "priority": 83
           },
           {
             "id": "K07",
@@ -2550,6 +2523,32 @@
             "emv_pct": 0.04195096526918575,
             "model": "Przekazanie terenu w podziale na odcinki z terminami; przedłużenie terminu o czas opóźnienia w przekazaniu terenu lub ustanowieniu służebności z przyczyn zamawiającego; procedura dla kolizji z niezinwentaryzowanym uzbrojeniem.",
             "priority": 48
+          },
+          {
+            "id": "K04",
+            "name": "Przedłużenie terminu — warunki atmosferyczne z obiektywnym kryterium",
+            "ref": "art. 455 ust. 1 pkt 1 Pzp",
+            "risks": [
+              "R06"
+            ],
+            "status": "niepełna",
+            "note": "brak obiektywnego kryterium (np. dane IMGW, temperatura, liczba dni z opadem) — spór o to, czy pogoda „uniemożliwiała” roboty",
+            "required": false,
+            "required_text": null,
+            "legal_gap": false,
+            "evidence": {
+              "page": 1,
+              "doc": "projekt_umowy_przyklad.txt",
+              "quote": "a) zmiana terminu realizacji w przypadku wystąpienia niekorzystnych warunków atmosferycznych uniemożliwiających prowadzenie robót,",
+              "pattern": "warunk\\w* atmosferyczn"
+            },
+            "data_why": [
+              "R06 Nierealistyczny harmonogram i nieuwzględnione zależności: 8 z 22 podobnych umów, mediana kosztu zmian +6,8% wartości umowy, mediana wydłużenia 90 dni; zmieniano na podstawie: art. 455 ust. 1 pkt 1 (9×), art. 455 ust. 2 (2×)"
+            ],
+            "probability": 0.4255502868516568,
+            "emv_pct": 0.02882824136485473,
+            "model": "Termin wydłuża się o liczbę dni, w których warunki uniemożliwiały roboty, potwierdzone danymi IMGW (np. temperatura poniżej −5°C lub opad powyżej 10 mm/dobę) i wpisem do dziennika budowy.",
+            "priority": 47
           },
           {
             "id": "K14",
@@ -2752,34 +2751,34 @@
         "summary": "Sprawdzono 14 klauzul. Wymogi ustawowe niespełnione: 2 (art. 436 pkt 3 Pzp, art. 439 Pzp). Luki wobec ryzyk, które wystąpiły w podobnych umowach: 5.",
         "n_reference": 22,
         "bases": {
-          "n": 40,
+          "n": 39,
           "rows": [
             {
               "basis": "art. 455 ust. 1 pkt 1",
               "meaning": "zmiana przewidziana w dokumentach zamówienia",
-              "n": 20,
-              "share": 0.5
+              "n": 19,
+              "share": 0.48717948717948717
             },
             {
               "basis": "art. 455 ust. 2",
               "meaning": "zmiana o niewielkiej wartości",
               "n": 10,
-              "share": 0.25
+              "share": 0.2564102564102564
             },
             {
               "basis": "art. 455 ust. 1 pkt 4",
               "meaning": "okoliczności nieprzewidywalne",
               "n": 8,
-              "share": 0.2
+              "share": 0.20512820512820512
             },
             {
               "basis": "art. 455 ust. 1 pkt 3",
               "meaning": "roboty/dostawy/usługi dodatkowe",
               "n": 2,
-              "share": 0.05
+              "share": 0.05128205128205128
             }
           ],
-          "foreseen_share": 0.5,
+          "foreseen_share": 0.48717948717948717,
           "note": "Zmiana „przewidziana” (art. 455 ust. 1 pkt 1 Pzp) jest możliwa tylko, gdy umowa zawiera jasną klauzulę. Pozostałe podstawy (roboty dodatkowe, okoliczności nieprzewidziane, zmiana o niewielkiej wartości) mają limity wartości i większe ryzyko zarzutów przy kontroli — duży ich udział oznacza, że umowy nie przewidziały, co się stanie."
         },
         "disclaimer": "Lista kontrolna dla eksperta i prawnika — nie stanowi opinii prawnej. Wzorcowe zapisy wymagają dostosowania."

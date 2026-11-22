@@ -453,8 +453,13 @@ def _related_notices(p, pr, stats, L):
                 label = bzp.NOTICE_TYPE_LABELS.get(n.get("notice_type"), "Ogłoszenie")
                 # formularze BZP czytamy strukturalnie (pola zmian, unieważnień) — skanowanie całego formularza regułami
                 # dawało fałszywe alarmy na etykietach pól (np. „…zawarciem umowy albo unieważnieniem postępowania”)
-                stats["events"] += _structured_events(p, pr, nid)
-                L(f"  + {label} {n.get('notice_number')} ({conf:.0%})")
+                if st == "proposed":
+                    # niepewne dopasowanie (bez wspólnego tenderId): zmiany umowy i zdarzenia powstaną dopiero
+                    # po zatwierdzeniu powiązania przez eksperta — nie mogą wcześniej zasilać statystyk
+                    L(f"  ? {label} {n.get('notice_number')} ({conf:.0%}) — do decyzji eksperta")
+                else:
+                    stats["events"] += _structured_events(p, pr, nid)
+                    L(f"  + {label} {n.get('notice_number')} ({conf:.0%})")
 
 
 
@@ -677,6 +682,13 @@ def _best_fact(pid, key, procurement_id=None, part="any"):
     if procurement_id:
         sql += " AND procurement_id=?"
         params.append(procurement_id)
+        # postępowanie ma potwierdzone ogłoszenia → fakty z niepotwierdzonych dopasowań (bez wspólnego tenderId)
+        # nie mogą nadpisać warunków umowy; gdy wszystkie są niepewne (np. KPO), używamy ich z niższą wagą w prognozie
+        if db.q1("SELECT 1 FROM notices n LEFT JOIN links l ON l.id=n.link_id WHERE n.procurement_id=? "
+                 "AND IFNULL(l.status,'auto') NOT IN ('proposed','rejected') LIMIT 1", (procurement_id,)):
+            sql += (" AND (notice_id IS NULL OR notice_id NOT IN (SELECT n.id FROM notices n JOIN links l ON l.id=n.link_id "
+                    "WHERE n.procurement_id=? AND l.status IN ('proposed','rejected')))")
+            params.append(procurement_id)
     if part != "any":
         if part is None:
             sql += " AND part IS NULL"
