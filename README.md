@@ -10,6 +10,10 @@ w tej umowie, żeby nie skończyła się tak samo*. Pilotaż: sektor wodociągow
 
 ## Jak uruchomić (dla jury, 3 minuty)
 
+**Wersja online (bez instalacji): https://risk-miner.onrender.com** — dane 22 projektów wczytują się same.
+Darmowy serwer usypia się po ok. 15 min bez ruchu, więc pierwsze wejście po przerwie trwa ok. minuty.
+Poniżej: jak uruchomić wersję lokalną.
+
 Potrzebny jest tylko **Python 3.9 lub nowszy** (bez instalowania bibliotek).
 Nie masz Pythona? Windows: [python.org/downloads](https://www.python.org/downloads/) — przy instalacji
 zaznacz „Add python.exe to PATH”. macOS: przy pierwszym poleceniu `python3` system sam zaproponuje instalację.
