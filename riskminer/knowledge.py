@@ -72,7 +72,7 @@ RISKS = [
     {
         "code": "R06", "name": "Nierealistyczny harmonogram i nieuwzględnione zależności",
         "effects": "Opóźnienie, kary, kumulacja prac, presja na skrócenie prób i badań albo pogorszenie jakości.",
-        "patterns": [r"przedluz\w* (termin|czas)", r"zmian\w* terminu", r"opoznien", r"nie(dotrzyma|zachowa)\w* termin", r"po terminie",
+        "patterns": [r"przedluz\w* (termin|czas)", r"zmian\w* terminu", r"opoznien", r"\bnie ?(dotrzyma|zachowa)\w* termin", r"po terminie",
                      r"warunk\w* atmosferyczn", r"okres\w* zimow", r"harmonogram\w* (rzeczowo|aktualiz|zmian)", r"wydluzeni\w* (termin|okres)"],
         "mitigations": ["Harmonogram uwzględniający okres zimowy, czas decyzji i odbiorów operatora.",
                         "Kamienie milowe i aktualizacja harmonogramu co miesiąc."],
@@ -155,7 +155,7 @@ RISKS = [
     {
         "code": "R15", "name": "Nieosiągnięcie efektu technologicznego, użytkowego lub środowiskowego",
         "effects": "Brak wymaganej jakości lub wydajności, ograniczenie użytkowania, konieczność dodatkowych prac, ryzyko sankcji albo utraty efektu projektu.",
-        "patterns": [r"nie ?osiagn\w* (efekt|wskaznik|parametr)", r"wskaznik\w* rezultatu", r"przekroczeni\w* (parametr|norm|dopuszczaln)",
+        "patterns": [r"\bnie ?osiagn\w* (efekt|wskaznik|parametr)", r"wskaznik\w* rezultatu", r"przekroczeni\w* (parametr|norm|dopuszczaln)",
                      r"niski\w* (poziom|stopien) przylaczen", r"mala liczba przylaczen", r"\brlm\b"],
         "mitigations": ["Wczesne potwierdzenie liczby przyłączeń (deklaracje); monitoring wskaźników."],
         "clauses": ["Obowiązek wykonawcy wykazania parametrów w okresie rozruchu; gwarancja efektu technologicznego."],

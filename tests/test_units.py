@@ -76,6 +76,15 @@ class InvestmentDescription(unittest.TestCase):
         self.assertIsNone(clauses.detect_months("Rękojmia za wady wynosi 60 miesięcy od dnia odbioru."))
 
 
+class CsvImport(unittest.TestCase):
+    def test_semicolon_and_cp1250(self):
+        from riskminer.util import csv_rows, decode_text
+        txt = 'Identyfikator rekordu;Nazwa odbiorcy;Opis\nRM-1;Gmina Łódź;"Budowa sieci, etap I; II"\n'
+        for data in (txt.encode("utf-8-sig"), txt.encode("cp1250")):
+            rows = csv_rows(decode_text(data))
+            self.assertEqual(rows[1], ["RM-1", "Gmina Łódź", "Budowa sieci, etap I; II"])
+
+
 class Quantiles(unittest.TestCase):
     def test_equal_weights_median(self):
         self.assertAlmostEqual(forecast.wquantile([(1, 1), (2, 1), (3, 1)], 0.5), 2)
@@ -99,6 +108,16 @@ class ClauseAudit(unittest.TestCase):
         a = {r["id"]: r for r in clauses.audit(self.pages(t))["rows"]}
         self.assertEqual(a["K01"]["status"], "wyłączona")
         self.assertTrue(a["K01"]["legal_gap"])
+
+    def test_wynagrodzenie_podlega_is_not_exclusion(self):
+        # „wynagrodzeNIE PODLEGA waloryzacji” nie może być czytane jako „nie podlega waloryzacji”
+        pg = [{"page": 1, "doc": "u", "text": "§ 9. Wynagrodzenie podlega waloryzacji w oparciu o wskaźnik cen GUS."}]
+        k01 = [r for r in clauses.audit(pg, doc_types=["PPU / wzór umowy"], months=12)["rows"] if r["id"] == "K01"][0]
+        self.assertEqual(k01["status"], "jest")
+        self.assertFalse(k01["legal_gap"])
+        pg = [{"page": 1, "doc": "u", "text": "§ 9. Wynagrodzenie nie podlega waloryzacji."}]
+        k01 = [r for r in clauses.audit(pg, doc_types=["PPU / wzór umowy"], months=12)["rows"] if r["id"] == "K01"][0]
+        self.assertEqual(k01["status"], "wyłączona")
 
     def test_short_contract_no_mandatory_indexation(self):
         t = "§ 1. Umowa. § 2. Termin realizacji: 4 miesiące od dnia zawarcia umowy. § 3. Zamawiający i Wykonawca."

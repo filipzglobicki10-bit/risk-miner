@@ -15,7 +15,7 @@ CLAUSES = [
      "mandatory": "months>6", "mandatory_text": "obowiązkowa w umowie na roboty budowlane zawartej na okres dłuższy niż 6 miesięcy",
      "risks": ["R08", "R13"],
      "patterns": [r"waloryzac", r"zmian\w* (cen|kosztow) (materialow|zwiazanych z realizacj)", r"wskaznik\w* (cen|zmiany cen|gus)", r"art\.?\s*439"],
-     "exclude": [r"nie (podlega|przewiduje|przewiduj\w*)[^.]{0,40}waloryzac", r"wylacz\w*[^.]{0,30}waloryzac"],
+     "exclude": [r"\bnie (podlega|przewiduje|przewiduj\w*)[^.]{0,40}waloryzac", r"wylacz\w*[^.]{0,30}waloryzac"],
      "model": "Wynagrodzenie podlega waloryzacji wg wskaźnika cen produkcji budowlano-montażowej GUS, po przekroczeniu progu zmiany "
               "(np. 5%) liczonego od miesiąca złożenia oferty; maksymalna łączna zmiana — np. 10% wynagrodzenia; wskazanie, jak zmiana "
               "przenosi się na wynagrodzenie podwykonawców."},

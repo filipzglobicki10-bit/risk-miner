@@ -213,9 +213,8 @@ def extract(filename, data):
             lines = [" | ".join("" if c is None else str(c) for c in r) for r in rows if any(c not in (None, "") for c in r)]
             pages.append({"page": i + 1, "text": f"[Arkusz: {name}]\n" + "\n".join(lines)})
     elif ext in (".csv", ".tsv"):
-        txt = data.decode("utf-8-sig", "ignore")
-        dialect = csv.Sniffer().sniff(txt[:2000]) if txt.strip() else csv.excel
-        rows = list(csv.reader(io.StringIO(txt), dialect))
+        from .util import csv_rows, decode_text
+        rows = csv_rows(decode_text(data))
         pages = [{"page": 1, "text": "\n".join(" | ".join(r) for r in rows)}]
     elif ext in (".html", ".htm"):
         pages = [{"page": 1, "text": strip_html(data.decode("utf-8", "ignore"))}]
@@ -269,7 +268,7 @@ def guess_doc_type(filename, text):
         ("Ogłoszenie o zamówieniu", ["ogłoszenie o zamówieniu"]),
         ("Aneks do umowy", ["aneks"]),
         ("Umowa", ["umowa nr", "zawarta w dniu", "zawarta dnia"]),
-        ("PPU / wzór umowy", ["projektowane postanowienia", "wzór umowy", "ppu"]),
+        ("PPU / wzór umowy", ["projektowane postanowienia", "wzór umowy", "wzor_umowy", "wzor umowy", "projekt umowy", "projekt_umowy", "istotne postanowienia", "ppu"]),
         ("SWZ", ["specyfikacja warunków zamówienia", "swz"]),
         ("PFU", ["program funkcjonalno", "pfu"]),
         ("OPZ", ["opis przedmiotu zamówienia", "opz"]),

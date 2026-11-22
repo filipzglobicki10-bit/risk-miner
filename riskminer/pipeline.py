@@ -59,11 +59,8 @@ def _rows_from_file(filename, data):
                     return name, i, hdr, rows[i + 1:]
         raise ValueError("Nie znaleziono arkusza z nagłówkami rekordów (np. 'Nazwa przedsięwzięcia', 'Identyfikator publiczny').")
     if fl.endswith((".csv", ".tsv", ".txt")):
-        import csv
-        import io
-        txt = data.decode("utf-8-sig", "ignore")
-        dialect = csv.Sniffer().sniff(txt[:3000], delimiters=";,\t")
-        rows = list(csv.reader(io.StringIO(txt), dialect))
+        from .util import csv_rows, decode_text
+        rows = csv_rows(decode_text(data))
         hdr = [fold(c).strip() for c in rows[0]]
         return "csv", 0, hdr, rows[1:]
     if fl.endswith(".xls"):
@@ -268,6 +265,7 @@ def enrich_project(pid, log=None, include_ted=True):
         id_type, id_norm, year, dfrom, dto = _window_for(p)
         part = scope_part(p)
         L(f"Projekt {p['record_id']}: identyfikator {id_type} {id_norm}, zakres: {p.get('scope') or '—'}, okno {dfrom[:10]}–{dto[:10]}")
+        _record_checks(p, stats)
         base_notices = []
         nip = normalize_nip(p.get("beneficiary_id"))
         if id_type == "BZP":
@@ -282,6 +280,9 @@ def enrich_project(pid, log=None, include_ted=True):
                     _data_issue(p, f"NIP odbiorcy w rekordzie ({nip}) różni się od NIP zamawiającego w ogłoszeniu {id_norm} ({n['organization_nip']}).", stats)
                 elif nip and n.get("organization_nip") == nip:
                     reasons.append("NIP zamawiającego zgodny z rekordem")
+                prov = re.sub(r"\D", "", n.get("organization_province") or "")[:2]
+                if prov in TERYT_VOIV and p.get("voivodeship") and fold(p["voivodeship"]).strip() != fold(TERYT_VOIV[prov]):
+                    _data_issue(p, f"Województwo w rekordzie („{p['voivodeship']}”) różni się od województwa zamawiającego w ogłoszeniu {id_norm} ({TERYT_VOIV[prov]}).", stats)
                 sim = ratio_similarity(n.get("title") or "", p.get("name") or "")
                 if sim < 0.35:
                     reasons.append(f"UWAGA: przedmiot zamówienia mało podobny do nazwy przedsięwzięcia ({sim:.0%})")
@@ -324,6 +325,23 @@ def enrich_project(pid, log=None, include_ted=True):
         db.update("projects", pid, {"enrich_status": "błąd", "enrich_log": "\n".join(logs[-300:]) + "\n" + traceback.format_exc()[-2000:]})
         stats["errors"] += 1
     return stats
+
+
+TERYT_VOIV = {"02": "dolnośląskie", "04": "kujawsko-pomorskie", "06": "lubelskie", "08": "lubuskie", "10": "łódzkie",
+              "12": "małopolskie", "14": "mazowieckie", "16": "opolskie", "18": "podkarpackie", "20": "podlaskie",
+              "22": "pomorskie", "24": "śląskie", "26": "świętokrzyskie", "28": "warmińsko-mazurskie", "30": "wielkopolskie",
+              "32": "zachodniopomorskie"}
+
+
+def _record_checks(p, stats):
+    """Kontrole samego rekordu (bez sieci): województwo vs kod TERYT, suma kontrolna NIP, brak identyfikatora publicznego."""
+    code = re.sub(r"\D", "", str(p.get("teryt") or ""))[:2].zfill(2) if p.get("teryt") else None
+    if code in TERYT_VOIV and p.get("voivodeship") and fold(p["voivodeship"]).strip() != fold(TERYT_VOIV[code]):
+        _data_issue(p, f"Województwo w rekordzie („{p['voivodeship']}”) nie zgadza się z kodem TERYT {code} ({TERYT_VOIV[code]}).", stats)
+    if (p.get("beneficiary_id_type") or "").upper() == "NIP" and p.get("beneficiary_id") and str(p.get("nip_valid")) in ("0", "False"):
+        _data_issue(p, f"NIP odbiorcy w rekordzie ({p['beneficiary_id']}) ma błędną sumę kontrolną.", stats)
+    if not (p.get("public_id") or "").strip():
+        _data_issue(p, "Rekord nie ma identyfikatora publicznego (numer BZP / KPO) — postępowanie dobrane tylko przybliżenie, do weryfikacji eksperta.", stats)
 
 
 def _data_issue(p, message, stats=None):

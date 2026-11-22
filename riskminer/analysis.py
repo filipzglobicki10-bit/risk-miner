@@ -168,8 +168,16 @@ def analyze(text, title=None, analysis_id=None, extra=None):
     ref = refclass.rcf(sims, value=feats.get("value"), duration_days=duration_days, stage="kosztorys")
     register = refclass.risk_register(sims, value=feats.get("value"), duration_days=duration_days)
     bases = refclass.change_bases([s["project_id"] for s in sims])
+    # okres realizacji dla audytu: z projektu umowy / SWZ (to on wiąże), a dopiero gdy go tam nie ma — z opisu i innych dokumentów
+    by_doc = {}
+    for pg in audit_pages[1:]:
+        by_doc.setdefault(pg["doc"], []).append(pg)
+    contract_months = None
+    for pgs in by_doc.values():
+        if clauses.has_contract_text(pgs):
+            contract_months = clauses.detect_months(" ".join(pg["text"] for pg in pgs)) or contract_months
     audit = clauses.audit(audit_pages, doc_types=[d["doc_type"] for d in doc_rows], register=register, bases=bases,
-                          months=months, formula=feats.get("formula"))
+                          months=contract_months or months, formula=feats.get("formula"))
     from datetime import date as _date
     dl, st = detect_schedule(full)
     for key, cur in (("deadline", dl), ("tender_start", st)):
@@ -278,7 +286,9 @@ def analyze(text, title=None, analysis_id=None, extra=None):
                       "basis": "prognoza referencyjna"})
     if funding and funding.get("deadline") and funding["p_miss"] >= 0.2:
         flags.insert(0, {"risk_code": "R13", "name": "Ryzyko utraty dofinansowania (termin zakończenia)", "level": "wysoki" if funding["p_miss"] >= 0.5 else "podwyższony",
-                         "why": (f"w {funding['k_miss'][0]} z {funding['k_miss'][1]} podobnych przebiegów inwestycja nie zdążyłaby przed {funding['deadline']} "
+                         "why": ((f"Termin z umowy o dofinansowanie ({funding['deadline']}) jest wcześniejszy niż planowany start przetargu ({funding['start']}) — "
+                                  "sprawdź daty w opisie albo wnioskuj o zmianę terminu. ") if (funding.get("available_days") or 0) <= 0 else "") +
+                                (f"w {funding['k_miss'][0]} z {funding['k_miss'][1]} podobnych przebiegów inwestycja nie zdążyłaby przed {funding['deadline']} "
                                  f"(ważone prawdopodobieństwo {funding['p_miss']:.0%}); realny termin zakończenia P80: {funding['finish']['p80']}"),
                          "basis": "prognoza referencyjna"})
     top_score = group[0]["score"] if group else 0

@@ -111,7 +111,7 @@ def year_from_identifier(id_type, value):
 # ---------------------------------------------------------------- kwoty
 
 AMOUNT_RE = re.compile(
-    r"(?<![\d,])(\d{1,3}(?:[   .]\d{3})+(?:,\d{1,2})?|\d+(?:[,.]\d{1,2})?)\s*(?:zł|złotych|PLN|pln)\b",
+    r"(?<![\d,])(\d{1,3}(?:[   .]\d{3})+(?:,\d{1,2})?|\d+(?:[,.]\d{1,2})?)\s*(?:zł|zl|złotych|zlotych|PLN|pln|ZŁ|ZL)\b",
 )
 AMOUNT_ANY_RE = re.compile(r"(?<![\d,])(\d{1,3}(?:[   .]\d{3})+(?:,\d{1,2})?|\d+(?:[,.]\d{1,2})?)")
 
@@ -346,3 +346,28 @@ def extract_length_km(text):
         if 0.05 <= v <= 200:
             vals.append(v)
     return max(vals) if vals else None
+
+
+# ---------------------------------------------------------------- CSV
+
+def decode_text(data):
+    """UTF-8 (także z BOM), a gdy się nie da — Windows-1250 (polski Excel zapisuje CSV w tym kodowaniu)."""
+    try:
+        return data.decode("utf-8-sig")
+    except UnicodeDecodeError:
+        return data.decode("cp1250", "replace")
+
+
+def csv_rows(txt):
+    """Wiersze CSV z automatycznym separatorem (; , tabulator). Sniffer zawodzi przy długich polach z przecinkami
+    i średnikami w treści — wtedy decyduje liczba separatorów w wierszu nagłówka."""
+    import csv
+    import io
+    first = (txt or "").split("\n", 1)[0]
+    try:
+        delim = csv.Sniffer().sniff(txt[:3000], delimiters=";,\t").delimiter
+    except csv.Error:
+        delim = None
+    if not delim or first.count(delim) == 0:
+        delim = max(";,\t", key=first.count)
+    return list(csv.reader(io.StringIO(txt), delimiter=delim))
