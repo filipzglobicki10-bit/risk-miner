@@ -224,7 +224,9 @@ def strip_html(s):
     if not s:
         return ""
     s = re.sub(r"(?is)<(script|style).*?</\1>", " ", s)
-    s = re.sub(r"(?i)<br\s*/?>|</p>|</div>|</h\d>|</li>|</tr>", "\n", s)
+    # każdy blok (także jego początek) to nowa linia: BZP na żywo podaje pola jako
+    # <h3>5.3.) Etykieta: </h3> wartość <h3>5.4.) …</h3> — bez tego wartość zlewa się z kolejną etykietą
+    s = re.sub(r"(?i)<br\s*/?>|</?(?:p|div|h\d|li|tr|section|article|table|ul|ol)(?:\s[^>]*)?>", "\n", s)
     s = re.sub(r"(?s)<[^>]+>", " ", s)
     s = html.unescape(s)
     s = re.sub(r"[ \t ]+", " ", s)

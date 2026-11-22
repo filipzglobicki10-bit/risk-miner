@@ -39,6 +39,26 @@ Część 2
         self.assertNotIn("jan@gmina.pl", bzp.mask_personal("kontakt: jan@gmina.pl, tel. 600 100 200"))
 
 
+class LiveHtmlFormat(unittest.TestCase):
+    """BZP na żywo podaje pola jako <h3>etykieta: </h3> wartość — wartość nie może zlać się z kolejną etykietą."""
+    HTML = ('<div><h3 class="mb-0">5.1.) Data zmiany umowy: <span class="normal">2024-10-09</span></h3>'
+            '<h3 class="mb-0">5.2.) Podstawa prawna zmiany umowy/umowy ramowej: </h3>art. 455 ust. 1 pkt 3 ustawy'
+            '<h3 class="mb-0">5.3.) Przyczyny dokonania zmian umowy/umowy ramowej: </h3>    W związku ze zwiększeniem zakresu robót'
+            '<h3 class="mb-0">5.4.) Krótki opis zmiany umowy/umowy ramowej: </h3>    W § 1 ust. 2 dodaje się pkt 3)'
+            '<h3 class="mb-0">5.5.1.) Wartość zmiany: <span class="normal">758084,56</span></h3></div>')
+
+    def test_change_fields_from_h3_markup(self):
+        from riskminer.util import strip_html
+        st = bzp.extract_structured("AgreementUpdateNotice", strip_html(self.HTML))
+        self.assertEqual(len(st["changes"]), 1)
+        c = st["changes"][0]
+        self.assertEqual(c["legal_basis"], "art. 455 ust. 1 pkt 3")
+        self.assertEqual(c["value"], 758084.56)
+        self.assertEqual(c["date"], "2024-10-09")
+        self.assertTrue(c["reason"].startswith("W związku ze zwiększeniem"))
+        self.assertNotIn("Przyczyny", c.get("basis") or "")
+
+
 class Quantiles(unittest.TestCase):
     def test_equal_weights_median(self):
         self.assertAlmostEqual(forecast.wquantile([(1, 1), (2, 1), (3, 1)], 0.5), 2)
